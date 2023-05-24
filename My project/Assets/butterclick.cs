@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class butterclick : MonoBehaviour
 {
-    public Transform butterObj;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +15,8 @@ public class butterclick : MonoBehaviour
     {
         
     }
+
     void OnMouseDown() {
-        Instantiate(butterObj, new Vector3(-1.8f,3.3f,3.3f), butterObj.rotation);
+        gameflow.placeButter = "y";
     }
 }
