@@ -694,6 +694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toastObj: {fileID: 1008982828}
+  steamObj: {fileID: 5072342520812992513, guid: 9d9ba014877c246f980e08b759065ed1, type: 3}
 --- !u!65 &585403703
 BoxCollider:
   m_ObjectHideFlags: 0

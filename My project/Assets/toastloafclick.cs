@@ -5,10 +5,13 @@ using UnityEngine;
 public class toastloafclick : MonoBehaviour
 {
     public Transform toastObj;
+    //public Transform steamObj;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Instantiate(steamObj, steamObj.position, steamObj.rotation);
+
     }
 
     // Update is called once per frame
