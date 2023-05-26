@@ -328,7 +328,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9312922a2b1054a329efa9f440a7178f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4906de03748df468988d77a4c8de4cb2, type: 2}
+      objectReference: {fileID: 2100000, guid: d58a84e76cb1e487c98938f79cae5362, type: 2}
     - target: {fileID: 919132149155446097, guid: 9312922a2b1054a329efa9f440a7178f, type: 3}
       propertyPath: m_Name
       value: front2 (1)
@@ -694,7 +694,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toastObj: {fileID: 1008982828}
-  steamObj: {fileID: 5072342520812992513, guid: 9d9ba014877c246f980e08b759065ed1, type: 3}
 --- !u!65 &585403703
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -763,7 +762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a5bab298ea4f84c8b8f23c5f1c6854d3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.91
+      value: 2.935
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a5bab298ea4f84c8b8f23c5f1c6854d3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1669,7 +1668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ea1c600f80f4348e3839dc4d4e6d8d6d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.880462
+      value: 3.8956885
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ea1c600f80f4348e3839dc4d4e6d8d6d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1677,7 +1676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ea1c600f80f4348e3839dc4d4e6d8d6d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.327
+      value: 3.293
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ea1c600f80f4348e3839dc4d4e6d8d6d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1713,7 +1712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ea1c600f80f4348e3839dc4d4e6d8d6d, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: ea1c600f80f4348e3839dc4d4e6d8d6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
