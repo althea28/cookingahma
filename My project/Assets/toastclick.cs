@@ -45,7 +45,6 @@ public class toastclick : MonoBehaviour
                 hasKayaOnB = "y";
                 Instantiate(kayaObj, newKayaPosition(), kayaObj.rotation);
             }
-            //gameflow.placeKaya = "n";
 
         } else if ((gameflow.placeButter == "y")  && (isOnBoard())) { //placing butter && toast on board
             if ((isOnBoardA()) && (hasKayaOnA == "y") && (hasButterOnA == "n")) {
@@ -55,8 +54,6 @@ public class toastclick : MonoBehaviour
                 hasButterOnB = "y";
                 Instantiate(butterObj, newButterPosition(), butterObj.rotation);
             } 
-            //hasButter = "y";
-            gameflow.placeButter = "n";
 
         } else if ((isOnGrill()) && (gameflow.toastOnBoardA == "n")) { //moving from grill to boardA
             if (isOnGrillA()) {
