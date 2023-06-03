@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - appear
     - butterclick
     - kayabottleclick
     - mainmenu
@@ -108,13 +109,15 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 3960}
+      Script: {instanceID: 3964}
     - Class: 114
-      Script: {instanceID: 4250}
+      Script: {instanceID: 4254}
     - Class: 114
-      Script: {instanceID: 4756}
+      Script: {instanceID: 4760}
     - Class: 114
-      Script: {instanceID: 5152}
+      Script: {instanceID: 5158}
+    - Class: 114
+      Script: {instanceID: 7290}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -151,33 +154,33 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1582}
+      Script: {instanceID: 1584}
     - Class: 114
-      Script: {instanceID: 2152}
+      Script: {instanceID: 2156}
     - Class: 114
-      Script: {instanceID: 2560}
+      Script: {instanceID: 2564}
     - Class: 114
-      Script: {instanceID: 2758}
+      Script: {instanceID: 2762}
     - Class: 114
-      Script: {instanceID: 3036}
+      Script: {instanceID: 3040}
     - Class: 114
-      Script: {instanceID: 4010}
+      Script: {instanceID: 4014}
     - Class: 114
-      Script: {instanceID: 4260}
+      Script: {instanceID: 4264}
     - Class: 114
-      Script: {instanceID: 4604}
+      Script: {instanceID: 4608}
     - Class: 114
-      Script: {instanceID: 4630}
+      Script: {instanceID: 4634}
     - Class: 114
-      Script: {instanceID: 4868}
+      Script: {instanceID: 4874}
     - Class: 114
-      Script: {instanceID: 4938}
+      Script: {instanceID: 4944}
     - Class: 114
-      Script: {instanceID: 5474}
+      Script: {instanceID: 5482}
     - Class: 114
-      Script: {instanceID: 5620}
+      Script: {instanceID: 5628}
     - Class: 114
-      Script: {instanceID: 5928}
+      Script: {instanceID: 5936}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -249,6 +252,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseExitMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 0199c430932953689b15d31850a7f70b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: buttertutorial
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -689,6 +698,12 @@ ScriptsOnlyBuild:
     className: Toggle
   - hash:
       serializedVersion: 2
+      Hash: c1db7bb9821e3902b6711af6fd6c2232
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: move
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -753,6 +768,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: bf792e6474c0839341c66fb916be081f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: toastloaftutorial
   - hash:
       serializedVersion: 2
       Hash: 2574ac7d50617d23cdefe4ad22f5e1ad
@@ -831,6 +852,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnDragMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 0199c430932953689b15d31850a7f70b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: kayatutorial
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -965,10 +992,22 @@ ScriptsOnlyBuild:
     className: Variables
   - hash:
       serializedVersion: 2
+      Hash: 2e18a5cb256a15205bdbb483dc5f17ed
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: toasttutorial
+  - hash:
+      serializedVersion: 2
       Hash: 2574ac7d50617d23cdefe4ad22f5e1ad
     assemblyName: Unity.VisualScripting.State.dll
     namespaceName: Unity.VisualScripting
     className: StateMachine
+  - hash:
+      serializedVersion: 2
+      Hash: 6c43fee9e14b61171c812a1697400d00
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: appear
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f

@@ -577,6 +577,7 @@ UnityEngine.Transform::get_childCount
 UnityEngine.Transform::InverseTransformPoint_Injected
 UnityEngine.Transform::SetAsFirstSibling
 UnityEngine.Transform::SetParent
+UnityEngine.Transform::TransformDirection_Injected
 UnityEngine.Transform::TransformPoint_Injected
 UnityEngine.Transform::get_localPosition_Injected
 UnityEngine.Transform::get_localRotation_Injected
