@@ -20,7 +20,7 @@ public class toastclick : MonoBehaviour
     private static string hasButterOnA = "n";
     private static string hasButterOnB = "n";
 
-
+    private GameObject instantiatedKayaObj;
 
     // Start is called before the first frame update
     void Start()
@@ -73,12 +73,13 @@ public class toastclick : MonoBehaviour
             GetComponent<Transform> ().position = boardBCoordinates;
             gameflow.toastOnBoardB = "y";
         
-        /*} else if (gameflow.toastOnBoardA == "y" && gameflow.placeKaya == "n" && gameflow.placeButter == "n") { 
+        } else if (gameflow.toastOnBoardA == "y" && gameflow.placeKaya == "n" && gameflow.placeButter == "n") { 
             //serving completed dish. But how to shift the kaya n butter :( 
             GetComponent<Transform>().position = new Vector3(2, 5.2f, 0);
-            kayaObj.transform.position = new Vector3(2, 5.4f, 0);
-            butterObj.transform.position = new Vector3(2, 5.5f, 0);
-            gameflow.toastOnBoardA = "n";*/
+            Instantiate(kayaObj, new Vector3(2,5.4f,0), kayaObj.rotation);
+            Instantiate(butterObj, new Vector3(2,5.5f,0), butterObj.rotation);
+            gameflow.toastOnBoardA = "n";
+
         }
         //reset, so don't get trapped
         gameflow.placeButter = "n";
