@@ -13,6 +13,10 @@ public class gameflow : MonoBehaviour
     
     public static string placeKaya = "n"; 
     public static string placeButter = "n";
+
+    public static string destroySteamA = "n";
+    public static string destroySteamB = "n";
+    
     // Start is called before the first frame update
     void Start()
     {

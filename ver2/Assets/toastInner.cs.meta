@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: ab5d5a7ad1f8c4d9b976a3f7efdd6147
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - cookedBreadMat: {fileID: 2100000, guid: 1be300f35b79f4d948cdad74ac29acbd, type: 2}
+  - burnedBreadMat: {fileID: 2100000, guid: fdf1d129b756d48f1872b3102f8d5f2c, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
