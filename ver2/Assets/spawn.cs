@@ -4,30 +4,31 @@ using UnityEngine;
 
 public class spawn : MonoBehaviour
 {
-    public GameObject customer; 
-    public Transform spawnPoint; 
+    public GameObject[] customers; // Array of customers
+    public Transform[] spawnPoints; // Array of spawn points
 
-    private float spawnInterval = 3f;  
+    private float spawnInterval = 3f; //Spawn customers every 3 secs
+
+    private int spawnCount = 0;
 
     private void Start()
     {
-         StartCoroutine(SpawnCustomersCoroutine());
+        StartCoroutine(SpawnCustomersCoroutine());
     }
 
     private IEnumerator SpawnCustomersCoroutine()
     {
-        while (true)
+        while (spawnCount < spawnPoints.Length)
         {
-             yield return new WaitForSeconds(spawnInterval);
+            yield return new WaitForSeconds(spawnInterval);
 
-    
-            SpawnCustomer();
+            SpawnCustomer(spawnCount);
+            spawnCount++;
         }
     }
 
-    private void SpawnCustomer()
+    private void SpawnCustomer(int index)
     {
- 
-        Instantiate(customer, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(customers[index], spawnPoints[index].position, spawnPoints[index].rotation);
     }
 }
