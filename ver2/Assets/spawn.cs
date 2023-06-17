@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class spawn : MonoBehaviour
 {
-    public GameObject[] customers; // Array of customers
-    public Transform[] spawnPoints; // Array of spawn points
+    public GameObject[] customers;  
+    public Transform[] spawnPoints;  
 
-    private float spawnInterval = 3f; //Spawn customers every 3 secs
+    private float spawnInterval = 3f; // Spawn customers every 3 seconds
 
     private int spawnCount = 0;
 
@@ -29,6 +29,8 @@ public class spawn : MonoBehaviour
 
     private void SpawnCustomer(int index)
     {
-        Instantiate(customers[index], spawnPoints[index].position, spawnPoints[index].rotation);
+        GameObject customer = Instantiate(customers[index], spawnPoints[index].position, spawnPoints[index].rotation);
+        customer.SetActive(true); 
+
     }
 }

@@ -6,6 +6,7 @@ public class CustomerClick : MonoBehaviour
 {
 
     void OnMouseDown() {
+        Debug.Log("Click");
         if (gameflow.isToastClicked == "y")
         {
             Debug.Log("Customer clciekd");

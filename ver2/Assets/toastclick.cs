@@ -93,6 +93,7 @@ public class toastclick : MonoBehaviour
                 hasKayaOnA = "y";
                 Instantiate(kayaObj, newKayaPosition(), kayaObj.rotation);
             } else if ((isOnBoardB()) && (hasKayaOnB == "n")) {
+                Debug.Log("B");
                 hasKayaOnB = "y";
                 Instantiate(kayaObj, newKayaPosition(), kayaObj.rotation);
             }
@@ -194,10 +195,9 @@ public class toastclick : MonoBehaviour
         return transform.position.x == grillBXCoordinates;
     }
 
-    Vector3 newKayaPosition() {
+    Vector3 newKayaPosition() { 
         return transform.position + new Vector3(0.01f, 0.182f, 0.032f);
     }
-
     Vector3 newButterPosition() {
         return transform.position + new Vector3(0.005f, 0.247f, 0.129f);
     }
