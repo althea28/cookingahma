@@ -23,6 +23,7 @@ public class toasttutorial : MonoBehaviour
         {
             if (isPrevDisplayed)
             {
+
                 HidePrevText();
                 isPrevDisplayed = false;
             }
@@ -41,6 +42,7 @@ public class toasttutorial : MonoBehaviour
     {
         if (clickCount == 1)
         {
+            Debug.Log("fb1 shown");
             feedbackText1.SetActive(true); 
 
         }
