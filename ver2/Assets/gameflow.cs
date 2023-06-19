@@ -5,6 +5,8 @@ using UnityEngine;
 public class gameflow : MonoBehaviour
 {
 
+    public static int customersServed = 0;
+
     public static Vector3 boardACoordinates = new Vector3(2.9f,3.08f,3.37f);
     public static Vector3 boardBCoordinates = new Vector3(0.52f,3.08f,3.37f);
     public static Vector3 grillACoordinates = new Vector3(-2.15f, 3.072f, 3.3f);
@@ -46,7 +48,8 @@ public class gameflow : MonoBehaviour
 
     public static string toastAIsClicked = "n";
     public static string toastBIsClicked = "n";
-
+    public static string trashA = "n";
+    public static string trashB = "n";
     
     /*==========
     public static string isCustomerClicked = "n";

@@ -29,11 +29,13 @@ public class customer : MonoBehaviour
             Destroy (gameObject);
             destroyReq();
             customerReset(transform.position);
+            gameflow.customersServed += 1;
         } else if ((gameflow.toastBIsClicked == "y") && (toastclick.isToastBReady == "y"))  {
             toastclick.serveToastB = "y"; //triggers serveB() in toastclick.update()
             Destroy (gameObject);
             destroyReq();
             customerReset(transform.position);
+            gameflow.customersServed += 1;
         }
         //reset
         gameflow.toastAIsClicked = "n";
