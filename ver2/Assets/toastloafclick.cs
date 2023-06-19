@@ -22,10 +22,10 @@ public class toastloafclick : MonoBehaviour
 
     void OnMouseDown() {
         if (gameflow.toastOnGrillA == "n") {
-            Instantiate(toastObj, new Vector3(-2.15f,3.072f,3.3f), toastObj.rotation);
+            Instantiate(toastObj, gameflow.grillACoordinates, toastObj.rotation);
             gameflow.toastOnGrillA = "y";
         } else if (gameflow.toastOnGrillB == "n") {
-            Instantiate(toastObj, new Vector3(-3.94f,3.072f,3.3f), toastObj.rotation);
+            Instantiate(toastObj, gameflow.grillBCoordinates, toastObj.rotation);
             gameflow.toastOnGrillB = "y";
         }
     }

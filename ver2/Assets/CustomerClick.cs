@@ -5,6 +5,7 @@ using UnityEngine;
 public class CustomerClick : MonoBehaviour
 {
 
+/*==============
     void OnMouseDown() {
         Debug.Log("Click");
         if (gameflow.isToastClicked == "y")
@@ -19,6 +20,7 @@ public class CustomerClick : MonoBehaviour
         }
         gameflow.isToastClicked = "n";
     }
+    */ //===============
 
     void Update() {
 

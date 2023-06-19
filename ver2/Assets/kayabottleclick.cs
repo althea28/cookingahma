@@ -21,6 +21,5 @@ public class kayabottleclick : MonoBehaviour
 
     void OnMouseDown() {
         gameflow.placeKaya = "y";
-        //Instantiate(kayaObj, new Vector3(-1.8f, 3.2f, 3.35f), kayaObj.rotation);
     }
 }
