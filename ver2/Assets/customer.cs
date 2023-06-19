@@ -37,6 +37,7 @@ public class customer : MonoBehaviour
             customerReset(transform.position);
             gameflow.customersServed += 1;
         }
+        Debug.Log("Current value of customersServed: " + gameflow.customersServed);
         //reset
         gameflow.toastAIsClicked = "n";
         gameflow.toastBIsClicked = "n";
