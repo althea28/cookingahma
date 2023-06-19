@@ -9,20 +9,10 @@ public class toastclick : MonoBehaviour
     public Transform butterObj;
     public Transform steamObj;
 
-    private float boardAXCoordinates = 2.9f;
-    private float boardBXCoordinates = 0.52f;
-    private float grillAXCoordinates = -2.15f;
-    private float grillBXCoordinates = -3.94f;
-    private Vector3 boardACoordinates = new Vector3(2.9f,3.08f,3.366f);
-    private Vector3 boardBCoordinates = new Vector3(0.52f,3.08f,3.366f);
-
-
     private static string hasKayaOnA = "n";
     private static string hasKayaOnB = "n";
     private static string hasButterOnA = "n";
     private static string hasButterOnB = "n";
-
-    private GameObject instantiatedKayaObj;
 
     public float cookingTimeA = 0;
     public float cookingTimeB = 0;
@@ -31,10 +21,16 @@ public class toastclick : MonoBehaviour
     public static string toastAIsBurnt = "n";
     public static string toastBIsBurnt = "n";
     private float timeForToastToCook = 3;
-    private float timeForToastToBurn = 10;
+    private float timeForToastToBurn = 5; //shld b 10 but change to 5 for faster debugging
 
-    public GameObject customer;
-    private bool isToastReady = false; 
+    //toastAIsCooked is for material change. toastOnBoardAIsCooked is for when checking if dish is correct
+    public static string toastOnBoardAIsCooked = "n";     
+    public static string toastOnBoardBIsCooked = "n";
+    public static string isToastAReady = "n";
+    public static string isToastBReady = "n";
+
+    public static string serveToastA = "n";
+    public static string serveToastB = "n";
 
     // Start is called before the first frame update
     void Start()
@@ -45,20 +41,15 @@ public class toastclick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameflow.isToastClicked =="y") {
-            Debug.Log("clicked2");
+        //check if toast can be served     
+        if ((toastOnBoardAIsCooked == "y") && (hasKayaOnA == "y") && (hasButterOnA == "y")) {
+            isToastAReady = "y";
         }
-        if (gameflow.destroyToast == "y" && isToastReady) {
-            Debug.Log("toast to serve");
-            GetComponent<Transform> ().position = new Vector3(3,3,10); // shift toast out of camera view
-            gameflow.destroyKaya = "y"; // change condition to call Update() in kayaspreadclick.cs
-            gameflow.destroyButter = "y"; // change condition to call Update() in butterclick.cs
-            if (gameflow.toastOnBoardA == "y") {
-                gameflow.toastOnBoardA = "n"; 
-            } else {
-                gameflow.toastOnBoardB = "n";
-            }
+        if ((toastOnBoardBIsCooked == "y") && (hasKayaOnB == "y") && (hasButterOnB == "y")) {
+            isToastBReady = "y";
         }
+                
+
         if (isOnGrillA()) {
             cookingTimeA += Time.deltaTime;
             if (cookingTimeA > timeForToastToCook) { 
@@ -77,29 +68,40 @@ public class toastclick : MonoBehaviour
             }
         }
 
+        if (serveToastA == "y") {
+            serveA();
+        } else if (serveToastB == "y") {
+            serveB();
+        }
+
     }
 
     void OnMouseDown() {
-        //GetComponent<Transform> ().position = new Vector3(2.9f,3.082f,3.366f);
-        //for reference, x coords are: boardA=2.9, boardB=0.52, grillA= -2.15f, grillB= -3.94
-        if (isToastReady) {
-            if ((gameflow.isToastClicked == "n")) {
-                Debug.Log("clicked");
-                gameflow.isToastClicked = "y";
+        
+        //in case of double click. needs to b at the top
+        if ((gameflow.toastAIsClicked == "y") || (gameflow.toastBIsClicked == "y")) {
+            gameflow.toastAIsClicked = "n";
+            gameflow.toastBIsClicked = "n";
+        }
+
+        if ((isOnBoard()) && (gameflow.placeButter == "n") && (gameflow.placeKaya == "n")) {
+            if (isOnBoardA()) {
+                gameflow.toastAIsClicked = "y";
+            } else {
+                gameflow.toastBIsClicked = "y";
             }
-        } else {
-            if ((gameflow.placeKaya == "y") && (isOnBoard())) { //placing kaya && toast on board
+
+        } else if ((gameflow.placeKaya == "y") && (isOnBoard())) { //placing kaya && toast on board
             if ((isOnBoardA()) && (hasKayaOnA == "n")) {
                 hasKayaOnA = "y";
                 Instantiate(kayaObj, newKayaPosition(), kayaObj.rotation);
-            } else if ((isOnBoardB()) && (hasKayaOnB == "n")) {
-                Debug.Log("B");
+            } else if ((isOnBoardB()) && (hasKayaOnB == "n")) { 
                 hasKayaOnB = "y";
                 Instantiate(kayaObj, newKayaPosition(), kayaObj.rotation);
             }
 
-            } else if ((gameflow.placeButter == "y")  && (isOnBoard())) { //placing butter && toast on board
-            isToastReady = true;
+        } else if ((gameflow.placeButter == "y")  && (isOnBoard())) { //placing butter && toast on board
+            //isToastReady = true;
             if ((isOnBoardA()) && (hasKayaOnA == "y") && (hasButterOnA == "n")) {
                 hasButterOnA = "y";
                 Instantiate(butterObj, newButterPosition(), butterObj.rotation);
@@ -108,49 +110,42 @@ public class toastclick : MonoBehaviour
                 Instantiate(butterObj, newButterPosition(), butterObj.rotation);
             } 
 
-            } else if ((isOnGrill()) && (gameflow.toastOnBoardA == "n")) { //moving from grill to boardA
+        } else if ((isOnGrill()) && (gameflow.toastOnBoardA == "n")) { //moving from grill to boardA
+            checkIfCookedWellA();
             resetAfterMoving();
-            GetComponent<Transform> ().position = boardACoordinates;
+            GetComponent<Transform> ().position = gameflow.boardACoordinates;
             gameflow.toastOnBoardA = "y";
 
-            } else if ((isOnGrill()) && (gameflow.toastOnBoardB == "n")) { //moving from grill to boardB
+        } else if ((isOnGrill()) && (gameflow.toastOnBoardB == "n")) { //moving from grill to boardB
+            checkIfCookedWellB();
             resetAfterMoving();
-            GetComponent<Transform> ().position = boardBCoordinates;
+            GetComponent<Transform> ().position = gameflow.boardBCoordinates;
             gameflow.toastOnBoardB = "y";
-            }
-            gameflow.placeButter = "n";
-            gameflow.placeKaya = "n";
         }
-        
-        /*} else if (gameflow.toastOnBoardA == "y" && gameflow.placeKaya == "n" && gameflow.placeButter == "n") { 
-            //serving completed dish. But how to shift the kaya n butter :( 
-            GetComponent<Transform>().position = new Vector3(2, 5.2f, 0);
-            Instantiate(kayaObj, new Vector3(2,5.4f,0), kayaObj.rotation);
-            Instantiate(butterObj, new Vector3(2,5.5f,0), butterObj.rotation);
-            gameflow.toastOnBoardA = "y";
 
-        }*/
         //reset, so don't get trapped
+        gameflow.placeButter = "n";
+        gameflow.placeKaya = "n";     
+        
 
     }
 
-    /*void OnMouseUp()
-    {
-         
-        if ((isToastClicked == "y") && (gameflow.isCustomerClicked == "y"))
-        {
-            ServeToastToCustomer();
+    void checkIfCookedWellA() { 
+        //toast is going to A, but dont know where it is on grill ==> end goal is ToastOnBoardAIsCooked
+        if (((isOnGrillA()) && (toastAIsCooked == "y") && (toastAIsBurnt == "n")) ||
+            ((isOnGrillB()) && (toastBIsCooked == "y") && (toastBIsBurnt == "n"))) {
+            toastOnBoardAIsCooked = "y";
         }
-    }*/
-    /*void ServeToastToCustomer()
-    {
-        if ((isToastClicked == "y") && (gameflow.isCustomerClicked == "y"))
-        {
-            Debug.Log("Destroying");
-            Destroy(customer);
-            Destroy(gameObject);
+    }
+
+    void checkIfCookedWellB() { 
+        //toast is going to B, but dont know where it is on grill ==> end goal is ToastOnBoardBIsCooked
+        if (((isOnGrillA()) && (toastAIsCooked == "y") && (toastAIsBurnt == "n")) ||
+            ((isOnGrillB()) && (toastBIsCooked == "y") && (toastBIsBurnt == "n"))) {
+            toastOnBoardBIsCooked = "y";
         }
-    }*/
+    }
+
 
     void resetAfterMoving() {
         if (isOnGrillA()) {
@@ -171,34 +166,82 @@ public class toastclick : MonoBehaviour
         }
     }
 
+    void resetA() {
+        hasKayaOnA = "n";
+        hasButterOnA = "n";
+        toastOnBoardAIsCooked = "n";
+        isToastAReady = "n";
+        gameflow.toastOnBoardA = "n";
+    }
+
+    void resetB() {
+        hasKayaOnB = "n";
+        hasButterOnB = "n";
+        toastOnBoardBIsCooked = "n";
+        isToastBReady = "n";
+        gameflow.toastOnBoardB = "n";
+    }
+
+    void serveA() {
+        if (transform.position == gameflow.boardACoordinates) {
+            Destroy (gameObject);
+            kayaspreadclick.destroyKayaA = "y";
+            butterspreadclick.destroyButterA = "y";
+            /*hasKayaOnA = "n";
+            hasButterOnA = "n";
+            toastOnBoardAIsCooked = "n";
+            isToastAReady = "n";
+            gameflow.toastOnBoardA = "n";*/
+            serveToastA = "n";
+            resetA();
+        }
+    }
+
+    void serveB() {
+        if (transform.position == gameflow.boardBCoordinates) {
+            Destroy (gameObject);
+            kayaspreadclick.destroyKayaB = "y";
+            butterspreadclick.destroyButterB = "y";
+            /*hasKayaOnB = "n";
+            hasButterOnB = "n";
+            toastOnBoardBIsCooked = "n";
+            isToastBReady = "n";
+            gameflow.toastOnBoardB = "n";*/
+            serveToastB = "n";
+            resetB();
+        }
+    }
+
+
     bool isOnBoard() {
-        return ((transform.position.x == boardAXCoordinates) || (transform.position.x == boardBXCoordinates));
+        return ((isOnBoardA()) || (isOnBoardB()));
     }
     
     bool isOnBoardA() {
-        return transform.position.x == boardAXCoordinates;
+        return transform.position == gameflow.boardACoordinates;
     }
     
     bool isOnBoardB() {
-        return transform.position.x == boardBXCoordinates;
+        return transform.position == gameflow.boardBCoordinates;
     }
     
     bool isOnGrill() {
-        return ((transform.position.x == grillAXCoordinates) || (transform.position.x == grillBXCoordinates));
+        return ((isOnGrillA()) || (isOnGrillB()));
     }
 
     bool isOnGrillA() {
-        return transform.position.x == grillAXCoordinates;
+        return transform.position == gameflow.grillACoordinates;
     }
 
     bool isOnGrillB() {
-        return transform.position.x == grillBXCoordinates;
+        return transform.position == gameflow.grillBCoordinates;
     }
 
     Vector3 newKayaPosition() { 
-        return transform.position + new Vector3(0.01f, 0.182f, 0.032f);
+        return transform.position + gameflow.addKayaCoordinates;
     }
+
     Vector3 newButterPosition() {
-        return transform.position + new Vector3(0.005f, 0.247f, 0.129f);
+        return transform.position + gameflow.addButterCoordinates;
     }
 }
