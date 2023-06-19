@@ -305,7 +305,10 @@
 "Assets/butterclick.cs"
 "Assets/butterspreadclick.cs"
 "Assets/buttertutorial.cs"
+"Assets/customer.cs"
 "Assets/CustomerClick.cs"
+"Assets/CustServed.cs"
+"Assets/CustServed2.cs"
 "Assets/gameflow.cs"
 "Assets/kayabottleclick.cs"
 "Assets/kayaspreadclick.cs"
@@ -320,9 +323,11 @@
 "Assets/timerslider.cs"
 "Assets/toastclick.cs"
 "Assets/toastInner.cs"
-"Assets/toastloafclick.cs"
+"Assets/toastloaf.cs"
 "Assets/toastloaftutorial.cs"
+"Assets/toastReq.cs"
 "Assets/toasttutorial.cs"
+"Assets/trashclick.cs"
 -langversion:9.0
 
 /deterministic

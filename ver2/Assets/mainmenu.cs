@@ -19,4 +19,9 @@ public class mainmenu : MonoBehaviour
    {
      Application.Quit();
    }
+   
+   public void TryAgain () 
+   { 
+    SceneManager.LoadScene(1);
+   }
 }
