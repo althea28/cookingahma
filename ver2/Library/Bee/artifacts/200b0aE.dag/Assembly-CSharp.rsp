@@ -365,10 +365,10 @@
 "Assets/toastclick.cs"
 "Assets/toastInner.cs"
 "Assets/toastloaf.cs"
-"Assets/toastloafclick.cs"
 "Assets/toastloaftutorial.cs"
 "Assets/toastReq.cs"
 "Assets/toasttutorial.cs"
+"Assets/trashclick.cs"
 -langversion:9.0
 
 /deterministic

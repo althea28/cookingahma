@@ -48,6 +48,16 @@ public class toastclick : MonoBehaviour
         if ((toastOnBoardBIsCooked == "y") && (hasKayaOnB == "y") && (hasButterOnB == "y")) {
             isToastBReady = "y";
         }
+
+        //check to trash
+        if ((gameflow.trashA == "y") && (transform.position == gameflow.boardACoordinates)) {
+            trashANow();
+            gameflow.trashA = "n";
+        }
+        if ((gameflow.trashB == "y") && (transform.position == gameflow.boardBCoordinates)) {
+            trashBNow();
+            gameflow.trashB = "n";
+        }
                 
 
         if (isOnGrillA()) {
@@ -101,7 +111,6 @@ public class toastclick : MonoBehaviour
             }
 
         } else if ((gameflow.placeButter == "y")  && (isOnBoard())) { //placing butter && toast on board
-            //isToastReady = true;
             if ((isOnBoardA()) && (hasKayaOnA == "y") && (hasButterOnA == "n")) {
                 hasButterOnA = "y";
                 Instantiate(butterObj, newButterPosition(), butterObj.rotation);
@@ -129,6 +138,30 @@ public class toastclick : MonoBehaviour
         
 
     }
+
+    void trashANow() {
+        Destroy (gameObject);
+        if (hasKayaOnA == "y") {
+            kayaspreadclick.destroyKayaA = "y";
+        }
+        if (hasButterOnA == "y") {
+            butterspreadclick.destroyButterA = "y";
+        }
+        resetA();
+    }
+
+    void trashBNow() {
+        Destroy (gameObject);
+        if (hasKayaOnB == "y") {
+            kayaspreadclick.destroyKayaB = "y";
+        }
+        if (hasButterOnB == "y") {
+            butterspreadclick.destroyButterB = "y";
+        }
+        resetB();
+    }
+
+
 
     void checkIfCookedWellA() { 
         //toast is going to A, but dont know where it is on grill ==> end goal is ToastOnBoardAIsCooked
@@ -187,11 +220,6 @@ public class toastclick : MonoBehaviour
             Destroy (gameObject);
             kayaspreadclick.destroyKayaA = "y";
             butterspreadclick.destroyButterA = "y";
-            /*hasKayaOnA = "n";
-            hasButterOnA = "n";
-            toastOnBoardAIsCooked = "n";
-            isToastAReady = "n";
-            gameflow.toastOnBoardA = "n";*/
             serveToastA = "n";
             resetA();
         }
@@ -202,11 +230,6 @@ public class toastclick : MonoBehaviour
             Destroy (gameObject);
             kayaspreadclick.destroyKayaB = "y";
             butterspreadclick.destroyButterB = "y";
-            /*hasKayaOnB = "n";
-            hasButterOnB = "n";
-            toastOnBoardBIsCooked = "n";
-            isToastBReady = "n";
-            gameflow.toastOnBoardB = "n";*/
             serveToastB = "n";
             resetB();
         }
