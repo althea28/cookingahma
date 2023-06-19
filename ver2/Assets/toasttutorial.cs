@@ -9,6 +9,7 @@ public class toasttutorial : MonoBehaviour
     public GameObject feedbackText3;
     public GameObject kayaText;
     public GameObject butterText;
+    public GameObject serveCustomer;
     private bool isPrevDisplayed = true;
     private int clickCount = 0;
 
@@ -59,6 +60,12 @@ public class toasttutorial : MonoBehaviour
             HideButterText();
             feedbackText3.SetActive(true);
 
+        }
+
+        else if (clickCount == 4)
+        {
+            feedbackText3.SetActive(false);
+            serveCustomer.SetActive(true);
         }
     }
 

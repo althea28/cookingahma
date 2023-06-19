@@ -2,10 +2,17 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CustomerClick
+    - GameEnd
     - appear
     - butterclick
     - butterspreadclick
     - buttertutorial
+<<<<<<< Updated upstream
+=======
+    - customer
+    - customertutorial
+    - gameflow
+>>>>>>> Stashed changes
     - kayabottleclick
     - kayaspreadclick
     - kayatutorial
@@ -26,7 +33,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
-    - TMPro.TextMeshPro
     - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -92,6 +98,33 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: GameEnd
+    methodName: TryClicked
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   sceneClasses:
     Assets/Scenes/Game.unity:
     - Class: 1
@@ -131,10 +164,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1654}
     - Class: 114
-      Script: {instanceID: 2570}
+      Script: {instanceID: 2320}
     - Class: 114
-      Script: {instanceID: 2768}
+      Script: {instanceID: 2574}
     - Class: 114
+<<<<<<< Updated upstream
       Script: {instanceID: 3292}
     - Class: 114
       Script: {instanceID: 3976}
@@ -164,6 +198,47 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6950}
     - Class: 114
       Script: {instanceID: 7310}
+=======
+      Script: {instanceID: 2772}
+    - Class: 114
+      Script: {instanceID: 2952}
+    - Class: 114
+      Script: {instanceID: 3066}
+    - Class: 114
+      Script: {instanceID: 3086}
+    - Class: 114
+      Script: {instanceID: 3304}
+    - Class: 114
+      Script: {instanceID: 3988}
+    - Class: 114
+      Script: {instanceID: 4742}
+    - Class: 114
+      Script: {instanceID: 4780}
+    - Class: 114
+      Script: {instanceID: 4812}
+    - Class: 114
+      Script: {instanceID: 4896}
+    - Class: 114
+      Script: {instanceID: 4952}
+    - Class: 114
+      Script: {instanceID: 4968}
+    - Class: 114
+      Script: {instanceID: 4998}
+    - Class: 114
+      Script: {instanceID: 5160}
+    - Class: 114
+      Script: {instanceID: 5186}
+    - Class: 114
+      Script: {instanceID: 5510}
+    - Class: 114
+      Script: {instanceID: 5656}
+    - Class: 114
+      Script: {instanceID: 5964}
+    - Class: 114
+      Script: {instanceID: 6960}
+    - Class: 114
+      Script: {instanceID: 7320}
+>>>>>>> Stashed changes
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -175,6 +250,65 @@ ScriptsOnlyBuild:
     - Class: 198
       Script: {instanceID: 0}
     - Class: 199
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/GameOver.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1584}
+    - Class: 114
+      Script: {instanceID: 2574}
+    - Class: 114
+      Script: {instanceID: 2772}
+    - Class: 114
+      Script: {instanceID: 3052}
+    - Class: 114
+      Script: {instanceID: 4628}
+    - Class: 114
+      Script: {instanceID: 4896}
+    - Class: 114
+      Script: {instanceID: 4968}
+    - Class: 114
+      Script: {instanceID: 5510}
+    - Class: 114
+      Script: {instanceID: 5656}
+    - Class: 114
+      Script: {instanceID: 5964}
+    - Class: 114
+      Script: {instanceID: 6960}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -212,10 +346,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2160}
     - Class: 114
-      Script: {instanceID: 2570}
+      Script: {instanceID: 2320}
     - Class: 114
-      Script: {instanceID: 2768}
+      Script: {instanceID: 2574}
     - Class: 114
+<<<<<<< Updated upstream
       Script: {instanceID: 3046}
     - Class: 114
       Script: {instanceID: 4026}
@@ -233,6 +368,92 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5646}
     - Class: 114
       Script: {instanceID: 5954}
+=======
+      Script: {instanceID: 2772}
+    - Class: 114
+      Script: {instanceID: 3052}
+    - Class: 114
+      Script: {instanceID: 3066}
+    - Class: 114
+      Script: {instanceID: 4038}
+    - Class: 114
+      Script: {instanceID: 4284}
+    - Class: 114
+      Script: {instanceID: 4628}
+    - Class: 114
+      Script: {instanceID: 4896}
+    - Class: 114
+      Script: {instanceID: 4968}
+    - Class: 114
+      Script: {instanceID: 5510}
+    - Class: 114
+      Script: {instanceID: 5656}
+    - Class: 114
+      Script: {instanceID: 5964}
+    - Class: 114
+      Script: {instanceID: 6960}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Success.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1584}
+    - Class: 114
+      Script: {instanceID: 2320}
+    - Class: 114
+      Script: {instanceID: 2548}
+    - Class: 114
+      Script: {instanceID: 2574}
+    - Class: 114
+      Script: {instanceID: 2772}
+    - Class: 114
+      Script: {instanceID: 3052}
+    - Class: 114
+      Script: {instanceID: 4896}
+    - Class: 114
+      Script: {instanceID: 4968}
+    - Class: 114
+      Script: {instanceID: 5510}
+    - Class: 114
+      Script: {instanceID: 5656}
+    - Class: 114
+      Script: {instanceID: 5964}
+    - Class: 114
+      Script: {instanceID: 6960}
+>>>>>>> Stashed changes
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -289,10 +510,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2094}
     - Class: 114
-      Script: {instanceID: 2570}
+      Script: {instanceID: 2574}
     - Class: 114
-      Script: {instanceID: 2768}
+      Script: {instanceID: 2772}
     - Class: 114
+<<<<<<< Updated upstream
       Script: {instanceID: 3292}
     - Class: 114
       Script: {instanceID: 3472}
@@ -326,11 +548,54 @@ ScriptsOnlyBuild:
       Script: {instanceID: 7264}
     - Class: 114
       Script: {instanceID: 7310}
+=======
+      Script: {instanceID: 2952}
+    - Class: 114
+      Script: {instanceID: 3086}
+    - Class: 114
+      Script: {instanceID: 3304}
+    - Class: 114
+      Script: {instanceID: 3988}
+    - Class: 114
+      Script: {instanceID: 4742}
+    - Class: 114
+      Script: {instanceID: 4780}
+    - Class: 114
+      Script: {instanceID: 4812}
+    - Class: 114
+      Script: {instanceID: 4896}
+    - Class: 114
+      Script: {instanceID: 4952}
+    - Class: 114
+      Script: {instanceID: 4968}
+    - Class: 114
+      Script: {instanceID: 4998}
+    - Class: 114
+      Script: {instanceID: 5160}
+    - Class: 114
+      Script: {instanceID: 5186}
+    - Class: 114
+      Script: {instanceID: 5320}
+    - Class: 114
+      Script: {instanceID: 5510}
+    - Class: 114
+      Script: {instanceID: 5656}
+    - Class: 114
+      Script: {instanceID: 5964}
+    - Class: 114
+      Script: {instanceID: 6286}
+    - Class: 114
+      Script: {instanceID: 6960}
+    - Class: 114
+      Script: {instanceID: 7274}
+    - Class: 114
+      Script: {instanceID: 7320}
+    - Class: 114
+      Script: {instanceID: 872646}
+>>>>>>> Stashed changes
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
-      Script: {instanceID: 0}
-    - Class: 135
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -471,6 +736,12 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: 2e715192b9f8784972fbd988b5fb7a13
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CustServed2
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -481,6 +752,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: timer
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameEnd
   - hash:
       serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
@@ -589,6 +866,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: f35843b48866a6774a30778e5ca7c964
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CustServed
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1197,7 +1480,7 @@ ScriptsOnlyBuild:
     className: Variables
   - hash:
       serializedVersion: 2
-      Hash: 2e18a5cb256a15205bdbb483dc5f17ed
+      Hash: 8d193cc6e36724db00a5a7bbdf8410e8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: toasttutorial
@@ -1255,9 +1538,20 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+<<<<<<< Updated upstream
+=======
+  - hash:
+      serializedVersion: 2
+      Hash: 0199c430932953689b15d31850a7f70b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: customertutorial
+>>>>>>> Stashed changes
   platform: 2
   scenePathNames:
   - Assets/Scenes/NEWMainMenu.unity
   - Assets/Scenes/Game.unity
   - Assets/Scenes/Tutorial.unity
+  - Assets/Scenes/Success.unity
+  - Assets/Scenes/GameOver.unity
   playerPath: /Users/Amber/Documents/GitHub/cookingahma/ver2/test.app

@@ -50,6 +50,9 @@ public class gameflow : MonoBehaviour
     public static string toastBIsClicked = "n";
     public static string trashA = "n";
     public static string trashB = "n";
+
+    public static int count = 0;
+
     
     /*==========
     public static string isCustomerClicked = "n";
@@ -127,9 +130,6 @@ public class gameflow : MonoBehaviour
     public Vector3 kayaBCoordinates() {
         return (boardBCoordinates + addKayaCoordinates);
     }
-
-
-
 
 
 

@@ -350,6 +350,13 @@
 "Assets/buttertutorial.cs"
 "Assets/customer.cs"
 "Assets/CustomerClick.cs"
+<<<<<<< Updated upstream
+=======
+"Assets/customertutorial.cs"
+"Assets/CustServed.cs"
+"Assets/CustServed2.cs"
+"Assets/GameEnd.cs"
+>>>>>>> Stashed changes
 "Assets/gameflow.cs"
 "Assets/kayabottleclick.cs"
 "Assets/kayaspreadclick.cs"

@@ -19,4 +19,9 @@ public class mainmenu : MonoBehaviour
    {
      Application.Quit();
    }
+<<<<<<< Updated upstream
+=======
+   
+
+>>>>>>> Stashed changes
 }
