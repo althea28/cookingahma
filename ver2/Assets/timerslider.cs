@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class timerslider : MonoBehaviour
 {
@@ -14,8 +13,7 @@ public class timerslider : MonoBehaviour
     public GameObject timerTextObject; 
     private Image sliderFillImage; 
     private Color startColor = Color.green;  
-    private Color endColor = Color.red; //  
-
+    private Color endColor = Color.red; 
 
     void Start()
     {
@@ -36,12 +34,10 @@ public class timerslider : MonoBehaviour
         int mins = Mathf.FloorToInt(time / 60);
         int secs = Mathf.FloorToInt(time - mins * 60f);
         string textTime = string.Format("{0:0}:{1:00}", mins, secs);
-<<<<<<< Updated upstream
-        if (time <= 0)
-=======
+
 
         if (gameflow.count > 0 && time <= 0)
->>>>>>> Stashed changes
+
         {
             Debug.Log("Here");
             ResetTimer();
@@ -50,7 +46,19 @@ public class timerslider : MonoBehaviour
         {
             gameflow.count++;
             stopTimer = true;
+
+            if (gameflow.customersServed >= 5)
+            {
+                // Transition to success scene, player has served 5/5 or more.
+                SceneManager.LoadScene(3);
+            }
+            else
+            {
+                // Transition to game over scene
+                SceneManager.LoadScene(4);
+            }
         }
+
         if (!stopTimer)
         {
             timerText.text = textTime;
@@ -61,9 +69,6 @@ public class timerslider : MonoBehaviour
             sliderFillImage.color = Color.Lerp(endColor, startColor, t);
         }
     }
-<<<<<<< Updated upstream
-=======
-
     void ResetTimer()
     {
         stopTimer = false;
@@ -74,5 +79,12 @@ public class timerslider : MonoBehaviour
         string textTime = string.Format("{0:0}:{1:00}", mins, secs);
         timerText.text = textTime;
     }
->>>>>>> Stashed changes
+
+    public void RestartTimer()
+    {
+        stopTimer = false;
+        timerSlider.value = gameTime;
+        timerText.text = string.Format("{0:0}:{1:00}", Mathf.FloorToInt(gameTime / 60), Mathf.FloorToInt(gameTime % 60));
+    }
+
 }

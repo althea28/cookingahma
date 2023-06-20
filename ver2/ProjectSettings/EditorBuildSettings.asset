@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/IGNORE_tutorial.unity
     guid: 4f3ed972caea24aed8eb7b18792f5aa1
+  - enabled: 1
+    path: Assets/Scenes/Success.unity
+    guid: 10c28084d82494d5a85ef09fe0676a52
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 5d49824d9d7794a639b63748ae6d68a8
   m_configObjects: {}

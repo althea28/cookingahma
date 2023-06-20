@@ -19,9 +19,10 @@ public class mainmenu : MonoBehaviour
    {
      Application.Quit();
    }
-<<<<<<< Updated upstream
-=======
    
+   public void TryAgain () 
+   { 
+    SceneManager.LoadScene(1);
+   }
 
->>>>>>> Stashed changes
 }
