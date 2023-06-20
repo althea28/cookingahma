@@ -364,6 +364,7 @@
 "Assets/move.cs"
 "Assets/quit.cs"
 "Assets/spawn.cs"
+"Assets/stats.cs"
 "Assets/steamclick.cs"
 "Assets/timer.cs"
 "Assets/timerslider.cs"

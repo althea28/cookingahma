@@ -8,5 +8,6 @@ public class quit : MonoBehaviour
     public void OnMouseDown()
     {
         SceneManager.LoadScene(0);
+        gameflow.customersServed = 0;
     }
 }
