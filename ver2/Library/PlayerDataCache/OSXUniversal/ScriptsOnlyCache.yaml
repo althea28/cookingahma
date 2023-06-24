@@ -27,6 +27,7 @@ ScriptsOnlyBuild:
     - toastloaf
     - toastloaftutorial
     - toasttutorial
+    - trashclick
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -166,6 +167,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3068}
     - Class: 114
+      Script: {instanceID: 3082}
+    - Class: 114
       Script: {instanceID: 3088}
     - Class: 114
       Script: {instanceID: 3306}
@@ -285,7 +288,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
