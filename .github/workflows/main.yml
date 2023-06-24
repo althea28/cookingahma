@@ -31,8 +31,13 @@ jobs:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           projectPath: ver2
           
+      
 
       # Build
+      - name: Log branch status
+        run: |
+          git status
+          git diff
       - name: Build project
         uses: game-ci/unity-builder@v2
         env:
