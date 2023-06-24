@@ -65,10 +65,36 @@ public class gameflow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("gameflowstarted");
+
+        toastOnGrillA = "n";
+        toastOnGrillB = "n";
+        toastOnBoardA = "n";
+        toastOnBoardB = "n";
+    
+        //placeKaya = "n"; 
+        //placeButter = "n";
+
+        destroySteamA = "n";
+        destroySteamB = "n";
+
         customerOnA = "n";
         customerOnB = "n";
         customerOnC = "n";
+        dishOnA = "none";
+        dishOnB = "none";
+        dishOnC = "none";
+        timeWithoutCustomerOnA = 0;
+        timeWithoutCustomerOnB = 0;
+        timeWithoutCustomerOnC = 0;
+
+        trashA = "n";
+        trashB = "n";
+
+        resetClicking();
+
+
+
+
 
         
     }
@@ -136,6 +162,15 @@ public class gameflow : MonoBehaviour
     public Vector3 kayaBCoordinates() {
         return (boardBCoordinates + addKayaCoordinates);
     }
+
+    public void resetClicking() {
+        placeKaya = "n"; 
+        placeButter = "n";
+        toastAIsClicked = "n";
+        toastBIsClicked = "n";
+    }
+
+
 
 
 
