@@ -34,7 +34,7 @@ public class buttertutorial : MonoBehaviour
 
     private void ClickIngredient()
     {
-        Debug.Log("Ingredient clicked!");
+        //Debug.Log("Ingredient clicked!");
         feedbackText.SetActive(true);
 
     }

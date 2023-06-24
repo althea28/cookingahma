@@ -65,12 +65,18 @@ public class gameflow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("gameflowstarted");
+        customerOnA = "n";
+        customerOnB = "n";
+        customerOnC = "n";
+
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("cusA "+customerOnA+" cusB "+customerOnB+ " cusC "+customerOnC);
         //add time passed without customer at each spot
         if (customerOnA == "n") {
             timeWithoutCustomerOnA += Time.deltaTime;

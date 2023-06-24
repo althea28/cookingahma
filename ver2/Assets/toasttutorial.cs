@@ -43,20 +43,20 @@ public class toasttutorial : MonoBehaviour
     {
         if (clickCount == 1)
         {
-            Debug.Log("fb1 shown");
+            //Debug.Log("fb1 shown");
             feedbackText1.SetActive(true); 
 
         }
         else if (clickCount == 2)
         {        
-            Debug.Log("2nd click!");
+            //Debug.Log("2nd click!");
             HideKayaText();
             feedbackText2.SetActive(true);
 
         }
         else if (clickCount == 3)
         {        
-            Debug.Log("3rd click!");
+            //Debug.Log("3rd click!");
             HideButterText();
             feedbackText3.SetActive(true);
 

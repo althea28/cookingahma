@@ -32,7 +32,7 @@ public class toastloaftutorial : MonoBehaviour
 
     private void ClickIngredient()
     {
-        Debug.Log("Ingredient collected!");
+        //Debug.Log("Ingredient collected!");
 
         if (clickCount == 1)
         {

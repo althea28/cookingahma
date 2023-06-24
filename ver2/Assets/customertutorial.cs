@@ -34,7 +34,7 @@ public class customertutorial : MonoBehaviour
 
     private void ClickCustomer()
     {
-        Debug.Log("Customer clicked!");
+        //Debug.Log("Customer clicked!");
         feedbackText.SetActive(true);
 
     }

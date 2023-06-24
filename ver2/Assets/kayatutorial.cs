@@ -20,7 +20,7 @@ public class kayatutorial : MonoBehaviour
             if (isPrevDisplayed)
             {
                 HidePrevText();
-                Debug.Log("Prev text hidden!");
+                //Debug.Log("Prev text hidden!");
 
                 isPrevDisplayed = false;
             }
@@ -36,7 +36,7 @@ public class kayatutorial : MonoBehaviour
 
     private void ClickIngredient()
     {
-        Debug.Log("Ingredient clicked!");
+        //Debug.Log("Ingredient clicked!");
 
         feedbackText.SetActive(true);
 
