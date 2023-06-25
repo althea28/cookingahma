@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class buttertutorial : MonoBehaviour
+public class kayatutorial : MonoBehaviour
 {
     public GameObject prevText;
     public GameObject feedbackText;
@@ -10,16 +10,27 @@ public class buttertutorial : MonoBehaviour
 
     private void Start()
     {
+        isPrevDisplayed = true;
+        isClicked =false;
 
+    }
+
+    private void Update() 
+    {
+        
     }
 
     private void OnMouseDown()
     {
-        if (!isClicked)
+        //=====
+        if ((!isClicked) && (tutorialflow.moveToGrill == "y") && 
+            (tutorialflow.addedToastB == "y") && (tutorialflow.addedKaya == "n"))
         {
             if (isPrevDisplayed)
             {
                 HidePrevText();
+                //Debug.Log("Prev text hidden!");
+
                 isPrevDisplayed = false;
             }
             ClickIngredient();
@@ -35,7 +46,11 @@ public class buttertutorial : MonoBehaviour
     private void ClickIngredient()
     {
         //Debug.Log("Ingredient clicked!");
+
         feedbackText.SetActive(true);
+
+        //====
+        tutorialflow.kayaClicked = "y";
 
     }
 

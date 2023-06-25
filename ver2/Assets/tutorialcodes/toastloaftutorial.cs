@@ -7,11 +7,18 @@ public class toastloaftutorial : MonoBehaviour
     public GameObject feedbackText2;
     private bool isInstructionDisplayed = true;
     private int clickCount = 0;
+    
+    //=====
+    public Transform toastAObj;
+    public Transform toastBObj;
+
 
     private void Start()
     {
         instructionText.SetActive(true);
     }
+
+   
 
     private void OnMouseDown()
     {
@@ -19,6 +26,7 @@ public class toastloaftutorial : MonoBehaviour
         {
             HideInstructionText();
             isInstructionDisplayed = false;
+
         }
 
         clickCount++;
@@ -37,12 +45,18 @@ public class toastloaftutorial : MonoBehaviour
         if (clickCount == 1)
         {
             feedbackText1.SetActive(true);
+            //====
+            Instantiate(toastAObj, tutorialflow.grillACoordinates, toastAObj.rotation);
 
         }
         else if (clickCount == 2)
         {          
             HideFeedbackText1();
             feedbackText2.SetActive(true);
+            //====
+            Instantiate(toastBObj, tutorialflow.grillBCoordinates, toastBObj.rotation);
+            tutorialflow.addedToastB = "y";
+
         }
     }
 

@@ -6,12 +6,16 @@ ScriptsOnlyBuild:
     - CustomerClick
     - GameEnd
     - appear
+    - burnToastTutorial
+    - butterSpreadTutorial
     - butterclick
     - butterspreadclick
     - buttertutorial
     - customer
     - customertutorial
     - gameflow
+    - innerToastTutorial
+    - kayaSpreadTutorial
     - kayabottleclick
     - kayaspreadclick
     - kayatutorial
@@ -20,14 +24,17 @@ ScriptsOnlyBuild:
     - spawn
     - stats
     - steamclick
+    - steamtutorial
     - timerslider
     - toastInner
     - toastReq
+    - toastReqTutorial
     - toastclick
     - toastloaf
     - toastloaftutorial
     - toasttutorial
     - trashclick
+    - tutorialflow
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -467,29 +474,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2954}
     - Class: 114
-      Script: {instanceID: 3088}
+      Script: {instanceID: 3082}
     - Class: 114
       Script: {instanceID: 3306}
     - Class: 114
-      Script: {instanceID: 3990}
-    - Class: 114
-      Script: {instanceID: 4744}
-    - Class: 114
-      Script: {instanceID: 4782}
-    - Class: 114
-      Script: {instanceID: 4814}
-    - Class: 114
       Script: {instanceID: 4898}
     - Class: 114
-      Script: {instanceID: 4954}
-    - Class: 114
       Script: {instanceID: 4970}
-    - Class: 114
-      Script: {instanceID: 5000}
-    - Class: 114
-      Script: {instanceID: 5162}
-    - Class: 114
-      Script: {instanceID: 5188}
     - Class: 114
       Script: {instanceID: 5322}
     - Class: 114
@@ -508,6 +499,20 @@ ScriptsOnlyBuild:
       Script: {instanceID: 7280}
     - Class: 114
       Script: {instanceID: 7326}
+    - Class: 114
+      Script: {instanceID: 27696}
+    - Class: 114
+      Script: {instanceID: 33158}
+    - Class: 114
+      Script: {instanceID: 33166}
+    - Class: 114
+      Script: {instanceID: 44028}
+    - Class: 114
+      Script: {instanceID: 44038}
+    - Class: 114
+      Script: {instanceID: 44046}
+    - Class: 114
+      Script: {instanceID: 44056}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1191,7 +1196,7 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
-      Hash: bf792e6474c0839341c66fb916be081f
+      Hash: 3ddcd223bdf9bfb9a2bd9a6d9c973b9f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: toastloaftutorial
@@ -1341,7 +1346,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerDownMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 0199c430932953689b15d31850a7f70b
+      Hash: 8c2286e2b33e25151934a40c29512aee
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: customertutorial
@@ -1431,7 +1436,7 @@ ScriptsOnlyBuild:
     className: Variables
   - hash:
       serializedVersion: 2
-      Hash: 8d193cc6e36724db00a5a7bbdf8410e8
+      Hash: ccbf7b268fe8363201d9f059df75e846
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: toasttutorial
@@ -1489,6 +1494,54 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: fd640f7b1df1d8a332ac26488c244146
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: tutorialflow
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: steamtutorial
+  - hash:
+      serializedVersion: 2
+      Hash: c524997cb79e109e4e6811d20cfd127d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: burnToastTutorial
+  - hash:
+      serializedVersion: 2
+      Hash: 078accddda501b09b26bd0336f6d9201
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: innerToastTutorial
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: kayaSpreadTutorial
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: butterSpreadTutorial
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: toastReqTutorial
+  - hash:
+      serializedVersion: 2
+      Hash: 8c2286e2b33e25151934a40c29512aee
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: customertutorial2
   platform: 20
   scenePathNames:
   - Assets/Scenes/NEWMainMenu.unity
@@ -1496,4 +1549,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Tutorial.unity
   - Assets/Scenes/Success.unity
   - Assets/Scenes/GameOver.unity
-  playerPath: /Users/Amber/Documents/GitHub/cookingahma/ver2/cookingahma
+  playerPath: /Users/altheatan/Desktop/b3
