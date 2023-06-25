@@ -14,6 +14,13 @@ jobs:
         with:
           lfs: true
 
+      # Add .gitignore
+      - name: Add .gitignore
+        run: |
+          echo ".DS_Store" >> .gitignore
+          git add .gitignore
+          git commit -m "Add .gitignore"
+
       # Cache
       - uses: actions/cache@v2
         with:
