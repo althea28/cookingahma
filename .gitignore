@@ -4,6 +4,8 @@
 # Ignore temporaries from GameCI
 /[Aa]rtifacts/
 /[Cc]odeCoverage/
+[Aa]rtifactDB
+/ver2/Library/
 
 ### Csharp ###
 ## Ignore Visual Studio temporary files, build results, and
