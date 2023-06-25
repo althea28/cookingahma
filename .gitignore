@@ -6,6 +6,10 @@
 /[Cc]odeCoverage/
 [Aa]rtifactDB
 /ver2/Library/
+a/ver2/Library/ArtifactDB
+b/ver2/Library/ArtifactDB
+a/ver2/Library/Bee/.DS_Store
+b/ver2/Library/Bee/.DS_Store
 
 ### Csharp ###
 ## Ignore Visual Studio temporary files, build results, and
