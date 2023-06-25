@@ -1,11 +1,11 @@
-name: Actions 😎
+name: Actions 
 
 on:
   workflow_dispatch: {}
 
 jobs:
   build:
-    name: Build my project ✨
+    name: Build my project 
     runs-on: ubuntu-latest
     steps:
       # Checkout
