@@ -5,15 +5,19 @@ using UnityEngine;
 public class customer : MonoBehaviour
 {
     public Transform toastReqObj;
+    public Transform eggReqObj;
 
     // Start is called before the first frame update
     void Start()
     {
-        int dishSelector = Random.Range(1,2); //change to 3 when add egg
-        if (dishSelector == 1) {
+        int dishSelector = Random.Range(1,gameflow.numOfDishes + 1); //change to 3 when add egg
+        if (dishSelector == 1) { //if toast
             Instantiate(toastReqObj, transform.position + gameflow.addReqCoordinates, toastReqObj.rotation);
             dishIndicator("toast");
-        }        
+        } else if (dishSelector == 2) {
+            Instantiate(eggReqObj, transform.position + gameflow.addReqCoordinates, eggReqObj.rotation);
+            dishIndicator("eggs");
+        }
     }
 
     // Update is called once per frame
@@ -24,23 +28,42 @@ public class customer : MonoBehaviour
 
     void OnMouseDown() {
         //check if toast is finished
-        if ((gameflow.toastAIsClicked == "y") && (toastclick.isToastAReady == "y")) {
+        if ((customersOrder() == "toast") && (gameflow.toastAIsClicked == "y") && (toastclick.isToastAReady == "y")) {
             toastclick.serveToastA = "y"; //triggers serveA() in toastclick.update()
-            Destroy (gameObject);
-            destroyReq();
-            customerReset(transform.position);
-            gameflow.customersServed += 1;
-        } else if ((gameflow.toastBIsClicked == "y") && (toastclick.isToastBReady == "y"))  {
+            successfulServe();
+            
+        } else if ((customersOrder() == "toast") && (gameflow.toastBIsClicked == "y") && (toastclick.isToastBReady == "y"))  {
             toastclick.serveToastB = "y"; //triggers serveB() in toastclick.update()
-            Destroy (gameObject);
-            destroyReq();
-            customerReset(transform.position);
-            gameflow.customersServed += 1;
+            successfulServe();
+            
+        } else if ((customersOrder() == "eggs") && (gameflow.plateAClicked) && 
+                (gameflow.plateACooked) && (gameflow.hasSoyaOnA)) {
+            gameflow.serveEggA = true;
+            successfulServe();
+
+        } else if ((customersOrder() == "eggs") && (gameflow.plateBClicked) && 
+                (gameflow.plateBCooked) && (gameflow.hasSoyaOnB)) {
+            gameflow.serveEggB = true;
+            successfulServe();
         }
-        Debug.Log("Current value of customersServed: " + gameflow.customersServed);
-        //reset
-        gameflow.toastAIsClicked = "n";
+
+        //Debug.Log("Current value of customersServed: " + gameflow.customersServed);
+        
+        //RESET===
+        gameflow.resetClicks = true;
+
+        /*gameflow.toastAIsClicked = "n";
         gameflow.toastBIsClicked = "n";
+        gameflow.plateAClicked = false;
+        gameflow.plateBClicked = false;*/
+
+        }
+
+    void successfulServe() { 
+        destroyReq();
+        customerReset(transform.position);
+        gameflow.customersServed += 1;
+        Destroy (gameObject);
     }
 
     void customerReset(Vector3 coords) {
@@ -73,6 +96,18 @@ public class customer : MonoBehaviour
             gameflow.dishOnB = dish;
         } else if (transform.position == gameflow.customerCCoordinates) {
             gameflow.dishOnC = dish;
+        }
+    }
+
+    string customersOrder() {
+        if (transform.position == gameflow.customerACoordinates) {
+            return gameflow.dishOnA;
+        } else if (transform.position == gameflow.customerBCoordinates) {
+            return gameflow.dishOnB;
+        } else if (transform.position == gameflow.customerCCoordinates) {
+            return gameflow.dishOnC;
+        } else {
+            return "none"; //need placeholder to ensure non null return
         }
     }
 

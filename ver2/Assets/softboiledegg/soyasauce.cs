@@ -1,0 +1,39 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class soyasauce : MonoBehaviour
+{
+    public static bool trashSoyaA = false;
+    public static bool trashSoyaB = false;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if ((trashSoyaA) && (isOnPlateA())) {
+            trashSoyaA = false;
+            Destroy (gameObject);
+        } else if ((trashSoyaB) && (isOnPlateB())) {
+            trashSoyaB = false;
+            Destroy (gameObject);
+        } 
+        
+    }
+
+    bool isOnPlateA() {
+        return transform.position == gameflow.plateACoords + gameflow.addUndercookedEggsCoords + 
+            gameflow.addSoyaSauceCoords;
+    }
+
+    bool isOnPlateB() {
+        return transform.position == gameflow.plateBCoords + gameflow.addUndercookedEggsCoords + 
+            gameflow.addSoyaSauceCoords;
+    }
+
+}

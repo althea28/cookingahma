@@ -97,8 +97,16 @@ public class toastclick : MonoBehaviour
         if ((isOnBoard()) && (gameflow.placeButter == "n") && (gameflow.placeKaya == "n")) {
             if (isOnBoardA()) {
                 gameflow.toastAIsClicked = "y";
+                
+                //RESET===
+                gameflow.toastBIsClicked = "n";
+
             } else {
                 gameflow.toastBIsClicked = "y";
+
+                //RESET===
+                gameflow.toastAIsClicked = "n";
+
             }
 
         } else if ((gameflow.placeKaya == "y") && (isOnBoard())) { //placing kaya && toast on board
@@ -110,6 +118,12 @@ public class toastclick : MonoBehaviour
                 Instantiate(kayaObj, newKayaPosition(), kayaObj.rotation);
             }
 
+            //RESET=== 
+            gameflow.toastAIsClicked = "n";
+            gameflow.toastBIsClicked = "n";
+            gameflow.placeButter = "n";
+
+
         } else if ((gameflow.placeButter == "y")  && (isOnBoard())) { //placing butter && toast on board
             if ((isOnBoardA()) && (hasKayaOnA == "y") && (hasButterOnA == "n")) {
                 hasButterOnA = "y";
@@ -119,23 +133,34 @@ public class toastclick : MonoBehaviour
                 Instantiate(butterObj, newButterPosition(), butterObj.rotation);
             } 
 
+            //RESET=== 
+            gameflow.toastAIsClicked = "n";
+            gameflow.toastBIsClicked = "n";
+            gameflow.placeKaya = "n";
+
         } else if ((isOnGrill()) && (gameflow.toastOnBoardA == "n")) { //moving from grill to boardA
             checkIfCookedWellA();
             resetAfterMoving();
             GetComponent<Transform> ().position = gameflow.boardACoordinates;
             gameflow.toastOnBoardA = "y";
 
+            //RESET=== 
+            gameflow.resetClicksToast = true;
+
         } else if ((isOnGrill()) && (gameflow.toastOnBoardB == "n")) { //moving from grill to boardB
             checkIfCookedWellB();
             resetAfterMoving();
             GetComponent<Transform> ().position = gameflow.boardBCoordinates;
             gameflow.toastOnBoardB = "y";
-        }
 
-        //reset, so don't get trapped
-        gameflow.placeButter = "n";
-        gameflow.placeKaya = "n";     
+            
+            //RESET=== 
+            gameflow.resetClicksToast = true;
+
+        }
         
+        //RESET===
+        gameflow.resetClicksEggs = true;
 
     }
 

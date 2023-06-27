@@ -23,18 +23,22 @@ public class toastInner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((changedToCookedA == "n") && (toastclick.toastAIsCooked == "y") && (transform.position.x == -2.15f)) {
+        if ((changedToCookedA == "n") && (toastclick.toastAIsCooked == "y") && 
+            (transform.position.x == gameflow.grillACoordinates.x)) {
             GetComponent<MeshRenderer> ().material = cookedBreadMat;
             changedToCookedA = "y";
-        } else if ((changedToCookedB == "n") && (toastclick.toastBIsCooked == "y") && (transform.position.x == -3.94f)) {
+        } else if ((changedToCookedB == "n") && (toastclick.toastBIsCooked == "y") && 
+        (transform.position.x == gameflow.grillBCoordinates.x)) {
             GetComponent<MeshRenderer> ().material = cookedBreadMat;
             changedToCookedB = "y";
         }
         
-        if ((changedToBurntA == "n") && (toastclick.toastAIsBurnt == "y") && (transform.position.x == -2.15f)) {
+        if ((changedToBurntA == "n") && (toastclick.toastAIsBurnt == "y") && 
+            (transform.position.x == gameflow.grillACoordinates.x)) {
             GetComponent<MeshRenderer> ().material = burnedBreadMat;
             changedToBurntA = "y";
-        } else if ((changedToBurntB == "n") && (toastclick.toastBIsBurnt == "y") && (transform.position.x == -3.94f)) {
+        } else if ((changedToBurntB == "n") && (toastclick.toastBIsBurnt == "y") && 
+            (transform.position.x == gameflow.grillBCoordinates.x)) {
             GetComponent<MeshRenderer> ().material = burnedBreadMat;
             changedToBurntB = "y";
         }

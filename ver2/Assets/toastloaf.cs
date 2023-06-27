@@ -25,5 +25,8 @@ public class toastloaf : MonoBehaviour
         } else if (gameflow.toastOnGrillB == "n") {
             Instantiate(toastObj, gameflow.grillBCoordinates, toastObj.rotation);
         }
+
+        //RESET===
+        gameflow.resetClicks = true;
     }
 }

@@ -23,7 +23,19 @@ public class trashclick : MonoBehaviour
         } else if (gameflow.toastBIsClicked == "y") {
             gameflow.trashB = "y";
             gameflow.toastBIsClicked = "n";
+        } else if (gameflow.plateAClicked) {
+            gameflow.trashPlateA = true;
+            gameflow.plateAClicked = false;
+        } else if (gameflow.plateBClicked) {
+            gameflow.trashPlateB = true;
+            gameflow.plateBClicked = false;
         }
+
+        //RESET===
+        gameflow.placeKaya = "n"; 
+        gameflow.placeButter = "n";
+        gameflow.soyaSauceClicked = false;
+
 
     }
 }

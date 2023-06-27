@@ -5,12 +5,22 @@ using UnityEngine;
 public class gameflow : MonoBehaviour
 {
 
-    public static int customersServed = 0;
+    //sticky clicks: 
+    //     kayatoast: placeKaya, placeButter, toastAIsClicked, toastBIsClicked
+    //     eggs: plateAClicked, plateBClicked, soyaSauceClicked
 
-    public static Vector3 boardACoordinates = new Vector3(2.9f,3.08f,3.37f);
-    public static Vector3 boardBCoordinates = new Vector3(0.52f,3.08f,3.37f);
-    public static Vector3 grillACoordinates = new Vector3(-2.15f, 3.072f, 3.3f);
-    public static Vector3 grillBCoordinates = new Vector3(-3.94f, 3.072f, 3.3f);
+    public static int customersServed = 0;
+    public static int numOfDishes = 2;
+
+    public static bool resetClicks = false;
+    public static bool resetClicksToast = false;
+    public static bool resetClicksEggs = false;
+
+    //kaya butter toast
+    public static Vector3 boardACoordinates = new Vector3(0.93f,3.08f,3.37f);
+    public static Vector3 boardBCoordinates = new Vector3(-0.93f,3.08f,3.37f);
+    public static Vector3 grillACoordinates = new Vector3(-3.72f, 3.072f, 3.3f);
+    public static Vector3 grillBCoordinates = new Vector3(-5.63f, 3.072f, 3.3f);
     public static Vector3 addKayaCoordinates = new Vector3(0.01f, 0.182f, 0.032f);
     public static Vector3 addButterCoordinates = new Vector3(0.005f, 0.247f, 0.129f);
 
@@ -25,6 +35,45 @@ public class gameflow : MonoBehaviour
     public static string destroySteamA = "n";
     public static string destroySteamB = "n";
 
+    //soft boiled egg 
+    public static Vector3 steamerACoords = new Vector3(6.044f, 3.385f, 3.55f);
+    public static Vector3 steamerBCoords = new Vector3(5.11f, 3.385f, 3.55f); //5.047
+    public static Vector3 plateACoords = new Vector3(3.36f, 3.01f, 1.916f);
+    public static Vector3 plateBCoords = new Vector3(3.36f, 3.01f, 3.8f);
+
+    public static Vector3 addUndercookedEggsCoords = new Vector3(-0.03f, -0.02f, 0.07f);
+    public static Vector3 addCookedEggsCoords = new Vector3(-0.03f, -0.02f, 0.07f);
+    public static Vector3 addOvercookedEggsCoords = new Vector3(0.05f, -0.02f, -0.04f);
+    public static Vector3 addSoyaSauceCoords = new Vector3(-0.021f, 0.139f, -0.019f); //from egg, not plate
+    public static Vector3 addOCSoyaSauceCoords = new Vector3(-0.11f, 0.15f, 0.19f);
+
+
+    public static float timeForEggToCook = 3f;
+    public static float timeForEggToBurn = 5f;
+
+    public static bool eggOnSteamerA = false;
+    public static bool eggOnSteamerB = false;
+
+    public static bool eggsOnPlateA = false;
+    public static bool eggsOnPlateB = false;
+
+    public static bool plateACooked = false;
+    public static bool plateBCooked = false;
+    public static bool hasSoyaOnA = false;
+    public static bool hasSoyaOnB = false;
+
+    public static bool soyaSauceClicked = false;
+    public static bool plateAClicked = false;
+    public static bool plateBClicked = false;
+
+    public static bool serveEggA = false;
+    public static bool serveEggB = false;
+
+    public static bool trashPlateA = false;
+    public static bool trashPlateB = false;
+
+
+    //customers
     public static Vector3 customerACoordinates = new Vector3(6.19f, 6f, -2f);
     public static Vector3 customerBCoordinates = new Vector3(1.19f, 6f, -2f); 
     public static Vector3 customerCCoordinates = new Vector3(-4.19f, 6f, -2f);
@@ -54,14 +103,6 @@ public class gameflow : MonoBehaviour
     public static int count = 0;
 
     
-    /*==========
-    public static string isCustomerClicked = "n";
-    public static string isToastClicked = "n";
-    public static string destroyToast = "n";
-    public static string destroyKaya = "n";
-    public static string destroyButter = "n";
-    */ //===========
-
     // Start is called before the first frame update
     void Start()
     {
@@ -70,9 +111,6 @@ public class gameflow : MonoBehaviour
         toastOnGrillB = "n";
         toastOnBoardA = "n";
         toastOnBoardB = "n";
-    
-        //placeKaya = "n"; 
-        //placeButter = "n";
 
         destroySteamA = "n";
         destroySteamB = "n";
@@ -91,18 +129,21 @@ public class gameflow : MonoBehaviour
         trashB = "n";
 
         resetClicking();
-
-
-
-
-
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("cusA "+customerOnA+" cusB "+customerOnB+ " cusC "+customerOnC);
+        if (resetClicks) {
+            resetClicking();
+        } else if (resetClicksToast) {
+            resetClickingToast();
+        } else if (resetClicksEggs) {
+            resetClickingEggs();
+        }
+
+        //Debug.Log("cusA "+customerOnA+" cusB "+customerOnB+ " cusC "+customerOnC);
         //add time passed without customer at each spot
         if (customerOnA == "n") {
             timeWithoutCustomerOnA += Time.deltaTime;
@@ -164,11 +205,31 @@ public class gameflow : MonoBehaviour
     }
 
     public void resetClicking() {
+        resetClickingToast();
+        resetClickingEggs();
+
+        resetClicks = false;
+    }
+
+    public void resetClickingToast() {
         placeKaya = "n"; 
         placeButter = "n";
         toastAIsClicked = "n";
         toastBIsClicked = "n";
+
+        resetClicksToast = false;
     }
+
+ 
+    public void resetClickingEggs() {
+        plateAClicked = false;
+        plateBClicked = false;
+        soyaSauceClicked = false;
+
+        resetClicksEggs = false;
+    }
+
+
 
 
 

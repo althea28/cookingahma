@@ -18,7 +18,11 @@ public class butterclick : MonoBehaviour
 
     void OnMouseDown() {
         gameflow.placeButter = "y";
+
+        //RESET===
+        gameflow.resetClicksEggs = true;
         gameflow.toastAIsClicked = "n";
         gameflow.toastBIsClicked = "n";
+        gameflow.placeKaya = "n";
     }
 }
