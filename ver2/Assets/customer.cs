@@ -46,17 +46,9 @@ public class customer : MonoBehaviour
             gameflow.serveEggB = true;
             successfulServe();
         }
-
-        //Debug.Log("Current value of customersServed: " + gameflow.customersServed);
         
         //RESET===
         gameflow.resetClicks = true;
-
-        /*gameflow.toastAIsClicked = "n";
-        gameflow.toastBIsClicked = "n";
-        gameflow.plateAClicked = false;
-        gameflow.plateBClicked = false;*/
-
         }
 
     void successfulServe() { 

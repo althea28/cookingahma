@@ -143,7 +143,6 @@ public class gameflow : MonoBehaviour
             resetClickingEggs();
         }
 
-        //Debug.Log("cusA "+customerOnA+" cusB "+customerOnB+ " cusC "+customerOnC);
         //add time passed without customer at each spot
         if (customerOnA == "n") {
             timeWithoutCustomerOnA += Time.deltaTime;

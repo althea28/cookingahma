@@ -372,6 +372,8 @@
 "Assets/tutorialcodes/toastReqTutorial.cs"
 "Assets/tutorialcodes/toasttutorial.cs"
 "Assets/tutorialcodes/tutorialflow.cs"
+"Assets/TUT_softboiledegg/eggcartonTut.cs"
+"Assets/TUT_softboiledegg/sbeTutFlow.cs"
 -langversion:9.0
 
 /deterministic

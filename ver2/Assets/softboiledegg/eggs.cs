@@ -59,12 +59,12 @@ public class eggs : MonoBehaviour
         //if egg is burned, add burned steam
         if ((eggCookingTimeA >= gameflow.timeForEggToBurn) && (isOnSteamerA()) && (!isBurntA)) {
             //add burnt steam obj
-            Instantiate(burntEggSteamObj, newSteamCoords(), cookedEggSteamObj.rotation);
+            Instantiate(burntEggSteamObj, newSteamCoords(), burntEggSteamObj.rotation);
             isBurntA = true;
 
         } else if ((eggCookingTimeB >= gameflow.timeForEggToBurn) && (isOnSteamerB()) && (!isBurntB)) {
             //add burnt steam obj
-            Instantiate(burntEggSteamObj, newSteamCoords(), cookedEggSteamObj.rotation);
+            Instantiate(burntEggSteamObj, newSteamCoords(), burntEggSteamObj.rotation);
             isBurntB = true;
         }
         
