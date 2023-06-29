@@ -29,6 +29,7 @@ public class eggcartonTut : MonoBehaviour
             sbeTutFlow.stepCounter ++;
         } else if (sbeTutFlow.stepCounter == 6) {
             Instantiate(eggCObj, sbeTutFlow.steamerACoords, eggCObj.rotation);
+            sbeTutFlow.stepCounter ++;
         }
     }
 

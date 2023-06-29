@@ -441,15 +441,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1781770242671204504, guid: 9d9ba014877c246f980e08b759065ed1, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.38679248
+      value: 0.26415092
       objectReference: {fileID: 0}
     - target: {fileID: 1781770242671204504, guid: 9d9ba014877c246f980e08b759065ed1, type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.38679248
+      value: 0.26415092
       objectReference: {fileID: 0}
     - target: {fileID: 1781770242671204504, guid: 9d9ba014877c246f980e08b759065ed1, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.38679248
+      value: 0.26415092
       objectReference: {fileID: 0}
     - target: {fileID: 1781770242671204504, guid: 9d9ba014877c246f980e08b759065ed1, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.a
@@ -3431,7 +3431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a0962a9af7764998a59667a9e9fc386, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.98
+      value: 15.55
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a0962a9af7764998a59667a9e9fc386, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4227,6 +4227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1572598187}
   - component: {fileID: 1572598186}
+  - component: {fileID: 1572598188}
   m_Layer: 0
   m_Name: GAMEMASTER
   m_TagString: Untagged
@@ -4269,6 +4270,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1572598188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572598185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47a42c5a6a214483aba12103de91481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1583776074 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ea1c600f80f4348e3839dc4d4e6d8d6d, type: 3}

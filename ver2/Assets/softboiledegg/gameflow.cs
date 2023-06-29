@@ -102,10 +102,14 @@ public class gameflow : MonoBehaviour
 
     public static int count = 0;
 
+    //LEVEL INITIATE
+    public static bool initiating = false;
+
     
     // Start is called before the first frame update
     void Start()
     {
+        initiating = true; //INITIATES LEVEL DETAILS
 
         toastOnGrillA = "n";
         toastOnGrillB = "n";
@@ -135,6 +139,7 @@ public class gameflow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (resetClicks) {
             resetClicking();
         } else if (resetClicksToast) {
