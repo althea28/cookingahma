@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - CustServed2
     - CustomerClick
     - GameEnd
+    - L1_Initiate
     - appear
     - burnToastTutorial
     - butterSpreadTutorial
@@ -13,7 +14,6 @@ ScriptsOnlyBuild:
     - buttertutorial
     - customer
     - customertutorial
-    - gameflow
     - innerToastTutorial
     - kayaSpreadTutorial
     - kayabottleclick
@@ -126,7 +126,64 @@ ScriptsOnlyBuild:
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
   sceneClasses:
-    Assets/Scenes/Game.unity:
+    Assets/Scenes/GameOver.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9090}
+    - Class: 114
+      Script: {instanceID: 10062}
+    - Class: 114
+      Script: {instanceID: 10088}
+    - Class: 114
+      Script: {instanceID: 10282}
+    - Class: 114
+      Script: {instanceID: 10562}
+    - Class: 114
+      Script: {instanceID: 12382}
+    - Class: 114
+      Script: {instanceID: 12454}
+    - Class: 114
+      Script: {instanceID: 12996}
+    - Class: 114
+      Script: {instanceID: 13140}
+    - Class: 114
+      Script: {instanceID: 13450}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/LEVEL1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -156,59 +213,61 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1544}
+      Script: {instanceID: 9048}
     - Class: 114
-      Script: {instanceID: 1584}
+      Script: {instanceID: 9090}
     - Class: 114
-      Script: {instanceID: 1606}
+      Script: {instanceID: 9112}
     - Class: 114
-      Script: {instanceID: 1654}
+      Script: {instanceID: 9160}
     - Class: 114
-      Script: {instanceID: 2322}
+      Script: {instanceID: 9384}
     - Class: 114
-      Script: {instanceID: 2576}
+      Script: {instanceID: 9836}
     - Class: 114
-      Script: {instanceID: 2774}
+      Script: {instanceID: 10088}
     - Class: 114
-      Script: {instanceID: 2954}
+      Script: {instanceID: 10282}
     - Class: 114
-      Script: {instanceID: 3068}
+      Script: {instanceID: 10462}
     - Class: 114
-      Script: {instanceID: 3082}
+      Script: {instanceID: 10576}
     - Class: 114
-      Script: {instanceID: 3088}
+      Script: {instanceID: 10590}
     - Class: 114
-      Script: {instanceID: 3306}
+      Script: {instanceID: 10596}
     - Class: 114
-      Script: {instanceID: 3990}
+      Script: {instanceID: 10812}
     - Class: 114
-      Script: {instanceID: 4744}
+      Script: {instanceID: 11482}
     - Class: 114
-      Script: {instanceID: 4782}
+      Script: {instanceID: 12270}
     - Class: 114
-      Script: {instanceID: 4814}
+      Script: {instanceID: 12298}
     - Class: 114
-      Script: {instanceID: 4898}
+      Script: {instanceID: 12382}
     - Class: 114
-      Script: {instanceID: 4954}
+      Script: {instanceID: 12438}
     - Class: 114
-      Script: {instanceID: 4970}
+      Script: {instanceID: 12454}
     - Class: 114
-      Script: {instanceID: 5000}
+      Script: {instanceID: 12482}
     - Class: 114
-      Script: {instanceID: 5162}
+      Script: {instanceID: 12640}
     - Class: 114
-      Script: {instanceID: 5188}
+      Script: {instanceID: 12666}
     - Class: 114
-      Script: {instanceID: 5512}
+      Script: {instanceID: 12996}
     - Class: 114
-      Script: {instanceID: 5658}
+      Script: {instanceID: 13140}
     - Class: 114
-      Script: {instanceID: 5966}
+      Script: {instanceID: 13450}
     - Class: 114
-      Script: {instanceID: 6966}
+      Script: {instanceID: 14462}
     - Class: 114
-      Script: {instanceID: 7326}
+      Script: {instanceID: 14818}
+    - Class: 114
+      Script: {instanceID: 35066}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -220,63 +279,6 @@ ScriptsOnlyBuild:
     - Class: 198
       Script: {instanceID: 0}
     - Class: 199
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    Assets/Scenes/GameOver.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 1584}
-    - Class: 114
-      Script: {instanceID: 2550}
-    - Class: 114
-      Script: {instanceID: 2576}
-    - Class: 114
-      Script: {instanceID: 2774}
-    - Class: 114
-      Script: {instanceID: 3054}
-    - Class: 114
-      Script: {instanceID: 4898}
-    - Class: 114
-      Script: {instanceID: 4970}
-    - Class: 114
-      Script: {instanceID: 5512}
-    - Class: 114
-      Script: {instanceID: 5658}
-    - Class: 114
-      Script: {instanceID: 5966}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -316,37 +318,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1584}
+      Script: {instanceID: 9090}
     - Class: 114
-      Script: {instanceID: 2162}
+      Script: {instanceID: 9676}
     - Class: 114
-      Script: {instanceID: 2322}
+      Script: {instanceID: 9836}
     - Class: 114
-      Script: {instanceID: 2576}
+      Script: {instanceID: 10088}
     - Class: 114
-      Script: {instanceID: 2774}
+      Script: {instanceID: 10282}
     - Class: 114
-      Script: {instanceID: 3054}
+      Script: {instanceID: 10562}
     - Class: 114
-      Script: {instanceID: 3068}
+      Script: {instanceID: 10576}
     - Class: 114
-      Script: {instanceID: 4040}
+      Script: {instanceID: 11532}
     - Class: 114
-      Script: {instanceID: 4286}
+      Script: {instanceID: 11778}
     - Class: 114
-      Script: {instanceID: 4630}
+      Script: {instanceID: 12120}
     - Class: 114
-      Script: {instanceID: 4898}
+      Script: {instanceID: 12382}
     - Class: 114
-      Script: {instanceID: 4970}
+      Script: {instanceID: 12454}
     - Class: 114
-      Script: {instanceID: 5512}
+      Script: {instanceID: 12996}
     - Class: 114
-      Script: {instanceID: 5658}
+      Script: {instanceID: 13140}
     - Class: 114
-      Script: {instanceID: 5966}
+      Script: {instanceID: 13450}
     - Class: 114
-      Script: {instanceID: 6966}
+      Script: {instanceID: 14462}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -385,33 +387,33 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1584}
+      Script: {instanceID: 9090}
     - Class: 114
-      Script: {instanceID: 2322}
+      Script: {instanceID: 9836}
     - Class: 114
-      Script: {instanceID: 2550}
+      Script: {instanceID: 10062}
     - Class: 114
-      Script: {instanceID: 2576}
+      Script: {instanceID: 10088}
     - Class: 114
-      Script: {instanceID: 2774}
+      Script: {instanceID: 10282}
     - Class: 114
-      Script: {instanceID: 3054}
+      Script: {instanceID: 10562}
     - Class: 114
-      Script: {instanceID: 3068}
+      Script: {instanceID: 10576}
     - Class: 114
-      Script: {instanceID: 4898}
+      Script: {instanceID: 12382}
     - Class: 114
-      Script: {instanceID: 4970}
+      Script: {instanceID: 12454}
     - Class: 114
-      Script: {instanceID: 5512}
+      Script: {instanceID: 12996}
     - Class: 114
-      Script: {instanceID: 5658}
+      Script: {instanceID: 13140}
     - Class: 114
-      Script: {instanceID: 5966}
+      Script: {instanceID: 13450}
     - Class: 114
-      Script: {instanceID: 6880}
+      Script: {instanceID: 14374}
     - Class: 114
-      Script: {instanceID: 6966}
+      Script: {instanceID: 14462}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -458,61 +460,61 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1544}
+      Script: {instanceID: 9048}
     - Class: 114
-      Script: {instanceID: 1584}
+      Script: {instanceID: 9054}
     - Class: 114
-      Script: {instanceID: 1606}
+      Script: {instanceID: 9090}
     - Class: 114
-      Script: {instanceID: 1654}
+      Script: {instanceID: 9112}
     - Class: 114
-      Script: {instanceID: 2096}
+      Script: {instanceID: 9160}
     - Class: 114
-      Script: {instanceID: 2576}
+      Script: {instanceID: 9608}
     - Class: 114
-      Script: {instanceID: 2774}
+      Script: {instanceID: 9746}
     - Class: 114
-      Script: {instanceID: 2954}
+      Script: {instanceID: 10088}
     - Class: 114
-      Script: {instanceID: 3082}
+      Script: {instanceID: 10282}
     - Class: 114
-      Script: {instanceID: 3306}
+      Script: {instanceID: 10462}
     - Class: 114
-      Script: {instanceID: 4898}
+      Script: {instanceID: 10590}
     - Class: 114
-      Script: {instanceID: 4970}
+      Script: {instanceID: 10812}
     - Class: 114
-      Script: {instanceID: 5322}
+      Script: {instanceID: 11256}
     - Class: 114
-      Script: {instanceID: 5512}
+      Script: {instanceID: 11484}
     - Class: 114
-      Script: {instanceID: 5658}
+      Script: {instanceID: 12382}
     - Class: 114
-      Script: {instanceID: 5966}
+      Script: {instanceID: 12454}
     - Class: 114
-      Script: {instanceID: 6288}
+      Script: {instanceID: 12804}
     - Class: 114
-      Script: {instanceID: 6592}
+      Script: {instanceID: 12996}
     - Class: 114
-      Script: {instanceID: 6966}
+      Script: {instanceID: 13140}
     - Class: 114
-      Script: {instanceID: 7280}
+      Script: {instanceID: 13210}
     - Class: 114
-      Script: {instanceID: 7326}
+      Script: {instanceID: 13450}
     - Class: 114
-      Script: {instanceID: 27696}
+      Script: {instanceID: 13458}
     - Class: 114
-      Script: {instanceID: 33158}
+      Script: {instanceID: 13776}
     - Class: 114
-      Script: {instanceID: 33166}
+      Script: {instanceID: 14084}
     - Class: 114
-      Script: {instanceID: 44028}
+      Script: {instanceID: 14462}
     - Class: 114
-      Script: {instanceID: 44038}
+      Script: {instanceID: 14774}
     - Class: 114
-      Script: {instanceID: 44046}
+      Script: {instanceID: 14818}
     - Class: 114
-      Script: {instanceID: 44056}
+      Script: {instanceID: 15048}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -540,6 +542,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CustomerClick
+  - hash:
+      serializedVersion: 2
+      Hash: fd640f7b1df1d8a332ac26488c244146
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: tutorialflow
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -602,6 +610,12 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionStayMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 445acc42b95423fc8754d6aa4630b563
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: eggATUT
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -611,7 +625,31 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
+    className: L1_Initiate
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
     className: TryAgain
+  - hash:
+      serializedVersion: 2
+      Hash: 20230ab019a04dd3e3dca941d0f5c24f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: cookedEggTut
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ocSoyasauce
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: undercookedEggTut
   - hash:
       serializedVersion: 2
       Hash: 0199c430932953689b15d31850a7f70b
@@ -624,6 +662,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnTriggerEnterMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: eggSteam
   - hash:
       serializedVersion: 2
       Hash: 800c50acba124432abb4cf0d47202e06
@@ -656,6 +700,12 @@ ScriptsOnlyBuild:
     className: UnityOnJointBreakMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: steamtutorial
+  - hash:
+      serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -672,6 +722,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnBecameVisibleMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: fd640f7b1df1d8a332ac26488c244146
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: sbeTutFlow
   - hash:
       serializedVersion: 2
       Hash: 0f057fa9301805aa37a94914d4782c6e
@@ -720,6 +776,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: soyasaucebottle
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -782,7 +844,7 @@ ScriptsOnlyBuild:
     className: UnityOnDropdownValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 255a452180797f547f9582d8138a7d9a
+      Hash: 39542475f2b5f793a463b761bf5ac510
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: customer
@@ -819,6 +881,18 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: overcookedEggTut
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: soyasauceTut
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnInputFieldValueChangedMessageListener
@@ -834,6 +908,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseDragMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 01564700a155491fad14c23d6a0deadd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: gameflow
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -932,6 +1012,24 @@ ScriptsOnlyBuild:
     className: UnityOnPointerExitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: c524997cb79e109e4e6811d20cfd127d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: burnToastTutorial
+  - hash:
+      serializedVersion: 2
+      Hash: 54116ea226eafa5b580261cb487ad123
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: eggcartonTut
+  - hash:
+      serializedVersion: 2
+      Hash: 16c8d5ee9d493c42c6d8243190fbd934
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: eggBTut
+  - hash:
+      serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -972,6 +1070,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: kayabottleclick
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: kayaSpreadTutorial
   - hash:
       serializedVersion: 2
       Hash: 0fb27be807aa299702f28ad0bcad1f46
@@ -1064,10 +1168,16 @@ ScriptsOnlyBuild:
     className: UnityOnEndDragMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 01564700a155491fad14c23d6a0deadd
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: gameflow
+    className: cookedSteamTut
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: L2_initiate
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1118,10 +1228,22 @@ ScriptsOnlyBuild:
     className: GlobalMessageListener
   - hash:
       serializedVersion: 2
+      Hash: e8be57a9dc9d15e4596acf033f2485e7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: eggCTut
+  - hash:
+      serializedVersion: 2
       Hash: 21a9c6dbf300fc1f6dc15ca7e2c39a37
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Slider
+  - hash:
+      serializedVersion: 2
+      Hash: 7fbd81691a63d914563dfeabdcd74133
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: overcookedegg
   - hash:
       serializedVersion: 2
       Hash: 3164bc883ff663a5cdb32d1ef7e7c0c5
@@ -1196,6 +1318,18 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
+      Hash: 7137e146254b366fc5eb5aeec5995ed1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: customerSbeTut
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: soyasauce
+  - hash:
+      serializedVersion: 2
       Hash: 3ddcd223bdf9bfb9a2bd9a6d9c973b9f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1206,6 +1340,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.State.dll
     namespaceName: Unity.VisualScripting
     className: StateGraphAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: reqSbeTut
+  - hash:
+      serializedVersion: 2
+      Hash: fe5dc0b55a05829664b8c93de4c78983
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: rawEgg
   - hash:
       serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
@@ -1233,6 +1379,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: butterSpreadTutorial
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseUpAsButtonMessageListener
@@ -1242,6 +1394,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: StandaloneInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 078accddda501b09b26bd0336f6d9201
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: innerToastTutorial
   - hash:
       serializedVersion: 2
       Hash: f7858108331b563fb41b80b729297acd
@@ -1254,6 +1412,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMesh
+  - hash:
+      serializedVersion: 2
+      Hash: 8c2286e2b33e25151934a40c29512aee
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: customertutorial2
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -1298,6 +1462,12 @@ ScriptsOnlyBuild:
     className: UnityOnPointerEnterMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 1026034a15be371e02644dbd47adc24c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: eggcarton
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1308,6 +1478,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: trashSbeTut
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1371,6 +1547,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: soyasaucebottleTut
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSubmitMessageListener
@@ -1388,6 +1570,12 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: overcookedSteamTut
+  - hash:
+      serializedVersion: 2
       Hash: 5dbd8532fce2d8e1edb181bf865bf420
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1398,6 +1586,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnMoveMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: eggOCSteam
   - hash:
       serializedVersion: 2
       Hash: 1307a513eaf606ac3240f0b66e80cd33
@@ -1416,6 +1610,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: 2633af194714f813a805907df6dbddc5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: eggs
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1466,6 +1666,12 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: toastReqTutorial
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1494,59 +1700,11 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: fd640f7b1df1d8a332ac26488c244146
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: tutorialflow
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: steamtutorial
-  - hash:
-      serializedVersion: 2
-      Hash: c524997cb79e109e4e6811d20cfd127d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: burnToastTutorial
-  - hash:
-      serializedVersion: 2
-      Hash: 078accddda501b09b26bd0336f6d9201
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: innerToastTutorial
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: kayaSpreadTutorial
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: butterSpreadTutorial
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: toastReqTutorial
-  - hash:
-      serializedVersion: 2
-      Hash: 8c2286e2b33e25151934a40c29512aee
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: customertutorial2
   platform: 20
   scenePathNames:
   - Assets/Scenes/NEWMainMenu.unity
-  - Assets/Scenes/Game.unity
+  - Assets/Scenes/LEVEL1.unity
   - Assets/Scenes/Tutorial.unity
   - Assets/Scenes/Success.unity
   - Assets/Scenes/GameOver.unity
-  playerPath: /Users/altheatan/Desktop/b3
+  playerPath: /Users/Amber/Documents/GitHub/cookingahma/ver2/test
