@@ -18,8 +18,14 @@ EditorBuildSettings:
     path: Assets/Scenes/LEVEL1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Tutorial.unity
+    path: Assets/Scenes/Tutorial Selection.unity
+    guid: c4a9da167addd457d9c7ef043261acf3
+  - enabled: 1
+    path: Assets/Scenes/TUT kayabutter.unity
     guid: 4497dfd3d5160439d804d587cfaa0727
+  - enabled: 1
+    path: Assets/Scenes/TUT softboiled egg.unity
+    guid: e189049111285453f8c8c16935b7317e
   - enabled: 1
     path: Assets/Scenes/Success.unity
     guid: 10c28084d82494d5a85ef09fe0676a52

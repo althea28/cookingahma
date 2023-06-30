@@ -10,7 +10,7 @@ public class mainmenu : MonoBehaviour
      SceneManager.LoadScene(1);
    }
 
-   public void TutorialMode ()
+   public void TutorialSelection ()
    {
      SceneManager.LoadScene(2);
    }
@@ -24,5 +24,15 @@ public class mainmenu : MonoBehaviour
    { 
     SceneManager.LoadScene(1);
    }
+
+   public void ToastTutorial ()
+   {
+    SceneManager.LoadScene(3);
+   }
+
+   public void EggsTutorial ()
+  {
+    SceneManager.LoadScene(4);
+  }
 
 }

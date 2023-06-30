@@ -50,13 +50,13 @@ public class timerslider : MonoBehaviour
             if (gameflow.customersServed >= 5)
             {
                 // Transition to success scene, player has served 5/5 or more.
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene(5);
                 gameflow.count++;
             }
             else
             {
                 // Transition to game over scene
-                SceneManager.LoadScene(4);
+                SceneManager.LoadScene(6);
             }
         }
 
