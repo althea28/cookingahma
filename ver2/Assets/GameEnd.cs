@@ -15,8 +15,20 @@ public class GameEnd : MonoBehaviour
         
     }
 
+
     public void NextLevel()
     {
-      SceneManager.LoadScene(1); //need to change to the number of the next lvl scene
+
+        if (gameflow.sceneCounter == 0)
+        {
+            SceneManager.LoadScene(7); // level 1 to level 2
+            gameflow.sceneCounter++;
+        }
+        else if (gameflow.sceneCounter == 1)
+        {
+            SceneManager.LoadScene(1); // level 2 to level 3, put placeholder 1 for level 3 first.
+            gameflow.sceneCounter++;
+        }
+
     }
 }
