@@ -35,4 +35,9 @@ public class mainmenu : MonoBehaviour
     SceneManager.LoadScene(4);
   }
 
+  public void CkTutorial ()
+  {
+    SceneManager.LoadScene(8);
+  }
+
 }
