@@ -55,14 +55,12 @@ public class overcookedChweeKueh : MonoBehaviour
             gameflow2.plateAClicked = true;
 
             //RESET===
-            gameflow2.resetClicksChweeKueh = true;
             gameflow2.plateBClicked = false;
 
         } else if (isOnPlateB()) {
             gameflow2.plateBClicked = true;
 
-            //RESET===
-            gameflow2.resetClicksChweeKueh = true;
+            //RESET=== 
             gameflow2.plateAClicked = false;
 
         }

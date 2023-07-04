@@ -13,11 +13,12 @@ public class trashclick2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(gameflow2.plateAClicked);
     }
 
     void OnMouseDown() {
         if (gameflow2.plateAClicked) {
+            Debug.Log("HERE");
             gameflow2.trashPlateA = true;
             gameflow2.plateAClicked = false;
         } else if (gameflow2.plateBClicked) {

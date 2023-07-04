@@ -3139,7 +3139,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1572598187}
-  - component: {fileID: 1572598186}
+  - component: {fileID: 1572598189}
   - component: {fileID: 1572598188}
   m_Layer: 0
   m_Name: GAMEMASTER
@@ -3148,26 +3148,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1572598186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1572598185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c62d37cab76b34fc886155b1dfc3cdbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uncleObj: {fileID: 864943921}
-  ladyObj: {fileID: 645833458}
-  boyObj: {fileID: 403888767}
-  womanObj: {fileID: 1609710235}
-  timeWithoutCustomerOnA: 0
-  timeWithoutCustomerOnB: 0
-  timeWithoutCustomerOnC: 0
-  maxTimeWithoutCustomer: 3
 --- !u!4 &1572598187
 Transform:
   m_ObjectHideFlags: 0
@@ -3195,6 +3175,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26994fa4b04974d09becf72c59a1e5a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1572598189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572598185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fe8b1651066b4d639e6d448b5254b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uncleObj: {fileID: 864943921}
+  ladyObj: {fileID: 645833458}
+  boyObj: {fileID: 403888767}
+  womanObj: {fileID: 1609710235}
+  timeWithoutCustomerOnA: 0
+  timeWithoutCustomerOnB: 0
+  timeWithoutCustomerOnC: 0
+  maxTimeWithoutCustomer: 3
 --- !u!1001 &1609710232
 PrefabInstance:
   m_ObjectHideFlags: 0

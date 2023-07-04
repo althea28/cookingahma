@@ -20,7 +20,6 @@ public class chaipohbowl : MonoBehaviour
         gameflow2.chaiPohClicked = true;
 
         //RESET===
-        gameflow2.resetClicksChweeKueh = true;
         gameflow2.plateAClicked = false;
         gameflow2.plateBClicked = false;
     }
