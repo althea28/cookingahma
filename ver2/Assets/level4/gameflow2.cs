@@ -10,11 +10,14 @@ public class gameflow2 : MonoBehaviour
     //num of dishes possible for this level
     public static int numOfDishes = 1;
 
+    //resetting clicks
+    public static bool resetClicks = false; 
+
     //customer generation
-    public static Vector3 customerACoords = new Vector3(6.19f, 6f, -2f);
-    public static Vector3 customerBCoords = new Vector3(1.19f, 6f, -2f); 
-    public static Vector3 customerCCoords = new Vector3(-4.19f, 6f, -2f);
-    public static Vector3 addReqCoords = new Vector3(-2.1f,1.11f,0.1f);
+    public static Vector3 customerACoordinates = new Vector3(6.19f, 6f, -2f);
+    public static Vector3 customerBCoordinates = new Vector3(1.19f, 6f, -2f); 
+    public static Vector3 customerCCoordinates = new Vector3(-4.19f, 6f, -2f);
+    public static Vector3 addReqCoordinates = new Vector3(-2.1f,1.11f,0.1f);
     
     public Transform uncleObj;
     public Transform ladyObj;
@@ -46,7 +49,20 @@ public class gameflow2 : MonoBehaviour
     public static Vector3 addCookedCP = new Vector3(0.006f, 0.108f, 0.006f); //from cooked CK
     public static Vector3 addOvercookedCP = new Vector3(0.006f, 0.108f, 0.006f); //from overcooked CK
 
+    public static float timeForCkToCook = 3f;
+    public static float timeForCkToBurn = 5f;
 
+    public static bool ckOnSteamerA = false;
+    public static bool ckOnSteamerB = false;
+
+    public static bool ckOnPlateA = false;
+    public static bool ckOnPlateB = false;
+
+    public static bool plateACooked = false;
+    public static bool plateBCooked = false;
+
+    //LEVEL INITIATE
+    public static bool initiating = false;
 
     // Start is called before the first frame update
     void Start()
@@ -79,17 +95,17 @@ public class gameflow2 : MonoBehaviour
 
         //check how long there is no customer in that position
         if (timeWithoutCustomerOnA > maxTimeWithoutCustomer - 0.5f) {
-            generateCustomer(customerACoords);
+            generateCustomer(customerACoordinates);
             customerOnA = "y";
             timeWithoutCustomerOnA = 0;
         }
         if (timeWithoutCustomerOnB > maxTimeWithoutCustomer + 1f) {
-            generateCustomer(customerBCoords);
+            generateCustomer(customerBCoordinates);
             customerOnB = "y";
             timeWithoutCustomerOnB = 0;
         }
         if (timeWithoutCustomerOnC > maxTimeWithoutCustomer + 2f) {
-            generateCustomer(customerCCoords);
+            generateCustomer(customerCCoordinates);
             customerOnC = "y";
             timeWithoutCustomerOnC = 0;
         }
