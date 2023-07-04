@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class chweekueh : MonoBehaviour
+public class chweekuehbatter : MonoBehaviour
 {
     //time spent on steamer
     private float ckCookingTimeA = 0;
@@ -22,9 +22,7 @@ public class chweekueh : MonoBehaviour
     public Transform cookedCkObj;
     public Transform overcookedCkObj;
 
-    //destroy steamobj
-    public static bool trigDestroySteamA = false;
-    public static bool trigDestroySteamB = false;
+ 
 
     // Start is called before the first frame update
     void Start()
@@ -94,7 +92,7 @@ public class chweekueh : MonoBehaviour
     void resetA() { //to destroy steam, reset timer, cooking checks, destroy ck
         //to trigger destroying steam
         if (isCookedA) {
-            trigDestroySteamA = true; //reset to false in steam
+            gameflow2.destroySteamA = "y"; 
         }
         gameflow2.ckOnSteamerA = false;
         isCookedA = false;
@@ -107,7 +105,7 @@ public class chweekueh : MonoBehaviour
     void resetB() { //to destroy steam, reset timer, cooking checks, destroy ck
         //to trigger destroying steam
         if (isCookedB) {
-            trigDestroySteamB = true; //reset to false in steam
+            gameflow2.destroySteamB = "y";  
         }
         gameflow2.ckOnSteamerB = false;
         isCookedB = false;

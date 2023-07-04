@@ -106,7 +106,7 @@ public class gameflow : MonoBehaviour
     public static bool initiating = false;
 
     public static int sceneCounter = 0;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -233,12 +233,6 @@ public class gameflow : MonoBehaviour
 
         resetClicksEggs = false;
     }
-
-
-
-
-
-
 
 
  

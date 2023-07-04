@@ -12,6 +12,7 @@ public class gameflow2 : MonoBehaviour
 
     //resetting clicks
     public static bool resetClicks = false; 
+    public static bool resetClicksChweeKueh = false;
 
     //customer generation
     public static Vector3 customerACoordinates = new Vector3(6.19f, 6f, -2f);
@@ -60,6 +61,24 @@ public class gameflow2 : MonoBehaviour
 
     public static bool plateACooked = false;
     public static bool plateBCooked = false;
+    public static bool hasCPOnA = false;
+    public static bool hasCPOnB = false;
+
+    public static bool chaiPohClicked = false;
+    public static bool plateAClicked = false;
+    public static bool plateBClicked = false;
+
+    public static bool serveCkA = false;
+    public static bool serveCkB = false;
+
+    public static bool trashPlateA = false;
+    public static bool trashPlateB = false;
+
+    public static string destroySteamA = "n";
+    public static string destroySteamB = "n";
+
+    public static string trashA = "n";
+    public static string trashB = "n";
 
     //LEVEL INITIATE
     public static bool initiating = false;
@@ -67,21 +86,39 @@ public class gameflow2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        initiating = true;
+
         customerOnA = "n";
         customerOnB = "n";
         customerOnC = "n";
         dishOnA = "none";
         dishOnB = "none";
         dishOnC = "none";
+
+        destroySteamA = "n";
+        destroySteamB = "n";
+
         timeWithoutCustomerOnA = 0;
         timeWithoutCustomerOnB = 0;
         timeWithoutCustomerOnC = 0;
+
+        trashA = "n";
+        trashB = "n";
+
+        resetClicking();
 
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (resetClicks) {
+            resetClicking();
+        } else if (resetClicksChweeKueh) {
+            resetClickingChweeKueh();
+        }
+
         //add time passed without customer at each spot
         if (customerOnA == "n") {
             timeWithoutCustomerOnA += Time.deltaTime;
@@ -112,6 +149,7 @@ public class gameflow2 : MonoBehaviour
 
     }
 
+    //select a random customer model to add to counter
     void generateCustomer(Vector3 cusCoord) {
         int cusSelector = Random.Range(1,5);
         if (cusSelector == 1) {
@@ -123,6 +161,20 @@ public class gameflow2 : MonoBehaviour
         } else if (cusSelector == 4) {
             Instantiate(womanObj, cusCoord, womanObj.rotation);
         }
+    }
+    
+    public void resetClicking() {
+        resetClickingChweeKueh();
+
+        resetClicks = false;
+    }
+
+    public void resetClickingChweeKueh() {
+        plateAClicked = false;
+        plateBClicked = false;
+        chaiPohClicked = false;
+
+        resetClicksChweeKueh = false;
     }
 
 }

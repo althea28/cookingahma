@@ -23,33 +23,25 @@ public class customer2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnMouseDown() {
         //check if toast is finished
-        if ((customersOrder() == "toast") && (gameflow.toastAIsClicked == "y") && (toastclick.isToastAReady == "y")) {
-            toastclick.serveToastA = "y"; //triggers serveA() in toastclick.update()
+        if ((customersOrder() == "chweekueh") && (gameflow2.plateAClicked) && 
+            (gameflow2.plateACooked) && (gameflow2.hasCPOnA)) {
+            gameflow2.serveCkA = true; 
             successfulServe();
             
-        } else if ((customersOrder() == "toast") && (gameflow.toastBIsClicked == "y") && (toastclick.isToastBReady == "y"))  {
-            toastclick.serveToastB = "y"; //triggers serveB() in toastclick.update()
-            successfulServe();
-            
-        } else if ((customersOrder() == "eggs") && (gameflow.plateAClicked) && 
-                (gameflow.plateACooked) && (gameflow.hasSoyaOnA)) {
-            gameflow.serveEggA = true;
-            successfulServe();
-
-        } else if ((customersOrder() == "eggs") && (gameflow.plateBClicked) && 
-                (gameflow.plateBCooked) && (gameflow.hasSoyaOnB)) {
-            gameflow.serveEggB = true;
+        } else if ((customersOrder() == "chweekueh") && (gameflow2.plateBClicked) && 
+            (gameflow2.plateBCooked) && (gameflow2.hasCPOnB)) {
+            gameflow2.serveCkB = true; 
             successfulServe();
         }
         
         //RESET===
-        gameflow.resetClicks = true;
-        }
+        gameflow2.resetClicks = true;
+    }
 
     void successfulServe() { 
         destroyReq();
@@ -73,11 +65,11 @@ public class customer2 : MonoBehaviour
 
     void destroyReq() {
         if (transform.position == gameflow2.customerACoordinates) {
-            toastReq.destroyA = "y";
+            ckReq.destroyA = "y";
         } else if (transform.position == gameflow2.customerBCoordinates) {
-            toastReq.destroyB = "y";
+            ckReq.destroyB = "y";
         } else if (transform.position == gameflow2.customerCCoordinates) {
-            toastReq.destroyC = "y";
+            ckReq.destroyC = "y";
         }
     }
 
