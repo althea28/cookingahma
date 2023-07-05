@@ -67,6 +67,8 @@ public class rawChweeKueh : MonoBehaviour
             gameflow2.plateAClicked = false;
 
         }
+        //reset
+        gameflow2.resetClicksRojak = true;
     }
    
     void resetA() { //to reset added chai poh, is on plate A

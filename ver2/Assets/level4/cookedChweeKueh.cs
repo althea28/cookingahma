@@ -43,11 +43,13 @@ public class cookedChweeKueh : MonoBehaviour
     }
     
     void OnMouseDown() {
-        if (gameflow2.chaiPohClicked) {
+        if ((gameflow2.chaiPohClicked) && (
+            ((isOnPlateA()) && (!gameflow2.hasCPOnA)) || 
+            ((isOnPlateB()) && (!gameflow2.hasCPOnB)))) {
             //add chai poh to chwee kueh
             Instantiate(cookedChaiPohObj, transform.position + gameflow2.addCookedCP, cookedChaiPohObj.rotation);
             addedCookedChaiPoh(); //indicate in gameflow2 that added chai poh
-            gameflow2.chaiPohClicked = false;
+           
             
             //RESET===
             gameflow2.resetClicks = true;
@@ -57,14 +59,17 @@ public class cookedChweeKueh : MonoBehaviour
 
             //RESET===
             gameflow2.plateBClicked = false;
+            gameflow2.resetClicksRojak = true;
 
         } else if (isOnPlateB()) {
             gameflow2.plateBClicked = true;
 
             //RESET===
             gameflow2.plateAClicked = false;
+            gameflow2.resetClicksRojak = true;
 
         }
+        gameflow2.chaiPohClicked = false;
     }
    
     void resetA() { //to reset added chai poh, is on plate A

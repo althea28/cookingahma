@@ -17,6 +17,9 @@ public class chweekuehbatter : MonoBehaviour
     //steam obj
     public Transform SteamObj;
 
+    //burnt CK;
+    public Transform burntLayerObj;
+
     //subsequent ck for plating
     public Transform undercookedCkObj;
     public Transform cookedCkObj;
@@ -52,9 +55,11 @@ public class chweekuehbatter : MonoBehaviour
 
         //if egg is burned, 
         if ((ckCookingTimeA >= gameflow2.timeForCkToBurn) && (isOnSteamerA()) && (!isBurntA)) {
+            Instantiate(burntLayerObj,transform.position + gameflow2.burntLayerCoords, burntLayerObj.rotation);
             isBurntA = true;
 
         } else if ((ckCookingTimeB >= gameflow2.timeForCkToBurn) && (isOnSteamerB()) && (!isBurntB)) {
+            Instantiate(burntLayerObj,transform.position + gameflow2.burntLayerCoords, burntLayerObj.rotation);
             isBurntB = true;
         }
     }
@@ -94,6 +99,9 @@ public class chweekuehbatter : MonoBehaviour
         if (isCookedA) {
             gameflow2.destroySteamA = "y"; 
         }
+        if (isBurntA) {
+            burntLayer.destroyA = true;
+        }
         gameflow2.ckOnSteamerA = false;
         isCookedA = false;
         isBurntA = false;
@@ -106,6 +114,9 @@ public class chweekuehbatter : MonoBehaviour
         //to trigger destroying steam
         if (isCookedB) {
             gameflow2.destroySteamB = "y";  
+        }
+        if (isBurntB) {
+            burntLayer.destroyB = true;
         }
         gameflow2.ckOnSteamerB = false;
         isCookedB = false;

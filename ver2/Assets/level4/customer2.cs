@@ -5,6 +5,7 @@ using UnityEngine;
 public class customer2 : MonoBehaviour
 {
     public Transform ckReqObj;
+    public Transform rojakReqObj;
 
     // Start is called before the first frame update
     void Start()
@@ -14,8 +15,7 @@ public class customer2 : MonoBehaviour
             Instantiate(ckReqObj, transform.position + gameflow2.addReqCoordinates, ckReqObj.rotation);
             dishIndicator("chweekueh");
         } else if (dishSelector == 2) {
-            //Instantiate(eggReqObj, transform.position + gameflow.addReqCoordinates, eggReqObj.rotation); 
-            //change eggReq to rojakReq
+            Instantiate(rojakReqObj, transform.position + gameflow.addReqCoordinates, rojakReqObj.rotation); 
             dishIndicator("rojak");
         }
     }
@@ -36,6 +36,16 @@ public class customer2 : MonoBehaviour
         } else if ((customersOrder() == "chweekueh") && (gameflow2.plateBClicked) && 
             (gameflow2.plateBCooked) && (gameflow2.hasCPOnB)) {
             gameflow2.serveCkB = true; 
+            successfulServe();
+
+        } else if ((customersOrder() == "rojak") && (gameflow2.bowlAClicked) && (gameflow2.stepOnBowlA == 5)) {
+            gameflow2.stepOnBowlA = 1;
+            gameflow2.serveRojakA = true;
+            successfulServe();
+
+        } else if ((customersOrder() == "rojak") && (gameflow2.bowlBClicked) && (gameflow2.stepOnBowlB == 5)) {
+            gameflow2.stepOnBowlB = 1;
+            gameflow2.serveRojakB = true;
             successfulServe();
         }
         
