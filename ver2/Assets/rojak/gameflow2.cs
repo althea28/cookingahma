@@ -45,6 +45,7 @@ public class gameflow2 : MonoBehaviour
     public static Vector3 steamerBCoords = new Vector3(6.58f, 3.493f, 3.61f);
     public static Vector3 plateACoords = new Vector3(4.246f, 3.148f, 2.53f);
     public static Vector3 plateBCoords = new Vector3(4.246f, 3.148f, 3.96f);
+    public static Vector3 cpSpoonCoords = new Vector3(1.194f, 3.784f, 1.07f);
 
     public static Vector3 addUndercookedCKCoords = new Vector3(0,0, -0.043f); //from plate coords
     public static Vector3 addCookedCKCoords = new Vector3(0.03f, 0.072f, 0.02f); //from plate coords

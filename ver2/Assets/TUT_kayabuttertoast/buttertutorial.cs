@@ -33,6 +33,7 @@ public class buttertutorial : MonoBehaviour
                 HidePrevText();
                 isPrevDisplayed = false;
             }
+            butterknifetutorial.moveUp = true;
             ClickIngredient();
             isClicked = true;
         }

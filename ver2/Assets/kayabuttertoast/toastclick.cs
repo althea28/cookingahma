@@ -121,8 +121,6 @@ public class toastclick : MonoBehaviour
             //RESET=== 
             gameflow.toastAIsClicked = "n";
             gameflow.toastBIsClicked = "n";
-            gameflow.placeButter = "n";
-
 
         } else if ((gameflow.placeButter == "y")  && (isOnBoard())) { //placing butter && toast on board
             if ((isOnBoardA()) && (hasKayaOnA == "y") && (hasButterOnA == "n")) {
@@ -136,7 +134,6 @@ public class toastclick : MonoBehaviour
             //RESET=== 
             gameflow.toastAIsClicked = "n";
             gameflow.toastBIsClicked = "n";
-            gameflow.placeKaya = "n";
 
         } else if ((isOnGrill()) && (gameflow.toastOnBoardA == "n")) { //moving from grill to boardA
             checkIfCookedWellA();
@@ -160,6 +157,8 @@ public class toastclick : MonoBehaviour
         }
         
         //RESET===
+        gameflow.placeKaya = "n";
+        gameflow.placeButter = "n";
         gameflow.resetClicksEggs = true;
 
     }

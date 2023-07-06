@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class soyasaucebottle : MonoBehaviour
 {
+    private static Vector3 downCoords = new Vector3(1.36f, 3.59f, 1.27f);
+    private static Vector3 upCoords = downCoords + new Vector3(0,0.5f,0);
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +16,11 @@ public class soyasaucebottle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if ((gameflow.soyaSauceClicked) && (transform.position == downCoords)) {
+            transform.position = upCoords;
+        } else if ((!gameflow.soyaSauceClicked) && (transform.position == upCoords)) {
+            transform.position = downCoords;
+        }
     }
 
     void OnMouseDown() {

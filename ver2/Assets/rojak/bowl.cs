@@ -15,7 +15,6 @@ public class bowl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {  
-        Debug.Log("stepA: "+gameflow2.stepOnBowlA+" stepB: "+gameflow2.stepOnBowlB);
     }
  
     void OnMouseDown() {

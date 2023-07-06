@@ -1128,10 +1128,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 403888765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7307409b35648413dbc457f18e667c26, type: 3}
+  m_Script: {fileID: 11500000, guid: 55531125d26624bd18f472e9384e90de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ckReqObj: {fileID: 1294554387}
+  rojakReqObj: {fileID: 1294554387}
 --- !u!1 &580798780
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,18 +1553,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 23783d7a852174ad9b55b7af1be59b1b, type: 3}
   m_PrefabInstance: {fileID: 2100553652}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &645833457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 645833456}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 497c725fc6b494b8dbd7958c8d92dc28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &645833458 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 23783d7a852174ad9b55b7af1be59b1b, type: 3}
@@ -1591,10 +1580,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 645833456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7307409b35648413dbc457f18e667c26, type: 3}
+  m_Script: {fileID: 11500000, guid: 55531125d26624bd18f472e9384e90de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ckReqObj: {fileID: 1294554387}
+  rojakReqObj: {fileID: 1294554387}
 --- !u!1001 &669407881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1940,10 +1930,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 864943916}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7307409b35648413dbc457f18e667c26, type: 3}
+  m_Script: {fileID: 11500000, guid: 55531125d26624bd18f472e9384e90de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ckReqObj: {fileID: 1294554387}
+  rojakReqObj: {fileID: 1294554387}
 --- !u!1001 &887283831
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3401,10 +3392,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1609710233}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7307409b35648413dbc457f18e667c26, type: 3}
+  m_Script: {fileID: 11500000, guid: 55531125d26624bd18f472e9384e90de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ckReqObj: {fileID: 1294554387}
+  rojakReqObj: {fileID: 1294554387}
 --- !u!1001 &1619215987
 PrefabInstance:
   m_ObjectHideFlags: 0

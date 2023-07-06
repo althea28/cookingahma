@@ -93,6 +93,7 @@ public class toasttutorial : MonoBehaviour
             //Debug.Log("2nd click!");
             HideKayaText();
             feedbackText2.SetActive(true);
+            kayaspoontutorial.moveDown = true;
             
             //===
             Instantiate(kayaSpreadObj, transform.position+tutorialflow.addKayaCoordinates, kayaSpreadObj.rotation);
@@ -105,6 +106,7 @@ public class toasttutorial : MonoBehaviour
             //Debug.Log("3rd click!");
             HideButterText();
             feedbackText3.SetActive(true);
+            butterknifetutorial.moveDown = true;
             
             //=====
             Instantiate(butterSpreadObj, transform.position+tutorialflow.addButterCoordinates, butterSpreadObj.rotation);

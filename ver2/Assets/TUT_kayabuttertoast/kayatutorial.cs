@@ -6,7 +6,7 @@ public class kayatutorial : MonoBehaviour
     public GameObject prevText;
     public GameObject feedbackText;
     private bool isPrevDisplayed = true;
-    private bool isClicked = false;
+    public bool isClicked = false;
 
     private void Start()
     {
@@ -33,6 +33,7 @@ public class kayatutorial : MonoBehaviour
 
                 isPrevDisplayed = false;
             }
+            kayaspoontutorial.moveUp = true;
             ClickIngredient();
             isClicked = true;
         }
