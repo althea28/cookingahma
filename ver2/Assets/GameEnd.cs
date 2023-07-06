@@ -9,9 +9,21 @@ public class GameEnd : MonoBehaviour
 
     public void TryClicked()
     {
-
-        Debug.Log("Clicked");
-        SceneManager.LoadScene(1);
+        if (gameflow.sceneCounter == 0) 
+        {
+            gameflow.customersServed = 0;
+            SceneManager.LoadScene(1);
+        }
+        else if (gameflow.sceneCounter == 1)
+        {
+            gameflow.customersServed = 0;
+            SceneManager.LoadScene(7);
+        }
+        else if (gameflow.sceneCounter == 2)
+        {
+            gameflow.customersServed = 0;
+            SceneManager.LoadScene(9);
+        }
         
     }
 
@@ -19,15 +31,24 @@ public class GameEnd : MonoBehaviour
     public void NextLevel()
     {
 
-        if (gameflow.sceneCounter == 0)
+        if (gameflow.sceneCounter == 1)
         {
+            gameflow.customersServed = 0;
             SceneManager.LoadScene(7); // level 1 to level 2
-            gameflow.sceneCounter++;
+ 
         }
-        else if (gameflow.sceneCounter == 1)
+        else if (gameflow.sceneCounter == 2)
         {
-            SceneManager.LoadScene(1); // level 2 to level 3, put placeholder 1 for level 3 first.
-            gameflow.sceneCounter++;
+            gameflow.customersServed = 0;
+            SceneManager.LoadScene(9); // level 2 to level 3
+            
+        }
+        
+        else if (gameflow.sceneCounter == 3)
+        {
+            gameflow.customersServed = 0;
+            SceneManager.LoadScene(11); // level 3 to snack stall intro
+            
         }
 
     }

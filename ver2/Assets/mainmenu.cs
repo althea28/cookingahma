@@ -7,7 +7,17 @@ public class mainmenu : MonoBehaviour
 {
    public void PlayGame ()
    {
+    SceneManager.LoadScene(10);
+   }
+
+   public void PlayToast ()
+   {
      SceneManager.LoadScene(1);
+   }
+
+   public void PlayCKRojak ()
+   {
+     SceneManager.LoadScene(12);
    }
 
    public void TutorialSelection ()

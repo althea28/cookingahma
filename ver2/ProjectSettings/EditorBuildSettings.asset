@@ -38,4 +38,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TUT chweekueh.unity
     guid: aee1959ef2c5046e7a2a3f0409568e9c
+  - enabled: 1
+    path: Assets/Scenes/LEVEL3.unity
+    guid: 6ff7547e716dc4df0a3b44d8287326aa
+  - enabled: 1
+    path: Assets/Scenes/Intro_BfastStall.unity
+    guid: 0666953d29f7e4ec68d26b1dded43735
+  - enabled: 1
+    path: Assets/Scenes/Intro_SnackStall.unity
+    guid: bedf45988a85547f89931b7f46146421
+  - enabled: 1
+    path: Assets/Scenes/LEVEL4.unity
+    guid: fe70f1ee0d65841e09372ece8beb42e5
+  - enabled: 1
+    path: Assets/Scenes/LEVEL5.unity
+    guid: 85db997f61a14412386a2652c80c7d1b
   m_configObjects: {}

@@ -141,6 +141,7 @@ public class gameflow : MonoBehaviour
     void Update()
     {
 
+        Debug.Log("Scene counter " + gameflow.sceneCounter);
         if (resetClicks) {
             resetClicking();
         } else if (resetClicksToast) {

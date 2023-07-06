@@ -47,13 +47,17 @@ public class timerslider : MonoBehaviour
             
             stopTimer = true;
 
-            if (gameflow.customersServed >= 5)
+            if ((gameflow.customersServed >= 5 && gameflow.sceneCounter == 0) ||
+                (gameflow.customersServed >= 10 && gameflow.sceneCounter == 1) ||
+                (gameflow.customersServed >= 15 && gameflow.sceneCounter == 2))
             {
                 // Transition to success scene, player has served 5/5 or more.
+                gameflow.sceneCounter++;
                 SceneManager.LoadScene(5);
-                gameflow.count++;
             }
-            else
+            else if ((gameflow.customersServed < 5 && gameflow.sceneCounter == 0) ||
+                (gameflow.customersServed < 10 && gameflow.sceneCounter == 1) ||
+                (gameflow.customersServed < 15 && gameflow.sceneCounter == 2))
             {
                 // Transition to game over scene
                 SceneManager.LoadScene(6);
