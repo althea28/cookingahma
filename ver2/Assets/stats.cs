@@ -14,7 +14,7 @@ public class stats : MonoBehaviour
 
     private void UpdateSliderText()
     {
-        if (gameflow.sceneCounter == 1)
+        if (gameflow.sceneCounter == 1 || gameflow.sceneCounter == 4)
         {
             customerCountText.text = "Customers Served: " + gameflow.customersServed.ToString() + "/5";
         }
@@ -27,5 +27,7 @@ public class stats : MonoBehaviour
         else if (gameflow.sceneCounter == 3)
         {
             customerCountText.text = "Customers Served: " + gameflow.customersServed.ToString() + "/15";
-        }    }
+        }   
+        
+        }
 }

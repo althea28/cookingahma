@@ -49,7 +49,7 @@ public class GameEnd : MonoBehaviour
             gameflow.customersServed = 0;
             SceneManager.LoadScene(11); // level 3 to snack stall intro
             
-        }
+        } 
 
     }
 }

@@ -49,7 +49,8 @@ public class timerslider : MonoBehaviour
 
             if ((gameflow.customersServed >= 5 && gameflow.sceneCounter == 0) ||
                 (gameflow.customersServed >= 10 && gameflow.sceneCounter == 1) ||
-                (gameflow.customersServed >= 15 && gameflow.sceneCounter == 2))
+                (gameflow.customersServed >= 15 && gameflow.sceneCounter == 2) ||
+                (gameflow.customersServed >= 5 && gameflow.sceneCounter == 3))
             {
                 // Transition to success scene, player has served 5/5 or more.
                 gameflow.sceneCounter++;
