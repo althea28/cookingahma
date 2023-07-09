@@ -34,6 +34,11 @@ public class gameflow : MonoBehaviour
 
     public static string destroySteamA = "n";
     public static string destroySteamB = "n";
+    
+    public static string toastAIsClicked = "n";
+    public static string toastBIsClicked = "n";
+    public static string trashA = "n";
+    public static string trashB = "n";
 
     //soft boiled egg 
     public static Vector3 steamerACoords = new Vector3(6.044f, 3.385f, 3.55f);
@@ -95,11 +100,6 @@ public class gameflow : MonoBehaviour
     public float timeWithoutCustomerOnC = 0;
     public float maxTimeWithoutCustomer = 3f;
 
-    public static string toastAIsClicked = "n";
-    public static string toastBIsClicked = "n";
-    public static string trashA = "n";
-    public static string trashB = "n";
-
     public static int count = 0;
 
     //LEVEL INITIATE
@@ -111,15 +111,45 @@ public class gameflow : MonoBehaviour
     void Start()
     {
         initiating = true; //INITIATES LEVEL DETAILS
-
+        
+        //toast
         toastOnGrillA = "n";
         toastOnGrillB = "n";
         toastOnBoardA = "n";
         toastOnBoardB = "n";
 
+        placeKaya = "n";
+        placeButter = "n";
+
         destroySteamA = "n";
         destroySteamB = "n";
 
+        toastAIsClicked = "n";
+        toastBIsClicked = "n";
+        trashA = "n";
+        trashB = "n";
+
+        //egg
+        eggOnSteamerA = false;
+        eggOnSteamerB = false;
+        eggsOnPlateA = false;
+        eggsOnPlateB = false;
+
+        plateACooked = false;
+        plateBCooked = false;
+        hasSoyaOnA = false;
+        hasSoyaOnB = false;
+
+        soyaSauceClicked = false;
+        plateAClicked = false;
+        plateBClicked = false;
+
+        serveEggA = false;
+        serveEggB = false;
+        trashPlateA = false;
+        trashPlateB = false;
+
+        //customergeneration
         customerOnA = "n";
         customerOnB = "n";
         customerOnC = "n";
@@ -130,9 +160,7 @@ public class gameflow : MonoBehaviour
         timeWithoutCustomerOnB = 0;
         timeWithoutCustomerOnC = 0;
 
-        trashA = "n";
-        trashB = "n";
-
+        
         resetClicking();
         
     }

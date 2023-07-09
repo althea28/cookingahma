@@ -133,17 +133,41 @@ public class gameflow2 : MonoBehaviour
         dishOnA = "none";
         dishOnB = "none";
         dishOnC = "none";
-        
-        //chweekueh
-        destroySteamA = "n";
-        destroySteamB = "n";
-
         timeWithoutCustomerOnA = 0;
         timeWithoutCustomerOnB = 0;
         timeWithoutCustomerOnC = 0;
 
+        //chweekueh
+        destroySteamA = "n";
+        destroySteamB = "n";
+
         trashA = "n";
         trashB = "n";
+        
+        ckOnSteamerA = false;
+        ckOnSteamerB = false;
+        ckOnPlateA = false;
+        ckOnPlateB = false;
+
+        plateACooked = false;
+        plateBCooked = false;
+        hasCPOnA = false;
+        hasCPOnB = false;
+
+        chaiPohClicked = false;
+        plateAClicked = false;
+        plateBClicked = false;
+
+        serveCkA = false;
+        serveCkB = false;
+
+        trashPlateA = false;
+        trashPlateB = false;
+        destroySteamA = "n";
+        destroySteamB = "n";
+        trashA = "n";
+        trashB = "n";
+
 
         //rojak
         foodOnBoardA = false;
