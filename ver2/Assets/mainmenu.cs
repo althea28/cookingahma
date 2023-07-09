@@ -49,5 +49,9 @@ public class mainmenu : MonoBehaviour
   {
     SceneManager.LoadScene(8);
   }
-
+  
+  public void RojakTutorial ()
+  {
+    SceneManager.LoadScene(14);
+  }
 }

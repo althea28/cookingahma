@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LEVEL5.unity
     guid: 85db997f61a14412386a2652c80c7d1b
+  - enabled: 1
+    path: Assets/Scenes/TUT rojak.unity
+    guid: 60bd506ddec2a4cdb91398a318077946
   m_configObjects: {}
