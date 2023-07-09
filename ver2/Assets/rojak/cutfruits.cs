@@ -25,7 +25,7 @@ public class cutfruits : MonoBehaviour
             gameflow2.trashBoardA = false;
         } else if ((gameflow2.trashBoardB) && (isOnBoardB())) {
             //resetBoardB();
-            gameflow2.foodOnBoardA = false;
+            gameflow2.foodOnBoardB = false;
             Destroy(gameObject);
             gameflow2.trashBoardB = false;
         }

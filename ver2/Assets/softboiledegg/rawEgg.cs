@@ -44,29 +44,37 @@ public class rawEgg : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if (gameflow.soyaSauceClicked) {
+        if ((gameflow.soyaSauceClicked) && (canAddSoyaSauce())) {
             //add soya sauce to egg
             Instantiate(soyaSauceObj, transform.position + gameflow.addSoyaSauceCoords, soyaSauceObj.rotation);
             addedSoya(); //indicate in gameflow that added soya sauce
-            gameflow.soyaSauceClicked = false;
             
             //RESET===
-            gameflow.resetClicks = true;
+            gameflow.resetClicksEggs = true;
 
         } else if (isOnPlateA()) {
             gameflow.plateAClicked = true;
 
             //RESET===
-            gameflow.resetClicksToast = true;
             gameflow.plateBClicked = false;
 
         } else if (isOnPlateB()) {
             gameflow.plateBClicked = true;
 
             //RESET===
-            gameflow.resetClicksToast = true;
             gameflow.plateAClicked = false;
 
+        }
+        gameflow.soyaSauceClicked = false;
+        gameflow.resetClicksToast = true;
+
+    }
+
+    bool canAddSoyaSauce() {
+        if (isOnPlateA()) {
+            return (!gameflow.hasSoyaOnA);
+        } else { //is on plate B
+            return (!gameflow.hasSoyaOnB);
         }
     }
 
