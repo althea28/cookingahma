@@ -6,9 +6,13 @@ using UnityEngine.SceneManagement;
 public class GameEnd : MonoBehaviour
 {
 
+    public AudioSource soundPlayer;
 
     public void TryClicked()
     {
+        soundPlayer.Play();
+        DontDestroyOnLoad(soundPlayer.gameObject);
+        
         if (gameflow.sceneCounter == 0) 
         {
             gameflow.customersServed = 0;
