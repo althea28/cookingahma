@@ -55,7 +55,7 @@ public class rojakTutFlow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("stepcounter: "+stepCounter);
+        //Debug.Log("stepcounter: "+stepCounter);
 
         if (stepCounter != stepTracker) {
             if (stepCounter == 2) {
