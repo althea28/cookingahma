@@ -168,7 +168,6 @@ public class gameflow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         Debug.Log("Scene counter " + gameflow.sceneCounter);
         if (resetClicks) {
             resetClicking();

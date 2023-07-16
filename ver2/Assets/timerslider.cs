@@ -34,7 +34,7 @@ public class timerslider : MonoBehaviour
         int mins = Mathf.FloorToInt(time / 60);
         int secs = Mathf.FloorToInt(time - mins * 60f);
         string textTime = string.Format("{0:0}:{1:00}", mins, secs);
-
+    
 
         if (gameflow.count > 0 && time <= 0)
 
@@ -42,23 +42,27 @@ public class timerslider : MonoBehaviour
             Debug.Log("Here");
             ResetTimer();
         }
-        else if (time <= 0 && gameflow.count == 0)
+        else if (time <= 0) //&& gameflow.count == 0)
         {
-            
+                
             stopTimer = true;
 
-            if ((gameflow.customersServed >= 5 && gameflow.sceneCounter == 0) ||
-                (gameflow.customersServed >= 10 && gameflow.sceneCounter == 1) ||
-                (gameflow.customersServed >= 15 && gameflow.sceneCounter == 2) ||
-                (gameflow.customersServed >= 5 && gameflow.sceneCounter == 3))
+            if ((gameflow.customersServed >= 1 && gameflow.sceneCounter == 0) ||
+                (gameflow.customersServed >= 1 && gameflow.sceneCounter == 1) ||
+                (gameflow.customersServed >= 1 && gameflow.sceneCounter == 2) ||
+                (gameflow2.customersServed >= 1 && gameflow.sceneCounter == 3) ||
+                (gameflow2.customersServed >= 1 && gameflow.sceneCounter == 4))
             {
+                Debug.Log("HERE");
                 // Transition to success scene, player has served 5/5 or more.
                 gameflow.sceneCounter++;
                 SceneManager.LoadScene(5);
             }
-            else if ((gameflow.customersServed < 5 && gameflow.sceneCounter == 0) ||
-                (gameflow.customersServed < 10 && gameflow.sceneCounter == 1) ||
-                (gameflow.customersServed < 15 && gameflow.sceneCounter == 2))
+            else if ((gameflow.customersServed < 1 && gameflow.sceneCounter == 0) ||
+                (gameflow.customersServed < 1 && gameflow.sceneCounter == 1) ||
+                (gameflow.customersServed < 1 && gameflow.sceneCounter == 2) ||
+                (gameflow2.customersServed < 1 && gameflow.sceneCounter == 3) ||
+                (gameflow2.customersServed < 1 && gameflow.sceneCounter ==4))
             {
                 // Transition to game over scene
                 SceneManager.LoadScene(6);

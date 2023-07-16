@@ -14,7 +14,8 @@ public class InGameBetweenScenes : MonoBehaviour
         "TUT rojak",
         "TUT chwee kueh",
         "Success",
-        "GameOver"
+        "GameOver",
+        "Intro_BfastStall", "Intro_SnackStall"
 
     };
 

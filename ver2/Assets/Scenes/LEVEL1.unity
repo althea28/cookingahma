@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerSlider: {fileID: 1367854392}
-  gameTime: 30
+  gameTime: 10
   timerTextObject: {fileID: 1627327242}
 --- !u!1 &85890223
 GameObject:

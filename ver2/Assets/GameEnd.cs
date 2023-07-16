@@ -28,6 +28,16 @@ public class GameEnd : MonoBehaviour
             gameflow.customersServed = 0;
             SceneManager.LoadScene(9);
         }
+        else if (gameflow.sceneCounter == 3)
+        {
+            gameflow2.customersServed = 0;
+            SceneManager.LoadScene(12);
+        }
+        else if (gameflow.sceneCounter == 4)
+        {
+            gameflow2.customersServed = 0;
+            SceneManager.LoadScene(15);
+        }
         
     }
 
@@ -55,5 +65,16 @@ public class GameEnd : MonoBehaviour
             
         } 
 
+        else if (gameflow.sceneCounter == 4)
+        {
+            gameflow2.customersServed = 0;
+            SceneManager.LoadScene(13); // level 4 to level 5
+        }
+
+        else if (gameflow.sceneCounter == 5)
+        {
+            gameflow2.customersServed = 0;
+            SceneManager.LoadScene(15); // level 4 to level 5
+        }
     }
 }

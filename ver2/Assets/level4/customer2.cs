@@ -56,7 +56,7 @@ public class customer2 : MonoBehaviour
     void successfulServe() { 
         destroyReq();
         customerReset(transform.position);
-        gameflow2.customersServed += 1;
+        gameflow2.customersServed ++;
         Destroy (gameObject);
     }
 
