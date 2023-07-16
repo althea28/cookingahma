@@ -31,8 +31,20 @@ public class CustServed3 : MonoBehaviour
 
     private void UpdateSliderText()
     {
-        customerCountText.text = "Customers Served: " + gameflow2.customersServed.ToString() + "/5";
+        if (gameflow.sceneCounter == 3)
+        {
+            customerCountText.text = "Customers Served: " + gameflow2.customersServed.ToString() + "/5";
+        }
+
+        else if (gameflow.sceneCounter == 4)
+        {
+            customerCountText.text = "Customers Served: " + gameflow2.customersServed.ToString() + "/10";
+        }
         
+        else if (gameflow.sceneCounter == 5)
+        {
+            customerCountText.text = "Customers Served: " + gameflow2.customersServed.ToString() + "/15";
+        }
     }
 
     private void UpdateSliderValue()

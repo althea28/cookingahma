@@ -51,10 +51,10 @@ public class timerslider : MonoBehaviour
                 (gameflow.customersServed >= 1 && gameflow.sceneCounter == 1) ||
                 (gameflow.customersServed >= 1 && gameflow.sceneCounter == 2) ||
                 (gameflow2.customersServed >= 1 && gameflow.sceneCounter == 3) ||
-                (gameflow2.customersServed >= 1 && gameflow.sceneCounter == 4))
+                (gameflow2.customersServed >= 1 && gameflow.sceneCounter == 4) ||
+                (gameflow2.customersServed >= 1 && gameflow.sceneCounter == 5))
             {
-                Debug.Log("HERE");
-                // Transition to success scene, player has served 5/5 or more.
+                // Transition to success scene, player has attained level goal
                 gameflow.sceneCounter++;
                 SceneManager.LoadScene(5);
             }
@@ -62,7 +62,8 @@ public class timerslider : MonoBehaviour
                 (gameflow.customersServed < 1 && gameflow.sceneCounter == 1) ||
                 (gameflow.customersServed < 1 && gameflow.sceneCounter == 2) ||
                 (gameflow2.customersServed < 1 && gameflow.sceneCounter == 3) ||
-                (gameflow2.customersServed < 1 && gameflow.sceneCounter ==4))
+                (gameflow2.customersServed < 1 && gameflow.sceneCounter == 4) ||
+                (gameflow2.customersServed < 1 && gameflow.sceneCounter == 5))
             {
                 // Transition to game over scene
                 SceneManager.LoadScene(6);
