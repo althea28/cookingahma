@@ -18,6 +18,7 @@ public class ondehTutFlow : MonoBehaviour
 
     public static Vector3 sugarOnDoughCoords = new Vector3(3.512f, 4.04f, 1.64f);
     public static Vector3 addBoilingOndehCoords = new Vector3(0, 0.154f, 0);
+    public static Vector3 addCoconutCoords = new Vector3(0.016f, 0.119f, 0);
 
     public static Vector3 customerBCoordinates = new Vector3(1.19f, 6f, -2f);     
     public static Vector3 addReqCoordinates = new Vector3(-2.1f,1.11f,0.1f);
@@ -40,6 +41,7 @@ public class ondehTutFlow : MonoBehaviour
     public GameObject instr15;
     public GameObject instr16;
     public GameObject instr17;
+    public GameObject instr18;
 
     // Start is called before the first frame update
     void Start()
@@ -107,6 +109,9 @@ public class ondehTutFlow : MonoBehaviour
             } else if (stepCounter == 17) { 
                 instr16.SetActive(false);
                 instr17.SetActive(true);
+            } else if (stepCounter == 18) { 
+                instr17.SetActive(false);
+                instr18.SetActive(true);
             }
             stepTracker++;
         }                

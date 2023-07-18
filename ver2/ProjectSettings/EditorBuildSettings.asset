@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LEVEL6.unity
     guid: 652a8dbd7aff94918982bac7fc0eb857
+  - enabled: 1
+    path: Assets/Scenes/TUT ondehondeh.unity
+    guid: 41a0545d9612b4de5b8cadf7e7612b54
   m_configObjects: {}

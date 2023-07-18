@@ -22,7 +22,7 @@ public class customerOndehTut : MonoBehaviour
         if ((ondehTutFlow.stepCounter == 11) && (isOnCusBCoords())) {
             ondehTutFlow.stepCounter ++;
             Destroy (gameObject);
-        } else if ((ondehTutFlow.stepCounter == 16)) {
+        } else if ((ondehTutFlow.stepCounter == 17)) {
             ondehTutFlow.stepCounter ++;
             Destroy (gameObject);
         }

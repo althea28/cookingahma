@@ -6,6 +6,7 @@ public class ondehsteamerTut : MonoBehaviour
 {
     public Transform undercookedOndehObj;
     public Transform burntOndehObj;
+    public Transform cookedOndehObj;
     
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,9 @@ public class ondehsteamerTut : MonoBehaviour
             ondehTutFlow.stepCounter++;
         } else if (ondehTutFlow.stepCounter == 10) {
             Instantiate(burntOndehObj, ondehTutFlow.plateACoords + ondehTutFlow.overcookedOndehCoords, burntOndehObj.rotation);
+            ondehTutFlow.stepCounter++;
+        } else if (ondehTutFlow.stepCounter == 13) {
+            Instantiate(cookedOndehObj, ondehTutFlow.plateACoords + ondehTutFlow.overcookedOndehCoords, cookedOndehObj.rotation);
             ondehTutFlow.stepCounter++;
         }
     }

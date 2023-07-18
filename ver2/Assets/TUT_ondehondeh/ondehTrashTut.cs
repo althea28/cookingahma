@@ -17,5 +17,10 @@ public class ondehTrashTut : MonoBehaviour
         {
             ondehTutFlow.stepCounter++;
         }
+
+        if (ondehTutFlow.stepCounter == 12)
+        {
+            ondehTutFlow.stepCounter++;
+        }
     }
 }

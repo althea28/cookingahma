@@ -61,4 +61,9 @@ public class mainmenu : MonoBehaviour
   {
     SceneManager.LoadScene(14);
   }
+
+  public void OndehTutorial ()
+  {
+    SceneManager.LoadScene(16);
+  }
 }
