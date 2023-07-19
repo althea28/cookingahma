@@ -1067,6 +1067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ondehReqObj: {fileID: 285400719}
+  pulutReqObj: {fileID: 285400719}
 --- !u!4 &434080394 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 988ba6530a2ca4353b47fba2e7b43808, type: 3}
@@ -1569,6 +1570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ondehReqObj: {fileID: 285400719}
+  pulutReqObj: {fileID: 285400719}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1855,6 +1857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ondehReqObj: {fileID: 285400719}
+  pulutReqObj: {fileID: 285400719}
 --- !u!1001 &887283831
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3464,6 +3467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ondehReqObj: {fileID: 285400719}
+  pulutReqObj: {fileID: 285400719}
 --- !u!1001 &1619215987
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -27,6 +27,11 @@ public class mainmenu : MonoBehaviour
      SceneManager.LoadScene(12);
    }
 
+   public void PlayDessert ()
+   {
+    SceneManager.LoadScene(17);
+   }
+
    public void TutorialSelection ()
    {
      SceneManager.LoadScene(2);

@@ -74,7 +74,13 @@ public class GameEnd : MonoBehaviour
         else if (gameflow.sceneCounter == 5)
         {
             gameflow2.customersServed = 0;
-            SceneManager.LoadScene(15); // level 4 to level 5
+            SceneManager.LoadScene(15); // level 5 to level 6
+        }
+        
+        else if (gameflow.sceneCounter == 6)
+        {
+            gameflow2.customersServed = 0;
+            SceneManager.LoadScene(17);
         }
     }
 }
