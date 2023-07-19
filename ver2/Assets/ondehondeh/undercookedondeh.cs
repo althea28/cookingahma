@@ -61,8 +61,9 @@ public class undercookedondeh : MonoBehaviour
             //reset
             gameflow3.ondehPlateAClicked = false;
         }
-
+        //reset
         gameflow3.coconutClicked = false;
+        gameflow3.resetClicksPulut = true;
     }
 
     void resetA() {

@@ -21,8 +21,13 @@ public class trashclick3 : MonoBehaviour
             gameflow3.destroyOndehA = true;
         } else if (gameflow3.ondehPlateBClicked) {
             gameflow3.destroyOndehB = true;
+        } else if (gameflow3.bowlAClicked) {
+            gameflow3.destroyPulutA = true;
+        } else if (gameflow3.bowlBClicked) {
+            gameflow3.destroyPulutB = true;
         }
+
         //reset
-        gameflow3.resetClicksOndeh = true;
+        gameflow3.resetClicks = true;
     }
 }

@@ -5,18 +5,18 @@ using UnityEngine;
 public class customer3 : MonoBehaviour
 {
     public Transform ondehReqObj;
-    //public Transform rojakReqObj;
+    public Transform pulutReqObj;
 
     // Start is called before the first frame update
     void Start()
     {
-        int dishSelector = Random.Range(1,gameflow2.numOfDishes + 1); 
+        int dishSelector = Random.Range(1, gameflow3.numOfDishes + 1); 
         if (dishSelector == 1) { //if ondeh
             Instantiate(ondehReqObj, transform.position + gameflow2.addReqCoordinates, ondehReqObj.rotation);
             dishIndicator("ondeh");
-        /*} else if (dishSelector == 2) {
-            Instantiate(rojakReqObj, transform.position + gameflow.addReqCoordinates, rojakReqObj.rotation); 
-            dishIndicator("rojak");*/
+        } else if (dishSelector == 2) { //if pulut hitam
+            Instantiate(pulutReqObj, transform.position + gameflow.addReqCoordinates, pulutReqObj.rotation); 
+            dishIndicator("pulut");
         }
     }
 
@@ -39,20 +39,22 @@ public class customer3 : MonoBehaviour
                 (gameflow3.ondehOnBCooked) && (gameflow3.coconutOnB)) {
             gameflow3.destroyOndehB = true; 
             successfulServe();
-
-        /*} else if ((customersOrder() == "rojak") && (gameflow2.bowlAClicked) && (gameflow2.stepOnBowlA == 5)) {
-            gameflow2.stepOnBowlA = 1;
-            gameflow2.serveRojakA = true;
+        
+        //serve pulut A
+        } else if ((customersOrder() == "pulut") && (gameflow3.bowlAClicked) && 
+                (gameflow3.bowlACooked) && (gameflow3.milkAddedOnA)) {
+            gameflow3.destroyPulutA = true;
             successfulServe();
-
-        } else if ((customersOrder() == "rojak") && (gameflow2.bowlBClicked) && (gameflow2.stepOnBowlB == 5)) {
-            gameflow2.stepOnBowlB = 1;
-            gameflow2.serveRojakB = true;
-            successfulServe();*/
+        
+        //serve pulut B
+        } else if ((customersOrder() == "pulut") && (gameflow3.bowlBClicked) && 
+                (gameflow3.bowlBCooked) && (gameflow3.milkAddedOnB)) {
+            gameflow3.destroyPulutB = true;
+            successfulServe();
         }
         
         //RESET===
-        gameflow3.resetClicksOndeh = true;
+        gameflow3.resetClicks = true;
     }
 
     void successfulServe() { 

@@ -22,6 +22,7 @@ public class coconutbowl : MonoBehaviour
         //reset
         gameflow3.ondehPlateAClicked = false;
         gameflow3.ondehPlateBClicked = false;
+        gameflow3.resetClicksPulut = true;
 
     }
 }

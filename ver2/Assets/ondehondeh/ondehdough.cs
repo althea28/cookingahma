@@ -38,6 +38,6 @@ public class ondehdough : MonoBehaviour
         } 
 
         //reset
-        gameflow3.resetClicksOndeh = true;
+        gameflow3.resetClicks = true;
     }
 }
