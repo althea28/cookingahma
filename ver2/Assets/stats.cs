@@ -52,5 +52,17 @@ public class stats : MonoBehaviour
             customerCountText.text = "Customers Served: " + gameflow3.customersServed.ToString() + "/5";
 
         }
+
+        else if (gameflow.sceneCounter == 8)
+        {            
+            customerCountText.text = "Customers Served: " + gameflow3.customersServed.ToString() + "/10";
+
+        }
+
+        else if (gameflow.sceneCounter == 9)
+        {            
+            customerCountText.text = "Customers Served: " + gameflow3.customersServed.ToString() + "/15";
+
+        }
         }
 }

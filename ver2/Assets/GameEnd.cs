@@ -80,7 +80,19 @@ public class GameEnd : MonoBehaviour
         else if (gameflow.sceneCounter == 6)
         {
             gameflow2.customersServed = 0;
-            SceneManager.LoadScene(17);
+            SceneManager.LoadScene(17); // level 6 to dessert stall intro
+        }
+
+        else if (gameflow.sceneCounter == 7)
+        {
+            gameflow2.customersServed = 0;
+            SceneManager.LoadScene(19); // level 7 to level 8
+        }
+
+        else if (gameflow.sceneCounter == 8)
+        {
+            gameflow2.customersServed = 0;
+            SceneManager.LoadScene(20); // level 8 to level 9
         }
     }
 }

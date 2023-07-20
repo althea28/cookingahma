@@ -872,7 +872,7 @@ GameObject:
   - component: {fileID: 799680213}
   - component: {fileID: 799680212}
   m_Layer: 5
-  m_Name: options
+  m_Name: play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -945,7 +945,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 476674068}
         m_TargetAssemblyTypeName: mainmenu, Assembly-CSharp
-        m_MethodName: PlayCKRojak
+        m_MethodName: PlayDessert
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

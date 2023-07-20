@@ -63,6 +63,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TUT ondehondeh.unity
     guid: 41a0545d9612b4de5b8cadf7e7612b54
   - enabled: 1
+    path: Assets/Scenes/Intro_DessertStall.unity
+    guid: f61e0fc1612484e1f93255a3de2f83ac
+  - enabled: 1
     path: Assets/Scenes/LEVEL7.unity
     guid: 01d5a30ec53c1494fb53d15db63ed493
   - enabled: 1
