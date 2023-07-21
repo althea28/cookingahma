@@ -24,7 +24,7 @@ public class pulutTutFlow : MonoBehaviour
  
     public Transform customerObj;
 
-    /*public GameObject instr1;
+    public GameObject instr1;
     public GameObject instr2;
     public GameObject instr3;
     public GameObject instr4;
@@ -40,7 +40,11 @@ public class pulutTutFlow : MonoBehaviour
     public GameObject instr14;
     public GameObject instr15;
     public GameObject instr16;
-    public GameObject instr17;*/
+    public GameObject instr17;
+    public GameObject instr18;
+    public GameObject instr19;
+    public GameObject instr20;
+    public GameObject instr21;
 
     // Start is called before the first frame update
     void Start()
@@ -57,7 +61,7 @@ public class pulutTutFlow : MonoBehaviour
         
         if (stepCounter != stepTracker) {
             Debug.Log("step: "+stepCounter);
-            /*if (stepCounter == 2) {
+            if (stepCounter == 2) {
                 instr1.SetActive(false);
                 instr2.SetActive(true);
             } else if (stepCounter == 3) {
@@ -106,7 +110,19 @@ public class pulutTutFlow : MonoBehaviour
             } else if (stepCounter == 17) { 
                 instr16.SetActive(false);
                 instr17.SetActive(true);
-            }*/
+            } else if (stepCounter == 18) { 
+                instr17.SetActive(false);
+                instr18.SetActive(true);
+            } else if (stepCounter == 19) { 
+                instr18.SetActive(false);
+                instr19.SetActive(true);
+            } else if (stepCounter == 20) { 
+                instr19.SetActive(false);
+                instr20.SetActive(true);
+            } else if (stepCounter == 21) { 
+                instr20.SetActive(false);
+                instr21.SetActive(true);
+            }
             stepTracker++;
         }
 

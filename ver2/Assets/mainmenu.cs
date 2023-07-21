@@ -71,4 +71,9 @@ public class mainmenu : MonoBehaviour
   {
     SceneManager.LoadScene(16);
   }
+  
+  public void PulutTutorial ()
+  {
+    SceneManager.LoadScene(21);
+  }
 }

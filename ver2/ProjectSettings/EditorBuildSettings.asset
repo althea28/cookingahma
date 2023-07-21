@@ -71,4 +71,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LEVEL8.unity
     guid: 23f1193c1830742a88ef28f47702eef2
+  - enabled: 1
+    path: Assets/Scenes/LEVEL9.unity
+    guid: bb5b6d557d2e3464a8e804a6c461333b
+  - enabled: 1
+    path: Assets/Scenes/TUT pulut hitam.unity
+    guid: 23e183a5f45c24f17905492ed6d06776
   m_configObjects: {}
