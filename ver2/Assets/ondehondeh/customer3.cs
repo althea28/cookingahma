@@ -60,7 +60,8 @@ public class customer3 : MonoBehaviour
     void successfulServe() { 
         destroyReq();
         customerReset();
-        gameflow3.customersServed += 1;
+        gameflow3.customersServed ++;
+        Debug.Log(gameflow3.customersServed);
         Destroy (gameObject);
     }
 

@@ -945,7 +945,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 476674068}
         m_TargetAssemblyTypeName: mainmenu, Assembly-CSharp
-        m_MethodName: PlayDessert
+        m_MethodName: PlayCKRojak
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
