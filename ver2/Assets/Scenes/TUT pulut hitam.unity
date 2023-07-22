@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 89.6, y: 27.8}
-  m_SizeDelta: {x: 426.4848, y: 56.615}
+  m_AnchoredPosition: {x: 0, y: 27.8}
+  m_SizeDelta: {x: 400, y: 56.615}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &942897
 MonoBehaviour:
@@ -295,7 +295,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 88.1, y: 21}
+  m_AnchoredPosition: {x: 0, y: 21}
   m_SizeDelta: {x: 469.96, y: 17.5422}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &40984006
@@ -430,7 +430,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 85.9, y: 21.2}
+  m_AnchoredPosition: {x: 0, y: 26}
   m_SizeDelta: {x: 466.0213, y: 31.075}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &45993123
@@ -646,7 +646,7 @@ RectTransform:
   - {fileID: 910117086}
   - {fileID: 1914962740}
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -724,8 +724,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 89, y: 25.1}
-  m_SizeDelta: {x: 467.7183, y: 51.973}
+  m_AnchoredPosition: {x: 0, y: 30}
+  m_SizeDelta: {x: 400, y: 51.973}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &107493641
 MonoBehaviour:
@@ -748,8 +748,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "The gula melaka in the other pot has dissolved and a red soup has formed.
-    \nThis means that the pulut hitam has cooked! \nClick the pot on the right to
-    remove it from the pot."
+    This means that the pulut hitam has cooked! \nClick the pot on the right to remove
+    it from the pot."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1103,7 +1103,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b0347eaad0a42456fa5a2e576095f3ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.6
+      value: -4.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b0347eaad0a42456fa5a2e576095f3ba, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1593,7 +1593,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 89.8, y: 25.8}
+  m_AnchoredPosition: {x: 0, y: 25.8}
   m_SizeDelta: {x: 427.0588, y: 41.289}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &346027425
@@ -1617,7 +1617,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Overcooked pulut hitam appears as a dark brown color. \nWe\u2019ll need
-    to trash this as we can\u2019t serve it. \nClick on the bowl."
+    to trash this as we can\u2019t serve it.\nClick on the bowl."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1879,7 +1879,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c28ec70f4c01a435b86af1d164292252, type: 3}
       propertyPath: m_RootOrder
-      value: 39
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c28ec70f4c01a435b86af1d164292252, type: 3}
       propertyPath: m_LocalScale.x
@@ -2027,7 +2027,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3bd4b2db1e5894a178af611f050e31f8, type: 3}
       propertyPath: m_RootOrder
-      value: 41
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3bd4b2db1e5894a178af611f050e31f8, type: 3}
       propertyPath: m_LocalScale.x
@@ -2448,7 +2448,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 78.3, y: 23.5}
+  m_AnchoredPosition: {x: 0, y: 23.5}
   m_SizeDelta: {x: 432.36, y: 18.8995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &636958900
@@ -2656,7 +2656,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 88.1, y: 21}
+  m_AnchoredPosition: {x: 0, y: 21}
   m_SizeDelta: {x: 469.96, y: 17.5422}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &700302525
@@ -2885,8 +2885,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 89.2, y: 20.6}
-  m_SizeDelta: {x: 467.7183, y: 51.973}
+  m_AnchoredPosition: {x: 0, y: 20.6}
+  m_SizeDelta: {x: 400, y: 51.973}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &708422581
 MonoBehaviour:
@@ -3021,8 +3021,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 76.164246, y: 24.47342}
-  m_SizeDelta: {x: 433.0103, y: 17.0308}
+  m_AnchoredPosition: {x: 0, y: 24.47342}
+  m_SizeDelta: {x: 300, y: 17.0308}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &729048598
 MonoBehaviour:
@@ -3261,7 +3261,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 81.4, y: 16.9}
+  m_AnchoredPosition: {x: 0, y: 16.9}
   m_SizeDelta: {x: 433.35, y: 33.636}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &772802348
@@ -3639,7 +3639,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 79.2, y: 24.2}
+  m_AnchoredPosition: {x: 0, y: 24.2}
   m_SizeDelta: {x: 433.35, y: 33.636}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &883312688
@@ -3844,8 +3844,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 77, y: 24}
-  m_SizeDelta: {x: 435.7821, y: 43.721}
+  m_AnchoredPosition: {x: 0, y: 24}
+  m_SizeDelta: {x: 300, y: 43.721}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &888600132
 MonoBehaviour:
@@ -3867,9 +3867,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Let\u2019s make pulut hitam! Black glutinous rice, pandan leaves and gula
-    melaka are cooked together for this recipe. \nClick on the bucket of black glutinous
-    rice to add some rice to the pot."
+  m_text: "Let\u2019s make pulut hitam!\nClick on the bucket of black glutinous rice
+    to add some rice to the pot."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4076,7 +4075,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 78.3, y: 23.5}
+  m_AnchoredPosition: {x: 0, y: 23.5}
   m_SizeDelta: {x: 432.36, y: 18.8995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &910117087
@@ -4412,7 +4411,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 76.4, y: 18.6}
+  m_AnchoredPosition: {x: 0, y: 18.6}
   m_SizeDelta: {x: 435.7821, y: 43.721}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &982024311
@@ -4581,7 +4580,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 76, y: 21.1}
+  m_AnchoredPosition: {x: 0, y: 21.1}
   m_SizeDelta: {x: 438.43, y: 31.3012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &994772911
@@ -4717,7 +4716,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 65.8777, y: 21.376}
+  m_AnchoredPosition: {x: 0, y: 21.376}
   m_SizeDelta: {x: 369.2342, y: 35.932}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1033798217
@@ -4853,7 +4852,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 84, y: 21.7}
+  m_AnchoredPosition: {x: 0, y: 21.7}
   m_SizeDelta: {x: 420.3494, y: 33.425}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1138124046
@@ -4976,6 +4975,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf848f2ccbd064d449ea4ee1bc7917e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1183399699
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f929ab5baa8fe42c3874a232c8ec2dc3, type: 3}
+      propertyPath: m_RootOrder
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f929ab5baa8fe42c3874a232c8ec2dc3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f929ab5baa8fe42c3874a232c8ec2dc3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.07
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f929ab5baa8fe42c3874a232c8ec2dc3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.09
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f929ab5baa8fe42c3874a232c8ec2dc3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8666387
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f929ab5baa8fe42c3874a232c8ec2dc3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.2260085
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f929ab5baa8fe42c3874a232c8ec2dc3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.433401
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f929ab5baa8fe42c3874a232c8ec2dc3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.10010586
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f929ab5baa8fe42c3874a232c8ec2dc3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -17.756
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f929ab5baa8fe42c3874a232c8ec2dc3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 56.75
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f929ab5baa8fe42c3874a232c8ec2dc3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -22.823
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f929ab5baa8fe42c3874a232c8ec2dc3, type: 3}
+      propertyPath: m_Name
+      value: ahma9 (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f929ab5baa8fe42c3874a232c8ec2dc3, type: 3}
 --- !u!1001 &1192877888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5088,7 +5144,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 81.4, y: 16.9}
+  m_AnchoredPosition: {x: 0, y: 16.9}
   m_SizeDelta: {x: 433.35, y: 33.636}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1207742605
@@ -5341,6 +5397,79 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   burntPulutObj: {fileID: 472796803}
+--- !u!1001 &1348828668
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 504338332}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 097c2546229cb404584902fba5344b15, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 097c2546229cb404584902fba5344b15, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.02
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 097c2546229cb404584902fba5344b15, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.0199997
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 097c2546229cb404584902fba5344b15, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.0199997
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 097c2546229cb404584902fba5344b15, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -24.260513
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 097c2546229cb404584902fba5344b15, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.560231
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 097c2546229cb404584902fba5344b15, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -11.889578
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 097c2546229cb404584902fba5344b15, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.96115094
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 097c2546229cb404584902fba5344b15, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.2760233
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 097c2546229cb404584902fba5344b15, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 097c2546229cb404584902fba5344b15, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 097c2546229cb404584902fba5344b15, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 57.954
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 097c2546229cb404584902fba5344b15, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 097c2546229cb404584902fba5344b15, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 097c2546229cb404584902fba5344b15, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 097c2546229cb404584902fba5344b15, type: 3}
+      propertyPath: m_Name
+      value: PHclipboard
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 097c2546229cb404584902fba5344b15, type: 3}
 --- !u!1001 &1382791817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5542,8 +5671,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 93.7, y: 22.5}
-  m_SizeDelta: {x: 490.5075, y: 52.9378}
+  m_AnchoredPosition: {x: 0, y: 22.5}
+  m_SizeDelta: {x: 400, y: 52.9378}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1424924379
 MonoBehaviour:
@@ -5565,10 +5694,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "The mixtures need to be cooked for a while before they're ready. \nRight
-    now, the gula melaka has not dissolved yet, which means it's still undercooked.
-    \nSee what happens when you remove it from the pot too early. \nClick on the
-    left pot."
+  m_text: "The porridge needs to be cooked for a while. Right now, the gula melaka
+    has not dissolved yet, which means it's still undercooked. See what happens when
+    you remove it from the pot too early. \nClick on the left pot."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6194,7 +6322,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1572598188
 MonoBehaviour:
@@ -6239,7 +6367,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 022e632f03b074b738af91255b4fd737, type: 3}
       propertyPath: m_RootOrder
-      value: 28
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 022e632f03b074b738af91255b4fd737, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6472,7 +6600,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 77, y: 24}
+  m_AnchoredPosition: {x: 0, y: 34}
   m_SizeDelta: {x: 435.7821, y: 43.721}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1729584954
@@ -6495,9 +6623,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Undercooked pulut hitam appears as purple rice in water. \nWe can only
-    serve correctly prepared dishes to customers. \nWe\u2019ll have to trash this.
-    Click on the bowl."
+  m_text: "Undercooked pulut hitam appears as purple rice \nin water. We can only
+    serve correctly prepared \ndishes to customers. We\u2019ll have to trash this.
+    \nClick on the bowl."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6688,7 +6816,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1914962739
 GameObject:
@@ -6735,7 +6863,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914962739}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -7015,7 +7143,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 78.3, y: 23.5}
+  m_AnchoredPosition: {x: 0, y: 23.5}
   m_SizeDelta: {x: 432.36, y: 18.8995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2001975968
