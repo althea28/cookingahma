@@ -1414,8 +1414,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 1.1895652, z: 4.363772}
-  m_Center: {x: -0.7000001, y: 0.6447825, z: -0.3318858}
+  m_Size: {x: 4, y: 1.8, z: 4.363772}
+  m_Center: {x: -0.7000001, y: 0.9, z: -0.3318858}
 --- !u!114 &585403705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2520,8 +2520,6 @@ MonoBehaviour:
   kayaObj: {fileID: 1748924908}
   butterObj: {fileID: 465861598}
   steamObj: {fileID: 512021259}
-  cookingTimeA: 0
-  cookingTimeB: 0
 --- !u!1001 &1100775657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2805,11 +2803,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5d4524df226f4df2a8c79b8e1903717, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.29
+      value: -3.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5d4524df226f4df2a8c79b8e1903717, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.95
+      value: 6.75
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5d4524df226f4df2a8c79b8e1903717, type: 3}
       propertyPath: m_LocalPosition.z

@@ -129,6 +129,30 @@ public class gameflow : MonoBehaviour
         trashA = "n";
         trashB = "n";
 
+        toastInner.changedToCookedA = "n";
+        toastInner.changedToCookedB = "n";
+        toastInner.changedToBurntA = "n";
+        toastInner.changedToBurntB = "n";
+
+        toastclick.hasKayaOnA = "n";
+        toastclick.hasKayaOnB = "n";
+        toastclick.hasButterOnA = "n";
+        toastclick.hasButterOnB = "n";
+
+        toastclick.cookingTimeA = 0;
+        toastclick.cookingTimeB = 0;
+        toastclick.toastAIsCooked = "n";
+        toastclick.toastBIsCooked = "n";
+        toastclick.toastAIsBurnt = "n";
+        toastclick.toastBIsBurnt = "n";
+
+        toastclick.toastOnBoardAIsCooked = "n";
+        toastclick.toastOnBoardBIsCooked = "n";
+        toastclick.isToastAReady = "n";
+        toastclick.isToastBReady = "n";
+        toastclick.serveToastA = "n";
+        toastclick.serveToastB = "n";
+
         //egg
         eggOnSteamerA = false;
         eggOnSteamerB = false;
@@ -148,6 +172,14 @@ public class gameflow : MonoBehaviour
         serveEggB = false;
         trashPlateA = false;
         trashPlateB = false;
+
+        eggs.eggCookingTimeA = 0;
+        eggs.eggCookingTimeB = 0;
+
+        eggs.isCookedA = false;
+        eggs.isCookedB = false;
+        eggs.isBurntA = false;
+        eggs.isBurntB = false;
 
         //customergeneration
         customerOnA = "n";

@@ -8,16 +8,16 @@ public class toastInner : MonoBehaviour
     public Material cookedBreadMat; //
     public Material burnedBreadMat;
 
-    private static string changedToCookedA = "n";
-    private static string changedToCookedB = "n";
-    private static string changedToBurntA = "n";
-    private static string changedToBurntB = "n";
+    public static string changedToCookedA = "n";
+    public static string changedToCookedB = "n";
+    public static string changedToBurntA = "n";
+    public static string changedToBurntB = "n";
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+ 
     }
 
     // Update is called once per frame

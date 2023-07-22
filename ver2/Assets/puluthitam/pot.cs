@@ -26,7 +26,15 @@ public class pot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       isCookingA = false; 
+       isCookingB = false;
+       cookingTimeA = 0f;
+       cookingTimeB = 0f;
+       hasCookedA = false;
+       hasBurnedA = false;
+       hasCookedB = false;
+       hasBurnedB = false;
+
     }
 
     // Update is called once per frame

@@ -6,14 +6,14 @@ public class eggs : MonoBehaviour
 {
 
     //time spent on steamer
-    private float eggCookingTimeA = 0;
-    private float eggCookingTimeB = 0;
+    public static float eggCookingTimeA = 0;
+    public static float eggCookingTimeB = 0;
 
     //ensures that only instantiate steam once
-    private bool isCookedA = false;     
-    private bool isCookedB = false;
-    private bool isBurntA = false;     
-    private bool isBurntB = false;
+    public static bool isCookedA = false;     
+    public static bool isCookedB = false;
+    public static bool isBurntA = false;     
+    public static bool isBurntB = false;
 
     //steam obj
     public Transform cookedEggSteamObj;

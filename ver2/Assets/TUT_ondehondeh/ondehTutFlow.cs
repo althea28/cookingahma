@@ -57,9 +57,11 @@ public class ondehTutFlow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("stepcounter: "+stepCounter);
 
         if (stepCounter != stepTracker) {
+            
+            Debug.Log("stepcounter: "+stepCounter);
+
             if (stepCounter == 2) {
                 instr1.SetActive(false);
                 instr2.SetActive(true);

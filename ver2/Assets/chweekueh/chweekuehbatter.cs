@@ -5,14 +5,14 @@ using UnityEngine;
 public class chweekuehbatter : MonoBehaviour
 {
     //time spent on steamer
-    private float ckCookingTimeA = 0;
-    private float ckCookingTimeB = 0;
+    public static float ckCookingTimeA = 0;
+    public static float ckCookingTimeB = 0;
 
     //ensures that only instantiate steam once
-    private bool isCookedA = false;     
-    private bool isCookedB = false;
-    private bool isBurntA = false;
-    private bool isBurntB = false;
+    public static bool isCookedA = false;     
+    public static bool isCookedB = false;
+    public static bool isBurntA = false;
+    public static bool isBurntB = false;
 
     //steam obj
     public Transform SteamObj;

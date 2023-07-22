@@ -10,8 +10,6 @@ public class cookedboilingondeh : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        destroyA = false;
-        destroyB = false;
         
     }
 

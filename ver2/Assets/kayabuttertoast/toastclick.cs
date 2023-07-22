@@ -9,13 +9,13 @@ public class toastclick : MonoBehaviour
     public Transform butterObj;
     public Transform steamObj;
 
-    private static string hasKayaOnA = "n";
-    private static string hasKayaOnB = "n";
-    private static string hasButterOnA = "n";
-    private static string hasButterOnB = "n";
+    public static string hasKayaOnA = "n";
+    public static string hasKayaOnB = "n";
+    public static string hasButterOnA = "n";
+    public static string hasButterOnB = "n";
 
-    public float cookingTimeA = 0;
-    public float cookingTimeB = 0;
+    public static float cookingTimeA = 0;
+    public static float cookingTimeB = 0;
     public static string toastAIsCooked = "n";
     public static string toastBIsCooked = "n";
     public static string toastAIsBurnt = "n";
@@ -36,6 +36,7 @@ public class toastclick : MonoBehaviour
     void Start()
     {
         Instantiate(steamObj, transform.position, steamObj.rotation);
+
     }
 
     // Update is called once per frame

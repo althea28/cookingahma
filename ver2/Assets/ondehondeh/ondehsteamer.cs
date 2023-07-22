@@ -24,6 +24,15 @@ public class ondehsteamer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        startCookingA = false;
+        cookingTimeA = 0f;
+        hasCookedA = false;
+        hasBurntA = false;
+
+        startCookingB = false;
+        cookingTimeB = 0f;
+        hasCookedB = false;
+        hasBurntB = false;
 
     }
 

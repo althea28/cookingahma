@@ -527,7 +527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b0347eaad0a42456fa5a2e576095f3ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.89
+      value: 5.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b0347eaad0a42456fa5a2e576095f3ba, type: 3}
       propertyPath: m_LocalPosition.y
@@ -969,7 +969,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 246065476}
   m_LocalRotation: {x: 0, y: 0.9659258, z: -0.2588191, w: 0}
-  m_LocalPosition: {x: 0, y: 8.11, z: 8.8}
+  m_LocalPosition: {x: 0.74, y: 8, z: 8.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1317,7 +1317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5d4524df226f4df2a8c79b8e1903717, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.72
+      value: -3.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5d4524df226f4df2a8c79b8e1903717, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4394,8 +4394,6 @@ MonoBehaviour:
   kayaObj: {fileID: 1067157733}
   butterObj: {fileID: 1631291997}
   steamObj: {fileID: 492301065}
-  cookingTimeA: 0
-  cookingTimeB: 0
 --- !u!65 &1171474992
 BoxCollider:
   m_ObjectHideFlags: 0

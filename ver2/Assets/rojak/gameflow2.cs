@@ -168,6 +168,12 @@ public class gameflow2 : MonoBehaviour
         trashA = "n";
         trashB = "n";
 
+        chweekuehbatter.ckCookingTimeA = 0;
+        chweekuehbatter.ckCookingTimeB = 0;
+        chweekuehbatter.isCookedA = false;
+        chweekuehbatter.isCookedB = false;
+        chweekuehbatter.isBurntA = false;
+        chweekuehbatter.isBurntB = false;
 
         //rojak
         foodOnBoardA = false;

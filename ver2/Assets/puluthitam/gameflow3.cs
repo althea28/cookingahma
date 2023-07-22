@@ -119,7 +119,53 @@ public class gameflow3 : MonoBehaviour
 
         initiating = true;
 
-        
+        //stats
+        customersServed = 0;
+
+        //customer generation
+        customerOnA = false;
+        customerOnB = false;
+        customerOnC = false;
+        dishOnA = "none";
+        dishOnB = "none";
+        dishOnC = "none";
+        timeWithoutCustomerOnA = 0;
+        timeWithoutCustomerOnB = 0;
+        timeWithoutCustomerOnC = 0;
+
+        //ondeh
+        doughOnSteamerA = false;
+        doughOnSteamerB = false;
+        ondehOnPlateA = false;
+        ondehOnPlateB = false;
+
+        coconutClicked = false;
+        ondehPlateAClicked = false;
+        ondehPlateBClicked = false;
+
+        ondehOnACooked = false;
+        ondehOnBCooked = false;
+        coconutOnA = false;
+        coconutOnB = false;
+
+        destroyOndehA = false;
+        destroyOndehB = false;
+
+        //pulut
+        bowlAOccupied = false;
+        bowlBOccupied = false;
+
+        bowlACooked = false;
+        bowlBCooked = false;
+        milkAddedOnA = false;
+        milkAddedOnB = false;
+
+        milkIsClicked = false;
+        bowlAClicked = false;
+        bowlBClicked = false;
+
+        destroyPulutA = false;
+        destroyPulutB = false;
     }
 
     // Update is called once per frame

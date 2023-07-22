@@ -3410,7 +3410,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1089457424}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6d18875c65144c2ba707a0a6ff170f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 76d3661e4ad6b455eaa55eb0a147ee45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1106141887
@@ -6361,7 +6361,7 @@ MonoBehaviour:
   m_text: 'Our final step is to add coconut flakes on top of the ondeh ondeh!
 
     Click
-    on the orange tub with coconut flakes.'
+    on the yellow tub with coconut flakes.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

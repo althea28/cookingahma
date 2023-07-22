@@ -12,6 +12,13 @@ public class cookedOndehTut : MonoBehaviour
         
     }
 
+    void Update() {
+        if ((ondehTutFlow.stepCounter == 18) && 
+                (transform.position == ondehTutFlow.plateACoords + ondehTutFlow.cookedOndehCoords))  {
+            Destroy(gameObject);
+        }
+    }
+
     // Update is called once per frame
     void OnMouseDown()
     {
