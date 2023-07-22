@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerSlider: {fileID: 1367854392}
-  gameTime: 60
+  gameTime: 10
   timerTextObject: {fileID: 1627327242}
 --- !u!1 &85890223
 GameObject:
@@ -5011,7 +5011,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 442, y: -175}
+  m_AnchoredPosition: {x: 436, y: -248}
   m_SizeDelta: {x: 550, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2002436256
@@ -5307,9 +5307,9 @@ RectTransform:
   m_Father: {fileID: 85890227}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.7, y: 3.9}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -2.7, y: 258.9}
   m_SizeDelta: {x: 409.0002, y: 191.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2038235452

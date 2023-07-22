@@ -1,19 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
- 
+using UnityEngine.SceneManagement;
+
 public class TransitionSceneMusic : MonoBehaviour
 {
-    public static TransitionSceneMusic instance;
- 
-    void Awake()
+    private AudioSource audioSource;
+
+    private void Awake()
     {
-        if (instance != null)
-            Destroy(gameObject);
-        else
+        // Check if the AudioSource component is available.
+        audioSource = GetComponent<AudioSource>();
+
+
+        if ((SceneManager.GetActiveScene().buildIndex == 5) || (SceneManager.GetActiveScene().buildIndex == 6))
         {
-            instance = this;
-            DontDestroyOnLoad(this.gameObject);
+            // Play the sound.
+            audioSource.Play();
         }
     }
 }

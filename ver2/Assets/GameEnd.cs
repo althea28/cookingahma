@@ -16,27 +16,49 @@ public class GameEnd : MonoBehaviour
         if (gameflow.sceneCounter == 0) 
         {
             gameflow.customersServed = 0;
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(1); //retry level 1
         }
         else if (gameflow.sceneCounter == 1)
         {
             gameflow.customersServed = 0;
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene(7); //retry level 2
         }
         else if (gameflow.sceneCounter == 2)
         {
             gameflow.customersServed = 0;
-            SceneManager.LoadScene(9);
+            SceneManager.LoadScene(9); //retry level 3
         }
         else if (gameflow.sceneCounter == 3)
         {
             gameflow2.customersServed = 0;
-            SceneManager.LoadScene(12);
+            SceneManager.LoadScene(12); //retry level 4
         }
         else if (gameflow.sceneCounter == 4)
         {
             gameflow2.customersServed = 0;
-            SceneManager.LoadScene(15);
+            SceneManager.LoadScene(13); //retry level 5
+        }
+
+        else if (gameflow.sceneCounter == 5)
+        {
+            gameflow2.customersServed = 0;
+            SceneManager.LoadScene(15); //retry level 6
+        }
+
+        else if (gameflow.sceneCounter == 6)
+        {
+            gameflow2.customersServed = 0;
+            SceneManager.LoadScene(18); //retry level 7
+        }
+        else if (gameflow.sceneCounter == 7)
+        {
+            gameflow2.customersServed = 0;
+            SceneManager.LoadScene(19); //retry level 8
+        }
+        else if (gameflow.sceneCounter == 8)
+        {
+            gameflow2.customersServed = 0;
+            SceneManager.LoadScene(20); //retry level 9
         }
         
     }

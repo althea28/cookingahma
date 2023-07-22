@@ -7,11 +7,7 @@ public class BetweenScenes : MonoBehaviour
 {
     List<string> scenesToPause = new List<string>
     {
-        "LEVEL1", "LEVEL2", "LEVEL3", "LEVEL4", "LEVEL5",
-        "TUT kayabutter",
-        "TUT softboiled egg",
-        "TUT rojak",
-        "TUT chwee kueh",
+        "LEVEL1", "LEVEL2", "LEVEL3", "LEVEL4", "LEVEL5", "LEVEL6", "LEVEL7", "LEVEL8", "LEVEL9",
         "Success",
         "GameOver"
 
