@@ -3211,7 +3211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerSlider: {fileID: 1116190838}
-  gameTime: 60
+  gameTime: 120
   timerTextObject: {fileID: 111675155}
 --- !u!1001 &616229784
 PrefabInstance:
