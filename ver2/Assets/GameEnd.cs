@@ -47,17 +47,17 @@ public class GameEnd : MonoBehaviour
 
         else if (gameflow.sceneCounter == 6)
         {
-            gameflow2.customersServed = 0;
+            gameflow3.customersServed = 0;
             SceneManager.LoadScene(18); //retry level 7
         }
         else if (gameflow.sceneCounter == 7)
         {
-            gameflow2.customersServed = 0;
+            gameflow3.customersServed = 0;
             SceneManager.LoadScene(19); //retry level 8
         }
         else if (gameflow.sceneCounter == 8)
         {
-            gameflow2.customersServed = 0;
+            gameflow3.customersServed = 0;
             SceneManager.LoadScene(20); //retry level 9
         }
         
@@ -107,14 +107,21 @@ public class GameEnd : MonoBehaviour
 
         else if (gameflow.sceneCounter == 7)
         {
-            gameflow2.customersServed = 0;
+            gameflow3.customersServed = 0;
             SceneManager.LoadScene(19); // level 7 to level 8
         }
 
         else if (gameflow.sceneCounter == 8)
         {
-            gameflow2.customersServed = 0;
+            gameflow3.customersServed = 0;
             SceneManager.LoadScene(20); // level 8 to level 9
         }
+
+        else if (gameflow.sceneCounter == 9)
+        {
+            gameflow3.customersServed = 0;
+            SceneManager.LoadScene(22); // level 9 to final scene
+        }
+
     }
 }

@@ -567,7 +567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 408, y: -180}
+  m_AnchoredPosition: {x: 408, y: -233}
   m_SizeDelta: {x: 554.1921, y: 33.1403}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &99186783
@@ -653,7 +653,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.34350586, y: 0, z: -1.8328247, w: 0}
+  m_margin: {x: -5.700073, y: 0, z: -1.8328247, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4691,7 +4691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerSlider: {fileID: 1688862527}
-  gameTime: 120
+  gameTime: 10
   timerTextObject: {fileID: 13302949}
 --- !u!1001 &1362886142
 PrefabInstance:

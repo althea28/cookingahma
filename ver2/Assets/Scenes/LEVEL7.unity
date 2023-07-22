@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerSlider: {fileID: 1367854392}
-  gameTime: 60
+  gameTime: 10
   timerTextObject: {fileID: 1627327242}
 --- !u!4 &45810619 stripped
 Transform:
@@ -2622,7 +2622,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5d4524df226f4df2a8c79b8e1903717, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.85
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5d4524df226f4df2a8c79b8e1903717, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4389,8 +4389,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 442, y: -175}
-  m_SizeDelta: {x: 550, y: 50}
+  m_AnchoredPosition: {x: 427.01645, y: -229}
+  m_SizeDelta: {x: 597.4172, y: 50.0124}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2002436256
 MonoBehaviour:

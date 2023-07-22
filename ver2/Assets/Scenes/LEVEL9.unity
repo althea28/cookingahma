@@ -3211,7 +3211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerSlider: {fileID: 1116190838}
-  gameTime: 120
+  gameTime: 10
   timerTextObject: {fileID: 111675155}
 --- !u!1001 &616229784
 PrefabInstance:
@@ -3492,8 +3492,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 422.8919, y: -174.96753}
-  m_SizeDelta: {x: 610.4701, y: 49.8972}
+  m_AnchoredPosition: {x: 411.01218, y: -226}
+  m_SizeDelta: {x: 648.0651, y: 49.9083}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &766759139
 MonoBehaviour:
