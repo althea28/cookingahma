@@ -16,9 +16,11 @@ public class sauceLadleTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rojakTutFlow.stepCounter == 14) {
+        if ((rojakTutFlow.stepCounter == rojakTutFlow.stepClickSauce) &&
+            (transform.position == downCoords)) {
            transform.position = upCoords;
-       } else if (transform.position == upCoords) {
+       } else if ((rojakTutFlow.stepCounter == rojakTutFlow.stepAddSauce) &&
+            (transform.position == upCoords)) {
            transform.position = downCoords;
     }
     }

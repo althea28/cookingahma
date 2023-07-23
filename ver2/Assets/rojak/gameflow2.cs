@@ -24,6 +24,12 @@ public class gameflow2 : MonoBehaviour
     public static Vector3 customerCCoordinates = new Vector3(-4.19f, 6f, -2f);
     public static Vector3 addReqCoordinates = new Vector3(-2.1f,1.11f,0.1f);
     
+    private int numOfCustomerModels = 4;
+    private int uncleModel = 1;
+    private int ladyModel = 2;
+    private int boyModel = 3;
+    private int womanModel = 4;
+
     public Transform uncleObj;
     public Transform ladyObj;
     public Transform boyObj;
@@ -38,7 +44,9 @@ public class gameflow2 : MonoBehaviour
     public float timeWithoutCustomerOnA = 0;
     public float timeWithoutCustomerOnB = 0;
     public float timeWithoutCustomerOnC = 0;
-    public float maxTimeWithoutCustomer = 3f;
+    public float maxTimeWithoutCustomerA = 2.5f;
+    public float maxTimeWithoutCustomerB = 4f;
+    public float maxTimeWithoutCustomerC = 4.5f;
 
     //chwee kueh
     public static Vector3 steamerACoords = new Vector3(6.58f, 3.493f, 1.574f);
@@ -97,6 +105,12 @@ public class gameflow2 : MonoBehaviour
 
     public static int stepOnBowlA = 1;
     public static int stepOnBowlB = 1;
+
+    public static int stepEmptyPlate = 1;
+    public static int stepPlateWithFruit = 2;
+    public static int stepPlateWithVege = 3;
+    public static int stepPlateWithTofu = 4;
+    public static int stepReadyPlate = 5;
 
     public static bool bowlAClicked = false;
     public static bool bowlBClicked = false;
@@ -224,17 +238,17 @@ public class gameflow2 : MonoBehaviour
         }
 
         //check how long there is no customer in that position
-        if (timeWithoutCustomerOnA > maxTimeWithoutCustomer - 0.5f) {
+        if (timeWithoutCustomerOnA > maxTimeWithoutCustomerA) {
             generateCustomer(customerACoordinates);
             customerOnA = "y";
             timeWithoutCustomerOnA = 0;
         }
-        if (timeWithoutCustomerOnB > maxTimeWithoutCustomer + 1f) {
+        if (timeWithoutCustomerOnB > maxTimeWithoutCustomerB) {
             generateCustomer(customerBCoordinates);
             customerOnB = "y";
             timeWithoutCustomerOnB = 0;
         }
-        if (timeWithoutCustomerOnC > maxTimeWithoutCustomer + 2f) {
+        if (timeWithoutCustomerOnC > maxTimeWithoutCustomerC) {
             generateCustomer(customerCCoordinates);
             customerOnC = "y";
             timeWithoutCustomerOnC = 0;
@@ -244,14 +258,14 @@ public class gameflow2 : MonoBehaviour
 
     //select a random customer model to add to counter
     void generateCustomer(Vector3 cusCoord) {
-        int cusSelector = Random.Range(1,5);
-        if (cusSelector == 1) {
+        int cusSelector = Random.Range(1, numOfCustomerModels + 1);
+        if (cusSelector == uncleModel) {
             Instantiate(uncleObj, cusCoord, uncleObj.rotation);
-        } else if (cusSelector == 2) {
+        } else if (cusSelector == ladyModel) {
             Instantiate(ladyObj, cusCoord, ladyObj.rotation);
-        } else if (cusSelector == 3) {
+        } else if (cusSelector == boyModel) {
             Instantiate(boyObj, cusCoord, boyObj.rotation);
-        } else if (cusSelector == 4) {
+        } else if (cusSelector == womanModel) {
             Instantiate(womanObj, cusCoord, womanObj.rotation);
         }
     }
@@ -281,15 +295,6 @@ public class gameflow2 : MonoBehaviour
 
         resetClicksRojak = false;
     }
-    /*
-        gameflow2.resetClicksChweeKueh = true;
-        
-        gameflow2.knifeClicked = false;
-        gameflow2.sauceClicked = false;
-        gameflow2.boardAClicked = false;
-        gameflow2.boardBClicked = false;
-        gameflow2.bowlAClicked = false;
-        gameflow2.bowlBClicked = false;
-*/
+    
 
 }

@@ -20,15 +20,15 @@ public class sugarplatetut : MonoBehaviour
     }
     
     void OnMouseDown() {
-        if (pulutTutFlow.stepCounter == 5) {
+        if (pulutTutFlow.stepCounter == pulutTutFlow.stepAddPandanB) {
             Instantiate(sugarObj, pulutTutFlow.potACoords + pulutTutFlow.addSugarCoords, sugarObj.rotation);
             Instantiate(steamObj, pulutTutFlow.potACoords, steamObj.rotation);
             pulutTutFlow.stepCounter ++;
-        } else if (pulutTutFlow.stepCounter == 6) {
+        } else if (pulutTutFlow.stepCounter == pulutTutFlow.stepAddSugarA) {
             Instantiate(sugarObj, pulutTutFlow.potBCoords + pulutTutFlow.addSugarCoords, sugarObj.rotation);
             Instantiate(steamObj, pulutTutFlow.potBCoords, steamObj.rotation);
             pulutTutFlow.stepCounter ++;
-        } else if (pulutTutFlow.stepCounter == 12) {
+        } else if (pulutTutFlow.stepCounter == pulutTutFlow.stepAddPandanC) {
             Instantiate(sugarObj, pulutTutFlow.potACoords + pulutTutFlow.addSugarCoords, sugarObj.rotation);
             Instantiate(steamObj, pulutTutFlow.potACoords, steamObj.rotation);
             pulutTutFlow.stepCounter ++;

@@ -18,12 +18,18 @@ public class toasttutorial : MonoBehaviour
     public Transform butterSpreadObj;
     private static float cookedTime = 0;
 
+    private static int stepStart = 0;
+    private static int stepMovedToast = 1;
+    private static int stepAddKaya = 2;
+    private static int stepAddButter = 3;
+    private static int stepServeToast = 4;
+
     private void Start()
     {
         //=====
         Instantiate(steamObj, transform.position, steamObj.rotation);
-        clickCount = 0;
-        cookedTime = 0;
+        clickCount = stepStart;
+        cookedTime = stepStart;
 
     }
 
@@ -48,7 +54,7 @@ public class toasttutorial : MonoBehaviour
     private void OnMouseDown()
     {
         //Debug.Log("cc: "+clickCount);
-        if (clickCount==0) //moving from grill to board
+        if (clickCount == stepStart) //moving from grill to board
         {
             /*if (isPrevDisplayed)
             {
@@ -58,10 +64,10 @@ public class toasttutorial : MonoBehaviour
             }*/
 
         }
-        if (((clickCount == 0) && (innerToastTutorial.aHasChanged == "y") && (tutorialflow.addedToastB == "y")) ||
-            ((clickCount == 1) && (tutorialflow.kayaClicked == "y")) ||
-            ((clickCount == 2) && (tutorialflow.butterClicked == "y")) ||
-            ((clickCount == 3) && (tutorialflow.addedButter == "y")))
+        if (((clickCount == stepStart) && (innerToastTutorial.aHasChanged == "y") && (tutorialflow.addedToastB == "y")) ||
+            ((clickCount == stepMovedToast) && (tutorialflow.kayaClicked == "y")) ||
+            ((clickCount == stepAddKaya) && (tutorialflow.butterClicked == "y")) ||
+            ((clickCount == stepAddButter) && (tutorialflow.addedButter == "y")))
         {
             clickCount++;
             ClickIngredient();
@@ -76,7 +82,7 @@ public class toasttutorial : MonoBehaviour
 
     private void ClickIngredient()
     {
-        if (clickCount == 1) //moved from grill to board, shows kaya text
+        if (clickCount == stepMovedToast) //moved from grill to board, shows kaya text
         {
             //Debug.Log("fb1 shown");
             prevText.SetActive(false);
@@ -88,7 +94,7 @@ public class toasttutorial : MonoBehaviour
             transform.position = tutorialflow.boardACoordinates;
 
         }
-        else if (clickCount == 2) //added kaya, shows butter text
+        else if (clickCount == stepAddKaya) //added kaya, shows butter text
         {        
             //Debug.Log("2nd click!");
             HideKayaText();
@@ -101,7 +107,7 @@ public class toasttutorial : MonoBehaviour
             tutorialflow.addedKaya = "y";
 
         }
-        else if (clickCount == 3) //add butter, shows serve text
+        else if (clickCount == stepAddButter) //add butter, shows serve text
         {        
             //Debug.Log("3rd click!");
             HideButterText();
@@ -116,7 +122,7 @@ public class toasttutorial : MonoBehaviour
 
         }
 
-        else if (clickCount == 4) //abt to serve toast
+        else if (clickCount == stepServeToast) //abt to serve toast
         {
             feedbackText3.SetActive(false);
             serveCustomer.SetActive(true);
@@ -129,7 +135,7 @@ public class toasttutorial : MonoBehaviour
 
     private void HideFeedbackText1()
     {
-        Debug.Log("hiding fb1");
+        //Debug.Log("hiding fb1");
         feedbackText1.SetActive(false);
     }
 

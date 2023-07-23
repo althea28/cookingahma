@@ -13,7 +13,7 @@ public class cookedOndehTut : MonoBehaviour
     }
 
     void Update() {
-        if ((ondehTutFlow.stepCounter == 18) && 
+        if ((ondehTutFlow.stepCounter == ondehTutFlow.stepServeCustomer) && 
                 (transform.position == ondehTutFlow.plateACoords + ondehTutFlow.cookedOndehCoords))  {
             Destroy(gameObject);
         }
@@ -22,13 +22,13 @@ public class cookedOndehTut : MonoBehaviour
     // Update is called once per frame
     void OnMouseDown()
     {
-        if (ondehTutFlow.stepCounter == 15) 
+        if (ondehTutFlow.stepCounter == ondehTutFlow.stepClickCoconut) 
         {
             Instantiate(coconutObj, transform.position + ondehTutFlow.addCoconutCoords, coconutObj.rotation);
             ondehTutFlow.stepCounter++;
-        } else if (ondehTutFlow.stepCounter == 16) {
+        } else if (ondehTutFlow.stepCounter == ondehTutFlow.stepAddCoconut) {
             ondehTutFlow.stepCounter++;
-        } else if (ondehTutFlow.stepCounter == 17) {
+        } else if (ondehTutFlow.stepCounter == ondehTutFlow.stepClickToServe) {
             Destroy (gameObject);
         }
     }

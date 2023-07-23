@@ -21,13 +21,13 @@ public class ondehdoughTut : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if (ondehTutFlow.stepCounter == 2) {
+        if (ondehTutFlow.stepCounter == ondehTutFlow.stepAddSugarA) {
             Instantiate(steamObj, ondehTutFlow.steamerACoords, steamObj.rotation);
             ondehTutFlow.stepCounter++;
-        } else if (ondehTutFlow.stepCounter == 4) {
+        } else if (ondehTutFlow.stepCounter == ondehTutFlow.stepAddSugarB) {
             Instantiate(steamObj2, ondehTutFlow.steamerBCoords, steamObj2.rotation);
             ondehTutFlow.stepCounter++;
-        } else if (ondehTutFlow.stepCounter == 9) {
+        } else if (ondehTutFlow.stepCounter == ondehTutFlow.stepAddSugarC) {
             Instantiate(steamObj3, ondehTutFlow.steamerACoords, steamObj3.rotation);
             ondehTutFlow.stepCounter++;
         }

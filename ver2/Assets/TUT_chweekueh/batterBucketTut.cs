@@ -21,13 +21,13 @@ public class batterBucketTut : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if (ckTutFlow.stepCounter == 1) {
+        if (ckTutFlow.stepCounter == ckTutFlow.stepStart) {
             Instantiate(chweeKuehAObj, ckTutFlow.steamerACoords, chweeKuehAObj.rotation);
             ckTutFlow.stepCounter ++;
-        } else if (ckTutFlow.stepCounter == 2) {
+        } else if (ckTutFlow.stepCounter == ckTutFlow.stepAddBatterA) {
             Instantiate(chweeKuehBObj, ckTutFlow.steamerBCoords, chweeKuehBObj.rotation);
             ckTutFlow.stepCounter ++;
-        } else if (ckTutFlow.stepCounter == 6) {
+        } else if (ckTutFlow.stepCounter == ckTutFlow.stepTrashUndercooked) {
             Instantiate(chweeKuehCObj, ckTutFlow.steamerACoords, chweeKuehCObj.rotation);
             ckTutFlow.stepCounter ++;
         }

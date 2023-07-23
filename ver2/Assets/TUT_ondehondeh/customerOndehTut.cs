@@ -19,10 +19,10 @@ public class customerOndehTut : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if ((ondehTutFlow.stepCounter == 11) && (isOnCusBCoords())) {
+        if ((ondehTutFlow.stepCounter == ondehTutFlow.stepMoveOvercooked) && (isOnCusBCoords())) {
             ondehTutFlow.stepCounter ++;
             Destroy (gameObject);
-        } else if ((ondehTutFlow.stepCounter == 17)) {
+        } else if ((ondehTutFlow.stepCounter == ondehTutFlow.stepClickToServe)) {
             ondehTutFlow.stepCounter ++;
             Destroy (gameObject);
         }

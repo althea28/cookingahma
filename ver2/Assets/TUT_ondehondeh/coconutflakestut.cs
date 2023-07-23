@@ -11,8 +11,8 @@ public class coconutflakestut : MonoBehaviour
     }
 
     void Update() {
-        if ((ondehTutFlow.stepCounter == 18) && (transform.position == 
-                ondehTutFlow.plateACoords + ondehTutFlow.cookedOndehCoords + ondehTutFlow.addCoconutCoords))  {
+        if ((ondehTutFlow.stepCounter == ondehTutFlow.stepServeCustomer) 
+            && (transform.position == ondehTutFlow.plateACoords + ondehTutFlow.cookedOndehCoords + ondehTutFlow.addCoconutCoords))  {
             Destroy(gameObject);
         }
     }

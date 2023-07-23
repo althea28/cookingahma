@@ -13,7 +13,7 @@ public class soyasauceTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((sbeTutFlow.stepCounter == 12) && (isOnPlateA())) {
+        if ((sbeTutFlow.stepCounter == sbeTutFlow.stepServeCustomer) && (isOnPlateA())) {
             Destroy (gameObject);
         }
         

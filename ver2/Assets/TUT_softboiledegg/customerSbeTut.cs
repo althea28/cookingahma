@@ -19,7 +19,7 @@ public class customerSbeTut : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if ((sbeTutFlow.stepCounter == 11) && (isOnCusBCoords())) {
+        if ((sbeTutFlow.stepCounter == sbeTutFlow.stepClickCooked) && (isOnCusBCoords())) {
             sbeTutFlow.stepCounter ++;
             Destroy (gameObject);
         }

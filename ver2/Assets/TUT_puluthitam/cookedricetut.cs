@@ -18,10 +18,10 @@ public class cookedricetut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((pulutTutFlow.stepCounter == 14) && (isOnPotB()) && (!destroyedB)) {
+        if ((pulutTutFlow.stepCounter == pulutTutFlow.stepMoveCooked) && (isOnPotB()) && (!destroyedB)) {
             destroyedB = true;
             Destroy(gameObject);
-        } else if ((pulutTutFlow.stepCounter == 18) && (isOnPotA()) && (!destroyedC)) {
+        } else if ((pulutTutFlow.stepCounter == pulutTutFlow.stepServeCustomer) && (isOnPotA()) && (!destroyedC)) {
             destroyedC = true;
             Instantiate(burntRiceObj, transform.position, burntRiceObj.rotation);
             Destroy(gameObject);

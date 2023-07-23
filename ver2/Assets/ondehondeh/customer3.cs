@@ -6,17 +6,22 @@ public class customer3 : MonoBehaviour
 {
     public Transform ondehReqObj;
     public Transform pulutReqObj;
+    
+    private int ondehDish = 1;
+    private int pulutDish = 2;
+    private string ondehName = "ondeh";
+    private string pulutName = "pulut";
 
     // Start is called before the first frame update
     void Start()
     {
         int dishSelector = Random.Range(1, gameflow3.numOfDishes + 1); 
-        if (dishSelector == 1) { //if ondeh
+        if (dishSelector == ondehDish) { //if ondeh
             Instantiate(ondehReqObj, transform.position + gameflow2.addReqCoordinates, ondehReqObj.rotation);
-            dishIndicator("ondeh");
-        } else if (dishSelector == 2) { //if pulut hitam
+            dishIndicator(ondehName);
+        } else if (dishSelector == pulutDish) { //if pulut hitam
             Instantiate(pulutReqObj, transform.position + gameflow.addReqCoordinates, pulutReqObj.rotation); 
-            dishIndicator("pulut");
+            dishIndicator(pulutName);
         }
     }
 
@@ -29,25 +34,25 @@ public class customer3 : MonoBehaviour
     void OnMouseDown() {
         
         //serve ondeh A
-        if ((customersOrder() == "ondeh") && (gameflow3.ondehPlateAClicked) && 
+        if ((customersOrder() == ondehName) && (gameflow3.ondehPlateAClicked) && 
                 (gameflow3.ondehOnACooked) && (gameflow3.coconutOnA)) {
             gameflow3.destroyOndehA = true; 
             successfulServe();
             
         //serve ondeh B
-        } else if ((customersOrder() == "ondeh") && (gameflow3.ondehPlateBClicked) && 
+        } else if ((customersOrder() == ondehName) && (gameflow3.ondehPlateBClicked) && 
                 (gameflow3.ondehOnBCooked) && (gameflow3.coconutOnB)) {
             gameflow3.destroyOndehB = true; 
             successfulServe();
         
         //serve pulut A
-        } else if ((customersOrder() == "pulut") && (gameflow3.bowlAClicked) && 
+        } else if ((customersOrder() == pulutName) && (gameflow3.bowlAClicked) && 
                 (gameflow3.bowlACooked) && (gameflow3.milkAddedOnA)) {
             gameflow3.destroyPulutA = true;
             successfulServe();
         
         //serve pulut B
-        } else if ((customersOrder() == "pulut") && (gameflow3.bowlBClicked) && 
+        } else if ((customersOrder() == pulutName) && (gameflow3.bowlBClicked) && 
                 (gameflow3.bowlBCooked) && (gameflow3.milkAddedOnB)) {
             gameflow3.destroyPulutB = true;
             successfulServe();

@@ -41,11 +41,29 @@ public class rojakTutFlow : MonoBehaviour
     public GameObject instr16;
     public GameObject instr17;
 
+    public static int stepStart = 1;
+    public static int stepClickFruitBox = 2;
+    public static int stepClickKnifeA = 3;
+    public static int stepPrecutFruit = 4;
+    public static int stepMoveFruit = 5;
+    public static int stepClickVegeBox = 6;
+    public static int stepClickKnifeB = 7;
+    public static int stepPrecutVege = 8;
+    public static int stepMoveVege = 9;
+    public static int stepClickTofuPlate = 10;
+    public static int stepClickKnifeC = 11;
+    public static int stepPrecutTofu = 12;
+    public static int stepMoveTofu = 13;
+    public static int stepClickSauce = 14;
+    public static int stepAddSauce = 15;
+    public static int stepClickRojak = 16;
+    public static int stepServeRojak = 17;
+
     // Start is called before the first frame update
     void Start()
     {
-        stepCounter = 1;
-        stepTracker = 1;
+        stepCounter = stepStart;
+        stepTracker = stepStart;
         Instantiate(customerObj, customerBCoordinates, customerObj.rotation);
 
         //ADD INSTR#1
@@ -58,57 +76,62 @@ public class rojakTutFlow : MonoBehaviour
         //Debug.Log("stepcounter: "+stepCounter);
 
         if (stepCounter != stepTracker) {
-            if (stepCounter == 2) {
-                instr1.SetActive(false);
-                instr2.SetActive(true);
-            } else if (stepCounter == 3) {
-                instr2.SetActive(false);
-                instr3.SetActive(true);
-            } else if (stepCounter == 4) {
-                instr3.SetActive(false);
-                instr4.SetActive(true);
-            } else if (stepCounter == 5) {
-                instr4.SetActive(false);
-                instr5.SetActive(true);
-            } else if (stepCounter == 6) { 
-                instr5.SetActive(false);
-                instr6.SetActive(true);
-            
-            } else if (stepCounter == 7) {
-                instr6.SetActive(false);
-                instr7.SetActive(true);
-            } else if (stepCounter == 8) { 
-                instr7.SetActive(false);
-                instr8.SetActive(true);
-            } else if (stepCounter == 9) { 
-                instr8.SetActive(false);
-                instr9.SetActive(true);
-            } else if (stepCounter == 10) { 
-                instr9.SetActive(false);
-                instr10.SetActive(true);
-            } else if (stepCounter == 11) { 
-                instr10.SetActive(false);
-                instr11.SetActive(true);
-            } else if (stepCounter == 12) { 
-                instr11.SetActive(false);
-                instr12.SetActive(true);
-            } else if (stepCounter == 13) { 
-                instr12.SetActive(false);
-                instr13.SetActive(true);
-            } else if (stepCounter == 14) { 
-                instr13.SetActive(false);
-                instr14.SetActive(true);
-            } else if (stepCounter == 15) { 
-                instr14.SetActive(false);
-                instr15.SetActive(true);
-            } else if (stepCounter == 16) { 
-                instr15.SetActive(false);
-                instr16.SetActive(true);
-            } else if (stepCounter == 17) { 
-                instr16.SetActive(false);
-                instr17.SetActive(true);
-            }
-            stepTracker++;
-        }                
+            Debug.Log("stepcounter: "+stepCounter);
+            nextStep();
+        }
+    }
+
+    void nextStep() {
+        if (stepCounter == stepClickFruitBox) {
+            instr1.SetActive(false);
+            instr2.SetActive(true);
+        } else if (stepCounter == stepClickKnifeA) {
+            instr2.SetActive(false);
+            instr3.SetActive(true);
+        } else if (stepCounter == stepPrecutFruit) {
+            instr3.SetActive(false);
+            instr4.SetActive(true);
+        } else if (stepCounter == stepMoveFruit) {
+            instr4.SetActive(false);
+            instr5.SetActive(true);
+        } else if (stepCounter == stepClickVegeBox) { 
+            instr5.SetActive(false);
+            instr6.SetActive(true);
+
+        } else if (stepCounter == stepClickKnifeB) {
+            instr6.SetActive(false);
+            instr7.SetActive(true);
+        } else if (stepCounter == stepPrecutVege) { 
+            instr7.SetActive(false);
+            instr8.SetActive(true);
+        } else if (stepCounter == stepMoveVege) { 
+            instr8.SetActive(false);
+            instr9.SetActive(true);
+        } else if (stepCounter == stepClickTofuPlate) { 
+            instr9.SetActive(false);
+            instr10.SetActive(true);
+        } else if (stepCounter == stepClickKnifeC) { 
+            instr10.SetActive(false);
+            instr11.SetActive(true);
+        } else if (stepCounter == stepPrecutTofu) { 
+            instr11.SetActive(false);
+            instr12.SetActive(true);
+        } else if (stepCounter == stepMoveTofu) { 
+            instr12.SetActive(false);
+            instr13.SetActive(true);
+        } else if (stepCounter == stepClickSauce) { 
+            instr13.SetActive(false);
+            instr14.SetActive(true);
+        } else if (stepCounter == stepAddSauce) { 
+            instr14.SetActive(false);
+            instr15.SetActive(true);
+        } else if (stepCounter == stepClickRojak) { 
+            instr15.SetActive(false);
+            instr16.SetActive(true);
+        } else if (stepCounter == stepServeRojak) { 
+            instr16.SetActive(false);
+            instr17.SetActive(true);
+        }
+        stepTracker++;
     }
 }

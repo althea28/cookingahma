@@ -15,14 +15,14 @@ public class soyasaucebottleTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((sbeTutFlow.stepCounter == 10) && (transform.position == upCoords)) {
+        if ((sbeTutFlow.stepCounter == sbeTutFlow.stepAddSoya) && (transform.position == upCoords)) {
             transform.position = downCoords;
             }
         
     }
 
     void OnMouseDown() {
-        if (sbeTutFlow.stepCounter == 8) {
+        if (sbeTutFlow.stepCounter == sbeTutFlow.stepMoveCooked) {
             transform.position = upCoords;
             sbeTutFlow.stepCounter++;
         }

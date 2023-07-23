@@ -16,9 +16,9 @@ public class coconutspoonTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((ondehTutFlow.stepCounter == 15) && (transform.position == downCoords)) {
+        if ((ondehTutFlow.stepCounter == ondehTutFlow.stepClickCoconut) && (transform.position == downCoords)) {
             transform.position = upCoords;
-        } else if ((ondehTutFlow.stepCounter == 16) && (transform.position == upCoords)) {
+        } else if ((ondehTutFlow.stepCounter == ondehTutFlow.stepAddCoconut) && (transform.position == upCoords)) {
             transform.position = downCoords;
         }
     }

@@ -20,15 +20,25 @@ public class customertutorial2 : MonoBehaviour
     {
         if ((!isClicked) && (tutorialflow.toastToServe == "y"))
         {
-            if (isPrevDisplayed)
-            {
-                HidePrevText();
-                isPrevDisplayed = false;
-            }
+            checkPrev();
+            /*if (isPrevDisplayed)
+              {
+              HidePrevText();
+              isPrevDisplayed = false;
+              }*/
             ClickCustomer();
             isClicked = true;
         }
     }
+
+    void checkPrev() {
+        if (isPrevDisplayed)
+        {
+            HidePrevText();
+            isPrevDisplayed = false;
+        }
+    }
+
 
     private void HidePrevText()
     {

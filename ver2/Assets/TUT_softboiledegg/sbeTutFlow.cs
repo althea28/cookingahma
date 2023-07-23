@@ -38,6 +38,23 @@ public class sbeTutFlow : MonoBehaviour
     public GameObject instr14;
     public GameObject instr15;
 
+    public static int stepStart = 1;
+    public static int stepAddEggA = 2;
+    public static int stepAddEggB = 3;
+    public static int stepMoveUndercooked = 4;
+    public static int stepClickUndercooked = 5;
+    public static int stepTrashUndercooked = 6;
+    public static int stepAddEggC = 7;
+    public static int stepMoveCooked = 8;
+    public static int stepClickSoya = 9;
+    public static int stepAddSoya = 10;
+    public static int stepClickCooked = 11;
+    public static int stepServeCustomer = 12;
+    public static int stepMoveBurnt = 13;
+    public static int stepClickBurnt = 14;
+    public static int stepTrashBurnt = 15;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,54 +69,59 @@ public class sbeTutFlow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("stepcounter: "+stepCounter);
 
         if (stepCounter != stepTracker) {
-            if (stepCounter == 2) {
-                instr1.SetActive(false);
-                instr2.SetActive(true);
-            } else if (stepCounter == 3) {
-                instr2.SetActive(false);
-                instr3.SetActive(true);
-            } else if (stepCounter == 4) {
-                instr3.SetActive(false);
-                instr4.SetActive(true);
-            } else if (stepCounter == 5) {
-                instr4.SetActive(false);
-                instr5.SetActive(true);
-            } else if (stepCounter == 6) { 
-                instr5.SetActive(false);
-                instr6.SetActive(true);
-            
-            } else if (stepCounter == 7) {
-                instr6.SetActive(false);
-                instr7.SetActive(true);
-            } else if (stepCounter == 8) { 
-                instr7.SetActive(false);
-                instr8.SetActive(true);
-            } else if (stepCounter == 9) { 
-                instr8.SetActive(false);
-                instr9.SetActive(true);
-            } else if (stepCounter == 10) { 
-                instr9.SetActive(false);
-                instr10.SetActive(true);
-            } else if (stepCounter == 11) { 
-                instr10.SetActive(false);
-                instr11.SetActive(true);
-            } else if (stepCounter == 12) { 
-                instr11.SetActive(false);
-                instr12.SetActive(true);
-            } else if (stepCounter == 13) { 
-                instr12.SetActive(false);
-                instr13.SetActive(true);
-            } else if (stepCounter == 14) { 
-                instr13.SetActive(false);
-                instr14.SetActive(true);
-            } else if (stepCounter == 15) { 
-                instr14.SetActive(false);
-                instr15.SetActive(true);
-            }
-            stepTracker++;
-        }                
+
+            Debug.Log("stepcounter: "+stepCounter);
+            nextStep();
+        }
     }
+    void nextStep() {
+
+        if (stepCounter == stepAddEggA) {
+            instr1.SetActive(false);
+            instr2.SetActive(true);
+        } else if (stepCounter == stepAddEggB) {
+            instr2.SetActive(false);
+            instr3.SetActive(true);
+        } else if (stepCounter == stepMoveUndercooked) {
+            instr3.SetActive(false);
+            instr4.SetActive(true);
+        } else if (stepCounter == stepClickUndercooked) {
+            instr4.SetActive(false);
+            instr5.SetActive(true);
+        } else if (stepCounter == stepTrashUndercooked) { 
+            instr5.SetActive(false);
+            instr6.SetActive(true);
+
+        } else if (stepCounter == stepAddEggC) {
+            instr6.SetActive(false);
+            instr7.SetActive(true);
+        } else if (stepCounter == stepMoveCooked) { 
+            instr7.SetActive(false);
+            instr8.SetActive(true);
+        } else if (stepCounter == stepClickSoya) { 
+            instr8.SetActive(false);
+            instr9.SetActive(true);
+        } else if (stepCounter == stepAddSoya) { 
+            instr9.SetActive(false);
+            instr10.SetActive(true);
+        } else if (stepCounter == stepClickCooked) { 
+            instr10.SetActive(false);
+            instr11.SetActive(true);
+        } else if (stepCounter == stepServeCustomer) { 
+            instr11.SetActive(false);
+            instr12.SetActive(true);
+        } else if (stepCounter == stepMoveBurnt) { 
+            instr12.SetActive(false);
+            instr13.SetActive(true);
+        } else if (stepCounter == stepClickBurnt) { 
+            instr13.SetActive(false);
+            instr14.SetActive(true);
+        } else if (stepCounter == stepTrashBurnt) { 
+            instr14.SetActive(false);
+            instr15.SetActive(true);
+        }
+        stepTracker++;
+    }                
 }

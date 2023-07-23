@@ -19,7 +19,7 @@ public class customerCkTut : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if ((ckTutFlow.stepCounter == 11) && (isOnCusBCoords())) {
+        if ((ckTutFlow.stepCounter == ckTutFlow.stepClickCK) && (isOnCusBCoords())) {
             ckTutFlow.stepCounter ++;
             Destroy (gameObject);
         }

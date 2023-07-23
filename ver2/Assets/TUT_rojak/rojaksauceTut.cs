@@ -18,7 +18,7 @@ public class rojaksauceTut : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if (rojakTutFlow.stepCounter == 13) {
+        if (rojakTutFlow.stepCounter == rojakTutFlow.stepMoveTofu) {
             rojakTutFlow.stepCounter ++;
         }
     }

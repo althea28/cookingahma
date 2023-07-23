@@ -18,9 +18,11 @@ public class rawEgg : MonoBehaviour
     {
         //trying to trash OR serve => destroy obj
         if (((gameflow.trashPlateA) && (isOnPlateA())) || (((gameflow.serveEggA) && (isOnPlateA()))))  {
-            if (gameflow.hasSoyaOnA) { //if added soya to A, destroy it too.
+            
+            checkSoyaA();
+            /*if (gameflow.hasSoyaOnA) { //if added soya to A, destroy it too.
                 soyasauce.trashSoyaA = true;
-            }
+            }*/
 
             gameflow.trashPlateA = false;
             gameflow.serveEggA = false;
@@ -29,9 +31,11 @@ public class rawEgg : MonoBehaviour
             Destroy (gameObject);
 
         } else if (((gameflow.trashPlateB) && (isOnPlateB())) || ((gameflow.serveEggB) && (isOnPlateB()))) {
-            if (gameflow.hasSoyaOnB) { //if added soya to A, destroy it too
+
+            checkSoyaB();
+            /*if (gameflow.hasSoyaOnB) { //if added soya to B, destroy it too
                 soyasauce.trashSoyaB = true;
-            }
+            }*/
 
             gameflow.trashPlateB = false;
             gameflow.serveEggB = false;
@@ -68,6 +72,16 @@ public class rawEgg : MonoBehaviour
         gameflow.soyaSauceClicked = false;
         gameflow.resetClicksToast = true;
 
+    }
+    void checkSoyaA() {
+        if (gameflow.hasSoyaOnA) { //if added soya to A, destroy it too.
+            soyasauce.trashSoyaA = true;
+        }
+    }
+    void checkSoyaB() {
+        if (gameflow.hasSoyaOnB) { //if added soya to B, destroy it too
+            soyasauce.trashSoyaB = true;
+        }
     }
 
     bool canAddSoyaSauce() {

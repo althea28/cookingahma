@@ -43,11 +43,30 @@ public class ondehTutFlow : MonoBehaviour
     public GameObject instr17;
     public GameObject instr18;
 
+    public static int stepStart = 1;
+    public static int stepAddSugarA = 2;
+    public static int stepBoilDoughA = 3;
+    public static int stepAddSugarB = 4;
+    public static int stepBoilDoughB = 5;
+    public static int stepMoveUndercooked = 6;
+    public static int stepClickUndercooked = 7;
+    public static int stepTrashUndercooked = 8;
+    public static int stepAddSugarC = 9;
+    public static int stepBoilDoughC = 10;
+    public static int stepMoveOvercooked = 11;
+    public static int stepClickOvercooked = 12;
+    public static int stepTrashOvercooked = 13;
+    public static int stepMoveCooked = 14;
+    public static int stepClickCoconut = 15;
+    public static int stepAddCoconut = 16;
+    public static int stepClickToServe = 17;
+    public static int stepServeCustomer = 18;
+
     // Start is called before the first frame update
     void Start()
     {
-        stepCounter = 1;
-        stepTracker = 1;
+        stepCounter = stepStart;
+        stepTracker = stepStart;
         Instantiate(customerObj, customerBCoordinates, customerObj.rotation);
 
         //ADD INSTR#1
@@ -59,63 +78,67 @@ public class ondehTutFlow : MonoBehaviour
     {
 
         if (stepCounter != stepTracker) {
-            
-            Debug.Log("stepcounter: "+stepCounter);
 
-            if (stepCounter == 2) {
-                instr1.SetActive(false);
-                instr2.SetActive(true);
-            } else if (stepCounter == 3) {
-                instr2.SetActive(false);
-                instr3.SetActive(true);
-            } else if (stepCounter == 4) {
-                instr3.SetActive(false);
-                instr4.SetActive(true);
-            } else if (stepCounter == 5) {
-                instr4.SetActive(false);
-                instr5.SetActive(true);
-            } else if (stepCounter == 6) { 
-                instr5.SetActive(false);
-                instr6.SetActive(true);
-            
-            } else if (stepCounter == 7) {
-                instr6.SetActive(false);
-                instr7.SetActive(true);
-            } else if (stepCounter == 8) { 
-                instr7.SetActive(false);
-                instr8.SetActive(true);
-            } else if (stepCounter == 9) { 
-                instr8.SetActive(false);
-                instr9.SetActive(true);
-            } else if (stepCounter == 10) { 
-                instr9.SetActive(false);
-                instr10.SetActive(true);
-            } else if (stepCounter == 11) { 
-                instr10.SetActive(false);
-                instr11.SetActive(true);
-            } else if (stepCounter == 12) { 
-                instr11.SetActive(false);
-                instr12.SetActive(true);
-            } else if (stepCounter == 13) { 
-                instr12.SetActive(false);
-                instr13.SetActive(true);
-            } else if (stepCounter == 14) { 
-                instr13.SetActive(false);
-                instr14.SetActive(true);
-            } else if (stepCounter == 15) { 
-                instr14.SetActive(false);
-                instr15.SetActive(true);
-            } else if (stepCounter == 16) { 
-                instr15.SetActive(false);
-                instr16.SetActive(true);
-            } else if (stepCounter == 17) { 
-                instr16.SetActive(false);
-                instr17.SetActive(true);
-            } else if (stepCounter == 18) { 
-                instr17.SetActive(false);
-                instr18.SetActive(true);
-            }
-            stepTracker++;
+            Debug.Log("stepcounter: "+stepCounter);
+            nextStep();
         }                
     }
+
+    void nextStep() {
+        if (stepCounter == stepAddSugarA) {
+            instr1.SetActive(false);
+            instr2.SetActive(true);
+        } else if (stepCounter == stepBoilDoughA) {
+            instr2.SetActive(false);
+            instr3.SetActive(true);
+        } else if (stepCounter == stepAddSugarB) {
+            instr3.SetActive(false);
+            instr4.SetActive(true);
+        } else if (stepCounter == stepBoilDoughB) {
+            instr4.SetActive(false);
+            instr5.SetActive(true);
+        } else if (stepCounter == stepMoveUndercooked) { 
+            instr5.SetActive(false);
+            instr6.SetActive(true);
+
+        } else if (stepCounter == stepClickUndercooked) {
+            instr6.SetActive(false);
+            instr7.SetActive(true);
+        } else if (stepCounter == stepTrashUndercooked) { 
+            instr7.SetActive(false);
+            instr8.SetActive(true);
+        } else if (stepCounter == stepAddSugarC) { 
+            instr8.SetActive(false);
+            instr9.SetActive(true);
+        } else if (stepCounter == stepBoilDoughC) { 
+            instr9.SetActive(false);
+            instr10.SetActive(true);
+        } else if (stepCounter == stepMoveOvercooked) { 
+            instr10.SetActive(false);
+            instr11.SetActive(true);
+        } else if (stepCounter == stepClickOvercooked) { 
+            instr11.SetActive(false);
+            instr12.SetActive(true);
+        } else if (stepCounter == stepTrashOvercooked) { 
+            instr12.SetActive(false);
+            instr13.SetActive(true);
+        } else if (stepCounter == stepMoveCooked) { 
+            instr13.SetActive(false);
+            instr14.SetActive(true);
+        } else if (stepCounter == stepClickCoconut) { 
+            instr14.SetActive(false);
+            instr15.SetActive(true);
+        } else if (stepCounter == stepAddCoconut) { 
+            instr15.SetActive(false);
+            instr16.SetActive(true);
+        } else if (stepCounter == stepClickToServe) { 
+            instr16.SetActive(false);
+            instr17.SetActive(true);
+        } else if (stepCounter == stepServeCustomer) { 
+            instr17.SetActive(false);
+            instr18.SetActive(true);
+        }
+        stepTracker++;
+    }  
+
 }

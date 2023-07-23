@@ -19,21 +19,21 @@ public class pot : MonoBehaviour
 
     private static bool hasCookedA = false;
     private static bool hasBurnedA = false;
-    
+
     private static bool hasCookedB = false;
     private static bool hasBurnedB = false;
 
     // Start is called before the first frame update
     void Start()
     {
-       isCookingA = false; 
-       isCookingB = false;
-       cookingTimeA = 0f;
-       cookingTimeB = 0f;
-       hasCookedA = false;
-       hasBurnedA = false;
-       hasCookedB = false;
-       hasBurnedB = false;
+        isCookingA = false; 
+        isCookingB = false;
+        cookingTimeA = 0f;
+        cookingTimeB = 0f;
+        hasCookedA = false;
+        hasBurnedA = false;
+        hasCookedB = false;
+        hasBurnedB = false;
 
     }
 
@@ -47,16 +47,15 @@ public class pot : MonoBehaviour
         if (isCookingB) {
             cookingTimeB += Time.deltaTime;
         }
-        
+
         //check if A is cooked/burnt
         if ((cookingTimeA >= gameflow3.timeForPulutToBurn) && (!hasBurnedA) && (isPotA())) {
-            Debug.Log("a burnt");
+
             cookedCookingPulut.destroyA = true;
             Instantiate(burntCookingPulutObj, gameflow3.potACoords + gameflow3.addRiceCoords, burntCookingPulutObj.rotation);
             hasBurnedA = true;
 
         } else if ((cookingTimeA >= gameflow3.timeForPulutToCook) && (!hasCookedA) && (isPotA())) {
-            Debug.Log("a cooked");
 
             rawCookingPulut.destroyA = true;
             sugarPieces.destroyA = true;
@@ -67,14 +66,12 @@ public class pot : MonoBehaviour
 
         //check if B is cooked/burnt
         if ((cookingTimeB >= gameflow3.timeForPulutToBurn) && (!hasBurnedB) && (isPotB())) {
-            Debug.Log("b burnt");
 
             cookedCookingPulut.destroyB = true;
             Instantiate(burntCookingPulutObj, gameflow3.potBCoords + gameflow3.addRiceCoords, burntCookingPulutObj.rotation);
             hasBurnedB = true;
 
         } else if ((cookingTimeB >= gameflow3.timeForPulutToCook) && (!hasCookedB) && (isPotB())) {
-            Debug.Log("b cooked");
 
             rawCookingPulut.destroyB = true;
             sugarPieces.destroyB = true;
@@ -82,41 +79,47 @@ public class pot : MonoBehaviour
             Instantiate(cookedCookingPulutObj, gameflow3.potBCoords + gameflow3.addRiceCoords, cookedCookingPulutObj.rotation);
             hasCookedB = true;
         }
-        
+
     }
 
     void OnMouseDown() {
         if ((isPotA()) && (canMoveToBowl()) && (gameflow3.potAStep > 3)) {
-            if (hasBurnedA) {
-                burntCookingPulut.destroyA = true;
-                Instantiate(burntPulutObj, getBowlCoords() + gameflow3.addPulutCoords, burntPulutObj.rotation);
-            } else if (hasCookedA) {
-                indicateCooked();
 
-                cookedCookingPulut.destroyA = true;
-                Instantiate(cookedPulutObj, getBowlCoords() + gameflow3.addPulutCoords, cookedPulutObj.rotation);
-            } else { //if raw
-                sugarPieces.destroyA = true;
+            checkCookingA();
+            /*if (hasBurnedA) {
+              burntCookingPulut.destroyA = true;
+              Instantiate(burntPulutObj, getBowlCoords() + gameflow3.addPulutCoords, burntPulutObj.rotation);
+              } else if (hasCookedA) {
+              indicateCooked();
 
-                rawCookingPulut.destroyA = true;
-                Instantiate(rawPulutObj, getBowlCoords() + gameflow3.addPulutCoords, rawPulutObj.rotation);
-            }
+              cookedCookingPulut.destroyA = true;
+              Instantiate(cookedPulutObj, getBowlCoords() + gameflow3.addPulutCoords, cookedPulutObj.rotation);
+              } else { //if raw
+              sugarPieces.destroyA = true;
+
+              rawCookingPulut.destroyA = true;
+              Instantiate(rawPulutObj, getBowlCoords() + gameflow3.addPulutCoords, rawPulutObj.rotation);
+              }*/
+
             resetA();
         } else if ((isPotB()) && (canMoveToBowl()) && (gameflow3.potBStep > 3)) {
-            if (hasBurnedB) {
-                burntCookingPulut.destroyB = true;
-                Instantiate(burntPulutObj, getBowlCoords() + gameflow3.addPulutCoords, burntPulutObj.rotation);
-            } else if (hasCookedB) {
-                indicateCooked();
 
-                cookedCookingPulut.destroyB = true;
-                Instantiate(cookedPulutObj, getBowlCoords() + gameflow3.addPulutCoords, cookedPulutObj.rotation);
-            } else { //if raw
-                sugarPieces.destroyB = true;
+            checkCookingB();
+            /*if (hasBurnedB) {
+              burntCookingPulut.destroyB = true;
+              Instantiate(burntPulutObj, getBowlCoords() + gameflow3.addPulutCoords, burntPulutObj.rotation);
+              } else if (hasCookedB) {
+              indicateCooked();
 
-                rawCookingPulut.destroyB = true;
-                Instantiate(rawPulutObj, getBowlCoords() + gameflow3.addPulutCoords, rawPulutObj.rotation);
-            }
+              cookedCookingPulut.destroyB = true;
+              Instantiate(cookedPulutObj, getBowlCoords() + gameflow3.addPulutCoords, cookedPulutObj.rotation);
+              } else { //if raw
+              sugarPieces.destroyB = true;
+
+              rawCookingPulut.destroyB = true;
+              Instantiate(rawPulutObj, getBowlCoords() + gameflow3.addPulutCoords, rawPulutObj.rotation);
+              }*/
+
             resetB();
         }
 
@@ -124,7 +127,42 @@ public class pot : MonoBehaviour
         gameflow3.resetClicks = true;
 
     }
-                
+
+    void checkCookingA() {
+        if (hasBurnedA) {
+            burntCookingPulut.destroyA = true;
+            Instantiate(burntPulutObj, getBowlCoords() + gameflow3.addPulutCoords, burntPulutObj.rotation);
+        } else if (hasCookedA) {
+            indicateCooked();
+
+            cookedCookingPulut.destroyA = true;
+            Instantiate(cookedPulutObj, getBowlCoords() + gameflow3.addPulutCoords, cookedPulutObj.rotation);
+        } else { //if raw
+            sugarPieces.destroyA = true;
+
+            rawCookingPulut.destroyA = true;
+            Instantiate(rawPulutObj, getBowlCoords() + gameflow3.addPulutCoords, rawPulutObj.rotation);
+        }
+    }
+    void checkCookingB() {
+        if (hasBurnedB) {
+            burntCookingPulut.destroyB = true;
+            Instantiate(burntPulutObj, getBowlCoords() + gameflow3.addPulutCoords, burntPulutObj.rotation);
+        } else if (hasCookedB) {
+            indicateCooked();
+
+            cookedCookingPulut.destroyB = true;
+            Instantiate(cookedPulutObj, getBowlCoords() + gameflow3.addPulutCoords, cookedPulutObj.rotation);
+        } else { //if raw
+            sugarPieces.destroyB = true;
+
+            rawCookingPulut.destroyB = true;
+            Instantiate(rawPulutObj, getBowlCoords() + gameflow3.addPulutCoords, rawPulutObj.rotation);
+        }
+    }
+
+
+
     void resetA() {
         gameflow3.potAStep = 1;
         isCookingA = false;
@@ -147,7 +185,7 @@ public class pot : MonoBehaviour
 
     }
 
-    
+
     Vector3 getBowlCoords() {
         if (!gameflow3.bowlAOccupied) {
             gameflow3.bowlAOccupied = true;

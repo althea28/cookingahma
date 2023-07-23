@@ -19,10 +19,10 @@ public class customerRojakTut : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if ((rojakTutFlow.stepCounter == 11) && (isOnCusBCoords())) {
+        if ((rojakTutFlow.stepCounter == rojakTutFlow.stepClickKnifeC) && (isOnCusBCoords())) {
             rojakTutFlow.stepCounter ++;
             Destroy (gameObject);
-        } else if ((rojakTutFlow.stepCounter == 16)) {
+        } else if ((rojakTutFlow.stepCounter == rojakTutFlow.stepClickRojak)) {
             rojakTutFlow.stepCounter ++;
             Destroy (gameObject);
         }

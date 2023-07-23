@@ -17,8 +17,9 @@ public class knifeholderTut : MonoBehaviour
     // Update is called once per frame
     void OnMouseDown()
     {
-        if (rojakTutFlow.stepCounter == 2 || rojakTutFlow.stepCounter == 6 || rojakTutFlow.stepCounter == 10) {
-            Debug.Log("here");
+        if (rojakTutFlow.stepCounter == rojakTutFlow.stepClickFruitBox || 
+            rojakTutFlow.stepCounter == rojakTutFlow.stepClickVegeBox || 
+            rojakTutFlow.stepCounter == rojakTutFlow.stepClickTofuPlate) {
             knifeObj.transform.position = upCoords;
             rojakTutFlow.stepCounter++;
         }

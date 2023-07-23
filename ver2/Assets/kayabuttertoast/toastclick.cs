@@ -20,8 +20,8 @@ public class toastclick : MonoBehaviour
     public static string toastBIsCooked = "n";
     public static string toastAIsBurnt = "n";
     public static string toastBIsBurnt = "n";
-    private float timeForToastToCook = 3;
-    private float timeForToastToBurn = 5; //shld b 10 but change to 5 for faster debugging
+    private float timeForToastToCook = 3f;
+    private float timeForToastToBurn = 5f; //shld b 10 but change to 5 for faster debugging
 
     //toastAIsCooked is for material change. toastOnBoardAIsCooked is for when checking if dish is correct
     public static string toastOnBoardAIsCooked = "n";     
@@ -63,20 +63,24 @@ public class toastclick : MonoBehaviour
 
         if (isOnGrillA()) {
             cookingTimeA += Time.deltaTime;
-            if (cookingTimeA > timeForToastToCook) { 
+            
+            checkCookingA();
+            /*if (cookingTimeA > timeForToastToCook) { 
                 toastAIsCooked = "y";
             }
             if (cookingTimeA > timeForToastToBurn) {
                 toastAIsBurnt = "y";
-            }
+            }*/
         } else if (isOnGrillB()) {
             cookingTimeB += Time.deltaTime;
-            if (cookingTimeB > timeForToastToCook) {
+
+            checkCookingB();
+            /*if (cookingTimeB > timeForToastToCook) {
                 toastBIsCooked = "y";
             }
             if (cookingTimeB > timeForToastToBurn) {
                 toastBIsBurnt = "y";
-            }
+            }*/
         }
 
         if (serveToastA == "y") {
@@ -95,42 +99,48 @@ public class toastclick : MonoBehaviour
             gameflow.toastBIsClicked = "n";
         }
 
+        //clicking dish for serving or trashing
         if ((isOnBoard()) && (gameflow.placeButter == "n") && (gameflow.placeKaya == "n")) {
-            if (isOnBoardA()) {
+
+            clickingDish();
+
+            /*if (isOnBoardA()) {
                 gameflow.toastAIsClicked = "y";
                 
                 //RESET===
                 gameflow.toastBIsClicked = "n";
-
             } else {
                 gameflow.toastBIsClicked = "y";
 
                 //RESET===
                 gameflow.toastAIsClicked = "n";
+            }*/
 
-            }
+        } else if ((gameflow.placeKaya == "y") && (isOnBoard())) { //placing kaya on board
+            placeKaya();
 
-        } else if ((gameflow.placeKaya == "y") && (isOnBoard())) { //placing kaya && toast on board
-            if ((isOnBoardA()) && (hasKayaOnA == "n")) {
+            /*if ((isOnBoardA()) && (hasKayaOnA == "n")) {
                 hasKayaOnA = "y";
                 Instantiate(kayaObj, newKayaPosition(), kayaObj.rotation);
             } else if ((isOnBoardB()) && (hasKayaOnB == "n")) { 
                 hasKayaOnB = "y";
                 Instantiate(kayaObj, newKayaPosition(), kayaObj.rotation);
-            }
+            }*/
 
             //RESET=== 
             gameflow.toastAIsClicked = "n";
             gameflow.toastBIsClicked = "n";
 
-        } else if ((gameflow.placeButter == "y")  && (isOnBoard())) { //placing butter && toast on board
-            if ((isOnBoardA()) && (hasKayaOnA == "y") && (hasButterOnA == "n")) {
+        } else if ((gameflow.placeButter == "y")  && (isOnBoard())) { //placing butter on board
+
+            placeButter();
+            /*if ((isOnBoardA()) && (hasKayaOnA == "y") && (hasButterOnA == "n")) {
                 hasButterOnA = "y";
                 Instantiate(butterObj, newButterPosition(), butterObj.rotation);
             } else if ((isOnBoardB()) && (hasKayaOnB == "y") && (hasButterOnB == "n")) {
                 hasButterOnB = "y";
                 Instantiate(butterObj, newButterPosition(), butterObj.rotation);
-            } 
+            }*/
 
             //RESET=== 
             gameflow.toastAIsClicked = "n";
@@ -162,6 +172,58 @@ public class toastclick : MonoBehaviour
         gameflow.placeButter = "n";
         gameflow.resetClicksEggs = true;
 
+    }
+
+    void checkCookingA() {
+        if (cookingTimeA > timeForToastToCook) { 
+            toastAIsCooked = "y";
+        }
+        if (cookingTimeA > timeForToastToBurn) {
+            toastAIsBurnt = "y";
+        }
+    }
+
+    void checkCookingB() {
+        if (cookingTimeB > timeForToastToCook) {
+            toastBIsCooked = "y";
+        }
+        if (cookingTimeB > timeForToastToBurn) {
+            toastBIsBurnt = "y";
+        }
+    }
+
+    void clickingDish() {
+        if (isOnBoardA()) {
+            gameflow.toastAIsClicked = "y";
+
+            //RESET===
+            gameflow.toastBIsClicked = "n";
+        } else {
+            gameflow.toastBIsClicked = "y";
+
+            //RESET===
+            gameflow.toastAIsClicked = "n";
+        }
+    }
+
+    void placeKaya() {
+        if ((isOnBoardA()) && (hasKayaOnA == "n")) {
+            hasKayaOnA = "y";
+            Instantiate(kayaObj, newKayaPosition(), kayaObj.rotation);
+        } else if ((isOnBoardB()) && (hasKayaOnB == "n")) { 
+            hasKayaOnB = "y";
+            Instantiate(kayaObj, newKayaPosition(), kayaObj.rotation);
+        }
+    }
+
+    void placeButter() {
+        if ((isOnBoardA()) && (hasKayaOnA == "y") && (hasButterOnA == "n")) {
+            hasButterOnA = "y";
+            Instantiate(butterObj, newButterPosition(), butterObj.rotation);
+        } else if ((isOnBoardB()) && (hasKayaOnB == "y") && (hasButterOnB == "n")) {
+            hasButterOnB = "y";
+            Instantiate(butterObj, newButterPosition(), butterObj.rotation);
+        }
     }
 
     void trashANow() {

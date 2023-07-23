@@ -13,7 +13,7 @@ public class burntOndehTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ondehTutFlow.stepCounter == 13) 
+        if (ondehTutFlow.stepCounter == ondehTutFlow.stepTrashOvercooked) 
         {
             Destroy (gameObject);
         }
@@ -21,7 +21,7 @@ public class burntOndehTut : MonoBehaviour
 
     void OnMouseDown() 
     {
-        if (ondehTutFlow.stepCounter == 11) 
+        if (ondehTutFlow.stepCounter == ondehTutFlow.stepMoveOvercooked) 
         {
             ondehTutFlow.stepCounter++;
         }

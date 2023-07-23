@@ -9,7 +9,7 @@ public class pulutTutFlow : MonoBehaviour
 
     public static Vector3 customerBCoordinates = new Vector3(1.19f, 6f, -2f);     
     public static Vector3 addReqCoordinates = new Vector3(-2.1f,1.11f,0.1f);
-   
+
     public static Vector3 potACoords = new Vector3(-3.219f, 3.663f, 3.69f);
     public static Vector3 potBCoords = new Vector3(-5.12f, 3.663f, 3.69f);
     public static Vector3 bowlACoords = new Vector3(0.69f, 3.461f, 3.732f);
@@ -21,7 +21,7 @@ public class pulutTutFlow : MonoBehaviour
 
     public static Vector3 addPulutCoords = new Vector3(0.052f, 0, 0.108f); //from bowl
     public static Vector3 addMilkCoords = new Vector3(0.042f, 0.044f, -0.086f); //from pulut in bowl
- 
+
     public Transform customerObj;
 
     public GameObject instr1;
@@ -46,11 +46,33 @@ public class pulutTutFlow : MonoBehaviour
     public GameObject instr20;
     public GameObject instr21;
 
+    public static int stepStart = 1;
+    public static int stepAddRiceA = 2;
+    public static int stepAddRiceB = 3;
+    public static int stepAddPandanA = 4;
+    public static int stepAddPandanB = 5;
+    public static int stepAddSugarA = 6;
+    public static int stepAddSugarB = 7;
+    public static int stepMoveUndercooked = 8;
+    public static int stepClickUndercooked = 9;
+    public static int stepTrashUndercooked = 10;
+    public static int stepAddRiceC = 11;
+    public static int stepAddPandanC = 12;
+    public static int stepAddSugarC = 13;
+    public static int stepMoveCooked = 14;
+    public static int stepClickMilk = 15;
+    public static int stepAddMilk = 16;
+    public static int stepClickCooked = 17;
+    public static int stepServeCustomer = 18;
+    public static int stepMoveBurnt = 19;
+    public static int stepClickBurnt = 20;
+    public static int stepTrashBurnt = 21;
+
     // Start is called before the first frame update
     void Start()
     {
-        stepCounter = 1;
-        stepTracker = 1;
+        stepCounter = stepStart;
+        stepTracker = stepStart;
         Instantiate(customerObj, customerBCoordinates, customerObj.rotation);
 
     }
@@ -58,73 +80,77 @@ public class pulutTutFlow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         if (stepCounter != stepTracker) {
             Debug.Log("step: "+stepCounter);
-            if (stepCounter == 2) {
-                instr1.SetActive(false);
-                instr2.SetActive(true);
-            } else if (stepCounter == 3) {
-                instr2.SetActive(false);
-                instr3.SetActive(true);
-            } else if (stepCounter == 4) {
-                instr3.SetActive(false);
-                instr4.SetActive(true);
-            } else if (stepCounter == 5) {
-                instr4.SetActive(false);
-                instr5.SetActive(true);
-            } else if (stepCounter == 6) { 
-                instr5.SetActive(false);
-                instr6.SetActive(true);
-             
-            } else if (stepCounter == 7) {
-                instr6.SetActive(false);
-                instr7.SetActive(true);
-            } else if (stepCounter == 8) { 
-                instr7.SetActive(false);
-                instr8.SetActive(true);
-            } else if (stepCounter == 9) { 
-                instr8.SetActive(false);
-                instr9.SetActive(true);
-            } else if (stepCounter == 10) { 
-                instr9.SetActive(false);
-                instr10.SetActive(true);
-            } else if (stepCounter == 11) { 
-                instr10.SetActive(false);
-                instr11.SetActive(true);
-            } else if (stepCounter == 12) { 
-                instr11.SetActive(false);
-                instr12.SetActive(true);
-            } else if (stepCounter == 13) { 
-                instr12.SetActive(false);
-                instr13.SetActive(true);
-            } else if (stepCounter == 14) { 
-                instr13.SetActive(false);
-                instr14.SetActive(true);
-            } else if (stepCounter == 15) { 
-                instr14.SetActive(false);
-                instr15.SetActive(true);
-            } else if (stepCounter == 16) { 
-                instr15.SetActive(false);
-                instr16.SetActive(true);
-            } else if (stepCounter == 17) { 
-                instr16.SetActive(false);
-                instr17.SetActive(true);
-            } else if (stepCounter == 18) { 
-                instr17.SetActive(false);
-                instr18.SetActive(true);
-            } else if (stepCounter == 19) { 
-                instr18.SetActive(false);
-                instr19.SetActive(true);
-            } else if (stepCounter == 20) { 
-                instr19.SetActive(false);
-                instr20.SetActive(true);
-            } else if (stepCounter == 21) { 
-                instr20.SetActive(false);
-                instr21.SetActive(true);
-            }
-            stepTracker++;
+            nextStep();
         }
-
     }
+
+    void nextStep() {
+        if (stepCounter == stepAddRiceA) {
+            instr1.SetActive(false);
+            instr2.SetActive(true);
+        } else if (stepCounter == stepAddRiceB) {
+            instr2.SetActive(false);
+            instr3.SetActive(true);
+        } else if (stepCounter == stepAddPandanA) {
+            instr3.SetActive(false);
+            instr4.SetActive(true);
+        } else if (stepCounter == stepAddPandanB) {
+            instr4.SetActive(false);
+            instr5.SetActive(true);
+        } else if (stepCounter == stepAddSugarA) { 
+            instr5.SetActive(false);
+            instr6.SetActive(true);
+
+        } else if (stepCounter == stepAddSugarB) {
+            instr6.SetActive(false);
+            instr7.SetActive(true);
+        } else if (stepCounter == stepMoveUndercooked) { 
+            instr7.SetActive(false);
+            instr8.SetActive(true);
+        } else if (stepCounter == stepClickUndercooked) { 
+            instr8.SetActive(false);
+            instr9.SetActive(true);
+        } else if (stepCounter == stepTrashUndercooked) { 
+            instr9.SetActive(false);
+            instr10.SetActive(true);
+        } else if (stepCounter == stepAddRiceC) { 
+            instr10.SetActive(false);
+            instr11.SetActive(true);
+        } else if (stepCounter == stepAddPandanC) { 
+            instr11.SetActive(false);
+            instr12.SetActive(true);
+        } else if (stepCounter == stepAddSugarC) { 
+            instr12.SetActive(false);
+            instr13.SetActive(true);
+        } else if (stepCounter == stepMoveCooked) { 
+            instr13.SetActive(false);
+            instr14.SetActive(true);
+        } else if (stepCounter == stepClickMilk) { 
+            instr14.SetActive(false);
+            instr15.SetActive(true);
+        } else if (stepCounter == stepAddMilk) { 
+            instr15.SetActive(false);
+            instr16.SetActive(true);
+        } else if (stepCounter == stepClickCooked) { 
+            instr16.SetActive(false);
+            instr17.SetActive(true);
+        } else if (stepCounter == stepServeCustomer) { 
+            instr17.SetActive(false);
+            instr18.SetActive(true);
+        } else if (stepCounter == stepMoveBurnt) { 
+            instr18.SetActive(false);
+            instr19.SetActive(true);
+        } else if (stepCounter == stepClickBurnt) { 
+            instr19.SetActive(false);
+            instr20.SetActive(true);
+        } else if (stepCounter == stepTrashBurnt) { 
+            instr20.SetActive(false);
+            instr21.SetActive(true);
+        }
+        stepTracker++;
+    }
+
 }

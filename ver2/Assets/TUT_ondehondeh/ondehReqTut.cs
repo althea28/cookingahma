@@ -13,7 +13,7 @@ public class ondehReqTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ondehTutFlow.stepCounter == 18)
+        if (ondehTutFlow.stepCounter == ondehTutFlow.stepServeCustomer)
         {
             Destroy(gameObject);
         }

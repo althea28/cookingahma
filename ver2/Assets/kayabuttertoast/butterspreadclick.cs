@@ -25,13 +25,6 @@ public class butterspreadclick : MonoBehaviour
             Destroy (gameObject);
             destroyButterB = "n";
         }
-
-        /* =========
-        if (gameflow.destroyButter == "y") {
-            GetComponent<Transform> ().position = new Vector3(3,3,10);
-        }
-        gameflow.destroyButter = "n";*/
-        // ===========
     }
 
 }

@@ -13,7 +13,7 @@ public class chaipohTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((ckTutFlow.stepCounter == 12) && (isOnPlateA())) {
+        if ((ckTutFlow.stepCounter == ckTutFlow.stepServeCustomer) && (isOnPlateA())) {
             Destroy (gameObject);
         }
         

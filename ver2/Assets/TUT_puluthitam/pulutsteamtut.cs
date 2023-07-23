@@ -13,9 +13,9 @@ public class pulutsteamtut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (((pulutTutFlow.stepCounter == 8) && (isOnPotA())) ||
-            ((pulutTutFlow.stepCounter == 14) && (isOnPotB())) ||
-            ((pulutTutFlow.stepCounter == 19) && (isOnPotA())))
+        if (((pulutTutFlow.stepCounter == pulutTutFlow.stepMoveUndercooked) && (isOnPotA())) ||
+            ((pulutTutFlow.stepCounter == pulutTutFlow.stepMoveCooked) && (isOnPotB())) ||
+            ((pulutTutFlow.stepCounter == pulutTutFlow.stepMoveBurnt) && (isOnPotA())))
             {
             Destroy(gameObject);
         }

@@ -21,13 +21,13 @@ public class pulutpottut : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if ((pulutTutFlow.stepCounter == 7) && (isPotA())) {
+        if ((pulutTutFlow.stepCounter == pulutTutFlow.stepAddSugarB) && (isPotA())) {
             Instantiate(rawPulutObj, pulutTutFlow.bowlACoords + pulutTutFlow.addPulutCoords, rawPulutObj.rotation);
             pulutTutFlow.stepCounter++;
-        } else if ((pulutTutFlow.stepCounter == 13) && (isPotB())) {
+        } else if ((pulutTutFlow.stepCounter == pulutTutFlow.stepAddSugarC) && (isPotB())) {
             Instantiate(cookedPulutObj, pulutTutFlow.bowlACoords + pulutTutFlow.addPulutCoords, cookedPulutObj.rotation);
             pulutTutFlow.stepCounter++;
-        } else if ((pulutTutFlow.stepCounter == 18) && (isPotA())) {
+        } else if ((pulutTutFlow.stepCounter == pulutTutFlow.stepServeCustomer) && (isPotA())) {
             Instantiate(burntPulutObj, pulutTutFlow.bowlACoords + pulutTutFlow.addPulutCoords, burntPulutObj.rotation);
             pulutTutFlow.stepCounter++;
         }

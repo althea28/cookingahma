@@ -9,46 +9,50 @@ public class undercookedondeh : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-       if ((gameflow3.destroyOndehA) && (isOnPlateA())) {
-            if (gameflow3.coconutOnA) {
-                undercookedcoconut.destroyA = true;
-                gameflow3.coconutOnA = false;
-            }
+        if ((gameflow3.destroyOndehA) && (isOnPlateA())) {
+            checkCoconutA();
+            /*if (gameflow3.coconutOnA) {
+              undercookedcoconut.destroyA = true;
+              gameflow3.coconutOnA = false;
+              }*/
+
             gameflow3.destroyOndehA = false;
             resetA();
             Destroy(gameObject);
         }
         if ((gameflow3.destroyOndehB) && (isOnPlateB())) {
-            if (gameflow3.coconutOnB) {
-                undercookedcoconut.destroyB = true;
-                gameflow3.coconutOnB = false;
-            }
+            checkCoconutB();
+            /*if (gameflow3.coconutOnB) {
+              undercookedcoconut.destroyB = true;
+              gameflow3.coconutOnB = false;
+              }*/
+
             gameflow3.destroyOndehB = false;
             resetB();
             Destroy(gameObject);
 
         }
- 
+
     }
-    
+
     void OnMouseDown() {
         //adding coconut
         if ((gameflow3.coconutClicked) && (noCoconutOnPlate())) {
             Instantiate(undercookedCoconutObj, transform.position +
-                gameflow3.addUndercookedCoconutCoords, undercookedCoconutObj.rotation);
+                    gameflow3.addUndercookedCoconutCoords, undercookedCoconutObj.rotation);
             addedCoconut();
-        
+
             //reset
             gameflow3.ondehPlateAClicked = false;
             gameflow3.ondehPlateBClicked = false;
-        
-        //click plate
+
+            //click plate
         } else if (isOnPlateA()) {
             gameflow3.ondehPlateAClicked = true;
 
@@ -64,6 +68,19 @@ public class undercookedondeh : MonoBehaviour
         //reset
         gameflow3.coconutClicked = false;
         gameflow3.resetClicksPulut = true;
+    }
+
+    void checkCoconutA() {
+        if (gameflow3.coconutOnA) {
+            undercookedcoconut.destroyA = true;
+            gameflow3.coconutOnA = false;
+        }
+    }
+    void checkCoconutB() {
+        if (gameflow3.coconutOnB) {
+            undercookedcoconut.destroyB = true;
+            gameflow3.coconutOnB = false;
+        }
     }
 
     void resetA() {
@@ -91,7 +108,7 @@ public class undercookedondeh : MonoBehaviour
             return !gameflow3.coconutOnB;
         }
     }
-    
+
     bool isOnPlateA() {
         return transform.position == gameflow3.plateACoords + gameflow3.undercookedOndehCoords;
     }

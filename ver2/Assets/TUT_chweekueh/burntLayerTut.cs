@@ -13,7 +13,7 @@ public class burntLayerTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((ckTutFlow.stepCounter == 13) && (isOnCK())) {
+        if ((ckTutFlow.stepCounter == ckTutFlow.stepMoveBurnt) && (isOnCK())) {
             Destroy (gameObject);
         }
         

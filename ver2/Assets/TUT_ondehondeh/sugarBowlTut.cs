@@ -22,15 +22,15 @@ public class sugarBowlTut : MonoBehaviour
     // Update is called once per frame
     void OnMouseDown()
     {
-        if (ondehTutFlow.stepCounter == 1) {
+        if (ondehTutFlow.stepCounter == ondehTutFlow.stepStart) {
             Instantiate(sugarCubeObj, ondehTutFlow.sugarOnDoughCoords, sugarCubeObj.rotation);
             ondehTutFlow.stepCounter ++;
         }
-        if (ondehTutFlow.stepCounter == 3) {
+        if (ondehTutFlow.stepCounter == ondehTutFlow.stepBoilDoughA) {
             Instantiate(sugarCube2Obj, ondehTutFlow.sugarOnDoughCoords, sugarCube2Obj.rotation);
             ondehTutFlow.stepCounter ++;
         }
-        if (ondehTutFlow.stepCounter == 8) {
+        if (ondehTutFlow.stepCounter == ondehTutFlow.stepTrashUndercooked) {
             Instantiate(sugarCube3Obj, ondehTutFlow.sugarOnDoughCoords, sugarCube3Obj.rotation);
             ondehTutFlow.stepCounter ++;
         }

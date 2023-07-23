@@ -13,13 +13,13 @@ public class undercookedEggTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((sbeTutFlow.stepCounter == 6) && (isOnPlateA())) {
+        if ((sbeTutFlow.stepCounter == sbeTutFlow.stepTrashUndercooked) && (isOnPlateA())) {
             Destroy (gameObject);
         }
     }
 
     void OnMouseDown() {
-        if (sbeTutFlow.stepCounter == 4) {
+        if (sbeTutFlow.stepCounter == sbeTutFlow.stepMoveUndercooked) {
             sbeTutFlow.stepCounter ++;
         }
     }

@@ -15,14 +15,14 @@ public class rawpuluttut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((pulutTutFlow.stepCounter == 10) && (!destroyedA) && (isOnBowlA())) {
+        if ((pulutTutFlow.stepCounter == pulutTutFlow.stepTrashUndercooked) && (!destroyedA) && (isOnBowlA())) {
             destroyedA = true;
             Destroy(gameObject);
         }
 
     }
     void OnMouseDown() {
-        if ((pulutTutFlow.stepCounter == 8) && (isOnBowlA())) {
+        if ((pulutTutFlow.stepCounter == pulutTutFlow.stepMoveUndercooked) && (isOnBowlA())) {
             pulutTutFlow.stepCounter++;
         }
     }

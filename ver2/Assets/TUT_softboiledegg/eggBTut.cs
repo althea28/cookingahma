@@ -18,14 +18,14 @@ public class eggBTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((sbeTutFlow.stepCounter == 7) && (isOnSteamerB()) && (!addedCookedSteam)) {
+        if ((sbeTutFlow.stepCounter == sbeTutFlow.stepAddEggC) && (isOnSteamerB()) && (!addedCookedSteam)) {
             Instantiate(cookedSteamObj, transform.position, cookedSteamObj.rotation);
             addedCookedSteam = true;
         }
     }
 
     void OnMouseDown() {
-        if ((sbeTutFlow.stepCounter == 7) && (isOnSteamerB())) {
+        if ((sbeTutFlow.stepCounter == sbeTutFlow.stepAddEggC) && (isOnSteamerB())) {
             Destroy (gameObject);
             Instantiate (cookedEggObj, 
                 sbeTutFlow.plateACoords + sbeTutFlow.addCookedEggsCoords, cookedEggObj.rotation);

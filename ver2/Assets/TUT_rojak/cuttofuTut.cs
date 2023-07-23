@@ -15,7 +15,7 @@ public class cuttofuTut : MonoBehaviour
     // Update is called once per frame
     void OnMouseDown()
     {
-        if (rojakTutFlow.stepCounter == 12) {
+        if (rojakTutFlow.stepCounter == rojakTutFlow.stepPrecutTofu) {
             Instantiate(platedTofuObj, rojakTutFlow.bowlACoords, platedTofuObj.rotation);
             Destroy(gameObject);
             rojakTutFlow.stepCounter++;

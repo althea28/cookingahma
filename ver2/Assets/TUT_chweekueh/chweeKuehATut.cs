@@ -19,7 +19,7 @@ public class chweeKuehATut : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if ((ckTutFlow.stepCounter == 3) && (isOnSteamerA())) {
+        if ((ckTutFlow.stepCounter == ckTutFlow.stepAddBatterB) && (isOnSteamerA())) {
 
             Instantiate(undercookedCkObj, 
                 ckTutFlow.plateACoords + ckTutFlow.addUndercookedCKCoords, 

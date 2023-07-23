@@ -17,7 +17,7 @@ public class chaipohbowltut : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if (ckTutFlow.stepCounter == 8) {
+        if (ckTutFlow.stepCounter == ckTutFlow.stepMoveCooked) {
             ckTutFlow.stepCounter++;
         }
     }

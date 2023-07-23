@@ -15,18 +15,18 @@ public class cookedEggTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((sbeTutFlow.stepCounter == 12) && (isOnPlateA())) {
+        if ((sbeTutFlow.stepCounter == sbeTutFlow.stepServeCustomer) && (isOnPlateA())) {
             Destroy (gameObject);
         }
         
     }
 
     void OnMouseDown() {
-        if ((sbeTutFlow.stepCounter == 9) && (isOnPlateA())) {
+        if ((sbeTutFlow.stepCounter == sbeTutFlow.stepClickSoya) && (isOnPlateA())) {
             Instantiate(soyasauceObj, 
                 transform.position + sbeTutFlow.addSoyaSauceCoords, soyasauceObj.rotation);
             sbeTutFlow.stepCounter ++;
-        } else if ((sbeTutFlow.stepCounter == 10) && (isOnPlateA())) {
+        } else if ((sbeTutFlow.stepCounter == sbeTutFlow.stepAddSoya) && (isOnPlateA())) {
             sbeTutFlow.stepCounter ++;
         }    }
 

@@ -9,32 +9,36 @@ public class cookedondeh : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
         if ((gameflow3.destroyOndehA) && (isOnPlateA())) {
-            if (gameflow3.coconutOnA) {
-                cookedcoconut.destroyA = true;
-                gameflow3.coconutOnA = false;
-            }
+
+            checkCoconutA();
+            /*if (gameflow3.coconutOnA) {
+              cookedcoconut.destroyA = true;
+              gameflow3.coconutOnA = false;
+              }*/
             gameflow3.destroyOndehA = false;
             resetA();
             Destroy(gameObject);
         }
         if ((gameflow3.destroyOndehB) && (isOnPlateB())) {
-            if (gameflow3.coconutOnB) {
-                cookedcoconut.destroyB = true;
-                gameflow3.coconutOnB = false;
-            }
+
+            checkCoconutB();
+            /*if (gameflow3.coconutOnB) {
+              cookedcoconut.destroyB = true;
+              gameflow3.coconutOnB = false;
+              }*/
             gameflow3.destroyOndehB = false;
             resetB();
             Destroy(gameObject);
 
         }
-        
+
     }
 
     void OnMouseDown() {
@@ -46,8 +50,8 @@ public class cookedondeh : MonoBehaviour
             //reset
             gameflow3.ondehPlateAClicked = false;
             gameflow3.ondehPlateBClicked = false;
-        
-        //click plate
+
+            //click plate
         } else if (isOnPlateA()) {
             Debug.Log("is on plate A");
             gameflow3.ondehPlateAClicked = true;
@@ -61,11 +65,25 @@ public class cookedondeh : MonoBehaviour
             //reset
             gameflow3.ondehPlateAClicked = false;
         }
-        
+
         //reset
         gameflow3.coconutClicked = false;
         gameflow3.resetClicksPulut = true;
     }
+
+    void checkCoconutA() {
+        if (gameflow3.coconutOnA) {
+            cookedcoconut.destroyA = true;
+            gameflow3.coconutOnA = false;
+        }
+    }
+    void checkCoconutB() {
+        if (gameflow3.coconutOnB) {
+            cookedcoconut.destroyB = true;
+            gameflow3.coconutOnB = false;
+        }
+    }
+
 
     void resetA() {
         gameflow3.ondehOnPlateA = false;

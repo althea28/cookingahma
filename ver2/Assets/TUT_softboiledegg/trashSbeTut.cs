@@ -17,7 +17,8 @@ public class trashSbeTut : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if ((sbeTutFlow.stepCounter == 5) || (sbeTutFlow.stepCounter == 14)) {
+        if ((sbeTutFlow.stepCounter == sbeTutFlow.stepClickUndercooked) || 
+            (sbeTutFlow.stepCounter == sbeTutFlow.stepClickBurnt)) {
             sbeTutFlow.stepCounter ++;
         }
     }

@@ -16,7 +16,7 @@ public class puluttrashtut : MonoBehaviour
         
     }
     void OnMouseDown() {
-        if ((pulutTutFlow.stepCounter == 9) || (pulutTutFlow.stepCounter == 20)) {
+        if ((pulutTutFlow.stepCounter == pulutTutFlow.stepClickUndercooked) || (pulutTutFlow.stepCounter == pulutTutFlow.stepClickBurnt)) {
             pulutTutFlow.stepCounter ++;
         }
     }

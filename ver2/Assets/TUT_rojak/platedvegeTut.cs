@@ -14,7 +14,7 @@ public class platedvegeTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rojakTutFlow.stepCounter == 17) {
+        if (rojakTutFlow.stepCounter == rojakTutFlow.stepServeRojak) {
             Destroy(gameObject);
         }
         

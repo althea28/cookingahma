@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class steamTut : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,9 +14,9 @@ public class steamTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((ckTutFlow.stepCounter == 8) && (isOnSteamerB())) {
+        if ((ckTutFlow.stepCounter == ckTutFlow.stepMoveCooked) && (isOnSteamerB())) {
             Destroy (gameObject);
-        } else if ((ckTutFlow.stepCounter == 13) && (isOnSteamerA())) {
+        } else if ((ckTutFlow.stepCounter == ckTutFlow.stepMoveBurnt) && (isOnSteamerA())) {
             Destroy (gameObject);
         }
         

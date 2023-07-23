@@ -18,7 +18,7 @@ public class precutfruitsTut : MonoBehaviour
     // Update is called once per frame
     void OnMouseDown()
     {
-        if (rojakTutFlow.stepCounter == 3) { //to cut fruits
+        if (rojakTutFlow.stepCounter == rojakTutFlow.stepClickKnifeA) { //to cut fruits
             Instantiate(cutFruitsObj, rojakTutFlow.boardACoords + rojakTutFlow.addCutFruitsBoardCoords, cutFruitsObj.rotation);
             Destroy(gameObject);
             rojakTutFlow.stepCounter++;

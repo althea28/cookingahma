@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class L4_Initiate : MonoBehaviour
 {
+    private int numOfDishes = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,7 @@ public class L4_Initiate : MonoBehaviour
     void Update()
     {
        if (gameflow2.initiating) {
-           gameflow2.numOfDishes = 1;
+           gameflow2.numOfDishes = numOfDishes;
 
            gameflow2.steamerACoords = new Vector3(4.204f, 3.493f, 1.574f);
            gameflow2.steamerBCoords = new Vector3(4.204f, 3.493f, 3.61f);

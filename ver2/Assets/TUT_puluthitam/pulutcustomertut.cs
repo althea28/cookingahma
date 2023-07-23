@@ -20,7 +20,7 @@ public class pulutcustomertut : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if ((pulutTutFlow.stepCounter == 17) && (transform.position == pulutTutFlow.customerBCoordinates)) {
+        if ((pulutTutFlow.stepCounter == pulutTutFlow.stepClickCooked) && (transform.position == pulutTutFlow.customerBCoordinates)) {
             Destroy(gameObject);
             pulutTutFlow.stepCounter++;
         }

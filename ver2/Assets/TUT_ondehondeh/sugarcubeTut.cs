@@ -13,7 +13,7 @@ public class sugarcubeTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ondehTutFlow.stepCounter == 3) {
+        if (ondehTutFlow.stepCounter == ondehTutFlow.stepBoilDoughA) {
             Destroy (gameObject);
         }
     }

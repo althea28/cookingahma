@@ -15,18 +15,18 @@ public class cookedChweeKuehTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((ckTutFlow.stepCounter == 12) && (isOnPlateA())) {
+        if ((ckTutFlow.stepCounter == ckTutFlow.stepServeCustomer) && (isOnPlateA())) {
             Destroy (gameObject);
         }
         
     }
 
     void OnMouseDown() {
-        if ((ckTutFlow.stepCounter == 9) && (isOnPlateA())) {
+        if ((ckTutFlow.stepCounter == ckTutFlow.stepClickCP) && (isOnPlateA())) {
             Instantiate(chaiPohObj, 
                 transform.position + ckTutFlow.addCookedCP, chaiPohObj.rotation);
             ckTutFlow.stepCounter ++;
-        } else if ((ckTutFlow.stepCounter == 10) && (isOnPlateA())) {
+        } else if ((ckTutFlow.stepCounter == ckTutFlow.stepAddCP) && (isOnPlateA())) {
             ckTutFlow.stepCounter ++;
         }    }
 

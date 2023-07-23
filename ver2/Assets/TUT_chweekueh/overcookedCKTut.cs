@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class overcookedCKTut : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,14 +14,14 @@ public class overcookedCKTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if ((ckTutFlow.stepCounter == 15) && (isOnPlateA())) {
+       if ((ckTutFlow.stepCounter == ckTutFlow.stepTrashBurnt) && (isOnPlateA())) {
            Destroy (gameObject);
        }
            
     }
 
     void OnMouseDown() {
-        if ((ckTutFlow.stepCounter == 13) && (isOnPlateA())) {
+        if ((ckTutFlow.stepCounter == ckTutFlow.stepMoveBurnt) && (isOnPlateA())) {
             ckTutFlow.stepCounter ++;
         }
     }

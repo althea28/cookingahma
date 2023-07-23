@@ -13,7 +13,7 @@ public class pulutreqtut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if ((pulutTutFlow.stepCounter == 18) && 
+       if ((pulutTutFlow.stepCounter == pulutTutFlow.stepServeCustomer) && 
                 (transform.position == pulutTutFlow.customerBCoordinates + pulutTutFlow.addReqCoordinates)) {
            Destroy(gameObject);
        }

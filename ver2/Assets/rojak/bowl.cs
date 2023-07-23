@@ -9,33 +9,36 @@ public class bowl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {  
     }
- 
+
     void OnMouseDown() {
-        if ((gameflow2.sauceClicked) && (getCurrentStep() == 4)) { //adding sauce
+        if ((gameflow2.sauceClicked) && (getCurrentStep() == gameflow2.stepPlateWithTofu)) { //adding sauce
             Instantiate(sauceObj, transform.position, sauceObj.rotation);
             nextStep();
 
             //RESET
             gameflow2.resetClicksRojak = true;
 
-        } else if (getCurrentStep() == 5) { //serving to customer
-            if (isBowlA()) {
-                gameflow2.bowlAClicked = true;
-                //RESET
-                gameflow2.bowlBClicked = false;
+        } else if (getCurrentStep() == gameflow2.stepReadyPlate) { //serving to customer
+
+            clickBowl();
+            /*if (isBowlA()) {
+              gameflow2.bowlAClicked = true;
+            //RESET
+            gameflow2.bowlBClicked = false;
 
             } else if (isBowlB()) {
-                gameflow2.bowlBClicked = true;
-                //RESET
-                gameflow2.bowlAClicked = false;
-            }
+            gameflow2.bowlBClicked = true;
+            //RESET
+            gameflow2.bowlAClicked = false;
+            }*/
+
             //RESET
             gameflow2.knifeClicked = false;
             gameflow2.sauceClicked = false;
@@ -45,7 +48,21 @@ public class bowl : MonoBehaviour
         //RESET
         gameflow2.resetClicksChweeKueh = true;
     }
- 
+
+    void clickBowl(){
+        if (isBowlA()) {
+            gameflow2.bowlAClicked = true;
+            //RESET
+            gameflow2.bowlBClicked = false;
+
+        } else if (isBowlB()) {
+            gameflow2.bowlBClicked = true;
+            //RESET
+            gameflow2.bowlAClicked = false;
+        }
+    }
+
+
     bool isBowlA() {
         return transform.position == gameflow2.bowlACoords;
     }

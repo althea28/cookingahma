@@ -15,7 +15,7 @@ public class precutvegTut : MonoBehaviour
     // Update is called once per frame
     void OnMouseDown()
     {
-        if (rojakTutFlow.stepCounter == 7) { //to cut vege
+        if (rojakTutFlow.stepCounter == rojakTutFlow.stepClickKnifeB) { //to cut vege
             Instantiate(cutVegObj, rojakTutFlow.boardACoords + rojakTutFlow.addCutVegeBoardCoords, cutVegObj.rotation);
             Destroy(gameObject);
             rojakTutFlow.stepCounter++;

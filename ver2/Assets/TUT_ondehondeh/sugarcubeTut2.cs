@@ -19,7 +19,7 @@ public class sugarcubeTut2 : MonoBehaviour
             Destroy (gameObject);
             destroy = false;   
         }*/
-        if (ondehTutFlow.stepCounter == 5) {
+        if (ondehTutFlow.stepCounter == ondehTutFlow.stepBoilDoughB) {
             Destroy (gameObject);
         }
     }

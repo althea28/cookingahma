@@ -26,13 +26,6 @@ public class kayaspreadclick : MonoBehaviour
             destroyKayaB = "n";
         }
 
-        /* ============
-        if (gameflow.destroyKaya == "y") {
-            Debug.Log("shift kaya");
-            GetComponent<Transform> ().position = new Vector3(3,3,10);
-        }
-        gameflow.destroyKaya = "n";
-        */ //===========
     }
 
     

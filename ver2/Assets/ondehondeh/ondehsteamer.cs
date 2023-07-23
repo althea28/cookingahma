@@ -38,9 +38,7 @@ public class ondehsteamer : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        
-        
+    {        
         //update times
         if (startCookingA) {
             cookingTimeA += Time.deltaTime;
@@ -84,6 +82,43 @@ public class ondehsteamer : MonoBehaviour
         
         //move from steamer A to plate
         if ((startCookingA) && (isSteamerA()) && (canMoveToPlate())) {
+            checkCookingA();
+            /*if (hasBurntA) { //burnt
+                overcookedboilingondeh.destroyA = true;
+                Instantiate(burntOndehObj, getPlateCoords("burnt"), burntOndehObj.rotation);
+            } else if (hasCookedA) { //cooked but not burnt
+                //gameflow3.ondehOnACooked = true;
+
+                cookedboilingondeh.destroyA = true;
+                Instantiate(cookedOndehObj, getPlateCoords("cooked"), cookedOndehObj.rotation);
+            } else { //undercooked
+                Instantiate(undercookedOndehObj, getPlateCoords("undercooked"), undercookedOndehObj.rotation);
+            }*/
+            resetA();
+
+        //move from steamerB to plate
+        } else if ((startCookingB) && (isSteamerB()) && (canMoveToPlate())) {
+            checkCookingB();
+            /*if (hasBurntB) { //burnt
+                overcookedboilingondeh.destroyB = true;
+                Instantiate(burntOndehObj, getPlateCoords("burnt"), burntOndehObj.rotation);
+            } else if (hasCookedB) { //cooked but not burnt
+                //gameflow3.ondehOnBCooked = true;
+
+                cookedboilingondeh.destroyB = true;
+                Instantiate(cookedOndehObj, getPlateCoords("cooked"), cookedOndehObj.rotation);
+            } else { //undercooked
+                Instantiate(undercookedOndehObj, getPlateCoords("undercooked"), undercookedOndehObj.rotation);
+            }*/
+            resetB();
+        }
+
+        //reset
+        gameflow3.resetClicks = true;
+
+    }
+
+    void checkCookingA() {
             if (hasBurntA) { //burnt
                 overcookedboilingondeh.destroyA = true;
                 Instantiate(burntOndehObj, getPlateCoords("burnt"), burntOndehObj.rotation);
@@ -95,10 +130,8 @@ public class ondehsteamer : MonoBehaviour
             } else { //undercooked
                 Instantiate(undercookedOndehObj, getPlateCoords("undercooked"), undercookedOndehObj.rotation);
             }
-            resetA();
-
-        //move from steamerB to plate
-        } else if ((startCookingB) && (isSteamerB()) && (canMoveToPlate())) {
+    }
+    void checkCookingB() {
             if (hasBurntB) { //burnt
                 overcookedboilingondeh.destroyB = true;
                 Instantiate(burntOndehObj, getPlateCoords("burnt"), burntOndehObj.rotation);
@@ -110,13 +143,9 @@ public class ondehsteamer : MonoBehaviour
             } else { //undercooked
                 Instantiate(undercookedOndehObj, getPlateCoords("undercooked"), undercookedOndehObj.rotation);
             }
-            resetB();
-        }
-
-        //reset
-        gameflow3.resetClicks = true;
-
     }
+
+
 
     void resetA() {
         ondehsteam.destroyA = true;
@@ -148,19 +177,35 @@ public class ondehsteamer : MonoBehaviour
         }
 
         if (!gameflow3.ondehOnPlateA) {
-            if (status == "cooked") {
+            
+            indicateCookedA(status);
+            /*if (status == "cooked") {
                 gameflow3.ondehOnACooked = true;
-            }
+            }*/
+
             gameflow3.ondehOnPlateA = true;
             coords += gameflow3.plateACoords;
         } else if (!gameflow3.ondehOnPlateB) {
-            if (status == "cooked") {
+
+            indicateCookedB(status);
+            /*if (status == "cooked") {
                 gameflow3.ondehOnBCooked = true;
-            }
+            }*/
+
             gameflow3.ondehOnPlateB = true;
             coords += gameflow3.plateBCoords;
         }
         return coords;
+    }
+    void indicateCookedA(string status) {
+        if (status == "cooked") {
+            gameflow3.ondehOnACooked = true;
+        }
+    }
+    void indicateCookedB(string status) {
+            if (status == "cooked") {
+                gameflow3.ondehOnBCooked = true;
+            }
     }
 
     bool canMoveToPlate() {

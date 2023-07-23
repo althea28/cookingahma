@@ -18,14 +18,14 @@ public class chweeKuehBTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((ckTutFlow.stepCounter == 7) && (isOnSteamerB()) && (!addedCookedSteam)) {
+        if ((ckTutFlow.stepCounter == ckTutFlow.stepAddBatterC) && (isOnSteamerB()) && (!addedCookedSteam)) {
             Instantiate(cookedSteamObj, transform.position, cookedSteamObj.rotation);
             addedCookedSteam = true;
         }
     }
 
     void OnMouseDown() {
-        if ((ckTutFlow.stepCounter == 7) && (isOnSteamerB())) {
+        if ((ckTutFlow.stepCounter == ckTutFlow.stepAddBatterC) && (isOnSteamerB())) {
             Destroy (gameObject);
             Instantiate (cookedCkObj, 
                 ckTutFlow.plateACoords + ckTutFlow.addCookedCKCoords, cookedCkObj.rotation);

@@ -12,7 +12,7 @@ public class ucOndehTut : MonoBehaviour
 
     void Update() 
     {
-        if (ondehTutFlow.stepCounter == 8) 
+        if (ondehTutFlow.stepCounter == ondehTutFlow.stepTrashUndercooked) 
         {
             Destroy (gameObject);
         }
@@ -21,7 +21,7 @@ public class ucOndehTut : MonoBehaviour
     // Update is called once per frame
     void OnMouseDown()
     {
-        if (ondehTutFlow.stepCounter == 6) 
+        if (ondehTutFlow.stepCounter == ondehTutFlow.stepMoveUndercooked) 
         {
             ondehTutFlow.stepCounter++;
         }

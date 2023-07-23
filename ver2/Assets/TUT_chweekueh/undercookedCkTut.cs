@@ -13,13 +13,13 @@ public class undercookedCkTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((ckTutFlow.stepCounter == 6) && (isOnPlateA())) {
+        if ((ckTutFlow.stepCounter == ckTutFlow.stepTrashUndercooked) && (isOnPlateA())) {
             Destroy (gameObject);
         }
     }
 
     void OnMouseDown() {
-        if (ckTutFlow.stepCounter == 4) {
+        if (ckTutFlow.stepCounter == ckTutFlow.stepMoveUndercooked) {
             ckTutFlow.stepCounter ++;
         }
     }

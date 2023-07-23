@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class steamclick2 : MonoBehaviour
 {
-    //private float grillAXCoordinates = -2.15f;
-    //private float grillBXCoordinates = -3.94f;
 
     // Start is called before the first frame update
     void Start()

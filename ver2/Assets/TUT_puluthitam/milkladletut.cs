@@ -16,9 +16,9 @@ public class milkladletut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((pulutTutFlow.stepCounter == 15) && (transform.position == downCoords)) {
+        if ((pulutTutFlow.stepCounter == pulutTutFlow.stepClickMilk) && (transform.position == downCoords)) {
             transform.position = upCoords;
-        } else if ((pulutTutFlow.stepCounter == 16) && (transform.position == upCoords)) {
+        } else if ((pulutTutFlow.stepCounter == pulutTutFlow.stepAddMilk) && (transform.position == upCoords)) {
             transform.position = downCoords;
         }
 

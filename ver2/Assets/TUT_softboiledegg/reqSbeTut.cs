@@ -13,7 +13,7 @@ public class reqSbeTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((sbeTutFlow.stepCounter == 12) && (isOnCusBReqCoords())) {
+        if ((sbeTutFlow.stepCounter == sbeTutFlow.stepServeCustomer) && (isOnCusBReqCoords())) {
             Destroy (gameObject);
         }
         

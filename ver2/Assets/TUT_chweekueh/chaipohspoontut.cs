@@ -17,10 +17,10 @@ public class chaipohspoontut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((ckTutFlow.stepCounter == 9) && (transform.position == downCoords)) {
+        if ((ckTutFlow.stepCounter == ckTutFlow.stepClickCP) && (transform.position == downCoords)) {
             transform.position = upCoords;
         }
-        if ((ckTutFlow.stepCounter == 10) && (transform.position == upCoords)) {
+        if ((ckTutFlow.stepCounter == ckTutFlow.stepAddCP) && (transform.position == upCoords)) {
             transform.position = downCoords;
         }
     }

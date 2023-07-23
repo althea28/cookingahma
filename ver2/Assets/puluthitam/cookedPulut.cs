@@ -9,29 +9,35 @@ public class cookedPulut : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-       if ((gameflow3.destroyPulutA) && (isOnBowlA())) {
-           if (gameflow3.milkAddedOnA) {
-               milk.destroyA = true;
-           } 
-           Destroy (gameObject);
-           gameflow3.destroyPulutA = false;
-           resetA();
+        if ((gameflow3.destroyPulutA) && (isOnBowlA())) {
 
-       } else if ((gameflow3.destroyPulutB) && (isOnBowlB())) {
-           if (gameflow3.milkAddedOnB) {
-               milk.destroyB = true;
-           } 
-           Destroy (gameObject);
-           gameflow3.destroyPulutB = false;
-           resetB();
-       } 
-   }
+            checkMilkA();
+            /*if (gameflow3.milkAddedOnA) {
+              milk.destroyA = true;
+              }*/
+
+            Destroy (gameObject);
+            gameflow3.destroyPulutA = false;
+            resetA();
+
+        } else if ((gameflow3.destroyPulutB) && (isOnBowlB())) {
+
+            checkMilkB();
+            /*if (gameflow3.milkAddedOnB) {
+              milk.destroyB = true;
+              }*/
+
+            Destroy (gameObject);
+            gameflow3.destroyPulutB = false;
+            resetB();
+        } 
+    }
 
     void OnMouseDown() {
         if ((gameflow3.milkIsClicked) && (canAddMilk())) {
@@ -50,7 +56,7 @@ public class cookedPulut : MonoBehaviour
 
         } else if (isOnBowlB()) {
             gameflow3.bowlBClicked = true;
-            
+
             //reset
             gameflow3.bowlAClicked = false;
         }
@@ -58,6 +64,17 @@ public class cookedPulut : MonoBehaviour
         //reset
         gameflow3.milkIsClicked = false;
         gameflow3.resetClicksOndeh = true;
+    }
+
+    void checkMilkA() {
+        if (gameflow3.milkAddedOnA) {
+            milk.destroyA = true;
+        } 
+    }
+    void checkMilkB() {
+        if (gameflow3.milkAddedOnB) {
+            milk.destroyB = true;
+        } 
     }
 
     void resetA() {

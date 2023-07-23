@@ -19,7 +19,7 @@ public class tofuboxTut : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if (rojakTutFlow.stepCounter == 9) {
+        if (rojakTutFlow.stepCounter == rojakTutFlow.stepMoveVege) {
             Instantiate(precutTofuObj, rojakTutFlow.boardACoords + rojakTutFlow.addFruitsBoardCoords, precutTofuObj.rotation);
             rojakTutFlow.stepCounter ++;
         }

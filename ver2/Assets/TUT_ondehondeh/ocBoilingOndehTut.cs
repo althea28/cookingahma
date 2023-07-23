@@ -12,7 +12,7 @@ public class ocBoilingOndehTut : MonoBehaviour
 
     void Update() 
     {
-        if (ondehTutFlow.stepCounter == 11) 
+        if (ondehTutFlow.stepCounter == ondehTutFlow.stepMoveOvercooked) 
         {
             Destroy (gameObject);
         }

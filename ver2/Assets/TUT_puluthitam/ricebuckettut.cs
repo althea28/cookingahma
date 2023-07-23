@@ -19,13 +19,13 @@ public class ricebuckettut : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if (pulutTutFlow.stepCounter == 1) {
+        if (pulutTutFlow.stepCounter == pulutTutFlow.stepStart) {
             Instantiate(rawRiceObj, pulutTutFlow.potACoords + pulutTutFlow.addRiceCoords, rawRiceObj.rotation);
             pulutTutFlow.stepCounter++;
-        } else if (pulutTutFlow.stepCounter == 2) {
+        } else if (pulutTutFlow.stepCounter == pulutTutFlow.stepAddRiceA) {
             Instantiate(rawRiceObj, pulutTutFlow.potBCoords + pulutTutFlow.addRiceCoords, rawRiceObj.rotation);
             pulutTutFlow.stepCounter++;
-        } else if (pulutTutFlow.stepCounter == 10) {
+        } else if (pulutTutFlow.stepCounter == pulutTutFlow.stepTrashUndercooked) {
             Instantiate(rawRiceObj, pulutTutFlow.potACoords + pulutTutFlow.addRiceCoords, rawRiceObj.rotation);
             pulutTutFlow.stepCounter++;
         }

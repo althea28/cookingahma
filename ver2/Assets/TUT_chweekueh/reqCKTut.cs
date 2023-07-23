@@ -13,7 +13,7 @@ public class reqCKTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((ckTutFlow.stepCounter == 12) && (isOnCusBReqCoords())) {
+        if ((ckTutFlow.stepCounter == ckTutFlow.stepServeCustomer) && (isOnCusBReqCoords())) {
             Destroy (gameObject);
         }
         

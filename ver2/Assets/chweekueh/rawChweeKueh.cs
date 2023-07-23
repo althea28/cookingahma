@@ -18,9 +18,11 @@ public class rawChweeKueh : MonoBehaviour
         
         //trying to trash OR serve => destroy obj
         if (((gameflow2.trashPlateA) && (isOnPlateA())) || (((gameflow2.serveCkA) && (isOnPlateA()))))  {
-            if (gameflow2.hasCPOnA) { //if added chai poh to A, destroy it too.
+            
+            checkChaiPohA();
+            /*if (gameflow2.hasCPOnA) { //if added chai poh to A, destroy it too.
                 undercookedChaiPoh.trashChaiPohA = true;
-            }
+            }*/
 
             gameflow2.trashPlateA = false;
             gameflow2.serveCkA = false;
@@ -29,9 +31,11 @@ public class rawChweeKueh : MonoBehaviour
             Destroy (gameObject);
 
         } else if (((gameflow2.trashPlateB) && (isOnPlateB())) || (((gameflow2.serveCkB) && (isOnPlateB())))) {
-            if (gameflow2.hasCPOnB) { //if added chai poh to B, destroy it too
+
+            checkChaiPohB();
+            /*if (gameflow2.hasCPOnB) { //if added chai poh to B, destroy it too
                 undercookedChaiPoh.trashChaiPohB = true;
-            }
+            }*/
 
             gameflow2.trashPlateB = false;
             gameflow2.serveCkB = false;
@@ -70,7 +74,19 @@ public class rawChweeKueh : MonoBehaviour
         //reset
         gameflow2.resetClicksRojak = true;
     }
-   
+    
+    void checkChaiPohA() {
+        if (gameflow2.hasCPOnA) { //if added chai poh to A, destroy it too.
+                undercookedChaiPoh.trashChaiPohA = true;
+            }
+    }
+    void checkChaiPohB() {
+            if (gameflow2.hasCPOnB) { //if added chai poh to B, destroy it too
+                undercookedChaiPoh.trashChaiPohB = true;
+            }
+    }
+
+
     void resetA() { //to reset added chai poh, is on plate A
         gameflow2.hasCPOnA = false;
         gameflow2.ckOnPlateA = false;

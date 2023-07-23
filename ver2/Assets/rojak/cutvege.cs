@@ -5,7 +5,7 @@ using UnityEngine;
 public class cutvege : MonoBehaviour
 {
     public Transform platedVegeObj;
-    private int ingredientStep = 2;
+    private int ingredientStep = gameflow2.stepPlateWithFruit;
 
     // Start is called before the first frame update
     void Start()

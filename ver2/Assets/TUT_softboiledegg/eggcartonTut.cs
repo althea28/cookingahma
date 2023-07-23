@@ -21,13 +21,13 @@ public class eggcartonTut : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if (sbeTutFlow.stepCounter == 1) {
+        if (sbeTutFlow.stepCounter == sbeTutFlow.stepStart) {
             Instantiate(eggAObj, sbeTutFlow.steamerACoords, eggAObj.rotation);
             sbeTutFlow.stepCounter ++;
-        } else if (sbeTutFlow.stepCounter == 2) {
+        } else if (sbeTutFlow.stepCounter == sbeTutFlow.stepAddEggA) {
             Instantiate(eggBObj, sbeTutFlow.steamerBCoords, eggBObj.rotation);
             sbeTutFlow.stepCounter ++;
-        } else if (sbeTutFlow.stepCounter == 6) {
+        } else if (sbeTutFlow.stepCounter == sbeTutFlow.stepTrashUndercooked) {
             Instantiate(eggCObj, sbeTutFlow.steamerACoords, eggCObj.rotation);
             sbeTutFlow.stepCounter ++;
         }

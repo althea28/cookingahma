@@ -19,17 +19,17 @@ public class ondehSteamTut2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((ondehTutFlow.stepCounter == 8) && (!addedCooked)) 
+        if ((ondehTutFlow.stepCounter == ondehTutFlow.stepTrashUndercooked) && (!addedCooked)) 
         {
             addedCooked = true;
             Instantiate(cookedOndehObj, ondehTutFlow.steamerBCoords + ondehTutFlow.addBoilingOndehCoords, cookedOndehObj.rotation);
         }
-        else if ((ondehTutFlow.stepCounter == 10) && (!addedOvercooked))
+        else if ((ondehTutFlow.stepCounter == ondehTutFlow.stepBoilDoughC) && (!addedOvercooked))
         {
             addedOvercooked = true;
             Instantiate(overcookedOndehObj, ondehTutFlow.steamerBCoords + ondehTutFlow.addBoilingOndehCoords, overcookedOndehObj.rotation);
         }
-        else if (ondehTutFlow.stepCounter == 11)
+        else if (ondehTutFlow.stepCounter == ondehTutFlow.stepMoveOvercooked)
         {
             Destroy (gameObject);
         }

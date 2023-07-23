@@ -13,7 +13,7 @@ public class overcookedSteamTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((sbeTutFlow.stepCounter == 13) && (isOnSteamerA())) {
+        if ((sbeTutFlow.stepCounter == sbeTutFlow.stepMoveBurnt) && (isOnSteamerA())) {
             Destroy (gameObject);
         }
     }

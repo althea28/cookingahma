@@ -12,6 +12,10 @@ public class toastloaftutorial : MonoBehaviour
     public Transform toastAObj;
     public Transform toastBObj;
 
+    private static int stepAddToastA = 1;
+    private static int stepAddToastB = 2;
+
+
 
     private void Start()
     {
@@ -42,14 +46,14 @@ public class toastloaftutorial : MonoBehaviour
     {
         //Debug.Log("Ingredient collected!");
 
-        if (clickCount == 1)
+        if (clickCount == stepAddToastA)
         {
             feedbackText1.SetActive(true);
             //====
             Instantiate(toastAObj, tutorialflow.grillACoordinates, toastAObj.rotation);
 
         }
-        else if (clickCount == 2)
+        else if (clickCount == stepAddToastB)
         {          
             HideFeedbackText1();
             feedbackText2.SetActive(true);

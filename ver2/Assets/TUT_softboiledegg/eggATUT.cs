@@ -19,7 +19,7 @@ public class eggATUT : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if ((sbeTutFlow.stepCounter == 3) && (isOnSteamerA())) {
+        if ((sbeTutFlow.stepCounter == sbeTutFlow.stepAddEggB) && (isOnSteamerA())) {
             Instantiate(undercookedEggObj, 
                 sbeTutFlow.plateACoords + sbeTutFlow.addUndercookedEggsCoords, 
                 undercookedEggObj.rotation);

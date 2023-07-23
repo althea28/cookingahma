@@ -18,7 +18,6 @@ public class rawCookingPulut : MonoBehaviour
     void Update()
     {
         if ((destroyA) && (isOnPotA())) {
-            Debug.Log("raw dest");
             destroyA = false;
             Destroy(gameObject);
         } else if ((destroyB) && (isOnPotB())) {

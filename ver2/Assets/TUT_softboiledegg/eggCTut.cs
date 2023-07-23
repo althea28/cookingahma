@@ -22,17 +22,17 @@ public class eggCTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if ((sbeTutFlow.stepCounter == 10) && (isOnSteamerA()) && (!addedCookedSteam)) {
+       if ((sbeTutFlow.stepCounter == sbeTutFlow.stepAddSoya) && (isOnSteamerA()) && (!addedCookedSteam)) {
            Instantiate(cookedSteamObj, transform.position, cookedSteamObj.rotation);
            addedCookedSteam = true;
-       } else if ((sbeTutFlow.stepCounter == 12) && (isOnSteamerA()) && (!addedOvercookedSteam)) {
+       } else if ((sbeTutFlow.stepCounter == sbeTutFlow.stepServeCustomer) && (isOnSteamerA()) && (!addedOvercookedSteam)) {
            Instantiate(overcookedSteamObj, transform.position, overcookedSteamObj.rotation);
            addedOvercookedSteam = true;
        }
     }
 
     void OnMouseDown() {
-        if ((sbeTutFlow.stepCounter == 12) && (isOnSteamerA())) {
+        if ((sbeTutFlow.stepCounter == sbeTutFlow.stepServeCustomer) && (isOnSteamerA())) {
             sbeTutFlow.stepCounter ++;
             Instantiate(overcookedEggsObj, 
                 sbeTutFlow.plateACoords + sbeTutFlow.addOvercookedEggsCoords, overcookedEggsObj.rotation);

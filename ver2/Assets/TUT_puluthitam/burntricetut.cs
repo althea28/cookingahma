@@ -15,7 +15,7 @@ public class burntricetut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if ((pulutTutFlow.stepCounter == 19) && (isOnPotA())) {
+       if ((pulutTutFlow.stepCounter == pulutTutFlow.stepMoveBurnt) && (isOnPotA())) {
            Destroy(gameObject);
        }
     }

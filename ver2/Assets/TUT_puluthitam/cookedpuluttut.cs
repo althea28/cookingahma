@@ -15,16 +15,16 @@ public class cookedpuluttut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((pulutTutFlow.stepCounter == 18) && (isOnBowlA())) {
+        if ((pulutTutFlow.stepCounter == pulutTutFlow.stepServeCustomer) && (isOnBowlA())) {
             Destroy(gameObject);
         }
     }
 
     void OnMouseDown() {
-        if (pulutTutFlow.stepCounter == 15) {
+        if (pulutTutFlow.stepCounter == pulutTutFlow.stepClickMilk) {
             Instantiate(milkObj, transform.position + pulutTutFlow.addMilkCoords, milkObj.rotation);
             pulutTutFlow.stepCounter++;
-        } else if (pulutTutFlow.stepCounter == 16) {
+        } else if (pulutTutFlow.stepCounter == pulutTutFlow.stepAddMilk) {
             pulutTutFlow.stepCounter++;
         }
     }

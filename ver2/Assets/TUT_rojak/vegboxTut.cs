@@ -19,7 +19,7 @@ public class vegboxTut : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if (rojakTutFlow.stepCounter == 5) {
+        if (rojakTutFlow.stepCounter == rojakTutFlow.stepMoveFruit) {
             Instantiate(precutVegObj, rojakTutFlow.boardACoords + rojakTutFlow.addVegeBoardCoords, precutVegObj.rotation);
             rojakTutFlow.stepCounter ++;
         }

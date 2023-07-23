@@ -5,7 +5,7 @@ using UnityEngine;
 public class cutfruits : MonoBehaviour
 {
     public Transform platedFruitsObj;
-    private int ingredientStep = 1;
+    private int ingredientStep = gameflow2.stepEmptyPlate;
 
     // Start is called before the first frame update
     void Start()

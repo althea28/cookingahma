@@ -16,7 +16,9 @@ public class knifeTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if (rojakTutFlow.stepCounter == 3 || rojakTutFlow.stepCounter == 7 || rojakTutFlow.stepCounter == 11) {
+       if (rojakTutFlow.stepCounter == rojakTutFlow.stepClickKnifeA || 
+           rojakTutFlow.stepCounter == rojakTutFlow.stepClickKnifeB || 
+           rojakTutFlow.stepCounter == rojakTutFlow.stepClickKnifeC) {
            transform.position = upCoords;
        } else if (transform.position == upCoords) {
            transform.position = downCoords;

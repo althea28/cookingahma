@@ -7,16 +7,21 @@ public class customer : MonoBehaviour
     public Transform toastReqObj;
     public Transform eggReqObj;
 
+    private int toastDish = 1;
+    private int eggDish = 2;
+    private string toastName = "toast";
+    private string eggName = "eggs";
+
     // Start is called before the first frame update
     void Start()
     {
         int dishSelector = Random.Range(1,gameflow.numOfDishes + 1); //change to 3 when add egg
-        if (dishSelector == 1) { //if toast
+        if (dishSelector == toastDish) { //if toast
             Instantiate(toastReqObj, transform.position + gameflow.addReqCoordinates, toastReqObj.rotation);
-            dishIndicator("toast");
-        } else if (dishSelector == 2) {
+            dishIndicator(toastName);
+        } else if (dishSelector == eggDish) {
             Instantiate(eggReqObj, transform.position + gameflow.addReqCoordinates, eggReqObj.rotation);
-            dishIndicator("eggs");
+            dishIndicator(eggName);
         }
     }
 
@@ -28,20 +33,20 @@ public class customer : MonoBehaviour
 
     void OnMouseDown() {
         //check if toast is finished
-        if ((customersOrder() == "toast") && (gameflow.toastAIsClicked == "y") && (toastclick.isToastAReady == "y")) {
+        if ((customersOrder() == toastName) && (gameflow.toastAIsClicked == "y") && (toastclick.isToastAReady == "y")) {
             toastclick.serveToastA = "y"; //triggers serveA() in toastclick.update()
             successfulServe();
             
-        } else if ((customersOrder() == "toast") && (gameflow.toastBIsClicked == "y") && (toastclick.isToastBReady == "y"))  {
+        } else if ((customersOrder() == toastName) && (gameflow.toastBIsClicked == "y") && (toastclick.isToastBReady == "y"))  {
             toastclick.serveToastB = "y"; //triggers serveB() in toastclick.update()
             successfulServe();
             
-        } else if ((customersOrder() == "eggs") && (gameflow.plateAClicked) && 
+        } else if ((customersOrder() == eggName) && (gameflow.plateAClicked) && 
                 (gameflow.plateACooked) && (gameflow.hasSoyaOnA)) {
             gameflow.serveEggA = true;
             successfulServe();
 
-        } else if ((customersOrder() == "eggs") && (gameflow.plateBClicked) && 
+        } else if ((customersOrder() == eggName) && (gameflow.plateBClicked) && 
                 (gameflow.plateBCooked) && (gameflow.hasSoyaOnB)) {
             gameflow.serveEggB = true;
             successfulServe();

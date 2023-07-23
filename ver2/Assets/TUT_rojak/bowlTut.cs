@@ -18,10 +18,10 @@ public class bowlTut : MonoBehaviour
     }
  
     void OnMouseDown() {
-        if (rojakTutFlow.stepCounter == 14) { //adding sauce
+        if (rojakTutFlow.stepCounter == rojakTutFlow.stepClickSauce) { //adding sauce
             Instantiate(sauceObj, transform.position, sauceObj.rotation);
             rojakTutFlow.stepCounter++;
-        } else if (rojakTutFlow.stepCounter == 15) {
+        } else if (rojakTutFlow.stepCounter == rojakTutFlow.stepAddSauce) {
             rojakTutFlow.stepCounter++;
         }
     }

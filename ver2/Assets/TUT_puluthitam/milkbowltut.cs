@@ -17,7 +17,7 @@ public class milkbowltut : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if (pulutTutFlow.stepCounter == 14) {
+        if (pulutTutFlow.stepCounter == pulutTutFlow.stepMoveCooked) {
             pulutTutFlow.stepCounter ++;
         }
     }

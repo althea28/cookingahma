@@ -19,7 +19,7 @@ public class coconutbowlTut : MonoBehaviour
 
     void OnMouseDown() 
     {
-        if (ondehTutFlow.stepCounter == 14) 
+        if (ondehTutFlow.stepCounter == ondehTutFlow.stepMoveCooked) 
         {
             ondehTutFlow.stepCounter++;
         }

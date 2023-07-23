@@ -19,7 +19,7 @@ public class fruitboxTut : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if (rojakTutFlow.stepCounter == 1) {
+        if (rojakTutFlow.stepCounter == rojakTutFlow.stepStart) {
             Instantiate(precutFruitsObj, rojakTutFlow.boardACoords + rojakTutFlow.addFruitsBoardCoords, precutFruitsObj.rotation);
             rojakTutFlow.stepCounter ++;
         }

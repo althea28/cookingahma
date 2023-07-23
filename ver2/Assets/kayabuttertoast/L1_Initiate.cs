@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class L1_Initiate : MonoBehaviour
 {
+    private int numOfDishes = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,7 @@ public class L1_Initiate : MonoBehaviour
     void Update()
     {
        if (gameflow.initiating) {
-           gameflow.numOfDishes = 1;
+           gameflow.numOfDishes = numOfDishes;
            gameflow.initiating = false;
        }
     }

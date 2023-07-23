@@ -13,7 +13,7 @@ public class cookedBoilingOndehTut2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ondehTutFlow.stepCounter == 14)
+        if (ondehTutFlow.stepCounter == ondehTutFlow.stepMoveCooked)
         {
             Destroy(gameObject);
         }

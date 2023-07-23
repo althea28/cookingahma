@@ -75,7 +75,9 @@ public class eggs : MonoBehaviour
         gameflow.resetClicks = true;
 
         if (((isOnSteamerA()) && emptySpaceOnPlates())) { //if is on A and can be moved
-            if ((!isCookedA) && (!isBurntA)) { //if A is undercooked
+
+            movingA();
+            /*if ((!isCookedA) && (!isBurntA)) { //if A is undercooked
                 Instantiate(undercookedEggsObj, transferEggsCoords("undercooked"), undercookedEggsObj.rotation);
                 
             } else if ((isCookedA) && (!isBurntA)) { //if A is cooked
@@ -83,10 +85,12 @@ public class eggs : MonoBehaviour
                            
             } else if ((isCookedA) && (isBurntA)) { //if A is overcooked
                 Instantiate(overcookedEggsObj, transferEggsCoords("overcooked"), overcookedEggsObj.rotation);
-                           }
+                           }*/
             resetA();
         } else if (((isOnSteamerB()) && emptySpaceOnPlates())) { //if is on B and can be moved
-            if ((!isCookedB) && (!isBurntB)) { //if B is undercooked
+            
+            movingB();
+            /*if ((!isCookedB) && (!isBurntB)) { //if B is undercooked
                 Instantiate(undercookedEggsObj, transferEggsCoords("undercooked"), undercookedEggsObj.rotation);
                 
             } else if ((isCookedB) && (!isBurntB)) { //if B is cooked
@@ -95,11 +99,36 @@ public class eggs : MonoBehaviour
             } else if ((isCookedB) && (isBurntB)) { //if B is overcooked
                 Instantiate(overcookedEggsObj, transferEggsCoords("overcooked"), overcookedEggsObj.rotation);
                
-            }
+            }*/
             resetB();
         }
 
 
+    }
+
+    void movingA() {
+        if ((!isCookedA) && (!isBurntA)) { //if A is undercooked
+                Instantiate(undercookedEggsObj, transferEggsCoords("undercooked"), undercookedEggsObj.rotation);
+                
+        } else if ((isCookedA) && (!isBurntA)) { //if A is cooked
+            Instantiate(cookedEggsObj, transferEggsCoords("cooked"), cookedEggsObj.rotation);
+                           
+        } else if ((isCookedA) && (isBurntA)) { //if A is overcooked
+            Instantiate(overcookedEggsObj, transferEggsCoords("overcooked"), overcookedEggsObj.rotation);
+        }
+    }
+
+    void movingB() {
+        if ((!isCookedB) && (!isBurntB)) { //if B is undercooked
+                Instantiate(undercookedEggsObj, transferEggsCoords("undercooked"), undercookedEggsObj.rotation);
+                
+        } else if ((isCookedB) && (!isBurntB)) { //if B is cooked
+            Instantiate(cookedEggsObj, transferEggsCoords("cooked"), cookedEggsObj.rotation);
+                          
+        } else if ((isCookedB) && (isBurntB)) { //if B is overcooked
+            Instantiate(overcookedEggsObj, transferEggsCoords("overcooked"), overcookedEggsObj.rotation);
+               
+        }
     }
 
     void resetA() { //to destroy steam, reset timer, cooking checks, destroy eggs
@@ -137,18 +166,34 @@ public class eggs : MonoBehaviour
     Vector3 transferEggsCoords(string cookCheck) {
         if (!gameflow.eggsOnPlateA) { //transf to plate A
             gameflow.eggsOnPlateA = true;
-            if (cookCheck == "cooked") {
+
+            cookCheckA(cookCheck);
+            /*if (cookCheck == "cooked") {
                 gameflow.plateACooked = true;
-            }
+            }*/
             return gameflow.plateACoords + adjustEggCoords(cookCheck);
         } else { //transf to plate B
             gameflow.eggsOnPlateB = true;
-            if (cookCheck == "cooked") {
+
+            cookCheckB(cookCheck);
+            /*if (cookCheck == "cooked") {
                 gameflow.plateBCooked = true;
-            }
+            }*/
             return gameflow.plateBCoords + adjustEggCoords(cookCheck);
         }
     }
+
+    void cookCheckA(string cookCheck) {
+        if (cookCheck == "cooked") {
+            gameflow.plateACooked = true;
+        }
+    }
+    void cookCheckB(string cookCheck) {
+        if (cookCheck == "cooked") {
+                gameflow.plateBCooked = true;
+        }
+    }
+        
     
     //adjusts eggs coordinates
     Vector3 adjustEggCoords(string cookCheck) {

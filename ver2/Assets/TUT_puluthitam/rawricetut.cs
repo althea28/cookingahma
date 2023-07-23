@@ -21,14 +21,14 @@ public class rawricetut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((pulutTutFlow.stepCounter == 8) && (isOnPotA()) && (!destroyedA)) {
+        if ((pulutTutFlow.stepCounter == pulutTutFlow.stepMoveUndercooked) && (isOnPotA()) && (!destroyedA)) {
             destroyedA = true;
             Destroy(gameObject);
-        } else if ((pulutTutFlow.stepCounter == 11) && (isOnPotB()) && (!destroyedB)) {
+        } else if ((pulutTutFlow.stepCounter == pulutTutFlow.stepAddRiceC) && (isOnPotB()) && (!destroyedB)) {
             destroyedB = true;
             Instantiate(cookedPulutObj, transform.position, cookedPulutObj.rotation);
             Destroy(gameObject);
-        } else if ((pulutTutFlow.stepCounter == 15) && (isOnPotA()) && (!destroyedC)) {
+        } else if ((pulutTutFlow.stepCounter == pulutTutFlow.stepClickMilk) && (isOnPotA()) && (!destroyedC)) {
             destroyedC = true;
             Instantiate(cookedPulutObj, transform.position, cookedPulutObj.rotation);
             Destroy(gameObject);

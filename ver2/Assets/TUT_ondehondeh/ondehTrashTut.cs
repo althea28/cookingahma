@@ -13,12 +13,12 @@ public class ondehTrashTut : MonoBehaviour
     // Update is called once per frame
     void OnMouseDown()
     {
-        if (ondehTutFlow.stepCounter == 7) 
+        if (ondehTutFlow.stepCounter == ondehTutFlow.stepClickUndercooked) 
         {
             ondehTutFlow.stepCounter++;
         }
 
-        if (ondehTutFlow.stepCounter == 12)
+        if (ondehTutFlow.stepCounter == ondehTutFlow.stepClickOvercooked)
         {
             ondehTutFlow.stepCounter++;
         }

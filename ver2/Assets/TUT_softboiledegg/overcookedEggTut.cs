@@ -13,14 +13,14 @@ public class overcookedEggTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if ((sbeTutFlow.stepCounter == 15) && (isOnPlateA())) {
+       if ((sbeTutFlow.stepCounter == sbeTutFlow.stepTrashBurnt) && (isOnPlateA())) {
            Destroy (gameObject);
        }
            
     }
 
     void OnMouseDown() {
-        if ((sbeTutFlow.stepCounter == 13) && (isOnPlateA())) {
+        if ((sbeTutFlow.stepCounter == sbeTutFlow.stepMoveBurnt) && (isOnPlateA())) {
             sbeTutFlow.stepCounter ++;
         }
     }

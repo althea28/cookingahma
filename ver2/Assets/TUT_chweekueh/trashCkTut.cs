@@ -17,7 +17,8 @@ public class trashCkTut : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if ((ckTutFlow.stepCounter == 5) || (ckTutFlow.stepCounter == 14)) {
+        if ((ckTutFlow.stepCounter == ckTutFlow.stepClickUndercooked) || 
+            (ckTutFlow.stepCounter == ckTutFlow.stepClickBurnt)) {
             ckTutFlow.stepCounter ++;
         }
     }

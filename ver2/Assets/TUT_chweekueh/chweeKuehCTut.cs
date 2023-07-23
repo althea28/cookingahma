@@ -11,6 +11,7 @@ public class chweeKuehCTut : MonoBehaviour
     public Transform burntLayerObj;
     public Transform overcookedCkObj;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,18 +23,18 @@ public class chweeKuehCTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if ((ckTutFlow.stepCounter == 10) && (isOnSteamerA()) && (!addedCookedSteam)) {
+       if ((ckTutFlow.stepCounter == ckTutFlow.stepAddCP) && (isOnSteamerA()) && (!addedCookedSteam)) {
            Instantiate(cookedSteamObj, transform.position, cookedSteamObj.rotation);
            addedCookedSteam = true;       
        }
-       if ((ckTutFlow.stepCounter == 12) && (!addedBurntLayer)) {
+       if ((ckTutFlow.stepCounter == ckTutFlow.stepServeCustomer) && (!addedBurntLayer)) {
            Instantiate(burntLayerObj, transform.position + ckTutFlow.burntLayerCoords, burntLayerObj.rotation);
            addedBurntLayer = true;
        }
     }
 
     void OnMouseDown() {
-        if ((ckTutFlow.stepCounter == 12) && (isOnSteamerA())) {
+        if ((ckTutFlow.stepCounter == ckTutFlow.stepServeCustomer) && (isOnSteamerA())) {
             ckTutFlow.stepCounter ++;
             Instantiate(overcookedCkObj, 
                 ckTutFlow.plateACoords + ckTutFlow.addOvercookedCKCoords, overcookedCkObj.rotation);

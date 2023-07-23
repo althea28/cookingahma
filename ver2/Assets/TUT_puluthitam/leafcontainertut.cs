@@ -19,13 +19,13 @@ public class leafcontainertut : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if (pulutTutFlow.stepCounter == 3) {
+        if (pulutTutFlow.stepCounter == pulutTutFlow.stepAddRiceB) {
             Instantiate(leafObj, pulutTutFlow.potACoords + pulutTutFlow.addPandanCoords, leafObj.rotation);
             pulutTutFlow.stepCounter++;
-        } else if (pulutTutFlow.stepCounter == 4) {
+        } else if (pulutTutFlow.stepCounter == pulutTutFlow.stepAddPandanA) {
             Instantiate(leafObj, pulutTutFlow.potBCoords + pulutTutFlow.addPandanCoords, leafObj.rotation);
             pulutTutFlow.stepCounter++;
-        } else if (pulutTutFlow.stepCounter == 11) {
+        } else if (pulutTutFlow.stepCounter == pulutTutFlow.stepAddRiceC) {
             Instantiate(leafObj, pulutTutFlow.potACoords + pulutTutFlow.addPandanCoords, leafObj.rotation);
             pulutTutFlow.stepCounter++;
         }

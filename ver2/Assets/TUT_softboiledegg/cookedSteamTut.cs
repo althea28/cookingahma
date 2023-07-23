@@ -13,9 +13,9 @@ public class cookedSteamTut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((sbeTutFlow.stepCounter == 8) && (isOnSteamerB())) {
+        if ((sbeTutFlow.stepCounter == sbeTutFlow.stepMoveCooked) && (isOnSteamerB())) {
             Destroy (gameObject);
-        } else if ((sbeTutFlow.stepCounter == 13) && (isOnSteamerA())) {
+        } else if ((sbeTutFlow.stepCounter == sbeTutFlow.stepMoveBurnt) && (isOnSteamerA())) {
             Destroy (gameObject);
         }
         

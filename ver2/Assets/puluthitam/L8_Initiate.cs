@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class L8_Initiate : MonoBehaviour
 {
+    private int numOfDishes = 2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,16 +18,8 @@ public class L8_Initiate : MonoBehaviour
        if (gameflow3.initiating) {
            gameflow3.initiating = false;
 
-           gameflow3.numOfDishes = 2;
+           gameflow3.numOfDishes = numOfDishes;
 
-           /*gameflow3.plateACoords = new Vector3(4.605f, 3.115f, 3.643f);
-           gameflow3.plateBCoords = new Vector3(2.706f, 3.115f, 3.643f);
-           gameflow3.steamerACoords = new Vector3(6.55f, 3.636f, 2.11f);
-           gameflow3.steamerBCoords = new Vector3(6.55f, 3.636f, 3.774f);
-
-           gameflow3.sugarOnDoughCoords = new Vector3(4.888f, 4.04f, 1.64f);
-
-           coconutspoon.downCoords = new Vector3(2.455f, 4.131f, 1.211f);*/
            
        }
     }

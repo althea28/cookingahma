@@ -17,16 +17,21 @@ public class overcookedegg : MonoBehaviour
     void Update()
     {
         if ((gameflow.trashPlateA) && (isOnPlateA())) {
-            if (gameflow.hasSoyaOnA) { //if added soya to A, destroy it too.
+            
+            checkSoyaA();
+            /*if (gameflow.hasSoyaOnA) { //if added soya to A, destroy it too.
                 ocSoyasauce.trashSoyaA = true;
-            }
+            }*/
+
             gameflow.trashPlateA = false;
             resetA();
             Destroy (gameObject);
         } else if ((gameflow.trashPlateB) && (isOnPlateB())) {
-            if (gameflow.hasSoyaOnB) { //if added soya to A, destroy it too
+
+            checkSoyaB();
+            /*if (gameflow.hasSoyaOnB) { //if added soya to B, destroy it too
                 ocSoyasauce.trashSoyaB = true;
-            }
+            }*/
             gameflow.trashPlateB = false;
             resetB();
             Destroy (gameObject);
@@ -58,6 +63,17 @@ public class overcookedegg : MonoBehaviour
             gameflow.resetClicksToast = true;
             gameflow.plateAClicked = false;
 
+        }
+    }
+
+    void checkSoyaA() {
+        if (gameflow.hasSoyaOnA) { //if added soya to A, destroy it too.
+            ocSoyasauce.trashSoyaA = true;
+        }
+    }
+    void checkSoyaB() {
+        if (gameflow.hasSoyaOnB) { //if added soya to B, destroy it too
+            ocSoyasauce.trashSoyaB = true;
         }
     }
 

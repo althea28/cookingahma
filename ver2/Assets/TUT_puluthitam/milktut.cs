@@ -13,7 +13,7 @@ public class milktut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if ((pulutTutFlow.stepCounter == 18) && (isOnBowlA())) { 
+       if ((pulutTutFlow.stepCounter == pulutTutFlow.stepServeCustomer) && (isOnBowlA())) { 
            Destroy(gameObject);
        }
     }

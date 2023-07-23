@@ -7,16 +7,22 @@ public class customer2 : MonoBehaviour
     public Transform ckReqObj;
     public Transform rojakReqObj;
 
+    private int ckDish = 1;
+    private int rojakDish = 2;
+    
+    private string ckName = "chweekueh";
+    private string rojakName = "rojak";
+
     // Start is called before the first frame update
     void Start()
     {
         int dishSelector = Random.Range(1,gameflow2.numOfDishes + 1); 
-        if (dishSelector == 1) { //if chweekueh
+        if (dishSelector == ckDish) { //if chweekueh
             Instantiate(ckReqObj, transform.position + gameflow2.addReqCoordinates, ckReqObj.rotation);
-            dishIndicator("chweekueh");
-        } else if (dishSelector == 2) {
+            dishIndicator(ckName);
+        } else if (dishSelector == rojakDish) {
             Instantiate(rojakReqObj, transform.position + gameflow.addReqCoordinates, rojakReqObj.rotation); 
-            dishIndicator("rojak");
+            dishIndicator(rojakName);
         }
     }
 
@@ -28,23 +34,23 @@ public class customer2 : MonoBehaviour
 
     void OnMouseDown() {
         //check if toast is finished
-        if ((customersOrder() == "chweekueh") && (gameflow2.plateAClicked) && 
+        if ((customersOrder() == ckName) && (gameflow2.plateAClicked) && 
             (gameflow2.plateACooked) && (gameflow2.hasCPOnA)) {
             gameflow2.serveCkA = true; 
             successfulServe();
             
-        } else if ((customersOrder() == "chweekueh") && (gameflow2.plateBClicked) && 
+        } else if ((customersOrder() == ckName) && (gameflow2.plateBClicked) && 
             (gameflow2.plateBCooked) && (gameflow2.hasCPOnB)) {
             gameflow2.serveCkB = true; 
             successfulServe();
 
-        } else if ((customersOrder() == "rojak") && (gameflow2.bowlAClicked) && (gameflow2.stepOnBowlA == 5)) {
-            gameflow2.stepOnBowlA = 1;
+        } else if ((customersOrder() == rojakName) && (gameflow2.bowlAClicked) && (gameflow2.stepOnBowlA == gameflow2.stepReadyPlate)) {
+            gameflow2.stepOnBowlA = gameflow2.stepEmptyPlate;
             gameflow2.serveRojakA = true;
             successfulServe();
 
-        } else if ((customersOrder() == "rojak") && (gameflow2.bowlBClicked) && (gameflow2.stepOnBowlB == 5)) {
-            gameflow2.stepOnBowlB = 1;
+        } else if ((customersOrder() == rojakName) && (gameflow2.bowlBClicked) && (gameflow2.stepOnBowlB == gameflow2.stepReadyPlate)) {
+            gameflow2.stepOnBowlB = gameflow2.stepEmptyPlate;
             gameflow2.serveRojakB = true;
             successfulServe();
         }

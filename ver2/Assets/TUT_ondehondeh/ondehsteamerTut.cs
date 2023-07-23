@@ -22,13 +22,13 @@ public class ondehsteamerTut : MonoBehaviour
 
     void OnMouseDown() 
     {
-        if (ondehTutFlow.stepCounter == 5) {
+        if (ondehTutFlow.stepCounter == ondehTutFlow.stepBoilDoughB) {
             Instantiate(undercookedOndehObj, ondehTutFlow.plateACoords + ondehTutFlow.undercookedOndehCoords, undercookedOndehObj.rotation);
             ondehTutFlow.stepCounter++;
-        } else if (ondehTutFlow.stepCounter == 10) {
+        } else if (ondehTutFlow.stepCounter == ondehTutFlow.stepBoilDoughC) {
             Instantiate(burntOndehObj, ondehTutFlow.plateACoords + ondehTutFlow.overcookedOndehCoords, burntOndehObj.rotation);
             ondehTutFlow.stepCounter++;
-        } else if (ondehTutFlow.stepCounter == 13) {
+        } else if (ondehTutFlow.stepCounter == ondehTutFlow.stepTrashOvercooked) {
             Instantiate(cookedOndehObj, ondehTutFlow.plateACoords + ondehTutFlow.overcookedOndehCoords, cookedOndehObj.rotation);
             ondehTutFlow.stepCounter++;
         }
