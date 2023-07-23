@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
+
 public class butterknife : MonoBehaviour
 {
     private static Vector3 downCoords = new Vector3(-2.054f, 3.479f, 1.607f);

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
+
 public class customer3 : MonoBehaviour
 {
     public Transform ondehReqObj;
@@ -33,16 +35,26 @@ public class customer3 : MonoBehaviour
 
     void OnMouseDown() {
         
-        //serve ondeh A
-        if ((customersOrder() == ondehName) && (gameflow3.ondehPlateAClicked) && 
+        //if customer has ordered ondeh ondeh, player has clicked ondeh ondeh on plate A to be served 
+        //     and ondeh ondeh on plate A is prepared correctly -> then serve ondeh ondeh A
+        if ((customersOrder() == ondehName) && (gameflow3.ondehPlateAClicked) && //
                 (gameflow3.ondehOnACooked) && (gameflow3.coconutOnA)) {
-            gameflow3.destroyOndehA = true; 
-            successfulServe();
             
-        //serve ondeh B
+            //destroy the ondeh ondeh on plate A
+            gameflow3.destroyOndehA = true;             
+
+            //update statistics
+            successfulServe();
+
+        //if customer has ordered ondeh ondeh, player has clicked ondeh ondeh on plate B to be served 
+        //     and ondeh ondeh on plate B is prepared correctly -> then serve ondeh ondeh B
         } else if ((customersOrder() == ondehName) && (gameflow3.ondehPlateBClicked) && 
                 (gameflow3.ondehOnBCooked) && (gameflow3.coconutOnB)) {
-            gameflow3.destroyOndehB = true; 
+
+            //destroy the ondeh ondeh on plate A
+            gameflow3.destroyOndehB = true;          
+
+            //update statistics
             successfulServe();
         
         //serve pulut A
@@ -61,12 +73,20 @@ public class customer3 : MonoBehaviour
         //RESET===
         gameflow3.resetClicks = true;
     }
-
+    
+    //player has successfully served a dish -> update game statistics and destroy customer
     void successfulServe() { 
+
+        //destroy the dish req attached to the customer
         destroyReq();
+
+        //signal gameflow to generate another customer at this position
         customerReset();
+
+        //update game statistics to reflect another customer served
         gameflow3.customersServed ++;
-        Debug.Log(gameflow3.customersServed);
+
+        //destroy current customer that has been served
         Destroy (gameObject);
     }
 

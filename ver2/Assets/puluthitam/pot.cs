@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
+
 public class pot : MonoBehaviour
 {
     public Transform cookedCookingPulutObj;
@@ -10,6 +12,8 @@ public class pot : MonoBehaviour
     public Transform rawPulutObj;
     public Transform cookedPulutObj;
     public Transform burntPulutObj;
+
+    private int stepToStartCooking = 3;
 
     public static bool isCookingA = false;
     public static bool isCookingB = false;
@@ -83,61 +87,38 @@ public class pot : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if ((isPotA()) && (canMoveToBowl()) && (gameflow3.potAStep > 3)) {
+        if ((isPotA()) && (canMoveToBowl()) && (gameflow3.potAStep > stepToStartCooking)) {
 
-            checkCookingA();
-            /*if (hasBurnedA) {
-              burntCookingPulut.destroyA = true;
-              Instantiate(burntPulutObj, getBowlCoords() + gameflow3.addPulutCoords, burntPulutObj.rotation);
-              } else if (hasCookedA) {
-              indicateCooked();
+            //Check if dish is raw/cooked/burnt, then instantiates correct model on bowl
+            checkCookingA();     
 
-              cookedCookingPulut.destroyA = true;
-              Instantiate(cookedPulutObj, getBowlCoords() + gameflow3.addPulutCoords, cookedPulutObj.rotation);
-              } else { //if raw
-              sugarPieces.destroyA = true;
-
-              rawCookingPulut.destroyA = true;
-              Instantiate(rawPulutObj, getBowlCoords() + gameflow3.addPulutCoords, rawPulutObj.rotation);
-              }*/
-
+            //Resets all variables so that new dish can be cooked on pot
             resetA();
-        } else if ((isPotB()) && (canMoveToBowl()) && (gameflow3.potBStep > 3)) {
 
+        } else if ((isPotB()) && (canMoveToBowl()) && (gameflow3.potBStep > stepToStartCooking)) {
+
+            //Check if dish is raw/cooked/burnt, then instantiates correct model on bowl
             checkCookingB();
-            /*if (hasBurnedB) {
-              burntCookingPulut.destroyB = true;
-              Instantiate(burntPulutObj, getBowlCoords() + gameflow3.addPulutCoords, burntPulutObj.rotation);
-              } else if (hasCookedB) {
-              indicateCooked();
 
-              cookedCookingPulut.destroyB = true;
-              Instantiate(cookedPulutObj, getBowlCoords() + gameflow3.addPulutCoords, cookedPulutObj.rotation);
-              } else { //if raw
-              sugarPieces.destroyB = true;
-
-              rawCookingPulut.destroyB = true;
-              Instantiate(rawPulutObj, getBowlCoords() + gameflow3.addPulutCoords, rawPulutObj.rotation);
-              }*/
-
+            //Resets all variables so that new dish can be cooked on pot
             resetB();
         }
-
         //reset
         gameflow3.resetClicks = true;
-
     }
 
     void checkCookingA() {
-        if (hasBurnedA) {
+        if (hasBurnedA) { //if dish is burnt
             burntCookingPulut.destroyA = true;
             Instantiate(burntPulutObj, getBowlCoords() + gameflow3.addPulutCoords, burntPulutObj.rotation);
-        } else if (hasCookedA) {
+
+        } else if (hasCookedA) { //if dish is cooked
             indicateCooked();
 
             cookedCookingPulut.destroyA = true;
             Instantiate(cookedPulutObj, getBowlCoords() + gameflow3.addPulutCoords, cookedPulutObj.rotation);
-        } else { //if raw
+
+        } else { //if dish is raw
             sugarPieces.destroyA = true;
 
             rawCookingPulut.destroyA = true;
