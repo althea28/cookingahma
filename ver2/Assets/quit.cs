@@ -13,5 +13,7 @@ public class quit : MonoBehaviour
         DontDestroyOnLoad(soundPlayer.gameObject);
         SceneManager.LoadScene(0);
         gameflow.customersServed = 0;
+
+        gameflow.sceneCounter = 0;
     }
 }

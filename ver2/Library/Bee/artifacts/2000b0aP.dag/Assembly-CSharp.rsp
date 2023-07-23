@@ -76,7 +76,6 @@
 -define:NET_STANDARD_2_1
 -define:NETSTANDARD
 -define:NETSTANDARD2_1
--define:UNITY_PRO_LICENSE
 -define:ENABLE_CUSTOM_RENDER_TEXTURE
 -define:ENABLE_DIRECTOR
 -define:ENABLE_LOCALIZATION
@@ -274,7 +273,7 @@
 -r:"/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.XDocument.dll"
 -r:"/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
 -r:"/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/NetStandard/ref/2.1.0/netstandard.dll"
--r:"/Users/Amber/Documents/GitHub/cookingahma/ver2/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"/Users/altheatan/Desktop/cookingahma/ver2/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/2000b0aP.dag/Unity.TextMeshPro.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aP.dag/Unity.Timeline.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aP.dag/Unity.VisualScripting.Core.ref.dll"
@@ -308,11 +307,9 @@
 "Assets/customertutorial2.cs"
 "Assets/CustServed.cs"
 "Assets/CustServed4.cs"
-"Assets/cutfruitsTut.cs"
 "Assets/GameCustServed.cs"
 "Assets/GameEnd.cs"
 "Assets/GameEndCustServed.cs"
-"Assets/gameflow.cs"
 "Assets/kayabuttertoast/butterclick.cs"
 "Assets/kayabuttertoast/butterknife.cs"
 "Assets/kayabuttertoast/butterspreadclick.cs"
@@ -389,6 +386,7 @@
 "Assets/softboiledegg/eggOCSteam.cs"
 "Assets/softboiledegg/eggs.cs"
 "Assets/softboiledegg/eggSteam.cs"
+"Assets/softboiledegg/gameflow.cs"
 "Assets/softboiledegg/L2_initiate.cs"
 "Assets/softboiledegg/ocSoyasauce.cs"
 "Assets/softboiledegg/overcookedegg.cs"
@@ -474,6 +472,7 @@
 "Assets/TUT_puluthitam/sugartut.cs"
 "Assets/TUT_rojak/bowlTut.cs"
 "Assets/TUT_rojak/customerRojakTut.cs"
+"Assets/TUT_rojak/cutfruitsTut.cs"
 "Assets/TUT_rojak/cuttofuTut.cs"
 "Assets/TUT_rojak/cutvegeTut.cs"
 "Assets/TUT_rojak/fruitboxTut.cs"

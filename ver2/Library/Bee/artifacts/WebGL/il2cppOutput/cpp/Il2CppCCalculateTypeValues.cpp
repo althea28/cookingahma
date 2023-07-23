@@ -39514,31 +39514,43 @@ struct InGameMusic_t37DD9303DFBF87A3668898FEF5ED5C7FBA8DE5A4  : public MonoBehav
 // L1_Initiate
 struct L1_Initiate_t30C2B5B6F6527E44921BE78A21E41638BCC85993  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	// System.Int32 L1_Initiate::numOfDishes
+	int32_t ___numOfDishes_4;
 };
 
 // L2_initiate
 struct L2_initiate_tAC0C0E0289CB5EA03244A60898485D7707C8A52B  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	// System.Int32 L2_initiate::numOfDishes
+	int32_t ___numOfDishes_4;
 };
 
 // L4_Initiate
 struct L4_Initiate_t657CB140202B17078F7E86B6C7462AFAABE2B4D8  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	// System.Int32 L4_Initiate::numOfDishes
+	int32_t ___numOfDishes_4;
 };
 
 // L5_Initiate
 struct L5_Initiate_tB912E5AB4077FD6A6334CEDF9EBE4A67ADC12A73  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	// System.Int32 L5_Initiate::numOfDishes
+	int32_t ___numOfDishes_4;
 };
 
 // L7_Initiate
 struct L7_Initiate_t650720B30CA5CECBF89DB12D97260039B034DFAE  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	// System.Int32 L7_Initiate::numOfDishes
+	int32_t ___numOfDishes_4;
 };
 
 // L8_Initiate
 struct L8_Initiate_tCA20B5E3BAE46844F63FA2A9E7672B96EC604CCC  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	// System.Int32 L8_Initiate::numOfDishes
+	int32_t ___numOfDishes_4;
 };
 
 // UnityEngine.UIElements.Label
@@ -40203,6 +40215,14 @@ struct customer_t1812A0B88121D145A5251E45FA912148230BAC98  : public MonoBehaviou
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___toastReqObj_4;
 	// UnityEngine.Transform customer::eggReqObj
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___eggReqObj_5;
+	// System.Int32 customer::toastDish
+	int32_t ___toastDish_6;
+	// System.Int32 customer::eggDish
+	int32_t ___eggDish_7;
+	// System.String customer::toastName
+	String_t* ___toastName_8;
+	// System.String customer::eggName
+	String_t* ___eggName_9;
 };
 
 // customer2
@@ -40212,6 +40232,14 @@ struct customer2_t1F4AE090035F607E7566AE653813BD42AA6D74B2  : public MonoBehavio
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___ckReqObj_4;
 	// UnityEngine.Transform customer2::rojakReqObj
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___rojakReqObj_5;
+	// System.Int32 customer2::ckDish
+	int32_t ___ckDish_6;
+	// System.Int32 customer2::rojakDish
+	int32_t ___rojakDish_7;
+	// System.String customer2::ckName
+	String_t* ___ckName_8;
+	// System.String customer2::rojakName
+	String_t* ___rojakName_9;
 };
 
 // customer3
@@ -40221,6 +40249,14 @@ struct customer3_t4436AE9BDC48D209A7680657D7F78EF59AEE653F  : public MonoBehavio
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___ondehReqObj_4;
 	// UnityEngine.Transform customer3::pulutReqObj
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___pulutReqObj_5;
+	// System.Int32 customer3::ondehDish
+	int32_t ___ondehDish_6;
+	// System.Int32 customer3::pulutDish
+	int32_t ___pulutDish_7;
+	// System.String customer3::ondehName
+	String_t* ___ondehName_8;
+	// System.String customer3::pulutName
+	String_t* ___pulutName_9;
 };
 
 // customerCkTut
@@ -40427,64 +40463,106 @@ struct fruitboxTut_tAFB353A9CC3BA0FB4370A7DF5907359A942CCA3E  : public MonoBehav
 // gameflow
 struct gameflow_t202A4FEAA0CB9A81D2C15E8B6C3B2B93C5A77CE3  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	// System.Int32 gameflow::numOfCustomerModels
+	int32_t ___numOfCustomerModels_57;
+	// System.Int32 gameflow::uncleModel
+	int32_t ___uncleModel_58;
+	// System.Int32 gameflow::ladyModel
+	int32_t ___ladyModel_59;
+	// System.Int32 gameflow::boyModel
+	int32_t ___boyModel_60;
+	// System.Int32 gameflow::womanModel
+	int32_t ___womanModel_61;
 	// UnityEngine.Transform gameflow::uncleObj
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___uncleObj_57;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___uncleObj_62;
 	// UnityEngine.Transform gameflow::ladyObj
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___ladyObj_58;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___ladyObj_63;
 	// UnityEngine.Transform gameflow::boyObj
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___boyObj_59;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___boyObj_64;
 	// UnityEngine.Transform gameflow::womanObj
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___womanObj_60;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___womanObj_65;
 	// System.Single gameflow::timeWithoutCustomerOnA
-	float ___timeWithoutCustomerOnA_67;
+	float ___timeWithoutCustomerOnA_72;
 	// System.Single gameflow::timeWithoutCustomerOnB
-	float ___timeWithoutCustomerOnB_68;
+	float ___timeWithoutCustomerOnB_73;
 	// System.Single gameflow::timeWithoutCustomerOnC
-	float ___timeWithoutCustomerOnC_69;
-	// System.Single gameflow::maxTimeWithoutCustomer
-	float ___maxTimeWithoutCustomer_70;
+	float ___timeWithoutCustomerOnC_74;
+	// System.Single gameflow::maxTimeWithoutCustomerA
+	float ___maxTimeWithoutCustomerA_75;
+	// System.Single gameflow::maxTimeWithoutCustomerB
+	float ___maxTimeWithoutCustomerB_76;
+	// System.Single gameflow::maxTimeWithoutCustomerC
+	float ___maxTimeWithoutCustomerC_77;
 };
 
 // gameflow2
 struct gameflow2_t073DA2E10CB12D2C91B88C957E9E4B1BEFEEA984  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	// System.Int32 gameflow2::numOfCustomerModels
+	int32_t ___numOfCustomerModels_13;
+	// System.Int32 gameflow2::uncleModel
+	int32_t ___uncleModel_14;
+	// System.Int32 gameflow2::ladyModel
+	int32_t ___ladyModel_15;
+	// System.Int32 gameflow2::boyModel
+	int32_t ___boyModel_16;
+	// System.Int32 gameflow2::womanModel
+	int32_t ___womanModel_17;
 	// UnityEngine.Transform gameflow2::uncleObj
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___uncleObj_13;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___uncleObj_18;
 	// UnityEngine.Transform gameflow2::ladyObj
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___ladyObj_14;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___ladyObj_19;
 	// UnityEngine.Transform gameflow2::boyObj
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___boyObj_15;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___boyObj_20;
 	// UnityEngine.Transform gameflow2::womanObj
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___womanObj_16;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___womanObj_21;
 	// System.Single gameflow2::timeWithoutCustomerOnA
-	float ___timeWithoutCustomerOnA_23;
+	float ___timeWithoutCustomerOnA_28;
 	// System.Single gameflow2::timeWithoutCustomerOnB
-	float ___timeWithoutCustomerOnB_24;
+	float ___timeWithoutCustomerOnB_29;
 	// System.Single gameflow2::timeWithoutCustomerOnC
-	float ___timeWithoutCustomerOnC_25;
-	// System.Single gameflow2::maxTimeWithoutCustomer
-	float ___maxTimeWithoutCustomer_26;
+	float ___timeWithoutCustomerOnC_30;
+	// System.Single gameflow2::maxTimeWithoutCustomerA
+	float ___maxTimeWithoutCustomerA_31;
+	// System.Single gameflow2::maxTimeWithoutCustomerB
+	float ___maxTimeWithoutCustomerB_32;
+	// System.Single gameflow2::maxTimeWithoutCustomerC
+	float ___maxTimeWithoutCustomerC_33;
 };
 
 // gameflow3
 struct gameflow3_t09C124A846E9C2F22721C74C9C448EB1CB480ADF  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	// System.Int32 gameflow3::numOfCustomerModels
+	int32_t ___numOfCustomerModels_14;
+	// System.Int32 gameflow3::uncleModel
+	int32_t ___uncleModel_15;
+	// System.Int32 gameflow3::ladyModel
+	int32_t ___ladyModel_16;
+	// System.Int32 gameflow3::boyModel
+	int32_t ___boyModel_17;
+	// System.Int32 gameflow3::womanModel
+	int32_t ___womanModel_18;
 	// UnityEngine.Transform gameflow3::uncleObj
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___uncleObj_14;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___uncleObj_19;
 	// UnityEngine.Transform gameflow3::ladyObj
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___ladyObj_15;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___ladyObj_20;
 	// UnityEngine.Transform gameflow3::boyObj
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___boyObj_16;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___boyObj_21;
 	// UnityEngine.Transform gameflow3::womanObj
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___womanObj_17;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___womanObj_22;
 	// System.Single gameflow3::timeWithoutCustomerOnA
-	float ___timeWithoutCustomerOnA_24;
+	float ___timeWithoutCustomerOnA_29;
 	// System.Single gameflow3::timeWithoutCustomerOnB
-	float ___timeWithoutCustomerOnB_25;
+	float ___timeWithoutCustomerOnB_30;
 	// System.Single gameflow3::timeWithoutCustomerOnC
-	float ___timeWithoutCustomerOnC_26;
-	// System.Single gameflow3::maxTimeWithoutCustomer
-	float ___maxTimeWithoutCustomer_27;
+	float ___timeWithoutCustomerOnC_31;
+	// System.Single gameflow3::maxTimeWithoutCustomerA
+	float ___maxTimeWithoutCustomerA_32;
+	// System.Single gameflow3::maxTimeWithoutCustomerB
+	float ___maxTimeWithoutCustomerB_33;
+	// System.Single gameflow3::maxTimeWithoutCustomerC
+	float ___maxTimeWithoutCustomerC_34;
 };
 
 // innerToastTutorial
@@ -58411,6 +58489,36 @@ struct ckTutFlow_tA39ECCCF635AB153022A316D3F3F0639E3154FA5_StaticFields
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___customerBCoordinates_17;
 	// UnityEngine.Vector3 ckTutFlow::addReqCoordinates
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addReqCoordinates_18;
+	// System.Int32 ckTutFlow::stepStart
+	int32_t ___stepStart_35;
+	// System.Int32 ckTutFlow::stepAddBatterA
+	int32_t ___stepAddBatterA_36;
+	// System.Int32 ckTutFlow::stepAddBatterB
+	int32_t ___stepAddBatterB_37;
+	// System.Int32 ckTutFlow::stepMoveUndercooked
+	int32_t ___stepMoveUndercooked_38;
+	// System.Int32 ckTutFlow::stepClickUndercooked
+	int32_t ___stepClickUndercooked_39;
+	// System.Int32 ckTutFlow::stepTrashUndercooked
+	int32_t ___stepTrashUndercooked_40;
+	// System.Int32 ckTutFlow::stepAddBatterC
+	int32_t ___stepAddBatterC_41;
+	// System.Int32 ckTutFlow::stepMoveCooked
+	int32_t ___stepMoveCooked_42;
+	// System.Int32 ckTutFlow::stepClickCP
+	int32_t ___stepClickCP_43;
+	// System.Int32 ckTutFlow::stepAddCP
+	int32_t ___stepAddCP_44;
+	// System.Int32 ckTutFlow::stepClickCK
+	int32_t ___stepClickCK_45;
+	// System.Int32 ckTutFlow::stepServeCustomer
+	int32_t ___stepServeCustomer_46;
+	// System.Int32 ckTutFlow::stepMoveBurnt
+	int32_t ___stepMoveBurnt_47;
+	// System.Int32 ckTutFlow::stepClickBurnt
+	int32_t ___stepClickBurnt_48;
+	// System.Int32 ckTutFlow::stepTrashBurnt
+	int32_t ___stepTrashBurnt_49;
 };
 
 // ckTutFlow
@@ -58787,23 +58895,23 @@ struct gameflow_t202A4FEAA0CB9A81D2C15E8B6C3B2B93C5A77CE3_StaticFields
 	// UnityEngine.Vector3 gameflow::addReqCoordinates
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addReqCoordinates_56;
 	// System.String gameflow::customerOnA
-	String_t* ___customerOnA_61;
+	String_t* ___customerOnA_66;
 	// System.String gameflow::customerOnB
-	String_t* ___customerOnB_62;
+	String_t* ___customerOnB_67;
 	// System.String gameflow::customerOnC
-	String_t* ___customerOnC_63;
+	String_t* ___customerOnC_68;
 	// System.String gameflow::dishOnA
-	String_t* ___dishOnA_64;
+	String_t* ___dishOnA_69;
 	// System.String gameflow::dishOnB
-	String_t* ___dishOnB_65;
+	String_t* ___dishOnB_70;
 	// System.String gameflow::dishOnC
-	String_t* ___dishOnC_66;
+	String_t* ___dishOnC_71;
 	// System.Int32 gameflow::count
-	int32_t ___count_71;
+	int32_t ___count_78;
 	// System.Boolean gameflow::initiating
-	bool ___initiating_72;
+	bool ___initiating_79;
 	// System.Int32 gameflow::sceneCounter
-	int32_t ___sceneCounter_73;
+	int32_t ___sceneCounter_80;
 };
 
 // gameflow
@@ -58830,133 +58938,143 @@ struct gameflow2_t073DA2E10CB12D2C91B88C957E9E4B1BEFEEA984_StaticFields
 	// UnityEngine.Vector3 gameflow2::addReqCoordinates
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addReqCoordinates_12;
 	// System.String gameflow2::customerOnA
-	String_t* ___customerOnA_17;
+	String_t* ___customerOnA_22;
 	// System.String gameflow2::customerOnB
-	String_t* ___customerOnB_18;
+	String_t* ___customerOnB_23;
 	// System.String gameflow2::customerOnC
-	String_t* ___customerOnC_19;
+	String_t* ___customerOnC_24;
 	// System.String gameflow2::dishOnA
-	String_t* ___dishOnA_20;
+	String_t* ___dishOnA_25;
 	// System.String gameflow2::dishOnB
-	String_t* ___dishOnB_21;
+	String_t* ___dishOnB_26;
 	// System.String gameflow2::dishOnC
-	String_t* ___dishOnC_22;
+	String_t* ___dishOnC_27;
 	// UnityEngine.Vector3 gameflow2::steamerACoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___steamerACoords_27;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___steamerACoords_34;
 	// UnityEngine.Vector3 gameflow2::steamerBCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___steamerBCoords_28;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___steamerBCoords_35;
 	// UnityEngine.Vector3 gameflow2::plateACoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___plateACoords_29;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___plateACoords_36;
 	// UnityEngine.Vector3 gameflow2::plateBCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___plateBCoords_30;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___plateBCoords_37;
 	// UnityEngine.Vector3 gameflow2::cpSpoonCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___cpSpoonCoords_31;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___cpSpoonCoords_38;
 	// UnityEngine.Vector3 gameflow2::addUndercookedCKCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addUndercookedCKCoords_32;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addUndercookedCKCoords_39;
 	// UnityEngine.Vector3 gameflow2::addCookedCKCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addCookedCKCoords_33;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addCookedCKCoords_40;
 	// UnityEngine.Vector3 gameflow2::addOvercookedCKCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addOvercookedCKCoords_34;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addOvercookedCKCoords_41;
 	// UnityEngine.Vector3 gameflow2::burntLayerCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___burntLayerCoords_35;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___burntLayerCoords_42;
 	// UnityEngine.Vector3 gameflow2::addUndercookedCP
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addUndercookedCP_36;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addUndercookedCP_43;
 	// UnityEngine.Vector3 gameflow2::addCookedCP
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addCookedCP_37;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addCookedCP_44;
 	// UnityEngine.Vector3 gameflow2::addOvercookedCP
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addOvercookedCP_38;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addOvercookedCP_45;
 	// System.Single gameflow2::timeForCkToCook
-	float ___timeForCkToCook_39;
+	float ___timeForCkToCook_46;
 	// System.Single gameflow2::timeForCkToBurn
-	float ___timeForCkToBurn_40;
+	float ___timeForCkToBurn_47;
 	// System.Boolean gameflow2::ckOnSteamerA
-	bool ___ckOnSteamerA_41;
+	bool ___ckOnSteamerA_48;
 	// System.Boolean gameflow2::ckOnSteamerB
-	bool ___ckOnSteamerB_42;
+	bool ___ckOnSteamerB_49;
 	// System.Boolean gameflow2::ckOnPlateA
-	bool ___ckOnPlateA_43;
+	bool ___ckOnPlateA_50;
 	// System.Boolean gameflow2::ckOnPlateB
-	bool ___ckOnPlateB_44;
+	bool ___ckOnPlateB_51;
 	// System.Boolean gameflow2::plateACooked
-	bool ___plateACooked_45;
+	bool ___plateACooked_52;
 	// System.Boolean gameflow2::plateBCooked
-	bool ___plateBCooked_46;
+	bool ___plateBCooked_53;
 	// System.Boolean gameflow2::hasCPOnA
-	bool ___hasCPOnA_47;
+	bool ___hasCPOnA_54;
 	// System.Boolean gameflow2::hasCPOnB
-	bool ___hasCPOnB_48;
+	bool ___hasCPOnB_55;
 	// System.Boolean gameflow2::chaiPohClicked
-	bool ___chaiPohClicked_49;
+	bool ___chaiPohClicked_56;
 	// System.Boolean gameflow2::plateAClicked
-	bool ___plateAClicked_50;
+	bool ___plateAClicked_57;
 	// System.Boolean gameflow2::plateBClicked
-	bool ___plateBClicked_51;
+	bool ___plateBClicked_58;
 	// System.Boolean gameflow2::serveCkA
-	bool ___serveCkA_52;
+	bool ___serveCkA_59;
 	// System.Boolean gameflow2::serveCkB
-	bool ___serveCkB_53;
+	bool ___serveCkB_60;
 	// System.Boolean gameflow2::trashPlateA
-	bool ___trashPlateA_54;
+	bool ___trashPlateA_61;
 	// System.Boolean gameflow2::trashPlateB
-	bool ___trashPlateB_55;
+	bool ___trashPlateB_62;
 	// System.String gameflow2::destroySteamA
-	String_t* ___destroySteamA_56;
+	String_t* ___destroySteamA_63;
 	// System.String gameflow2::destroySteamB
-	String_t* ___destroySteamB_57;
+	String_t* ___destroySteamB_64;
 	// System.String gameflow2::trashA
-	String_t* ___trashA_58;
+	String_t* ___trashA_65;
 	// System.String gameflow2::trashB
-	String_t* ___trashB_59;
+	String_t* ___trashB_66;
 	// System.Boolean gameflow2::foodOnBoardA
-	bool ___foodOnBoardA_60;
+	bool ___foodOnBoardA_67;
 	// System.Boolean gameflow2::foodOnBoardB
-	bool ___foodOnBoardB_61;
+	bool ___foodOnBoardB_68;
 	// System.Boolean gameflow2::knifeClicked
-	bool ___knifeClicked_62;
+	bool ___knifeClicked_69;
 	// System.Boolean gameflow2::sauceClicked
-	bool ___sauceClicked_63;
+	bool ___sauceClicked_70;
 	// System.Boolean gameflow2::boardAClicked
-	bool ___boardAClicked_64;
+	bool ___boardAClicked_71;
 	// System.Boolean gameflow2::boardBClicked
-	bool ___boardBClicked_65;
+	bool ___boardBClicked_72;
 	// System.Int32 gameflow2::stepOnBowlA
-	int32_t ___stepOnBowlA_66;
+	int32_t ___stepOnBowlA_73;
 	// System.Int32 gameflow2::stepOnBowlB
-	int32_t ___stepOnBowlB_67;
+	int32_t ___stepOnBowlB_74;
+	// System.Int32 gameflow2::stepEmptyPlate
+	int32_t ___stepEmptyPlate_75;
+	// System.Int32 gameflow2::stepPlateWithFruit
+	int32_t ___stepPlateWithFruit_76;
+	// System.Int32 gameflow2::stepPlateWithVege
+	int32_t ___stepPlateWithVege_77;
+	// System.Int32 gameflow2::stepPlateWithTofu
+	int32_t ___stepPlateWithTofu_78;
+	// System.Int32 gameflow2::stepReadyPlate
+	int32_t ___stepReadyPlate_79;
 	// System.Boolean gameflow2::bowlAClicked
-	bool ___bowlAClicked_68;
+	bool ___bowlAClicked_80;
 	// System.Boolean gameflow2::bowlBClicked
-	bool ___bowlBClicked_69;
+	bool ___bowlBClicked_81;
 	// System.Boolean gameflow2::serveRojakA
-	bool ___serveRojakA_70;
+	bool ___serveRojakA_82;
 	// System.Boolean gameflow2::serveRojakB
-	bool ___serveRojakB_71;
+	bool ___serveRojakB_83;
 	// System.Boolean gameflow2::trashBoardA
-	bool ___trashBoardA_72;
+	bool ___trashBoardA_84;
 	// System.Boolean gameflow2::trashBoardB
-	bool ___trashBoardB_73;
+	bool ___trashBoardB_85;
 	// UnityEngine.Vector3 gameflow2::addFruitsBoardCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addFruitsBoardCoords_74;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addFruitsBoardCoords_86;
 	// UnityEngine.Vector3 gameflow2::addCutFruitsBoardCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addCutFruitsBoardCoords_75;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addCutFruitsBoardCoords_87;
 	// UnityEngine.Vector3 gameflow2::addVegeBoardCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addVegeBoardCoords_76;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addVegeBoardCoords_88;
 	// UnityEngine.Vector3 gameflow2::addCutVegeBoardCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addCutVegeBoardCoords_77;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addCutVegeBoardCoords_89;
 	// UnityEngine.Vector3 gameflow2::addTofuBoardCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addTofuBoardCoords_78;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addTofuBoardCoords_90;
 	// UnityEngine.Vector3 gameflow2::addCutTofuBoardCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addCutTofuBoardCoords_79;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addCutTofuBoardCoords_91;
 	// UnityEngine.Vector3 gameflow2::boardACoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___boardACoords_80;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___boardACoords_92;
 	// UnityEngine.Vector3 gameflow2::boardBCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___boardBCoords_81;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___boardBCoords_93;
 	// UnityEngine.Vector3 gameflow2::bowlACoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___bowlACoords_82;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___bowlACoords_94;
 	// UnityEngine.Vector3 gameflow2::bowlBCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___bowlBCoords_83;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___bowlBCoords_95;
 	// System.Boolean gameflow2::initiating
-	bool ___initiating_84;
+	bool ___initiating_96;
 };
 
 // gameflow2
@@ -58985,117 +59103,117 @@ struct gameflow3_t09C124A846E9C2F22721C74C9C448EB1CB480ADF_StaticFields
 	// UnityEngine.Vector3 gameflow3::addReqCoordinates
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addReqCoordinates_13;
 	// System.Boolean gameflow3::customerOnA
-	bool ___customerOnA_18;
+	bool ___customerOnA_23;
 	// System.Boolean gameflow3::customerOnB
-	bool ___customerOnB_19;
+	bool ___customerOnB_24;
 	// System.Boolean gameflow3::customerOnC
-	bool ___customerOnC_20;
+	bool ___customerOnC_25;
 	// System.String gameflow3::dishOnA
-	String_t* ___dishOnA_21;
+	String_t* ___dishOnA_26;
 	// System.String gameflow3::dishOnB
-	String_t* ___dishOnB_22;
+	String_t* ___dishOnB_27;
 	// System.String gameflow3::dishOnC
-	String_t* ___dishOnC_23;
+	String_t* ___dishOnC_28;
 	// UnityEngine.Vector3 gameflow3::plateACoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___plateACoords_28;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___plateACoords_35;
 	// UnityEngine.Vector3 gameflow3::plateBCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___plateBCoords_29;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___plateBCoords_36;
 	// UnityEngine.Vector3 gameflow3::steamerACoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___steamerACoords_30;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___steamerACoords_37;
 	// UnityEngine.Vector3 gameflow3::steamerBCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___steamerBCoords_31;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___steamerBCoords_38;
 	// UnityEngine.Vector3 gameflow3::sugarOnDoughCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___sugarOnDoughCoords_32;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___sugarOnDoughCoords_39;
 	// UnityEngine.Vector3 gameflow3::addBoilingOndehCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addBoilingOndehCoords_33;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addBoilingOndehCoords_40;
 	// UnityEngine.Vector3 gameflow3::undercookedOndehCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___undercookedOndehCoords_34;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___undercookedOndehCoords_41;
 	// UnityEngine.Vector3 gameflow3::cookedOndehCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___cookedOndehCoords_35;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___cookedOndehCoords_42;
 	// UnityEngine.Vector3 gameflow3::overcookedOndehCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___overcookedOndehCoords_36;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___overcookedOndehCoords_43;
 	// UnityEngine.Vector3 gameflow3::addCoconutCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addCoconutCoords_37;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addCoconutCoords_44;
 	// UnityEngine.Vector3 gameflow3::addUndercookedCoconutCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addUndercookedCoconutCoords_38;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addUndercookedCoconutCoords_45;
 	// System.Single gameflow3::timeForOndehToCook
-	float ___timeForOndehToCook_39;
+	float ___timeForOndehToCook_46;
 	// System.Single gameflow3::timeForOndehToBurn
-	float ___timeForOndehToBurn_40;
+	float ___timeForOndehToBurn_47;
 	// System.Boolean gameflow3::doughOnSteamerA
-	bool ___doughOnSteamerA_41;
+	bool ___doughOnSteamerA_48;
 	// System.Boolean gameflow3::doughOnSteamerB
-	bool ___doughOnSteamerB_42;
+	bool ___doughOnSteamerB_49;
 	// System.Boolean gameflow3::ondehOnPlateA
-	bool ___ondehOnPlateA_43;
+	bool ___ondehOnPlateA_50;
 	// System.Boolean gameflow3::ondehOnPlateB
-	bool ___ondehOnPlateB_44;
+	bool ___ondehOnPlateB_51;
 	// System.Boolean gameflow3::coconutClicked
-	bool ___coconutClicked_45;
+	bool ___coconutClicked_52;
 	// System.Boolean gameflow3::ondehPlateAClicked
-	bool ___ondehPlateAClicked_46;
+	bool ___ondehPlateAClicked_53;
 	// System.Boolean gameflow3::ondehPlateBClicked
-	bool ___ondehPlateBClicked_47;
+	bool ___ondehPlateBClicked_54;
 	// System.Boolean gameflow3::ondehOnACooked
-	bool ___ondehOnACooked_48;
+	bool ___ondehOnACooked_55;
 	// System.Boolean gameflow3::ondehOnBCooked
-	bool ___ondehOnBCooked_49;
+	bool ___ondehOnBCooked_56;
 	// System.Boolean gameflow3::coconutOnA
-	bool ___coconutOnA_50;
+	bool ___coconutOnA_57;
 	// System.Boolean gameflow3::coconutOnB
-	bool ___coconutOnB_51;
+	bool ___coconutOnB_58;
 	// System.Boolean gameflow3::destroyOndehA
-	bool ___destroyOndehA_52;
+	bool ___destroyOndehA_59;
 	// System.Boolean gameflow3::destroyOndehB
-	bool ___destroyOndehB_53;
+	bool ___destroyOndehB_60;
 	// UnityEngine.Vector3 gameflow3::potACoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___potACoords_54;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___potACoords_61;
 	// UnityEngine.Vector3 gameflow3::potBCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___potBCoords_55;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___potBCoords_62;
 	// UnityEngine.Vector3 gameflow3::bowlACoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___bowlACoords_56;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___bowlACoords_63;
 	// UnityEngine.Vector3 gameflow3::bowlBCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___bowlBCoords_57;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___bowlBCoords_64;
 	// UnityEngine.Vector3 gameflow3::addRiceCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addRiceCoords_58;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addRiceCoords_65;
 	// UnityEngine.Vector3 gameflow3::addPandanCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addPandanCoords_59;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addPandanCoords_66;
 	// UnityEngine.Vector3 gameflow3::addSugarCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addSugarCoords_60;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addSugarCoords_67;
 	// UnityEngine.Vector3 gameflow3::addPulutCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addPulutCoords_61;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addPulutCoords_68;
 	// UnityEngine.Vector3 gameflow3::addMilkCoords
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addMilkCoords_62;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addMilkCoords_69;
 	// System.Int32 gameflow3::potAStep
-	int32_t ___potAStep_63;
+	int32_t ___potAStep_70;
 	// System.Int32 gameflow3::potBStep
-	int32_t ___potBStep_64;
+	int32_t ___potBStep_71;
 	// System.Single gameflow3::timeForPulutToCook
-	float ___timeForPulutToCook_65;
+	float ___timeForPulutToCook_72;
 	// System.Single gameflow3::timeForPulutToBurn
-	float ___timeForPulutToBurn_66;
+	float ___timeForPulutToBurn_73;
 	// System.Boolean gameflow3::bowlAOccupied
-	bool ___bowlAOccupied_67;
+	bool ___bowlAOccupied_74;
 	// System.Boolean gameflow3::bowlBOccupied
-	bool ___bowlBOccupied_68;
+	bool ___bowlBOccupied_75;
 	// System.Boolean gameflow3::bowlACooked
-	bool ___bowlACooked_69;
+	bool ___bowlACooked_76;
 	// System.Boolean gameflow3::bowlBCooked
-	bool ___bowlBCooked_70;
+	bool ___bowlBCooked_77;
 	// System.Boolean gameflow3::milkAddedOnA
-	bool ___milkAddedOnA_71;
+	bool ___milkAddedOnA_78;
 	// System.Boolean gameflow3::milkAddedOnB
-	bool ___milkAddedOnB_72;
+	bool ___milkAddedOnB_79;
 	// System.Boolean gameflow3::milkIsClicked
-	bool ___milkIsClicked_73;
+	bool ___milkIsClicked_80;
 	// System.Boolean gameflow3::bowlAClicked
-	bool ___bowlAClicked_74;
+	bool ___bowlAClicked_81;
 	// System.Boolean gameflow3::bowlBClicked
-	bool ___bowlBClicked_75;
+	bool ___bowlBClicked_82;
 	// System.Boolean gameflow3::destroyPulutA
-	bool ___destroyPulutA_76;
+	bool ___destroyPulutA_83;
 	// System.Boolean gameflow3::destroyPulutB
-	bool ___destroyPulutB_77;
+	bool ___destroyPulutB_84;
 };
 
 // gameflow3
@@ -59311,6 +59429,42 @@ struct ondehTutFlow_tEF905236F4884811D91F73894F1F955AB638E1E2_StaticFields
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___customerBCoordinates_16;
 	// UnityEngine.Vector3 ondehTutFlow::addReqCoordinates
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addReqCoordinates_17;
+	// System.Int32 ondehTutFlow::stepStart
+	int32_t ___stepStart_37;
+	// System.Int32 ondehTutFlow::stepAddSugarA
+	int32_t ___stepAddSugarA_38;
+	// System.Int32 ondehTutFlow::stepBoilDoughA
+	int32_t ___stepBoilDoughA_39;
+	// System.Int32 ondehTutFlow::stepAddSugarB
+	int32_t ___stepAddSugarB_40;
+	// System.Int32 ondehTutFlow::stepBoilDoughB
+	int32_t ___stepBoilDoughB_41;
+	// System.Int32 ondehTutFlow::stepMoveUndercooked
+	int32_t ___stepMoveUndercooked_42;
+	// System.Int32 ondehTutFlow::stepClickUndercooked
+	int32_t ___stepClickUndercooked_43;
+	// System.Int32 ondehTutFlow::stepTrashUndercooked
+	int32_t ___stepTrashUndercooked_44;
+	// System.Int32 ondehTutFlow::stepAddSugarC
+	int32_t ___stepAddSugarC_45;
+	// System.Int32 ondehTutFlow::stepBoilDoughC
+	int32_t ___stepBoilDoughC_46;
+	// System.Int32 ondehTutFlow::stepMoveOvercooked
+	int32_t ___stepMoveOvercooked_47;
+	// System.Int32 ondehTutFlow::stepClickOvercooked
+	int32_t ___stepClickOvercooked_48;
+	// System.Int32 ondehTutFlow::stepTrashOvercooked
+	int32_t ___stepTrashOvercooked_49;
+	// System.Int32 ondehTutFlow::stepMoveCooked
+	int32_t ___stepMoveCooked_50;
+	// System.Int32 ondehTutFlow::stepClickCoconut
+	int32_t ___stepClickCoconut_51;
+	// System.Int32 ondehTutFlow::stepAddCoconut
+	int32_t ___stepAddCoconut_52;
+	// System.Int32 ondehTutFlow::stepClickToServe
+	int32_t ___stepClickToServe_53;
+	// System.Int32 ondehTutFlow::stepServeCustomer
+	int32_t ___stepServeCustomer_54;
 };
 
 // ondehTutFlow
@@ -59547,6 +59701,48 @@ struct pulutTutFlow_t68C6F2E9840736A44A64CB788BB1ADB3ED03285B_StaticFields
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addPulutCoords_15;
 	// UnityEngine.Vector3 pulutTutFlow::addMilkCoords
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addMilkCoords_16;
+	// System.Int32 pulutTutFlow::stepStart
+	int32_t ___stepStart_39;
+	// System.Int32 pulutTutFlow::stepAddRiceA
+	int32_t ___stepAddRiceA_40;
+	// System.Int32 pulutTutFlow::stepAddRiceB
+	int32_t ___stepAddRiceB_41;
+	// System.Int32 pulutTutFlow::stepAddPandanA
+	int32_t ___stepAddPandanA_42;
+	// System.Int32 pulutTutFlow::stepAddPandanB
+	int32_t ___stepAddPandanB_43;
+	// System.Int32 pulutTutFlow::stepAddSugarA
+	int32_t ___stepAddSugarA_44;
+	// System.Int32 pulutTutFlow::stepAddSugarB
+	int32_t ___stepAddSugarB_45;
+	// System.Int32 pulutTutFlow::stepMoveUndercooked
+	int32_t ___stepMoveUndercooked_46;
+	// System.Int32 pulutTutFlow::stepClickUndercooked
+	int32_t ___stepClickUndercooked_47;
+	// System.Int32 pulutTutFlow::stepTrashUndercooked
+	int32_t ___stepTrashUndercooked_48;
+	// System.Int32 pulutTutFlow::stepAddRiceC
+	int32_t ___stepAddRiceC_49;
+	// System.Int32 pulutTutFlow::stepAddPandanC
+	int32_t ___stepAddPandanC_50;
+	// System.Int32 pulutTutFlow::stepAddSugarC
+	int32_t ___stepAddSugarC_51;
+	// System.Int32 pulutTutFlow::stepMoveCooked
+	int32_t ___stepMoveCooked_52;
+	// System.Int32 pulutTutFlow::stepClickMilk
+	int32_t ___stepClickMilk_53;
+	// System.Int32 pulutTutFlow::stepAddMilk
+	int32_t ___stepAddMilk_54;
+	// System.Int32 pulutTutFlow::stepClickCooked
+	int32_t ___stepClickCooked_55;
+	// System.Int32 pulutTutFlow::stepServeCustomer
+	int32_t ___stepServeCustomer_56;
+	// System.Int32 pulutTutFlow::stepMoveBurnt
+	int32_t ___stepMoveBurnt_57;
+	// System.Int32 pulutTutFlow::stepClickBurnt
+	int32_t ___stepClickBurnt_58;
+	// System.Int32 pulutTutFlow::stepTrashBurnt
+	int32_t ___stepTrashBurnt_59;
 };
 
 // pulutTutFlow
@@ -59661,6 +59857,40 @@ struct rojakTutFlow_tB63FF75510E6A4A46647D59EDD32C7620EDC78A8_StaticFields
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___customerBCoordinates_16;
 	// UnityEngine.Vector3 rojakTutFlow::addReqCoordinates
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addReqCoordinates_17;
+	// System.Int32 rojakTutFlow::stepStart
+	int32_t ___stepStart_36;
+	// System.Int32 rojakTutFlow::stepClickFruitBox
+	int32_t ___stepClickFruitBox_37;
+	// System.Int32 rojakTutFlow::stepClickKnifeA
+	int32_t ___stepClickKnifeA_38;
+	// System.Int32 rojakTutFlow::stepPrecutFruit
+	int32_t ___stepPrecutFruit_39;
+	// System.Int32 rojakTutFlow::stepMoveFruit
+	int32_t ___stepMoveFruit_40;
+	// System.Int32 rojakTutFlow::stepClickVegeBox
+	int32_t ___stepClickVegeBox_41;
+	// System.Int32 rojakTutFlow::stepClickKnifeB
+	int32_t ___stepClickKnifeB_42;
+	// System.Int32 rojakTutFlow::stepPrecutVege
+	int32_t ___stepPrecutVege_43;
+	// System.Int32 rojakTutFlow::stepMoveVege
+	int32_t ___stepMoveVege_44;
+	// System.Int32 rojakTutFlow::stepClickTofuPlate
+	int32_t ___stepClickTofuPlate_45;
+	// System.Int32 rojakTutFlow::stepClickKnifeC
+	int32_t ___stepClickKnifeC_46;
+	// System.Int32 rojakTutFlow::stepPrecutTofu
+	int32_t ___stepPrecutTofu_47;
+	// System.Int32 rojakTutFlow::stepMoveTofu
+	int32_t ___stepMoveTofu_48;
+	// System.Int32 rojakTutFlow::stepClickSauce
+	int32_t ___stepClickSauce_49;
+	// System.Int32 rojakTutFlow::stepAddSauce
+	int32_t ___stepAddSauce_50;
+	// System.Int32 rojakTutFlow::stepClickRojak
+	int32_t ___stepClickRojak_51;
+	// System.Int32 rojakTutFlow::stepServeRojak
+	int32_t ___stepServeRojak_52;
 };
 
 // rojakTutFlow
@@ -59702,6 +59932,36 @@ struct sbeTutFlow_t638680EA9C1DEA7D2AEEFBEF49609731B70049C0_StaticFields
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___customerBCoordinates_15;
 	// UnityEngine.Vector3 sbeTutFlow::addReqCoordinates
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___addReqCoordinates_16;
+	// System.Int32 sbeTutFlow::stepStart
+	int32_t ___stepStart_33;
+	// System.Int32 sbeTutFlow::stepAddEggA
+	int32_t ___stepAddEggA_34;
+	// System.Int32 sbeTutFlow::stepAddEggB
+	int32_t ___stepAddEggB_35;
+	// System.Int32 sbeTutFlow::stepMoveUndercooked
+	int32_t ___stepMoveUndercooked_36;
+	// System.Int32 sbeTutFlow::stepClickUndercooked
+	int32_t ___stepClickUndercooked_37;
+	// System.Int32 sbeTutFlow::stepTrashUndercooked
+	int32_t ___stepTrashUndercooked_38;
+	// System.Int32 sbeTutFlow::stepAddEggC
+	int32_t ___stepAddEggC_39;
+	// System.Int32 sbeTutFlow::stepMoveCooked
+	int32_t ___stepMoveCooked_40;
+	// System.Int32 sbeTutFlow::stepClickSoya
+	int32_t ___stepClickSoya_41;
+	// System.Int32 sbeTutFlow::stepAddSoya
+	int32_t ___stepAddSoya_42;
+	// System.Int32 sbeTutFlow::stepClickCooked
+	int32_t ___stepClickCooked_43;
+	// System.Int32 sbeTutFlow::stepServeCustomer
+	int32_t ___stepServeCustomer_44;
+	// System.Int32 sbeTutFlow::stepMoveBurnt
+	int32_t ___stepMoveBurnt_45;
+	// System.Int32 sbeTutFlow::stepClickBurnt
+	int32_t ___stepClickBurnt_46;
+	// System.Int32 sbeTutFlow::stepTrashBurnt
+	int32_t ___stepTrashBurnt_47;
 };
 
 // sbeTutFlow
@@ -59917,6 +60177,13 @@ struct toastclick_t4B37A4603CE7E1BAA5B217B12FB61F72EC0CF054_StaticFields
 // toastloaf
 
 // toastloaftutorial
+struct toastloaftutorial_t8DC076C475428D7143D75F4AC5FB066B8DD75F61_StaticFields
+{
+	// System.Int32 toastloaftutorial::stepAddToastA
+	int32_t ___stepAddToastA_11;
+	// System.Int32 toastloaftutorial::stepAddToastB
+	int32_t ___stepAddToastB_12;
+};
 
 // toastloaftutorial
 
@@ -59925,6 +60192,16 @@ struct toasttutorial_t0DAF527E3AA4613A8AC1CBD213C306E8232264CD_StaticFields
 {
 	// System.Single toasttutorial::cookedTime
 	float ___cookedTime_15;
+	// System.Int32 toasttutorial::stepStart
+	int32_t ___stepStart_16;
+	// System.Int32 toasttutorial::stepMovedToast
+	int32_t ___stepMovedToast_17;
+	// System.Int32 toasttutorial::stepAddKaya
+	int32_t ___stepAddKaya_18;
+	// System.Int32 toasttutorial::stepAddButter
+	int32_t ___stepAddButter_19;
+	// System.Int32 toasttutorial::stepServeToast
+	int32_t ___stepServeToast_20;
 };
 
 // toasttutorial
@@ -66947,339 +67224,339 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize3183 = { sizeof(CustServed_t
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3184;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize3184 = { sizeof(CustServed4_tE9463ED0644BF966555BDEE475C8B91C7843CFDD), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3185;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3185 = { sizeof(cutfruitsTut_t4C5D6134FDFD471ABF13D6864BE9E3D0ADDF1511), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3185 = { sizeof(GameCustServed_tE6861050CE11BDA505A36122E3719BF6944DE36B), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3186;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3186 = { sizeof(GameCustServed_tE6861050CE11BDA505A36122E3719BF6944DE36B), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3186 = { sizeof(GameEnd_t67EEBF3DE72BB3200A737F3642EFF786F4B003B0), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3187;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3187 = { sizeof(GameEnd_t67EEBF3DE72BB3200A737F3642EFF786F4B003B0), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3187 = { sizeof(GameEndCustServed_tE1CA4280DD3ABC18A161DEDCA6C85B47D886F6A1), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3188;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3188 = { sizeof(GameEndCustServed_tE1CA4280DD3ABC18A161DEDCA6C85B47D886F6A1), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3188 = { sizeof(butterclick_t16D67EEA1D14A0DD271567773EA2C05842F884FD), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3189;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3189 = { sizeof(gameflow_t202A4FEAA0CB9A81D2C15E8B6C3B2B93C5A77CE3), -1, sizeof(gameflow_t202A4FEAA0CB9A81D2C15E8B6C3B2B93C5A77CE3_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3189 = { sizeof(butterknife_t6C2A4AA2E48CE51CC113EAA4871E78FD70D6601C), -1, sizeof(butterknife_t6C2A4AA2E48CE51CC113EAA4871E78FD70D6601C_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3190;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3190 = { sizeof(butterclick_t16D67EEA1D14A0DD271567773EA2C05842F884FD), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3190 = { sizeof(butterspreadclick_tC71EEE41FD67E13D8E5CEB0B4C185A14E3A15791), -1, sizeof(butterspreadclick_tC71EEE41FD67E13D8E5CEB0B4C185A14E3A15791_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3191;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3191 = { sizeof(butterknife_t6C2A4AA2E48CE51CC113EAA4871E78FD70D6601C), -1, sizeof(butterknife_t6C2A4AA2E48CE51CC113EAA4871E78FD70D6601C_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3191 = { sizeof(kayabottleclick_tD78587991F3E7011B24CCB7DD17389465B36D263), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3192;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3192 = { sizeof(butterspreadclick_tC71EEE41FD67E13D8E5CEB0B4C185A14E3A15791), -1, sizeof(butterspreadclick_tC71EEE41FD67E13D8E5CEB0B4C185A14E3A15791_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3192 = { sizeof(kayaspoon_t8EC9F240B3B08F270D88A34B4144CA5EDF124D06), -1, sizeof(kayaspoon_t8EC9F240B3B08F270D88A34B4144CA5EDF124D06_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3193;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3193 = { sizeof(kayabottleclick_tD78587991F3E7011B24CCB7DD17389465B36D263), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3193 = { sizeof(kayaspreadclick_tF2E2F02958CBE5B06BB84BC893F29E60F9F3177D), -1, sizeof(kayaspreadclick_tF2E2F02958CBE5B06BB84BC893F29E60F9F3177D_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3194;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3194 = { sizeof(kayaspoon_t8EC9F240B3B08F270D88A34B4144CA5EDF124D06), -1, sizeof(kayaspoon_t8EC9F240B3B08F270D88A34B4144CA5EDF124D06_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3194 = { sizeof(L1_Initiate_t30C2B5B6F6527E44921BE78A21E41638BCC85993), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3195;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3195 = { sizeof(kayaspreadclick_tF2E2F02958CBE5B06BB84BC893F29E60F9F3177D), -1, sizeof(kayaspreadclick_tF2E2F02958CBE5B06BB84BC893F29E60F9F3177D_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3195 = { sizeof(steamclick_tE0B7A02119458A9071CD3D2983B3B476F6BAE58B), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3196;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3196 = { sizeof(L1_Initiate_t30C2B5B6F6527E44921BE78A21E41638BCC85993), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3196 = { sizeof(toastclick_t4B37A4603CE7E1BAA5B217B12FB61F72EC0CF054), -1, sizeof(toastclick_t4B37A4603CE7E1BAA5B217B12FB61F72EC0CF054_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3197;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3197 = { sizeof(steamclick_tE0B7A02119458A9071CD3D2983B3B476F6BAE58B), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3197 = { sizeof(toastInner_tB771812C95B79416DBABDBF0DF69FE2F7CCB96A4), -1, sizeof(toastInner_tB771812C95B79416DBABDBF0DF69FE2F7CCB96A4_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3198;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3198 = { sizeof(toastclick_t4B37A4603CE7E1BAA5B217B12FB61F72EC0CF054), -1, sizeof(toastclick_t4B37A4603CE7E1BAA5B217B12FB61F72EC0CF054_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3198 = { sizeof(toastloaf_t560122BC50F206BA3554842F6CDABEDC6746FC43), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3199;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3199 = { sizeof(toastInner_tB771812C95B79416DBABDBF0DF69FE2F7CCB96A4), -1, sizeof(toastInner_tB771812C95B79416DBABDBF0DF69FE2F7CCB96A4_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3199 = { sizeof(toastReq_tAF42AE43267532F2D91BDADA411E6819A5CFE00A), -1, sizeof(toastReq_tAF42AE43267532F2D91BDADA411E6819A5CFE00A_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3200;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3200 = { sizeof(toastloaf_t560122BC50F206BA3554842F6CDABEDC6746FC43), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3200 = { sizeof(trashclick_t940D550A884036F39D5A1F70347636340E259B2F), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3201;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3201 = { sizeof(toastReq_tAF42AE43267532F2D91BDADA411E6819A5CFE00A), -1, sizeof(toastReq_tAF42AE43267532F2D91BDADA411E6819A5CFE00A_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3201 = { sizeof(mainmenu_t10DFE8E663EB2A851DB7D1ED7C36414603656007), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3202;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3202 = { sizeof(trashclick_t940D550A884036F39D5A1F70347636340E259B2F), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3202 = { sizeof(MainMenu1_t1E8356D6AE0D6662125B29DD36B7D47410896497), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3203;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3203 = { sizeof(mainmenu_t10DFE8E663EB2A851DB7D1ED7C36414603656007), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3203 = { sizeof(move_tDF5CE8A8FB59011802884AAD0329B322802E99D9), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3204;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3204 = { sizeof(MainMenu1_t1E8356D6AE0D6662125B29DD36B7D47410896497), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3204 = { sizeof(coconutbowl_tDAA369736E68FA7C078B2F43DFF7419C6FD33D7E), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3205;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3205 = { sizeof(move_tDF5CE8A8FB59011802884AAD0329B322802E99D9), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3205 = { sizeof(coconutspoon_t6B234E88439D68F6A8F94A05DB4FD85FAE8242AA), -1, sizeof(coconutspoon_t6B234E88439D68F6A8F94A05DB4FD85FAE8242AA_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3206;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3206 = { sizeof(coconutbowl_tDAA369736E68FA7C078B2F43DFF7419C6FD33D7E), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3206 = { sizeof(cookedboilingondeh_t3F8629197921576BC691F38CEA4AC280549EE038), -1, sizeof(cookedboilingondeh_t3F8629197921576BC691F38CEA4AC280549EE038_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3207;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3207 = { sizeof(coconutspoon_t6B234E88439D68F6A8F94A05DB4FD85FAE8242AA), -1, sizeof(coconutspoon_t6B234E88439D68F6A8F94A05DB4FD85FAE8242AA_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3207 = { sizeof(cookedcoconut_t4018D19459FB32B3E14D00AEE6EBD5362826FC49), -1, sizeof(cookedcoconut_t4018D19459FB32B3E14D00AEE6EBD5362826FC49_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3208;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3208 = { sizeof(cookedboilingondeh_t3F8629197921576BC691F38CEA4AC280549EE038), -1, sizeof(cookedboilingondeh_t3F8629197921576BC691F38CEA4AC280549EE038_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3208 = { sizeof(cookedondeh_tB81EB8719E86989E2F5FE2CA71DEC1574176DFD6), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3209;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3209 = { sizeof(cookedcoconut_t4018D19459FB32B3E14D00AEE6EBD5362826FC49), -1, sizeof(cookedcoconut_t4018D19459FB32B3E14D00AEE6EBD5362826FC49_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3209 = { sizeof(customer3_t4436AE9BDC48D209A7680657D7F78EF59AEE653F), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3210;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3210 = { sizeof(cookedondeh_tB81EB8719E86989E2F5FE2CA71DEC1574176DFD6), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3210 = { sizeof(dishReq_t38D6339AC2662C2962F6111010D85D3729DF445A), -1, sizeof(dishReq_t38D6339AC2662C2962F6111010D85D3729DF445A_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3211;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3211 = { sizeof(customer3_t4436AE9BDC48D209A7680657D7F78EF59AEE653F), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3211 = { sizeof(L7_Initiate_t650720B30CA5CECBF89DB12D97260039B034DFAE), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3212;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3212 = { sizeof(dishReq_t38D6339AC2662C2962F6111010D85D3729DF445A), -1, sizeof(dishReq_t38D6339AC2662C2962F6111010D85D3729DF445A_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3212 = { sizeof(ondehdough_t5B2D18CC5F27087C115249CE219785D7B115BDA0), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3213;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3213 = { sizeof(L7_Initiate_t650720B30CA5CECBF89DB12D97260039B034DFAE), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3213 = { sizeof(ondehsteam_t07A3B29B94BAB5C079E3D552A5262872A2FC2F46), -1, sizeof(ondehsteam_t07A3B29B94BAB5C079E3D552A5262872A2FC2F46_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3214;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3214 = { sizeof(ondehdough_t5B2D18CC5F27087C115249CE219785D7B115BDA0), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3214 = { sizeof(ondehsteamer_tAAB616EE0E0A3755F05D71C9F223E0F2DBA2F402), -1, sizeof(ondehsteamer_tAAB616EE0E0A3755F05D71C9F223E0F2DBA2F402_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3215;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3215 = { sizeof(ondehsteam_t07A3B29B94BAB5C079E3D552A5262872A2FC2F46), -1, sizeof(ondehsteam_t07A3B29B94BAB5C079E3D552A5262872A2FC2F46_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3215 = { sizeof(overcookedboilingondeh_tC4278C17A7022636FD18B7D59451F3EAD9F65CAA), -1, sizeof(overcookedboilingondeh_tC4278C17A7022636FD18B7D59451F3EAD9F65CAA_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3216;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3216 = { sizeof(ondehsteamer_tAAB616EE0E0A3755F05D71C9F223E0F2DBA2F402), -1, sizeof(ondehsteamer_tAAB616EE0E0A3755F05D71C9F223E0F2DBA2F402_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3216 = { sizeof(sugarbowl_tF444BC58CC3989F6023E612B92B1BB74032DD3AA), -1, sizeof(sugarbowl_tF444BC58CC3989F6023E612B92B1BB74032DD3AA_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3217;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3217 = { sizeof(overcookedboilingondeh_tC4278C17A7022636FD18B7D59451F3EAD9F65CAA), -1, sizeof(overcookedboilingondeh_tC4278C17A7022636FD18B7D59451F3EAD9F65CAA_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3217 = { sizeof(sugarcube_t7FFCA6142C146D2DE6E1D8902A77CC45E1F75964), -1, sizeof(sugarcube_t7FFCA6142C146D2DE6E1D8902A77CC45E1F75964_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3218;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3218 = { sizeof(sugarbowl_tF444BC58CC3989F6023E612B92B1BB74032DD3AA), -1, sizeof(sugarbowl_tF444BC58CC3989F6023E612B92B1BB74032DD3AA_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3218 = { sizeof(trashclick3_tAC880E4BAD2CD6FF7B1E7D06B398BCC0C6B870CB), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3219;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3219 = { sizeof(sugarcube_t7FFCA6142C146D2DE6E1D8902A77CC45E1F75964), -1, sizeof(sugarcube_t7FFCA6142C146D2DE6E1D8902A77CC45E1F75964_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3219 = { sizeof(undercookedcoconut_t5A663C5AA59A1B212E9FBEB6B01C15EE13483210), -1, sizeof(undercookedcoconut_t5A663C5AA59A1B212E9FBEB6B01C15EE13483210_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3220;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3220 = { sizeof(trashclick3_tAC880E4BAD2CD6FF7B1E7D06B398BCC0C6B870CB), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3220 = { sizeof(undercookedondeh_t35B7768C8563F5A488A436B4BC18A895BA531B76), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3221;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3221 = { sizeof(undercookedcoconut_t5A663C5AA59A1B212E9FBEB6B01C15EE13483210), -1, sizeof(undercookedcoconut_t5A663C5AA59A1B212E9FBEB6B01C15EE13483210_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3221 = { sizeof(burntCookingPulut_t091474C63CAD3713E9DAA6C75E2F082EE0DC1512), -1, sizeof(burntCookingPulut_t091474C63CAD3713E9DAA6C75E2F082EE0DC1512_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3222;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3222 = { sizeof(undercookedondeh_t35B7768C8563F5A488A436B4BC18A895BA531B76), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3222 = { sizeof(cookedCookingPulut_tB2A8F2F5D192CB2875382BBA8A9EE12085284DE0), -1, sizeof(cookedCookingPulut_tB2A8F2F5D192CB2875382BBA8A9EE12085284DE0_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3223;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3223 = { sizeof(burntCookingPulut_t091474C63CAD3713E9DAA6C75E2F082EE0DC1512), -1, sizeof(burntCookingPulut_t091474C63CAD3713E9DAA6C75E2F082EE0DC1512_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3223 = { sizeof(cookedPulut_tC7DEE5E6C83DB10811211493A1096C28063A2B77), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3224;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3224 = { sizeof(cookedCookingPulut_tB2A8F2F5D192CB2875382BBA8A9EE12085284DE0), -1, sizeof(cookedCookingPulut_tB2A8F2F5D192CB2875382BBA8A9EE12085284DE0_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3224 = { sizeof(gameflow3_t09C124A846E9C2F22721C74C9C448EB1CB480ADF), -1, sizeof(gameflow3_t09C124A846E9C2F22721C74C9C448EB1CB480ADF_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3225;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3225 = { sizeof(cookedPulut_tC7DEE5E6C83DB10811211493A1096C28063A2B77), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3225 = { sizeof(L8_Initiate_tCA20B5E3BAE46844F63FA2A9E7672B96EC604CCC), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3226;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3226 = { sizeof(gameflow3_t09C124A846E9C2F22721C74C9C448EB1CB480ADF), -1, sizeof(gameflow3_t09C124A846E9C2F22721C74C9C448EB1CB480ADF_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3226 = { sizeof(leafbowl_t70740F33A20AAD6F415840E7118050880BC0B9AA), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3227;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3227 = { sizeof(L8_Initiate_tCA20B5E3BAE46844F63FA2A9E7672B96EC604CCC), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3227 = { sizeof(milk_t704C8B2E4CAFC7D8175AC485228B947D0FF7EDE8), -1, sizeof(milk_t704C8B2E4CAFC7D8175AC485228B947D0FF7EDE8_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3228;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3228 = { sizeof(leafbowl_t70740F33A20AAD6F415840E7118050880BC0B9AA), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3228 = { sizeof(milkbowl_t98C36D6BEDD0CB5E17BDF5CE3178B1DAF914EAF4), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3229;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3229 = { sizeof(milk_t704C8B2E4CAFC7D8175AC485228B947D0FF7EDE8), -1, sizeof(milk_t704C8B2E4CAFC7D8175AC485228B947D0FF7EDE8_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3229 = { sizeof(milkladle_t2A706381EF51121ED436206D29F25F1F2BA7E558), -1, sizeof(milkladle_t2A706381EF51121ED436206D29F25F1F2BA7E558_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3230;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3230 = { sizeof(milkbowl_t98C36D6BEDD0CB5E17BDF5CE3178B1DAF914EAF4), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3230 = { sizeof(pandanLeaf_t229EFB169B3A863FC17B70233234AB4B83FBFCDC), -1, sizeof(pandanLeaf_t229EFB169B3A863FC17B70233234AB4B83FBFCDC_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3231;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3231 = { sizeof(milkladle_t2A706381EF51121ED436206D29F25F1F2BA7E558), -1, sizeof(milkladle_t2A706381EF51121ED436206D29F25F1F2BA7E558_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3231 = { sizeof(pot_t8EE80442F32C8C15AC99ED17F4BE79808E03EDC1), -1, sizeof(pot_t8EE80442F32C8C15AC99ED17F4BE79808E03EDC1_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3232;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3232 = { sizeof(pandanLeaf_t229EFB169B3A863FC17B70233234AB4B83FBFCDC), -1, sizeof(pandanLeaf_t229EFB169B3A863FC17B70233234AB4B83FBFCDC_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3232 = { sizeof(pulutSteam_tDCD1C65A6C732721292CDCC53231CD46DD7CF181), -1, sizeof(pulutSteam_tDCD1C65A6C732721292CDCC53231CD46DD7CF181_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3233;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3233 = { sizeof(pot_t8EE80442F32C8C15AC99ED17F4BE79808E03EDC1), -1, sizeof(pot_t8EE80442F32C8C15AC99ED17F4BE79808E03EDC1_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3233 = { sizeof(rawCookingPulut_t57BCBADE5C292A662D754DA5D5281995A4CD43E8), -1, sizeof(rawCookingPulut_t57BCBADE5C292A662D754DA5D5281995A4CD43E8_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3234;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3234 = { sizeof(pulutSteam_tDCD1C65A6C732721292CDCC53231CD46DD7CF181), -1, sizeof(pulutSteam_tDCD1C65A6C732721292CDCC53231CD46DD7CF181_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3234 = { sizeof(ricebucket_tC1E549B9DE8213D1FCEF0E0622304FA35922794B), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3235;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3235 = { sizeof(rawCookingPulut_t57BCBADE5C292A662D754DA5D5281995A4CD43E8), -1, sizeof(rawCookingPulut_t57BCBADE5C292A662D754DA5D5281995A4CD43E8_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3235 = { sizeof(sugarPieces_t1AA4719B73CA6078C5E8E8548A7A89D1DC71C211), -1, sizeof(sugarPieces_t1AA4719B73CA6078C5E8E8548A7A89D1DC71C211_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3236;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3236 = { sizeof(ricebucket_tC1E549B9DE8213D1FCEF0E0622304FA35922794B), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3236 = { sizeof(sugarplate_t4A4C62EB6EA751B299113E819C5F366FCD1D6FA5), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3237;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3237 = { sizeof(sugarPieces_t1AA4719B73CA6078C5E8E8548A7A89D1DC71C211), -1, sizeof(sugarPieces_t1AA4719B73CA6078C5E8E8548A7A89D1DC71C211_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3237 = { sizeof(quit_tD1876749456897F23113642DBBF8633214E26B87), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3238;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3238 = { sizeof(sugarplate_t4A4C62EB6EA751B299113E819C5F366FCD1D6FA5), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3238 = { sizeof(quitTut_tD49275A72C8CB4125EDA0E38688570D66AEAD9CB), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3239;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3239 = { sizeof(quit_tD1876749456897F23113642DBBF8633214E26B87), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3239 = { sizeof(bowl_t1AC1915B406D7A81B4092299B9FA4BFC33FDD177), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3240;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3240 = { sizeof(quitTut_tD49275A72C8CB4125EDA0E38688570D66AEAD9CB), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3240 = { sizeof(cutfruits_t67916209A9DB22E27457DF1E9F39CE747A671675), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3241;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3241 = { sizeof(bowl_t1AC1915B406D7A81B4092299B9FA4BFC33FDD177), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3241 = { sizeof(cuttofu_t9445844F2F57EF018CD43FBF18029D2256937019), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3242;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3242 = { sizeof(cutfruits_t67916209A9DB22E27457DF1E9F39CE747A671675), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3242 = { sizeof(cutvege_tB9AB15D370E89CC257F7F9668C59DB90E8E4D1D6), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3243;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3243 = { sizeof(cuttofu_t9445844F2F57EF018CD43FBF18029D2256937019), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3243 = { sizeof(fruitbox_t0F63852FBB5F9D313E375EF4DBEBEAA924127704), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3244;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3244 = { sizeof(cutvege_tB9AB15D370E89CC257F7F9668C59DB90E8E4D1D6), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3244 = { sizeof(gameflow2_t073DA2E10CB12D2C91B88C957E9E4B1BEFEEA984), -1, sizeof(gameflow2_t073DA2E10CB12D2C91B88C957E9E4B1BEFEEA984_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3245;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3245 = { sizeof(fruitbox_t0F63852FBB5F9D313E375EF4DBEBEAA924127704), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3245 = { sizeof(knife_t93C2871667CF92BF8CE5E9DA256C758F9E049228), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3246;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3246 = { sizeof(gameflow2_t073DA2E10CB12D2C91B88C957E9E4B1BEFEEA984), -1, sizeof(gameflow2_t073DA2E10CB12D2C91B88C957E9E4B1BEFEEA984_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3246 = { sizeof(knifeholder_tA6C2917A48436059B85FFE8B444CD0B69AAEBD33), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3247;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3247 = { sizeof(knife_t93C2871667CF92BF8CE5E9DA256C758F9E049228), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3247 = { sizeof(L5_Initiate_tB912E5AB4077FD6A6334CEDF9EBE4A67ADC12A73), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3248;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3248 = { sizeof(knifeholder_tA6C2917A48436059B85FFE8B444CD0B69AAEBD33), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3248 = { sizeof(platedFruits_tDCC6D3E320BDE01F148D97292A8C28119F5241D8), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3249;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3249 = { sizeof(L5_Initiate_tB912E5AB4077FD6A6334CEDF9EBE4A67ADC12A73), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3249 = { sizeof(platedSauce_t285DFD1C9C374A54530A2BFBFE10697D8CF44DEF), -1, sizeof(platedSauce_t285DFD1C9C374A54530A2BFBFE10697D8CF44DEF_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3250;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3250 = { sizeof(platedFruits_tDCC6D3E320BDE01F148D97292A8C28119F5241D8), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3250 = { sizeof(platedTofu_t279EE769E22B3C4C25A97B50C12D945D515E7E43), -1, sizeof(platedTofu_t279EE769E22B3C4C25A97B50C12D945D515E7E43_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3251;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3251 = { sizeof(platedSauce_t285DFD1C9C374A54530A2BFBFE10697D8CF44DEF), -1, sizeof(platedSauce_t285DFD1C9C374A54530A2BFBFE10697D8CF44DEF_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3251 = { sizeof(platedVege_tF5B7C43E237C8946D4EC2DE177006997EE8B4BD0), -1, sizeof(platedVege_tF5B7C43E237C8946D4EC2DE177006997EE8B4BD0_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3252;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3252 = { sizeof(platedTofu_t279EE769E22B3C4C25A97B50C12D945D515E7E43), -1, sizeof(platedTofu_t279EE769E22B3C4C25A97B50C12D945D515E7E43_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3252 = { sizeof(precutFruits_t2D3F3145DB8D49750964230F1FB477E810169AE4), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3253;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3253 = { sizeof(platedVege_tF5B7C43E237C8946D4EC2DE177006997EE8B4BD0), -1, sizeof(platedVege_tF5B7C43E237C8946D4EC2DE177006997EE8B4BD0_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3253 = { sizeof(precutTofu_tC4B43F1E1C43AF63506308CA759DA19BB6AA9588), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3254;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3254 = { sizeof(precutFruits_t2D3F3145DB8D49750964230F1FB477E810169AE4), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3254 = { sizeof(precutVeges_t635FEA5D051929C0B87316B22804051216386FC6), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3255;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3255 = { sizeof(precutTofu_tC4B43F1E1C43AF63506308CA759DA19BB6AA9588), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3255 = { sizeof(rojakSauce_t79680059B89F2B91A9FADFE68941641B929277C1), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3256;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3256 = { sizeof(precutVeges_t635FEA5D051929C0B87316B22804051216386FC6), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3256 = { sizeof(suaceLadle_t43FE0EFB1FED0D6D772595478AEB9DA3CA6EB2F5), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3257;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3257 = { sizeof(rojakSauce_t79680059B89F2B91A9FADFE68941641B929277C1), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3257 = { sizeof(tofubox_t94AE7B0A4A9C003FF2D7A34C1BCC72C88ED6D588), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3258;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3258 = { sizeof(suaceLadle_t43FE0EFB1FED0D6D772595478AEB9DA3CA6EB2F5), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3258 = { sizeof(trashclick2_t1A815708A6AA0E802994D21E6E1BBC8196145EE2), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3259;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3259 = { sizeof(tofubox_t94AE7B0A4A9C003FF2D7A34C1BCC72C88ED6D588), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3259 = { sizeof(vegebox_t4B4E57413BB858D4061FC711883B6DBE87C32F64), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3260;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3260 = { sizeof(trashclick2_t1A815708A6AA0E802994D21E6E1BBC8196145EE2), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3260 = { sizeof(eggcarton_t6EB270C5F0317F621A82C33B539B862B908B3A78), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3261;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3261 = { sizeof(vegebox_t4B4E57413BB858D4061FC711883B6DBE87C32F64), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3261 = { sizeof(eggOCSteam_t9C78B4379A1AC0FEF284108CC388E3392A4922D3), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3262;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3262 = { sizeof(eggcarton_t6EB270C5F0317F621A82C33B539B862B908B3A78), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3262 = { sizeof(eggs_tBB88ABD99AD380E08243129C5CB75AC94AFAEA6F), -1, sizeof(eggs_tBB88ABD99AD380E08243129C5CB75AC94AFAEA6F_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3263;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3263 = { sizeof(eggOCSteam_t9C78B4379A1AC0FEF284108CC388E3392A4922D3), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3263 = { sizeof(eggSteam_t2795D13DA33B7A7F69C91722F47BBF38C1A8DD86), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3264;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3264 = { sizeof(eggs_tBB88ABD99AD380E08243129C5CB75AC94AFAEA6F), -1, sizeof(eggs_tBB88ABD99AD380E08243129C5CB75AC94AFAEA6F_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3264 = { sizeof(gameflow_t202A4FEAA0CB9A81D2C15E8B6C3B2B93C5A77CE3), -1, sizeof(gameflow_t202A4FEAA0CB9A81D2C15E8B6C3B2B93C5A77CE3_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3265;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3265 = { sizeof(eggSteam_t2795D13DA33B7A7F69C91722F47BBF38C1A8DD86), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3265 = { sizeof(L2_initiate_tAC0C0E0289CB5EA03244A60898485D7707C8A52B), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3266;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3266 = { sizeof(L2_initiate_tAC0C0E0289CB5EA03244A60898485D7707C8A52B), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3266 = { sizeof(ocSoyasauce_tC0F68177A97AB4B89FD2C132955E801305DB099F), -1, sizeof(ocSoyasauce_tC0F68177A97AB4B89FD2C132955E801305DB099F_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3267;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3267 = { sizeof(ocSoyasauce_tC0F68177A97AB4B89FD2C132955E801305DB099F), -1, sizeof(ocSoyasauce_tC0F68177A97AB4B89FD2C132955E801305DB099F_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3267 = { sizeof(overcookedegg_t0A689C63C82C49F79002D13BB843CF4B8D37DCC1), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3268;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3268 = { sizeof(overcookedegg_t0A689C63C82C49F79002D13BB843CF4B8D37DCC1), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3268 = { sizeof(rawEgg_t1B2EF2C6106EB874EA6783889AFA9EF3F45E727E), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3269;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3269 = { sizeof(rawEgg_t1B2EF2C6106EB874EA6783889AFA9EF3F45E727E), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3269 = { sizeof(soyasauce_t021117E41589D0D3F11ED65974D6633AA08B9E2C), -1, sizeof(soyasauce_t021117E41589D0D3F11ED65974D6633AA08B9E2C_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3270;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3270 = { sizeof(soyasauce_t021117E41589D0D3F11ED65974D6633AA08B9E2C), -1, sizeof(soyasauce_t021117E41589D0D3F11ED65974D6633AA08B9E2C_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3270 = { sizeof(soyasaucebottle_t21ED98186C3BD4AAE4D796F38F410FAD581C5209), -1, sizeof(soyasaucebottle_t21ED98186C3BD4AAE4D796F38F410FAD581C5209_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3271;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3271 = { sizeof(soyasaucebottle_t21ED98186C3BD4AAE4D796F38F410FAD581C5209), -1, sizeof(soyasaucebottle_t21ED98186C3BD4AAE4D796F38F410FAD581C5209_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3271 = { sizeof(U3CSpawnCustomersCoroutineU3Ed__5_t127C222F7B1148DCA226AE1BA532AED706DFAC26), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3272;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3272 = { sizeof(U3CSpawnCustomersCoroutineU3Ed__5_t127C222F7B1148DCA226AE1BA532AED706DFAC26), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3272 = { sizeof(spawn_t9AE66EF479D404741F9258A34BE8D62757180EA1), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3273;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3273 = { sizeof(spawn_t9AE66EF479D404741F9258A34BE8D62757180EA1), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3273 = { sizeof(stats_t3D7E34B34B559C628AB7FE04ABED8B9AA89A6AA3), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3274;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3274 = { sizeof(stats_t3D7E34B34B559C628AB7FE04ABED8B9AA89A6AA3), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3274 = { sizeof(timer_t66D3E9E4B7C190A2D024B79E1C450DB5B8C3FB21), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3275;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3275 = { sizeof(timer_t66D3E9E4B7C190A2D024B79E1C450DB5B8C3FB21), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3275 = { sizeof(timerslider_t5B7573FD88EDFD4E4BF4346FF1AC383BEE6230BE), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3276;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3276 = { sizeof(timerslider_t5B7573FD88EDFD4E4BF4346FF1AC383BEE6230BE), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3276 = { sizeof(TryAgain_t7F2515CD76D6FD6A220A5A7998914D59C8F813C1), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3277;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3277 = { sizeof(TryAgain_t7F2515CD76D6FD6A220A5A7998914D59C8F813C1), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3277 = { sizeof(batterBucketTut_t0E66298A24D5D85038A632DFDBA3E3AE66C4FAB6), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3278;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3278 = { sizeof(batterBucketTut_t0E66298A24D5D85038A632DFDBA3E3AE66C4FAB6), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3278 = { sizeof(burntLayerTut_tCA3448B81B23ED712E92540B52D71205A41F6784), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3279;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3279 = { sizeof(burntLayerTut_tCA3448B81B23ED712E92540B52D71205A41F6784), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3279 = { sizeof(chaipohbowltut_tF114343755222355EFB3D5FA5C1D6296E525DFBE), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3280;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3280 = { sizeof(chaipohbowltut_tF114343755222355EFB3D5FA5C1D6296E525DFBE), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3280 = { sizeof(chaipohspoontut_t2AA2DC77D74417096FB4C73AD86CC5724D00DBC6), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3281;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3281 = { sizeof(chaipohspoontut_t2AA2DC77D74417096FB4C73AD86CC5724D00DBC6), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3281 = { sizeof(chaipohTut_t009E81B5A3A8E48689136CB1B92EC44D557F37B6), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3282;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3282 = { sizeof(chaipohTut_t009E81B5A3A8E48689136CB1B92EC44D557F37B6), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3282 = { sizeof(chweeKuehATut_t0810BCBF390A06495A9F9506CD0B95C067BD9DEA), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3283;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3283 = { sizeof(chweeKuehATut_t0810BCBF390A06495A9F9506CD0B95C067BD9DEA), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3283 = { sizeof(chweeKuehBTut_t7F978C45D1BFA729473B51948D9850A24660F8CE), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3284;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3284 = { sizeof(chweeKuehBTut_t7F978C45D1BFA729473B51948D9850A24660F8CE), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3284 = { sizeof(chweeKuehCTut_t4EE5A42A7124A42C6C36ECCEF441F9AB1F67185D), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3285;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3285 = { sizeof(chweeKuehCTut_t4EE5A42A7124A42C6C36ECCEF441F9AB1F67185D), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3285 = { sizeof(ckTutFlow_tA39ECCCF635AB153022A316D3F3F0639E3154FA5), -1, sizeof(ckTutFlow_tA39ECCCF635AB153022A316D3F3F0639E3154FA5_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3286;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3286 = { sizeof(ckTutFlow_tA39ECCCF635AB153022A316D3F3F0639E3154FA5), -1, sizeof(ckTutFlow_tA39ECCCF635AB153022A316D3F3F0639E3154FA5_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3286 = { sizeof(cookedChweeKuehTut_tBAEEADD57BBDC83E11DBA190F65FCBB5B8B0751C), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3287;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3287 = { sizeof(cookedChweeKuehTut_tBAEEADD57BBDC83E11DBA190F65FCBB5B8B0751C), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3287 = { sizeof(customerCkTut_tADFD93A29EE98F05B9A7A0B9736212978BD34119), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3288;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3288 = { sizeof(customerCkTut_tADFD93A29EE98F05B9A7A0B9736212978BD34119), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3288 = { sizeof(overcookedCKTut_t96045FDD4F8BED2C00D31B8721C356EF7D7F76F2), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3289;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3289 = { sizeof(overcookedCKTut_t96045FDD4F8BED2C00D31B8721C356EF7D7F76F2), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3289 = { sizeof(reqCKTut_tDAD996CB5319F9EFD8163BECE3CE5A6F8980E32A), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3290;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3290 = { sizeof(reqCKTut_tDAD996CB5319F9EFD8163BECE3CE5A6F8980E32A), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3290 = { sizeof(steamTut_tE6B9E1FC9902363FDEDB357A06443F258B46B1F1), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3291;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3291 = { sizeof(steamTut_tE6B9E1FC9902363FDEDB357A06443F258B46B1F1), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3291 = { sizeof(trashCkTut_t1B94EBD237EBD2AC6A83EDF6F34C6347950BB345), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3292;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3292 = { sizeof(trashCkTut_t1B94EBD237EBD2AC6A83EDF6F34C6347950BB345), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3292 = { sizeof(undercookedCkTut_tFA865F38E1012CE3831C046EA045CEF304845EE4), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3293;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3293 = { sizeof(undercookedCkTut_tFA865F38E1012CE3831C046EA045CEF304845EE4), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3293 = { sizeof(burnToastTutorial_tF67347B460FAD0B1D7FBB352C27D7A66ACAA5BC9), -1, sizeof(burnToastTutorial_tF67347B460FAD0B1D7FBB352C27D7A66ACAA5BC9_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3294;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3294 = { sizeof(burnToastTutorial_tF67347B460FAD0B1D7FBB352C27D7A66ACAA5BC9), -1, sizeof(burnToastTutorial_tF67347B460FAD0B1D7FBB352C27D7A66ACAA5BC9_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3294 = { sizeof(butterknifetutorial_tBBAD6DF315ADBF93A590F9AF7C2281C0B31B358D), -1, sizeof(butterknifetutorial_tBBAD6DF315ADBF93A590F9AF7C2281C0B31B358D_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3295;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3295 = { sizeof(butterknifetutorial_tBBAD6DF315ADBF93A590F9AF7C2281C0B31B358D), -1, sizeof(butterknifetutorial_tBBAD6DF315ADBF93A590F9AF7C2281C0B31B358D_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3295 = { sizeof(butterSpreadTutorial_t278922C34C902F78DA5854A755B169966D82F9E5), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3296;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3296 = { sizeof(butterSpreadTutorial_t278922C34C902F78DA5854A755B169966D82F9E5), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3296 = { sizeof(buttertutorial_t38DAC6AC856ECBA69EFE4EC69FCF3A550A486A1B), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3297;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3297 = { sizeof(buttertutorial_t38DAC6AC856ECBA69EFE4EC69FCF3A550A486A1B), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3297 = { sizeof(customertutorial_tB1CE9074A2AFC27922669047CAAA39B5D2BF0A9D), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3298;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3298 = { sizeof(customertutorial_tB1CE9074A2AFC27922669047CAAA39B5D2BF0A9D), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3298 = { sizeof(innerToastTutorial_t0CBA6726DDA3683FA92A93BD09ACFA36E8ECBC21), -1, sizeof(innerToastTutorial_t0CBA6726DDA3683FA92A93BD09ACFA36E8ECBC21_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3299;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3299 = { sizeof(innerToastTutorial_t0CBA6726DDA3683FA92A93BD09ACFA36E8ECBC21), -1, sizeof(innerToastTutorial_t0CBA6726DDA3683FA92A93BD09ACFA36E8ECBC21_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3299 = { sizeof(kayaspoontutorial_t0AB090DCB15EC4F06DE4EC53DC13DBAC5D628878), -1, sizeof(kayaspoontutorial_t0AB090DCB15EC4F06DE4EC53DC13DBAC5D628878_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3300;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3300 = { sizeof(kayaspoontutorial_t0AB090DCB15EC4F06DE4EC53DC13DBAC5D628878), -1, sizeof(kayaspoontutorial_t0AB090DCB15EC4F06DE4EC53DC13DBAC5D628878_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3300 = { sizeof(kayaSpreadTutorial_t6CD4F334491EF46EBE86D182F376643433A3654D), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3301;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3301 = { sizeof(kayaSpreadTutorial_t6CD4F334491EF46EBE86D182F376643433A3654D), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3301 = { sizeof(kayatutorial_t6E265E1F6C18CA75DF25C6B5E943BB8E17D397ED), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3302;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3302 = { sizeof(kayatutorial_t6E265E1F6C18CA75DF25C6B5E943BB8E17D397ED), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3302 = { sizeof(steamtutorial_tFB84F256DBC683515DFCF5207A6814A34858DA1C), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3303;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3303 = { sizeof(steamtutorial_tFB84F256DBC683515DFCF5207A6814A34858DA1C), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3303 = { sizeof(toastloaftutorial_t8DC076C475428D7143D75F4AC5FB066B8DD75F61), -1, sizeof(toastloaftutorial_t8DC076C475428D7143D75F4AC5FB066B8DD75F61_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3304;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3304 = { sizeof(toastloaftutorial_t8DC076C475428D7143D75F4AC5FB066B8DD75F61), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3304 = { sizeof(toastReqTutorial_t4ED3B3450A7610D2918C257D32DFF75A9F6DB8FE), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3305;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3305 = { sizeof(toastReqTutorial_t4ED3B3450A7610D2918C257D32DFF75A9F6DB8FE), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3305 = { sizeof(toasttutorial_t0DAF527E3AA4613A8AC1CBD213C306E8232264CD), -1, sizeof(toasttutorial_t0DAF527E3AA4613A8AC1CBD213C306E8232264CD_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3306;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3306 = { sizeof(toasttutorial_t0DAF527E3AA4613A8AC1CBD213C306E8232264CD), -1, sizeof(toasttutorial_t0DAF527E3AA4613A8AC1CBD213C306E8232264CD_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3306 = { sizeof(tutorialflow_tB913D01A576DF33BABA53F1526DE1B8132BC8290), -1, sizeof(tutorialflow_tB913D01A576DF33BABA53F1526DE1B8132BC8290_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3307;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3307 = { sizeof(tutorialflow_tB913D01A576DF33BABA53F1526DE1B8132BC8290), -1, sizeof(tutorialflow_tB913D01A576DF33BABA53F1526DE1B8132BC8290_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3307 = { sizeof(burntOndehTut_t4A28B2CE21ED39BBD2474F3D17227E9C2638E005), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3308;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3308 = { sizeof(burntOndehTut_t4A28B2CE21ED39BBD2474F3D17227E9C2638E005), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3308 = { sizeof(coconutbowlTut_tB9CE32530E8AD61710A02352C42C0FC2170E14CE), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3309;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3309 = { sizeof(coconutbowlTut_tB9CE32530E8AD61710A02352C42C0FC2170E14CE), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3309 = { sizeof(coconutflakestut_tAAD6C3948E10CEC7E216496D49D8F85889DB42D8), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3310;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3310 = { sizeof(coconutflakestut_tAAD6C3948E10CEC7E216496D49D8F85889DB42D8), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3310 = { sizeof(coconutspoonTut_tA7526EE54F77F8F80AE9C33CDC838AB7049FA701), -1, sizeof(coconutspoonTut_tA7526EE54F77F8F80AE9C33CDC838AB7049FA701_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3311;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3311 = { sizeof(coconutspoonTut_tA7526EE54F77F8F80AE9C33CDC838AB7049FA701), -1, sizeof(coconutspoonTut_tA7526EE54F77F8F80AE9C33CDC838AB7049FA701_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3311 = { sizeof(cookedboilingondehTut_t2A763F8D60BFA27F04961D9D03DCFD38D54ACB10), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3312;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3312 = { sizeof(cookedboilingondehTut_t2A763F8D60BFA27F04961D9D03DCFD38D54ACB10), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3312 = { sizeof(cookedBoilingOndehTut2_t9B1B75538341D7269A4D91FAA58AA582FBD24C05), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3313;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3313 = { sizeof(cookedBoilingOndehTut2_t9B1B75538341D7269A4D91FAA58AA582FBD24C05), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3313 = { sizeof(cookedOndehTut_tE4B7A998F569B7098F838F984A78267909D4CB25), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3314;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3314 = { sizeof(cookedOndehTut_tE4B7A998F569B7098F838F984A78267909D4CB25), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3314 = { sizeof(customerOndehTut_t83103F580BD0A6EFBA93F464012993AEDB1195F4), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3315;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3315 = { sizeof(customerOndehTut_t83103F580BD0A6EFBA93F464012993AEDB1195F4), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3315 = { sizeof(ocBoilingOndehTut_t51F66B51EFD38E04A18D675A3EF83E414887CADA), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3316;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3316 = { sizeof(ocBoilingOndehTut_t51F66B51EFD38E04A18D675A3EF83E414887CADA), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3316 = { sizeof(ondehdoughTut_t845FE78F04C7609A81F7B1B36EC34C5EEDC4FE53), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3317;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3317 = { sizeof(ondehdoughTut_t845FE78F04C7609A81F7B1B36EC34C5EEDC4FE53), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3317 = { sizeof(ondehReqTut_t2C2312E52D50B7ACAF254662E4E929F387037E19), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3318;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3318 = { sizeof(ondehReqTut_t2C2312E52D50B7ACAF254662E4E929F387037E19), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3318 = { sizeof(ondehsteamerTut_tEFE96028DDDBF04C00DC43243C48C84FA3250393), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3319;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3319 = { sizeof(ondehsteamerTut_tEFE96028DDDBF04C00DC43243C48C84FA3250393), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3319 = { sizeof(ondehSteamTut_t740C06EF712A796D65C67C97E9106C83A27D2AAE), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3320;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3320 = { sizeof(ondehSteamTut_t740C06EF712A796D65C67C97E9106C83A27D2AAE), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3320 = { sizeof(ondehSteamTut2_t6D9A0D8A49DF57164B2B0C9807FCC7F367F26A37), -1, sizeof(ondehSteamTut2_t6D9A0D8A49DF57164B2B0C9807FCC7F367F26A37_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3321;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3321 = { sizeof(ondehSteamTut2_t6D9A0D8A49DF57164B2B0C9807FCC7F367F26A37), -1, sizeof(ondehSteamTut2_t6D9A0D8A49DF57164B2B0C9807FCC7F367F26A37_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3321 = { sizeof(ondehSteamTut3_tDFC59E23E2A160D158CF3E74705B0EA73F2A6D10), -1, sizeof(ondehSteamTut3_tDFC59E23E2A160D158CF3E74705B0EA73F2A6D10_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3322;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3322 = { sizeof(ondehSteamTut3_tDFC59E23E2A160D158CF3E74705B0EA73F2A6D10), -1, sizeof(ondehSteamTut3_tDFC59E23E2A160D158CF3E74705B0EA73F2A6D10_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3322 = { sizeof(ondehTrashTut_tE5A2942011BDC61890CA6DB40CF7DC392BBFE521), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3323;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3323 = { sizeof(ondehTrashTut_tE5A2942011BDC61890CA6DB40CF7DC392BBFE521), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3323 = { sizeof(ondehTutFlow_tEF905236F4884811D91F73894F1F955AB638E1E2), -1, sizeof(ondehTutFlow_tEF905236F4884811D91F73894F1F955AB638E1E2_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3324;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3324 = { sizeof(ondehTutFlow_tEF905236F4884811D91F73894F1F955AB638E1E2), -1, sizeof(ondehTutFlow_tEF905236F4884811D91F73894F1F955AB638E1E2_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3324 = { sizeof(sugarBowlTut_tCDB100A1FFE4AEA0BDBFFA4C46E3E6CA93A1228F), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3325;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3325 = { sizeof(sugarBowlTut_tCDB100A1FFE4AEA0BDBFFA4C46E3E6CA93A1228F), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3325 = { sizeof(sugarcubeTut_t7D9AE000BB2A9A26BC3094BBA9E7CD7A92648706), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3326;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3326 = { sizeof(sugarcubeTut_t7D9AE000BB2A9A26BC3094BBA9E7CD7A92648706), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3326 = { sizeof(sugarcubeTut2_t08B7C865E87B3F14CA29BC314A77489D813CFD96), -1, sizeof(sugarcubeTut2_t08B7C865E87B3F14CA29BC314A77489D813CFD96_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3327;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3327 = { sizeof(sugarcubeTut2_t08B7C865E87B3F14CA29BC314A77489D813CFD96), -1, sizeof(sugarcubeTut2_t08B7C865E87B3F14CA29BC314A77489D813CFD96_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3327 = { sizeof(sugarCubeTut3_t8259D60C4DA26AD76EC8DF8FAC542DF033E0766D), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3328;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3328 = { sizeof(sugarCubeTut3_t8259D60C4DA26AD76EC8DF8FAC542DF033E0766D), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3328 = { sizeof(ucOndehTut_tDC41E20FBA5C22C04533C56AAE254883B19701CD), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3329;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3329 = { sizeof(ucOndehTut_tDC41E20FBA5C22C04533C56AAE254883B19701CD), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3329 = { sizeof(burntpuluttut_tB669561BACE06A7F4D0FFDB57AA53E868D79F723), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3330;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3330 = { sizeof(burntpuluttut_tB669561BACE06A7F4D0FFDB57AA53E868D79F723), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3330 = { sizeof(burntricetut_t4AEA0A7B691543C04DAB6F8E8E807534F90B5B3C), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3331;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3331 = { sizeof(burntricetut_t4AEA0A7B691543C04DAB6F8E8E807534F90B5B3C), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3331 = { sizeof(cookedpuluttut_t4B94A96DBCAA83034D9FE5D3AF673F5F5F01D548), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3332;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3332 = { sizeof(cookedpuluttut_t4B94A96DBCAA83034D9FE5D3AF673F5F5F01D548), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3332 = { sizeof(cookedricetut_t84FFD46AE9815BA94D8373A7815F00BE853D10AA), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3333;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3333 = { sizeof(cookedricetut_t84FFD46AE9815BA94D8373A7815F00BE853D10AA), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3333 = { sizeof(leafcontainertut_t020E8002233258303FFDEBA5B92CC6F13278F802), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3334;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3334 = { sizeof(leafcontainertut_t020E8002233258303FFDEBA5B92CC6F13278F802), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3334 = { sizeof(milkbowltut_t02F130170448E96B98607126E1950F66CB5A5032), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3335;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3335 = { sizeof(milkbowltut_t02F130170448E96B98607126E1950F66CB5A5032), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3335 = { sizeof(milkladletut_t1C4C451F8493E371551861F01518366106C11BCB), -1, sizeof(milkladletut_t1C4C451F8493E371551861F01518366106C11BCB_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3336;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3336 = { sizeof(milkladletut_t1C4C451F8493E371551861F01518366106C11BCB), -1, sizeof(milkladletut_t1C4C451F8493E371551861F01518366106C11BCB_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3336 = { sizeof(milktut_t74AD04555E36E0CF0E9D1019546A657C8BF5DBD4), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3337;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3337 = { sizeof(milktut_t74AD04555E36E0CF0E9D1019546A657C8BF5DBD4), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3337 = { sizeof(pandantut_tA2262E71B33EB51415D1236B079591A9D9F84A15), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3338;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3338 = { sizeof(pandantut_tA2262E71B33EB51415D1236B079591A9D9F84A15), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3338 = { sizeof(pulutcustomertut_t50D845623B62FAB3ADC9605FA637A84D7793DD61), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3339;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3339 = { sizeof(pulutcustomertut_t50D845623B62FAB3ADC9605FA637A84D7793DD61), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3339 = { sizeof(pulutpottut_t9E8FE1D5D4CC5DC7A457BB81812034E44A404388), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3340;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3340 = { sizeof(pulutpottut_t9E8FE1D5D4CC5DC7A457BB81812034E44A404388), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3340 = { sizeof(pulutreqtut_t56B886EA3DC42A0FFEA463738EACD2BA4C962857), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3341;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3341 = { sizeof(pulutreqtut_t56B886EA3DC42A0FFEA463738EACD2BA4C962857), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3341 = { sizeof(pulutsteamtut_tEA8DA679A73071E8CA1D498223FAFD60B2D2CB2C), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3342;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3342 = { sizeof(pulutsteamtut_tEA8DA679A73071E8CA1D498223FAFD60B2D2CB2C), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3342 = { sizeof(puluttrashtut_t48A7F4D62E060AFDE77300219988FB48EDDFC645), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3343;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3343 = { sizeof(puluttrashtut_t48A7F4D62E060AFDE77300219988FB48EDDFC645), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3343 = { sizeof(pulutTutFlow_t68C6F2E9840736A44A64CB788BB1ADB3ED03285B), -1, sizeof(pulutTutFlow_t68C6F2E9840736A44A64CB788BB1ADB3ED03285B_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3344;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3344 = { sizeof(pulutTutFlow_t68C6F2E9840736A44A64CB788BB1ADB3ED03285B), -1, sizeof(pulutTutFlow_t68C6F2E9840736A44A64CB788BB1ADB3ED03285B_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3344 = { sizeof(rawpuluttut_t8CFA3E2877824B6DDC128FE011BC6AE8A4E87BAB), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3345;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3345 = { sizeof(rawpuluttut_t8CFA3E2877824B6DDC128FE011BC6AE8A4E87BAB), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3345 = { sizeof(rawricetut_t9EA8B77691E8BBC52BD6DDDC850FFF10E50FBE73), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3346;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3346 = { sizeof(rawricetut_t9EA8B77691E8BBC52BD6DDDC850FFF10E50FBE73), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3346 = { sizeof(ricebuckettut_tC4461E3FDD81682AC58241C85D88F0A29F71F9D3), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3347;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3347 = { sizeof(ricebuckettut_tC4461E3FDD81682AC58241C85D88F0A29F71F9D3), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3347 = { sizeof(sugarplatetut_t7DE9A2D763E5645D8A876A2D0F904A109A3B3611), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3348;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3348 = { sizeof(sugarplatetut_t7DE9A2D763E5645D8A876A2D0F904A109A3B3611), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3348 = { sizeof(sugartut_tB6CF517270967E4148B3CCBD978FFA694C4B0052), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3349;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3349 = { sizeof(sugartut_tB6CF517270967E4148B3CCBD978FFA694C4B0052), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3349 = { sizeof(bowlTut_t087F552835EAA212E3012CD14DCD667EEC27A5D4), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3350;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3350 = { sizeof(bowlTut_t087F552835EAA212E3012CD14DCD667EEC27A5D4), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3350 = { sizeof(customerRojakTut_tF7162C5585CDBF7B215818DFF5FDA448A68AD4DB), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3351;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3351 = { sizeof(customerRojakTut_tF7162C5585CDBF7B215818DFF5FDA448A68AD4DB), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3351 = { sizeof(cutfruitsTut_t4C5D6134FDFD471ABF13D6864BE9E3D0ADDF1511), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3352;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize3352 = { sizeof(cuttofuTut_t0818764B7543B25BE98D4A393352B6930E5F7FC6), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3353;
