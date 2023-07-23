@@ -3093,7 +3093,9 @@ MonoBehaviour:
   timeWithoutCustomerOnA: 0
   timeWithoutCustomerOnB: 0
   timeWithoutCustomerOnC: 0
-  maxTimeWithoutCustomer: 3
+  maxTimeWithoutCustomerA: 2.5
+  maxTimeWithoutCustomerB: 4
+  maxTimeWithoutCustomerC: 4.5
 --- !u!114 &1572598189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4389,7 +4391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 427.01645, y: -229}
+  m_AnchoredPosition: {x: 404, y: -177}
   m_SizeDelta: {x: 597.4172, y: 50.0124}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2002436256

@@ -1795,7 +1795,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 403888765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 590a8163cb99c4ebc994dfc8d13776ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bd290520ce794a5497da2e3e5cbebbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   toastReqObj: {fileID: 1640373940}
@@ -2273,30 +2273,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 645833456}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 497c725fc6b494b8dbd7958c8d92dc28, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bd290520ce794a5497da2e3e5cbebbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toastReqObj: {fileID: 1640373940}
+  eggReqObj: {fileID: 667573459}
 --- !u!4 &645833458 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 23783d7a852174ad9b55b7af1be59b1b, type: 3}
   m_PrefabInstance: {fileID: 2100553652}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &645833459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 645833456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 590a8163cb99c4ebc994dfc8d13776ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toastReqObj: {fileID: 1640373940}
-  eggReqObj: {fileID: 667573459}
 --- !u!65 &645833460
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2656,7 +2644,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 864943916}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 590a8163cb99c4ebc994dfc8d13776ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bd290520ce794a5497da2e3e5cbebbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   toastReqObj: {fileID: 1640373940}
@@ -4308,7 +4296,9 @@ MonoBehaviour:
   timeWithoutCustomerOnA: 0
   timeWithoutCustomerOnB: 0
   timeWithoutCustomerOnC: 0
-  maxTimeWithoutCustomer: 3
+  maxTimeWithoutCustomerA: 2.5
+  maxTimeWithoutCustomerB: 4
+  maxTimeWithoutCustomerC: 4.5
 --- !u!4 &1572598187
 Transform:
   m_ObjectHideFlags: 0
@@ -4424,7 +4414,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1609710233}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 590a8163cb99c4ebc994dfc8d13776ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bd290520ce794a5497da2e3e5cbebbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   toastReqObj: {fileID: 1640373940}
@@ -5977,7 +5967,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 407.54013, y: -227.6925}
+  m_AnchoredPosition: {x: 399, y: -184}
   m_SizeDelta: {x: 630.571, y: 55.3562}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2002436256

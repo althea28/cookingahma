@@ -1243,20 +1243,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 44d594976ae7f46599bcc3fec79fc893, type: 3}
   m_PrefabInstance: {fileID: 403888764}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &403888766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403888765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 590a8163cb99c4ebc994dfc8d13776ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toastReqObj: {fileID: 1640373940}
-  eggReqObj: {fileID: 1640373940}
 --- !u!4 &403888767 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 44d594976ae7f46599bcc3fec79fc893, type: 3}
@@ -1275,6 +1261,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 1.5, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &403888769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403888765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd290520ce794a5497da2e3e5cbebbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toastReqObj: {fileID: 1640373940}
+  eggReqObj: {fileID: 1640373940}
 --- !u!1001 &406560686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1523,12 +1523,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08f5181cccaa4d0e8351efe0130975a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customers:
-  - {fileID: 556070473}
-  - {fileID: 645833456}
-  spawnPoints:
-  - {fileID: 148781231}
-  - {fileID: 296896467}
 --- !u!4 &638705522
 Transform:
   m_ObjectHideFlags: 0
@@ -1549,18 +1543,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 23783d7a852174ad9b55b7af1be59b1b, type: 3}
   m_PrefabInstance: {fileID: 2100553652}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &645833457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 645833456}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 497c725fc6b494b8dbd7958c8d92dc28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &645833458 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 23783d7a852174ad9b55b7af1be59b1b, type: 3}
@@ -1575,11 +1557,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 645833456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 590a8163cb99c4ebc994dfc8d13776ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bd290520ce794a5497da2e3e5cbebbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toastReqObj: {fileID: 1640373940}
-  eggReqObj: {fileID: 1640373940}
+  toastReqObj: {fileID: -8679921383154817045, guid: 7805fdbaf8afa4bc4961d74fc86d8efd, type: 3}
+  eggReqObj: {fileID: -8679921383154817045, guid: 7805fdbaf8afa4bc4961d74fc86d8efd, type: 3}
 --- !u!65 &645833460
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1915,7 +1897,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 864943916}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 590a8163cb99c4ebc994dfc8d13776ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bd290520ce794a5497da2e3e5cbebbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   toastReqObj: {fileID: 1640373940}
@@ -2389,7 +2371,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 141b2547b1b814e07b4571efbb61c875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  appearanceTime: 5
 --- !u!1001 &927193611
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3362,7 +3343,9 @@ MonoBehaviour:
   timeWithoutCustomerOnA: 0
   timeWithoutCustomerOnB: 0
   timeWithoutCustomerOnC: 0
-  maxTimeWithoutCustomer: 3
+  maxTimeWithoutCustomerA: 2.5
+  maxTimeWithoutCustomerB: 4
+  maxTimeWithoutCustomerC: 4.5
 --- !u!4 &1572598187
 Transform:
   m_ObjectHideFlags: 0
@@ -3535,7 +3518,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1609710233}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 590a8163cb99c4ebc994dfc8d13776ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bd290520ce794a5497da2e3e5cbebbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   toastReqObj: {fileID: 1640373940}
@@ -4379,7 +4362,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 141b2547b1b814e07b4571efbb61c875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  appearanceTime: 5
 --- !u!1 &1823610037
 GameObject:
   m_ObjectHideFlags: 0

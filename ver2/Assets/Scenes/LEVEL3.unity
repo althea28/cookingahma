@@ -203,7 +203,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 20448739}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 590a8163cb99c4ebc994dfc8d13776ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bd290520ce794a5497da2e3e5cbebbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   toastReqObj: {fileID: 289949268}
@@ -874,7 +874,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 243645637}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 590a8163cb99c4ebc994dfc8d13776ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bd290520ce794a5497da2e3e5cbebbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   toastReqObj: {fileID: 289949268}
@@ -1610,23 +1610,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 483626228}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 590a8163cb99c4ebc994dfc8d13776ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bd290520ce794a5497da2e3e5cbebbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   toastReqObj: {fileID: 289949268}
   eggReqObj: {fileID: 729604144}
---- !u!114 &483626230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 483626228}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 497c725fc6b494b8dbd7958c8d92dc28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &483626231
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4116,7 +4104,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1163377793}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 590a8163cb99c4ebc994dfc8d13776ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bd290520ce794a5497da2e3e5cbebbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   toastReqObj: {fileID: 289949268}
@@ -4169,7 +4157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 412.6197, y: -222.00143}
+  m_AnchoredPosition: {x: 398, y: -187}
   m_SizeDelta: {x: 614.4961, y: 50.0046}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1167178929
@@ -6515,7 +6503,9 @@ MonoBehaviour:
   timeWithoutCustomerOnA: 0
   timeWithoutCustomerOnB: 0
   timeWithoutCustomerOnC: 0
-  maxTimeWithoutCustomer: 3
+  maxTimeWithoutCustomerA: 2.5
+  maxTimeWithoutCustomerB: 4
+  maxTimeWithoutCustomerC: 4.5
 --- !u!4 &2086245285
 Transform:
   m_ObjectHideFlags: 0
