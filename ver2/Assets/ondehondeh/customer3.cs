@@ -19,10 +19,10 @@ public class customer3 : MonoBehaviour
     {
         int dishSelector = Random.Range(1, gameflow3.numOfDishes + 1); 
         if (dishSelector == ondehDish) { //if ondeh
-            Instantiate(ondehReqObj, transform.position + gameflow2.addReqCoordinates, ondehReqObj.rotation);
+            Instantiate(ondehReqObj, transform.position + customerGenerator.addReqCoordinates, ondehReqObj.rotation);
             dishIndicator(ondehName);
         } else if (dishSelector == pulutDish) { //if pulut hitam
-            Instantiate(pulutReqObj, transform.position + gameflow2.addReqCoordinates, pulutReqObj.rotation); 
+            Instantiate(pulutReqObj, transform.position + customerGenerator.addReqCoordinates, pulutReqObj.rotation); 
             dishIndicator(pulutName);
         }
     }
@@ -91,42 +91,42 @@ public class customer3 : MonoBehaviour
     }
 
     void customerReset() {
-        if (transform.position == gameflow3.customerACoordinates) {
-            gameflow3.customerOnA = false;
+        if (transform.position == customerGenerator.customerACoordinates) {
+            customerGenerator.customerOnA = false;
             gameflow3.dishOnA = "none";
-        } else if (transform.position == gameflow3.customerBCoordinates) {
-            gameflow3.customerOnB = false;
+        } else if (transform.position == customerGenerator.customerBCoordinates) {
+            customerGenerator.customerOnB = false;
             gameflow3.dishOnB = "none";
-        } else if (transform.position == gameflow3.customerCCoordinates) {
-            gameflow3.customerOnC = false;
+        } else if (transform.position == customerGenerator.customerCCoordinates) {
+            customerGenerator.customerOnC = false;
             gameflow3.dishOnC = "none";
         }
     }
 
     void destroyReq() {
-        if (transform.position == gameflow3.customerACoordinates) {
+        if (transform.position == customerGenerator.customerACoordinates) {
             dishReq.destroyA = true;
-        } else if (transform.position == gameflow3.customerBCoordinates) {
+        } else if (transform.position == customerGenerator.customerBCoordinates) {
             dishReq.destroyB = true;
-        } else if (transform.position == gameflow3.customerCCoordinates) {
+        } else if (transform.position == customerGenerator.customerCCoordinates) {
             dishReq.destroyC = true;
         }
     }
 
     void dishIndicator(string dish) {
-        if (transform.position == gameflow3.customerACoordinates) {
+        if (transform.position == customerGenerator.customerACoordinates) {
             gameflow3.dishOnA = dish;
-        } else if (transform.position == gameflow3.customerBCoordinates) {
+        } else if (transform.position == customerGenerator.customerBCoordinates) {
             gameflow3.dishOnB = dish;
-        } else if (transform.position == gameflow3.customerCCoordinates) {
+        } else if (transform.position == customerGenerator.customerCCoordinates) {
             gameflow3.dishOnC = dish;
         }
     }
 
     string customersOrder() {
-        if (transform.position == gameflow3.customerACoordinates) {
+        if (transform.position == customerGenerator.customerACoordinates) {
             return gameflow3.dishOnA;
-        } else if (transform.position == gameflow3.customerBCoordinates) {
+        } else if (transform.position == customerGenerator.customerBCoordinates) {
             return gameflow3.dishOnB;
         } else { //is customerC
             return gameflow3.dishOnC;

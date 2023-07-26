@@ -21,7 +21,7 @@ public class gameflow2 : MonoBehaviour
     public static bool resetClicksRojak = false;
 
     //customer generation
-    public static Vector3 customerACoordinates = new Vector3(6.19f, 6f, -2f);
+    /*public static Vector3 customerACoordinates = new Vector3(6.19f, 6f, -2f);
     public static Vector3 customerBCoordinates = new Vector3(1.19f, 6f, -2f); 
     public static Vector3 customerCCoordinates = new Vector3(-4.19f, 6f, -2f);
     public static Vector3 addReqCoordinates = new Vector3(-2.1f,1.11f,0.1f);
@@ -39,16 +39,16 @@ public class gameflow2 : MonoBehaviour
 
     public static string customerOnA = "n";
     public static string customerOnB = "n";
-    public static string customerOnC = "n";
+    public static string customerOnC = "n";*/
     public static string dishOnA = "none";
     public static string dishOnB = "none";
     public static string dishOnC = "none";
-    public float timeWithoutCustomerOnA = 0;
+    /*public float timeWithoutCustomerOnA = 0;
     public float timeWithoutCustomerOnB = 0;
     public float timeWithoutCustomerOnC = 0;
     public float maxTimeWithoutCustomerA = 2.5f;
     public float maxTimeWithoutCustomerB = 4f;
-    public float maxTimeWithoutCustomerC = 4.5f;
+    public float maxTimeWithoutCustomerC = 4.5f;*/
 
     //chwee kueh
     public static Vector3 steamerACoords = new Vector3(6.58f, 3.493f, 1.574f);
@@ -143,15 +143,15 @@ public class gameflow2 : MonoBehaviour
         initiating = true;
         
         //customer generation
-        customerOnA = "n";
+        /*customerOnA = "n";
         customerOnB = "n";
-        customerOnC = "n";
+        customerOnC = "n";*/
         dishOnA = "none";
         dishOnB = "none";
         dishOnC = "none";
-        timeWithoutCustomerOnA = 0;
+        /*timeWithoutCustomerOnA = 0;
         timeWithoutCustomerOnB = 0;
-        timeWithoutCustomerOnC = 0;
+        timeWithoutCustomerOnC = 0;*/
 
         //chweekueh
         destroySteamA = "n";
@@ -229,7 +229,7 @@ public class gameflow2 : MonoBehaviour
         }
 
         //add time passed without customer at each spot
-        if (customerOnA == "n") {
+        /*if (customerOnA == "n") {
             timeWithoutCustomerOnA += Time.deltaTime;
         }
         if (customerOnB == "n") {
@@ -254,12 +254,12 @@ public class gameflow2 : MonoBehaviour
             generateCustomer(customerCCoordinates);
             customerOnC = "y";
             timeWithoutCustomerOnC = 0;
-        }
+        }*/
 
     }
 
     //select a random customer model to add to counter
-    void generateCustomer(Vector3 cusCoord) {
+    /*void generateCustomer(Vector3 cusCoord) {
         int cusSelector = Random.Range(1, numOfCustomerModels + 1);
         if (cusSelector == uncleModel) {
             Instantiate(uncleObj, cusCoord, uncleObj.rotation);
@@ -270,7 +270,7 @@ public class gameflow2 : MonoBehaviour
         } else if (cusSelector == womanModel) {
             Instantiate(womanObj, cusCoord, womanObj.rotation);
         }
-    }
+    }*/
     
     public void resetClicking() {
         resetClickingChweeKueh();

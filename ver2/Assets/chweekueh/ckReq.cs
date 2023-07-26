@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ckReq : MonoBehaviour
 {
-    public static string destroyA = "n";
-    public static string destroyB = "n";
-    public static string destroyC = "n";
+    public static bool destroyA = false;
+    public static bool destroyB = false;
+    public static bool destroyC = false;
 
     // Start is called before the first frame update
     void Start()
@@ -16,15 +16,15 @@ public class ckReq : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((destroyA == "y") && (transform.position == gameflow2.customerACoordinates + gameflow2.addReqCoordinates)) {
+        if ((destroyA) && (transform.position == customerGenerator.customerACoordinates + customerGenerator.addReqCoordinates)) {
             Destroy (gameObject);
-            destroyA = "n";
-        } else if ((destroyB == "y") && (transform.position == gameflow2.customerBCoordinates + gameflow2.addReqCoordinates)) {
+            destroyA = false;
+        } else if ((destroyB) && (transform.position == customerGenerator.customerBCoordinates + customerGenerator.addReqCoordinates)) {
             Destroy (gameObject);
-            destroyB = "n";
-        } else if ((destroyC == "y") && (transform.position == gameflow2.customerCCoordinates + gameflow2.addReqCoordinates)) {
+            destroyB = false;
+        } else if ((destroyC) && (transform.position == customerGenerator.customerCCoordinates + customerGenerator.addReqCoordinates)) {
             Destroy (gameObject);
-            destroyC = "n";
+            destroyC = false;
         }
     }
 }

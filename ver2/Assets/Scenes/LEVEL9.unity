@@ -6060,6 +6060,7 @@ GameObject:
   - component: {fileID: 1801263455}
   - component: {fileID: 1801263454}
   - component: {fileID: 1801263453}
+  - component: {fileID: 1801263456}
   m_Layer: 0
   m_Name: GAMEMASTER
   m_TagString: Untagged
@@ -6091,14 +6092,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: facf047ba5a22466390cb5bae1ea79e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uncleObj: {fileID: 20705206}
-  ladyObj: {fileID: 1121195556}
-  boyObj: {fileID: 1746956865}
-  womanObj: {fileID: 1094131487}
-  timeWithoutCustomerOnA: 0
-  timeWithoutCustomerOnB: 0
-  timeWithoutCustomerOnC: 0
-  maxTimeWithoutCustomer: 3
 --- !u!4 &1801263455
 Transform:
   m_ObjectHideFlags: 0
@@ -6114,6 +6107,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 57
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1801263456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801263452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84890e4625ad9469daf09e1fea4a0f82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uncleObj: {fileID: 20705206}
+  ladyObj: {fileID: 1121195556}
+  boyObj: {fileID: 1746956865}
+  womanObj: {fileID: 1094131487}
 --- !u!1 &1812893865
 GameObject:
   m_ObjectHideFlags: 0

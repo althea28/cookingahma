@@ -17,13 +17,13 @@ public class dishReq : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((destroyA) && (transform.position == gameflow3.customerACoordinates + gameflow3.addReqCoordinates)) {
+        if ((destroyA) && (transform.position == customerGenerator.customerACoordinates + customerGenerator.addReqCoordinates)) {
             Destroy (gameObject);
             destroyA = false;
-        } else if ((destroyB) && (transform.position == gameflow3.customerBCoordinates + gameflow3.addReqCoordinates)) {
+        } else if ((destroyB) && (transform.position == customerGenerator.customerBCoordinates + customerGenerator.addReqCoordinates)) {
             Destroy (gameObject);
             destroyB = false;
-        } else if ((destroyC) && (transform.position == gameflow3.customerCCoordinates + gameflow3.addReqCoordinates)) {
+        } else if ((destroyC) && (transform.position == customerGenerator.customerCCoordinates + customerGenerator.addReqCoordinates)) {
             Destroy (gameObject);
             destroyC = false;
         }
