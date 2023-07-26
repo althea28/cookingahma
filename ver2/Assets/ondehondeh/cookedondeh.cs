@@ -55,7 +55,6 @@ public class cookedondeh : MonoBehaviour
 
             //click plate
         } else if (isOnPlateA()) {
-            Debug.Log("is on plate A");
             gameflow3.ondehPlateAClicked = true;
 
             //reset

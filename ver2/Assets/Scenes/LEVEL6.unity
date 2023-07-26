@@ -1647,8 +1647,8 @@ GameObject:
   m_Component:
   - component: {fileID: 188205898}
   - component: {fileID: 188205897}
-  - component: {fileID: 188205896}
   - component: {fileID: 188205899}
+  - component: {fileID: 188205900}
   m_Layer: 0
   m_Name: GAMEMASTER
   m_TagString: Untagged
@@ -1656,18 +1656,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &188205896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 188205895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7851ee5684735435bb4bb856b134fd3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &188205897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1711,6 +1699,18 @@ MonoBehaviour:
   ladyObj: {fileID: 1429331071}
   boyObj: {fileID: 2031063210}
   womanObj: {fileID: 651104342}
+--- !u!114 &188205900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188205895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b899595111d0447791bbc369076a71a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &234961412
 PrefabInstance:
   m_ObjectHideFlags: 0
