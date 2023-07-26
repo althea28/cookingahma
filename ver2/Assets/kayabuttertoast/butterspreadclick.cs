@@ -7,8 +7,8 @@ using UnityEngine;
 public class butterspreadclick : MonoBehaviour
 {
 
-    public static string destroyButterA = "n";
-    public static string destroyButterB = "n";
+    public static bool destroyButterA = false;
+    public static bool destroyButterB = false;
 
     // Start is called before the first frame update
     void Start()
@@ -19,13 +19,13 @@ public class butterspreadclick : MonoBehaviour
    // Update is called once per frame
     void Update()
     {
-        if ((destroyButterA == "y") && (transform.position == gameflow.boardACoordinates + gameflow.addButterCoordinates)) {
+        if ((destroyButterA) && (transform.position == gameflow.boardACoordinates + gameflow.addButterCoordinates)) {
             Destroy (gameObject);
-            destroyButterA = "n";
+            destroyButterA = false;
         }
-        if ((destroyButterB == "y") && (transform.position == gameflow.boardBCoordinates + gameflow.addButterCoordinates)) {
+        if ((destroyButterB) && (transform.position == gameflow.boardBCoordinates + gameflow.addButterCoordinates)) {
             Destroy (gameObject);
-            destroyButterB = "n";
+            destroyButterB = false;
         }
     }
 

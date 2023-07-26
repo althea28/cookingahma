@@ -22,7 +22,7 @@ public class customer3 : MonoBehaviour
             Instantiate(ondehReqObj, transform.position + gameflow2.addReqCoordinates, ondehReqObj.rotation);
             dishIndicator(ondehName);
         } else if (dishSelector == pulutDish) { //if pulut hitam
-            Instantiate(pulutReqObj, transform.position + gameflow.addReqCoordinates, pulutReqObj.rotation); 
+            Instantiate(pulutReqObj, transform.position + gameflow2.addReqCoordinates, pulutReqObj.rotation); 
             dishIndicator(pulutName);
         }
     }

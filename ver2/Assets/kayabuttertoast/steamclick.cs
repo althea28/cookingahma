@@ -18,12 +18,12 @@ public class steamclick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((gameflow.destroySteamA == "y") && (transform.position == gameflow.grillACoordinates)) {
+        if ((gameflow.destroySteamA) && (transform.position == gameflow.grillACoordinates)) {
            Destroy (gameObject);
-           gameflow.destroySteamA = "n";
-       } else if ((gameflow.destroySteamB == "y") && (transform.position == gameflow.grillBCoordinates)) {
+           gameflow.destroySteamA = false;
+       } else if ((gameflow.destroySteamB) && (transform.position == gameflow.grillBCoordinates)) {
            Destroy (gameObject);
-           gameflow.destroySteamB = "n";
+           gameflow.destroySteamB = false;
        }
 
     }

@@ -17,10 +17,10 @@ public class customer : MonoBehaviour
     {
         int dishSelector = Random.Range(1,gameflow.numOfDishes + 1); //change to 3 when add egg
         if (dishSelector == toastDish) { //if toast
-            Instantiate(toastReqObj, transform.position + gameflow.addReqCoordinates, toastReqObj.rotation);
+            Instantiate(toastReqObj, transform.position + customerGenerator.addReqCoordinates, toastReqObj.rotation);
             dishIndicator(toastName);
         } else if (dishSelector == eggDish) {
-            Instantiate(eggReqObj, transform.position + gameflow.addReqCoordinates, eggReqObj.rotation);
+            Instantiate(eggReqObj, transform.position + customerGenerator.addReqCoordinates, eggReqObj.rotation);
             dishIndicator(eggName);
         }
     }
@@ -33,12 +33,12 @@ public class customer : MonoBehaviour
 
     void OnMouseDown() {
         //check if toast is finished
-        if ((customersOrder() == toastName) && (gameflow.toastAIsClicked == "y") && (toastclick.isToastAReady == "y")) {
-            toastclick.serveToastA = "y"; //triggers serveA() in toastclick.update()
+        if ((customersOrder() == toastName) && (gameflow.toastAIsClicked) && (toastclick.isToastAReady)) {
+            toastclick.serveToastA = true; //triggers serveA() in toastclick.update()
             successfulServe();
             
-        } else if ((customersOrder() == toastName) && (gameflow.toastBIsClicked == "y") && (toastclick.isToastBReady == "y"))  {
-            toastclick.serveToastB = "y"; //triggers serveB() in toastclick.update()
+        } else if ((customersOrder() == toastName) && (gameflow.toastBIsClicked) && (toastclick.isToastBReady))  {
+            toastclick.serveToastB = true; //triggers serveB() in toastclick.update()
             successfulServe();
             
         } else if ((customersOrder() == eggName) && (gameflow.plateAClicked) && 
@@ -64,44 +64,44 @@ public class customer : MonoBehaviour
     }
 
     void customerReset(Vector3 coords) {
-        if (coords == gameflow.customerACoordinates) {
-            gameflow.customerOnA = "n";
+        if (coords == customerGenerator.customerACoordinates) {
+            customerGenerator.customerOnA = false;
             gameflow.dishOnA = "none";
-        } else if (coords == gameflow.customerBCoordinates) {
-            gameflow.customerOnB = "n";
+        } else if (coords == customerGenerator.customerBCoordinates) {
+            customerGenerator.customerOnB = false;
             gameflow.dishOnB = "none";
-        } else if (coords == gameflow.customerCCoordinates) {
-            gameflow.customerOnC = "n";
+        } else if (coords == customerGenerator.customerCCoordinates) {
+            customerGenerator.customerOnC = false;
             gameflow.dishOnC = "none";
         }
     }
 
     void destroyReq() {
-        if (transform.position == gameflow.customerACoordinates) {
-            toastReq.destroyA = "y";
-        } else if (transform.position == gameflow.customerBCoordinates) {
-            toastReq.destroyB = "y";
-        } else if (transform.position == gameflow.customerCCoordinates) {
-            toastReq.destroyC = "y";
+        if (transform.position == customerGenerator.customerACoordinates) {
+            toastReq.destroyA = true;
+        } else if (transform.position == customerGenerator.customerBCoordinates) {
+            toastReq.destroyB = true;
+        } else if (transform.position == customerGenerator.customerCCoordinates) {
+            toastReq.destroyC = true;
         }
     }
 
     void dishIndicator(string dish) {
-        if (transform.position == gameflow.customerACoordinates) {
+        if (transform.position == customerGenerator.customerACoordinates) {
             gameflow.dishOnA = dish;
-        } else if (transform.position == gameflow.customerBCoordinates) {
+        } else if (transform.position == customerGenerator.customerBCoordinates) {
             gameflow.dishOnB = dish;
-        } else if (transform.position == gameflow.customerCCoordinates) {
+        } else if (transform.position == customerGenerator.customerCCoordinates) {
             gameflow.dishOnC = dish;
         }
     }
 
     string customersOrder() {
-        if (transform.position == gameflow.customerACoordinates) {
+        if (transform.position == customerGenerator.customerACoordinates) {
             return gameflow.dishOnA;
-        } else if (transform.position == gameflow.customerBCoordinates) {
+        } else if (transform.position == customerGenerator.customerBCoordinates) {
             return gameflow.dishOnB;
-        } else if (transform.position == gameflow.customerCCoordinates) {
+        } else if (transform.position == customerGenerator.customerCCoordinates) {
             return gameflow.dishOnC;
         } else {
             return "none"; //need placeholder to ensure non null return

@@ -21,12 +21,12 @@ public class toastloaf : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if (gameflow.toastOnGrillA == "n") {
+        if (!gameflow.toastOnGrillA) {
             Instantiate(toastObj, gameflow.grillACoordinates, toastObj.rotation);
-            gameflow.toastOnGrillA = "y";
-        } else if (gameflow.toastOnGrillB == "n") {
+            gameflow.toastOnGrillA = true;
+        } else if (!gameflow.toastOnGrillB) {
             Instantiate(toastObj, gameflow.grillBCoordinates, toastObj.rotation);
-            gameflow.toastOnGrillB = "y";
+            gameflow.toastOnGrillB = true;
         }
 
         //RESET===

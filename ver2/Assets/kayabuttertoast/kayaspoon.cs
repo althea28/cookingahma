@@ -17,9 +17,9 @@ public class kayaspoon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((gameflow.placeKaya == "y") && (transform.position == downCoords)) {
+        if ((gameflow.placeKaya) && (transform.position == downCoords)) {
             transform.position = upCoords;
-        } else if ((gameflow.placeKaya == "n") && (transform.position == upCoords)) {
+        } else if ((!gameflow.placeKaya) && (transform.position == upCoords)) {
             transform.position = downCoords;
         }
         

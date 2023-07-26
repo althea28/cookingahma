@@ -22,12 +22,12 @@ public class kayabottleclick : MonoBehaviour
     }
 
     void OnMouseDown() {
-        gameflow.placeKaya = "y";
+        gameflow.placeKaya = true;
         
         //RESET====
         gameflow.resetClicksEggs = true;
-        gameflow.toastAIsClicked = "n";
-        gameflow.toastBIsClicked = "n";
-        gameflow.placeButter = "n";
+        gameflow.toastAIsClicked = false;
+        gameflow.toastBIsClicked = false;
+        gameflow.placeButter = false;
     }
 }

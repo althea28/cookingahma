@@ -18,9 +18,9 @@ public class butterknife : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((gameflow.placeButter == "y") && (transform.position == downCoords)) {
+        if ((gameflow.placeButter) && (transform.position == downCoords)) {
             transform.position = upCoords;
-        } else if ((gameflow.placeButter == "n") && (transform.position == upCoords)) {
+        } else if ((!gameflow.placeButter) && (transform.position == upCoords)) {
             transform.position = downCoords;
         }
         

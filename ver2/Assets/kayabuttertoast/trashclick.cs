@@ -19,12 +19,12 @@ public class trashclick : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if (gameflow.toastAIsClicked == "y") {
-            gameflow.trashA = "y";
-            gameflow.toastAIsClicked = "n";
-        } else if (gameflow.toastBIsClicked == "y") {
-            gameflow.trashB = "y";
-            gameflow.toastBIsClicked = "n";
+        if (gameflow.toastAIsClicked) {
+            gameflow.trashA = true;
+            gameflow.toastAIsClicked = false;
+        } else if (gameflow.toastBIsClicked) {
+            gameflow.trashB = true;
+            gameflow.toastBIsClicked = false;
         } else if (gameflow.plateAClicked) {
             gameflow.trashPlateA = true;
             gameflow.plateAClicked = false;
@@ -34,8 +34,8 @@ public class trashclick : MonoBehaviour
         }
 
         //RESET===
-        gameflow.placeKaya = "n"; 
-        gameflow.placeButter = "n";
+        gameflow.placeKaya = false; 
+        gameflow.placeButter = false;
         gameflow.soyaSauceClicked = false;
 
 

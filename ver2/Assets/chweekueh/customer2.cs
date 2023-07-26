@@ -23,7 +23,7 @@ public class customer2 : MonoBehaviour
             Instantiate(ckReqObj, transform.position + gameflow2.addReqCoordinates, ckReqObj.rotation);
             dishIndicator(ckName);
         } else if (dishSelector == rojakDish) {
-            Instantiate(rojakReqObj, transform.position + gameflow.addReqCoordinates, rojakReqObj.rotation); 
+            Instantiate(rojakReqObj, transform.position + gameflow2.addReqCoordinates, rojakReqObj.rotation); 
             dishIndicator(rojakName);
         }
     }

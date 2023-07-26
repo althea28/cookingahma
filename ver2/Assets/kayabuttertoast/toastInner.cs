@@ -10,10 +10,10 @@ public class toastInner : MonoBehaviour
     public Material cookedBreadMat; //
     public Material burnedBreadMat;
 
-    public static string changedToCookedA = "n";
-    public static string changedToCookedB = "n";
-    public static string changedToBurntA = "n";
-    public static string changedToBurntB = "n";
+    public static bool changedToCookedA = false;
+    public static bool changedToCookedB = false;
+    public static bool changedToBurntA = false;
+    public static bool changedToBurntB = false;
 
 
     // Start is called before the first frame update
@@ -25,35 +25,35 @@ public class toastInner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((changedToCookedA == "n") && (toastclick.toastAIsCooked == "y") && 
+        if ((!changedToCookedA) && (toastclick.toastAIsCooked) && 
             (transform.position.x == gameflow.grillACoordinates.x)) {
             GetComponent<MeshRenderer> ().material = cookedBreadMat;
-            changedToCookedA = "y";
-        } else if ((changedToCookedB == "n") && (toastclick.toastBIsCooked == "y") && 
+            changedToCookedA = true;
+        } else if ((!changedToCookedB) && (toastclick.toastBIsCooked) && 
         (transform.position.x == gameflow.grillBCoordinates.x)) {
             GetComponent<MeshRenderer> ().material = cookedBreadMat;
-            changedToCookedB = "y";
+            changedToCookedB = true;
         }
         
-        if ((changedToBurntA == "n") && (toastclick.toastAIsBurnt == "y") && 
+        if ((!changedToBurntA) && (toastclick.toastAIsBurnt) && 
             (transform.position.x == gameflow.grillACoordinates.x)) {
             GetComponent<MeshRenderer> ().material = burnedBreadMat;
-            changedToBurntA = "y";
-        } else if ((changedToBurntB == "n") && (toastclick.toastBIsBurnt == "y") && 
+            changedToBurntA = true;
+        } else if ((!changedToBurntB) && (toastclick.toastBIsBurnt) && 
             (transform.position.x == gameflow.grillBCoordinates.x)) {
             GetComponent<MeshRenderer> ().material = burnedBreadMat;
-            changedToBurntB = "y";
+            changedToBurntB = true;
         }
 
     }
 
     public static void resetA() {
-        changedToCookedA = "n";
-        changedToBurntA = "n";
+        changedToCookedA = false;
+        changedToBurntA = false;
     }
 
     public static void resetB() {
-        changedToCookedB = "n";
-        changedToBurntB = "n";
+        changedToCookedB = false;
+        changedToBurntB = false;
     }
 }

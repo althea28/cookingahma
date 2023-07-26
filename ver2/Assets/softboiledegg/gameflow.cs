@@ -26,21 +26,21 @@ public class gameflow : MonoBehaviour
     public static Vector3 addKayaCoordinates = new Vector3(0.01f, 0.182f, 0.032f);
     public static Vector3 addButterCoordinates = new Vector3(0.005f, 0.247f, 0.129f);
 
-    public static string toastOnGrillA = "n";
-    public static string toastOnGrillB = "n";
-    public static string toastOnBoardA = "n";
-    public static string toastOnBoardB = "n";
+    public static bool toastOnGrillA = false;
+    public static bool toastOnGrillB = false;
+    public static bool toastOnBoardA = false;
+    public static bool toastOnBoardB = false;
     
-    public static string placeKaya = "n"; 
-    public static string placeButter = "n";
+    public static bool placeKaya = false; 
+    public static bool placeButter = false;
 
-    public static string destroySteamA = "n";
-    public static string destroySteamB = "n";
+    public static bool destroySteamA = false;
+    public static bool destroySteamB = false;
     
-    public static string toastAIsClicked = "n";
-    public static string toastBIsClicked = "n";
-    public static string trashA = "n";
-    public static string trashB = "n";
+    public static bool toastAIsClicked = false;
+    public static bool toastBIsClicked = false;
+    public static bool trashA = false;
+    public static bool trashB = false;
 
     //soft boiled egg 
     public static Vector3 steamerACoords = new Vector3(6.044f, 3.385f, 3.55f);
@@ -81,7 +81,7 @@ public class gameflow : MonoBehaviour
 
 
     //customers
-    public static Vector3 customerACoordinates = new Vector3(6.19f, 6f, -2f);
+    /*public static Vector3 customerACoordinates = new Vector3(6.19f, 6f, -2f);
     public static Vector3 customerBCoordinates = new Vector3(1.19f, 6f, -2f); 
     public static Vector3 customerCCoordinates = new Vector3(-4.19f, 6f, -2f);
     public static Vector3 addReqCoordinates = new Vector3(-2.1f,1.11f,0.1f);
@@ -97,18 +97,18 @@ public class gameflow : MonoBehaviour
     public Transform boyObj;
     public Transform womanObj;
 
-    public static string customerOnA = "n";
-    public static string customerOnB = "n";
-    public static string customerOnC = "n";
+    public static bool customerOnA = false;
+    public static bool customerOnB = false;
+    public static bool customerOnC = false;*/
     public static string dishOnA = "none";
     public static string dishOnB = "none";
     public static string dishOnC = "none";
-    public float timeWithoutCustomerOnA = 0;
+    /*public float timeWithoutCustomerOnA = 0;
     public float timeWithoutCustomerOnB = 0;
     public float timeWithoutCustomerOnC = 0;
     public float maxTimeWithoutCustomerA = 2.5f;
     public float maxTimeWithoutCustomerB = 4f;
-    public float maxTimeWithoutCustomerC = 4.5f;
+    public float maxTimeWithoutCustomerC = 4.5f;*/
 
     public static int count = 0;
 
@@ -123,45 +123,45 @@ public class gameflow : MonoBehaviour
         initiating = true; //INITIATES LEVEL DETAILS
         
         //toast
-        toastOnGrillA = "n";
-        toastOnGrillB = "n";
-        toastOnBoardA = "n";
-        toastOnBoardB = "n";
+        toastOnGrillA = false;
+        toastOnGrillB = false;
+        toastOnBoardA = false;
+        toastOnBoardB = false;
 
-        placeKaya = "n";
-        placeButter = "n";
+        placeKaya = false;
+        placeButter = false;
 
-        destroySteamA = "n";
-        destroySteamB = "n";
+        destroySteamA = false;
+        destroySteamB = false;
 
-        toastAIsClicked = "n";
-        toastBIsClicked = "n";
-        trashA = "n";
-        trashB = "n";
+        toastAIsClicked = false;
+        toastBIsClicked = false;
+        trashA = false;
+        trashB = false;
 
-        toastInner.changedToCookedA = "n";
-        toastInner.changedToCookedB = "n";
-        toastInner.changedToBurntA = "n";
-        toastInner.changedToBurntB = "n";
+        toastInner.changedToCookedA = false;
+        toastInner.changedToCookedB = false;
+        toastInner.changedToBurntA = false;
+        toastInner.changedToBurntB = false;
 
-        toastclick.hasKayaOnA = "n";
-        toastclick.hasKayaOnB = "n";
-        toastclick.hasButterOnA = "n";
-        toastclick.hasButterOnB = "n";
+        toastclick.hasKayaOnA = false;
+        toastclick.hasKayaOnB = false;
+        toastclick.hasButterOnA = false;
+        toastclick.hasButterOnB = false;
 
         toastclick.cookingTimeA = 0;
         toastclick.cookingTimeB = 0;
-        toastclick.toastAIsCooked = "n";
-        toastclick.toastBIsCooked = "n";
-        toastclick.toastAIsBurnt = "n";
-        toastclick.toastBIsBurnt = "n";
+        toastclick.toastAIsCooked = false;
+        toastclick.toastBIsCooked = false;
+        toastclick.toastAIsBurnt = false;
+        toastclick.toastBIsBurnt = false;
 
-        toastclick.toastOnBoardAIsCooked = "n";
-        toastclick.toastOnBoardBIsCooked = "n";
-        toastclick.isToastAReady = "n";
-        toastclick.isToastBReady = "n";
-        toastclick.serveToastA = "n";
-        toastclick.serveToastB = "n";
+        toastclick.toastOnBoardAIsCooked = false;
+        toastclick.toastOnBoardBIsCooked = false;
+        toastclick.isToastAReady = false;
+        toastclick.isToastBReady = false;
+        toastclick.serveToastA = false;
+        toastclick.serveToastB = false;
 
         //egg
         eggOnSteamerA = false;
@@ -192,15 +192,15 @@ public class gameflow : MonoBehaviour
         eggs.isBurntB = false;
 
         //customergeneration
-        customerOnA = "n";
-        customerOnB = "n";
-        customerOnC = "n";
+        /*customerOnA = false;
+        customerOnB = false;
+        customerOnC = false;*/
         dishOnA = "none";
         dishOnB = "none";
         dishOnC = "none";
-        timeWithoutCustomerOnA = 0;
+        /*timeWithoutCustomerOnA = 0;
         timeWithoutCustomerOnB = 0;
-        timeWithoutCustomerOnC = 0;
+        timeWithoutCustomerOnC = 0;*/
 
         
         resetClicking();
@@ -220,37 +220,37 @@ public class gameflow : MonoBehaviour
         }
 
         //add time passed without customer at each spot
-        if (customerOnA == "n") {
+        /*if (!customerOnA) {
             timeWithoutCustomerOnA += Time.deltaTime;
         }
-        if (customerOnB == "n") {
+        if (!customerOnB) {
             timeWithoutCustomerOnB += Time.deltaTime;
         }
-        if (customerOnC == "n") {
+        if (!customerOnC) {
             timeWithoutCustomerOnC += Time.deltaTime;
         }
 
         //check how long there is no customer in that position
         if (timeWithoutCustomerOnA > maxTimeWithoutCustomerA) {
             generateCustomer(customerACoordinates);
-            customerOnA = "y";
+            customerOnA = true;
             timeWithoutCustomerOnA = 0;
         }
         if (timeWithoutCustomerOnB > maxTimeWithoutCustomerB) {
             generateCustomer(customerBCoordinates);
-            customerOnB = "y";
+            customerOnB = true;
             timeWithoutCustomerOnB = 0;
         }
         if (timeWithoutCustomerOnC > maxTimeWithoutCustomerC) {
             generateCustomer(customerCCoordinates);
-            customerOnC = "y";
+            customerOnC = true;
             timeWithoutCustomerOnC = 0;
-        }
+        }*/
         
     }
     
     //select a random customer model to add to counter
-    void generateCustomer(Vector3 cusCoord) {
+    /*void generateCustomer(Vector3 cusCoord) {
         int cusSelector = Random.Range(1, numOfCustomerModels + 1);
         if (cusSelector == uncleModel) {
             Instantiate(uncleObj, cusCoord, uncleObj.rotation);
@@ -261,7 +261,7 @@ public class gameflow : MonoBehaviour
         } else if (cusSelector == womanModel) {
             Instantiate(womanObj, cusCoord, womanObj.rotation);
         }
-    }
+    }*/
 
     public Vector3 butterACoordinates() {
         return (boardACoordinates + addButterCoordinates);
@@ -287,10 +287,10 @@ public class gameflow : MonoBehaviour
     }
 
     public void resetClickingToast() {
-        placeKaya = "n"; 
-        placeButter = "n";
-        toastAIsClicked = "n";
-        toastBIsClicked = "n";
+        placeKaya = false; 
+        placeButter = false;
+        toastAIsClicked = false;
+        toastBIsClicked = false;
 
         resetClicksToast = false;
     }
