@@ -4,6 +4,8 @@ using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
 
+/* Part of softboiled egg dish. Instantiates new egg on steamer if possible.
+*/
 public class eggcarton : MonoBehaviour
 {
     public Transform eggsObj;
@@ -21,6 +23,8 @@ public class eggcarton : MonoBehaviour
     }
 
     //to instantiate eggs onto steamer
+    /* Instantiates new egg on steamer if there is space on steamer.
+    */
     void OnMouseDown() {
         if (!gameflow.eggOnSteamerA) { //if there is no eggs on steamer A
             Instantiate(eggsObj, gameflow.steamerACoords, eggsObj.rotation);

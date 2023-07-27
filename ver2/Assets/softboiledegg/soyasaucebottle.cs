@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/* Part of soft-boiled egg dish. Supports:
+ * (i) Adding soya sauce to egg
+ * (ii) Provides visual feedback when soya sauce bottle is clicked
+*/
 public class soyasaucebottle : MonoBehaviour
 {
     private static Vector3 downCoords = new Vector3(1.36f, 3.59f, 1.27f);
@@ -16,6 +19,8 @@ public class soyasaucebottle : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Changes coordinates of bottle after it has been clicked.
+    */
     void Update()
     {
         if ((gameflow.soyaSauceClicked) && (transform.position == downCoords)) {
@@ -25,6 +30,8 @@ public class soyasaucebottle : MonoBehaviour
         }
     }
 
+    /* Indicates in gameflow when soya sauce bottle is clicked. Support addition of soya sauce to eggs.
+    */
     void OnMouseDown() {
         gameflow.soyaSauceClicked = true;
 

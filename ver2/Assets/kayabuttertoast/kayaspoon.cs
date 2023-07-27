@@ -4,6 +4,9 @@ using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
 
+/* class butterknife shows visual feedback when block of butter is clicked.
+*/
+
 public class kayaspoon : MonoBehaviour
 {
     private static Vector3 downCoords = new Vector3(0.276f, 4.473f, 1.559f);
@@ -15,6 +18,8 @@ public class kayaspoon : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Raises kaya spoon up and down when kaya bottle is clicked.
+    */
     void Update()
     {
         if ((gameflow.placeKaya) && (transform.position == downCoords)) {

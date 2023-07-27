@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*Part of chwee kueh dish. Provides visual feedback when chai poh bowl has been clicked
+*/
 public class cpspoon : MonoBehaviour
 {
     private Vector3 downCoords = gameflow2.cpSpoonCoords;
@@ -14,6 +15,8 @@ public class cpspoon : MonoBehaviour
     }
 
     // Update is called once per frame
+    /*Raises and lowers spoon when chai poh bowl has been clicked.
+    */
     void Update()
     {
        if (downCoords != gameflow2.cpSpoonCoords) { //initiating bug. dont delete

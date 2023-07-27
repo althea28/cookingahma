@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Attached to dish req object. Destroys when customer has been successfully served.
+*/
 public class dishReq : MonoBehaviour
 {
     public static bool destroyA = false;
@@ -15,6 +16,8 @@ public class dishReq : MonoBehaviour
     }
 
     // Update is called once per frame
+    /*Destroys dish req when customer has been successfully served.
+    */
     void Update()
     {
         if ((destroyA) && (transform.position == customerGenerator.customerACoordinates + customerGenerator.addReqCoordinates)) {

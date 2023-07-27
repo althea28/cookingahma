@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/* Part of rojak dish. Supports cutting ingredients mechanism
+*/
 public class knifeholder : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -18,6 +19,8 @@ public class knifeholder : MonoBehaviour
         
     }
 
+    /*Indicates in gameflow2 that knife is clicked. Supports cutting ingredients mechanism
+    */
     void OnMouseDown() {
         gameflow2.knifeClicked = true;
 

@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/*Part of chwee kueh dish. Destroys chai poh added to raw chwee kueh when trashing dish.
+*/
 public class undercookedChaiPoh : MonoBehaviour
 {
     public static bool trashChaiPohA = false;
@@ -16,6 +17,8 @@ public class undercookedChaiPoh : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Destroys chai poh added to raw chwee kueh when trashing dish.
+    */
     void Update()
     {
         if ((trashChaiPohA) && (isOnPlateA())) {

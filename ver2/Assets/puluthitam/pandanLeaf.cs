@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/*Part of pulut hitam dish. Destroys pandan leaf when moving pulut hitam from pot to bowl.
+*/
 public class pandanLeaf : MonoBehaviour
 {
     public static bool destroyA = false;
@@ -17,6 +18,8 @@ public class pandanLeaf : MonoBehaviour
     }
 
     // Update is called once per frame
+    /*  Destroys pandan leaf when moving pulut hitam from pot to bowl.
+    */
     void Update()
     {
         if ((destroyA) && (isOnPotA())) {

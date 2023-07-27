@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/*Part of pulut hitam dish. Destroys milk during trashing/serving mechanism.
+*/
 public class milk : MonoBehaviour
 {
     public static bool destroyA = false;
@@ -17,6 +18,8 @@ public class milk : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Destroys milk during trashing/serving mechanism.
+    */
     void Update()
     {
         if ((destroyA) && (isOnBowlA())) {

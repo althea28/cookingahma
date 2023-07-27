@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
+/* Part of rojak dish. Supports:
+ * (i) Moving tofu from board to bowl.
+ * (ii) Trashing tofu.
+*/
 
 public class cuttofu : MonoBehaviour
 {
@@ -16,6 +20,8 @@ public class cuttofu : MonoBehaviour
     }
 
     // Update is called once per frame
+    /*Destroys cut tofu when (i) trashing (ii) moving from board to bowl
+    */
     void Update()
     {   
         //check if trashing
@@ -32,6 +38,10 @@ public class cuttofu : MonoBehaviour
         }
     }
 
+    /*Supports:
+     * (i) Moving ingredient from board to bowl
+     * (ii) Trashing mechanism 
+     */
     void OnMouseDown() {
         //move to bowls
         if ((isOnBoardA()) && 
@@ -81,6 +91,9 @@ public class cuttofu : MonoBehaviour
     }
 
 
+    /* Checks whether ingrdeient can be added to any bowl.
+     * @return bowl coordinates where tofu can be moved to.
+    */
     Vector3 getBowlCoords() {
         if (gameflow2.stepOnBowlA == ingredientStep) {
             gameflow2.stepOnBowlA ++;

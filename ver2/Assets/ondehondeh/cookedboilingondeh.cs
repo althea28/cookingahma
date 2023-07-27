@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/*Part of ondeh ondeh dish. Destroys cooked boiling ondeh when moving from steamer to plate.
+*/
 public class cookedboilingondeh : MonoBehaviour
 {
     public static bool destroyA = false;
@@ -16,6 +17,8 @@ public class cookedboilingondeh : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Destroys cooked boiling ondeh when moving from steamer to plate.
+    */
     void Update()
     {
         if ((destroyA) && (isOnSteamerA())) {

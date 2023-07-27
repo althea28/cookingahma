@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/* Part of ondeh ondeh dish. Instantiates boiilng ondeh ondeh in steamer.
+*/
 public class ondehdough : MonoBehaviour
 {
     public Transform steamObj;
@@ -19,7 +20,9 @@ public class ondehdough : MonoBehaviour
     {
         
     }
-
+    
+    /*  Instantiates boiilng ondeh ondeh in steamer when sugar cube has been added and there is space on steamer.
+    */
     void OnMouseDown() {
         if ((sugarbowl.sugarOnDough) && (!gameflow3.doughOnSteamerA)) {
             sugarcube.destroy = true;

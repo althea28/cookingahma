@@ -4,6 +4,9 @@ using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
 
+/* Manages the material change of toast when its on the grill, to show that it is cooked or burnt.
+*/
+
 public class toastInner : MonoBehaviour
 {
     
@@ -23,6 +26,8 @@ public class toastInner : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Changes material of toast to reflect if toast has been cooked or burnt. 
+    */
     void Update()
     {
         if ((!changedToCookedA) && (toastclick.toastAIsCooked) && 
@@ -47,11 +52,15 @@ public class toastInner : MonoBehaviour
 
     }
 
+    /* Resets variables of toast on position A of grill so that new toast can be cooked there. 
+    */
     public static void resetA() {
         changedToCookedA = false;
         changedToBurntA = false;
     }
 
+    /* Resets variables of toast on position B of grill so that new toast can be cooked there. 
+    */
     public static void resetB() {
         changedToCookedB = false;
         changedToBurntB = false;

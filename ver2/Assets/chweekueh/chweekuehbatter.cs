@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/* Part of chweekueh dish. Supports:
+ * (i) Cooking mechanism of chwee kueh batter
+ * (ii) Moving chwee kueh batter from steamer to plate
+*/
 public class chweekuehbatter : MonoBehaviour
 {
     //time spent on steamer
@@ -36,6 +39,8 @@ public class chweekuehbatter : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Manages cooking mechanism of chwee kueh. Tracks time spent on steamer and show visual feedback when it is cooked or burnt.
+    */
     void Update()
     {
         //update how long ck have been on steamer
@@ -65,7 +70,9 @@ public class chweekuehbatter : MonoBehaviour
             isBurntB = true;
         }
     }
-
+    
+    /* Moves chwee kueh from steamer to plate, if there is space on the plates.
+    */
     void OnMouseDown() {
         gameflow2.resetClicks = true;
 
@@ -96,10 +103,12 @@ public class chweekuehbatter : MonoBehaviour
 
     }
     
+    /* Resets variables and destroy steam of position A of steamer, so new chwee kueh can be instantiated there.
+    */
     void resetA() { //to destroy steam, reset timer, cooking checks, destroy ck
         //to trigger destroying steam
         if (isCookedA) {
-            gameflow2.destroySteamA = "y"; 
+            gameflow2.destroySteamA = true;
         }
         if (isBurntA) {
             burntLayer.destroyA = true;
@@ -112,10 +121,12 @@ public class chweekuehbatter : MonoBehaviour
 
     }
 
+    /* Resets variables and destroy steam of position B of steamer, so new chwee kueh can be instantiated there.
+    */
     void resetB() { //to destroy steam, reset timer, cooking checks, destroy ck
         //to trigger destroying steam
         if (isCookedB) {
-            gameflow2.destroySteamB = "y";  
+            gameflow2.destroySteamB = true;  
         }
         if (isBurntB) {
             burntLayer.destroyB = true;
@@ -129,6 +140,10 @@ public class chweekuehbatter : MonoBehaviour
     }
 
     //get new coords for egg transfer (no need to know where egg is rn)
+    /* Get plate coordinates to instantied chwee kueh on plates.
+     * @param cookCheck to signal whether to return raw/cooked/burnt chwee kueh coordinates
+     * @return appropriate coordinates to instantiate chwee kueh at when moving from steamer to plates
+    */
     Vector3 transferCkCoords(string cookCheck) {
         if (!gameflow2.ckOnPlateA) { //transf to plate A
             gameflow2.ckOnPlateA = true;
@@ -146,6 +161,10 @@ public class chweekuehbatter : MonoBehaviour
     }
 
     //adjusts ck coordinates
+    /* Returns appropriate model coordinates to instantiate chwee kueh on plates.
+     * @param cookCheck to signal whether to return raw/cooked/burnt chwee kueh coordinates
+     * @return appropriate coordinates to instantiate chwee kueh at when moving from steamer to plates
+     */
     Vector3 adjustCkCoords(string cookCheck) {
         if (cookCheck == "undercooked") {
             return gameflow2.addUndercookedCKCoords;
@@ -167,7 +186,8 @@ public class chweekuehbatter : MonoBehaviour
     Vector3 newSteamCoords() {
         return transform.position;
     }
-
+    /* Checks whether there is space on the plates to move the chwee kueh to.
+    */
     bool emptySpaceOnPlates() {
         if ((!gameflow2.ckOnPlateA) || (!gameflow2.ckOnPlateB)) {
             return true;

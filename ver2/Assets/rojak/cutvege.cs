@@ -4,6 +4,11 @@ using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
 
+/* Part of rojak dish. Supports:
+ * (i) Moving vegetables from board to bowl.
+ * (ii) Trashing vegetables.
+*/
+
 public class cutvege : MonoBehaviour
 {
     public Transform platedVegeObj;
@@ -16,6 +21,8 @@ public class cutvege : MonoBehaviour
     }
 
     // Update is called once per frame
+    /*Destroys cut vegetables when (i) trashing (ii) moving from board to bowl
+    */
     void Update()
     {
 
@@ -34,6 +41,10 @@ public class cutvege : MonoBehaviour
         
     }
 
+    /*Supports:
+     * (i) Moving ingredient from board to bowl
+     * (ii) Trashing mechanism 
+     */
     void OnMouseDown() {
         //move to bowls
         if ((isOnBoardA()) && 
@@ -82,6 +93,9 @@ public class cutvege : MonoBehaviour
         gameflow2.resetClicksChweeKueh = true;
     }
 
+    /* Checks whether ingrdeient can be added to any bowl.
+     * @return bowl coordinates where vegetables can be moved to.
+    */
     Vector3 getBowlCoords() {
         if (gameflow2.stepOnBowlA == ingredientStep) {
             gameflow2.stepOnBowlA ++;

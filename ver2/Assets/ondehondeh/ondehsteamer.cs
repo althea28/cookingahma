@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/*Part of ondeh ondeh dish. Supports:
+ * (i) Cooking mechanism of ondeh ondeh in steamer 
+ * (ii) Moving ondeh ondeh from steamer to plate
+*/
 public class ondehsteamer : MonoBehaviour
 {
     public static bool startCookingA = false;
@@ -39,6 +42,8 @@ public class ondehsteamer : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Tracks time that ondeh ondeh has spent on steamer. Show changes when ondeh ondeh is cooked/burnt.
+    */
     void Update()
     {        
         //update times
@@ -80,6 +85,8 @@ public class ondehsteamer : MonoBehaviour
 
     }
 
+    /* Moves ondeh ondeh from steamer to plate.
+    */
     void OnMouseDown() {
         
         //move from steamer A to plate
@@ -119,7 +126,9 @@ public class ondehsteamer : MonoBehaviour
         gameflow3.resetClicks = true;
 
     }
-
+    
+    /* Checks if ondeh ondeh is raw/cooked/burnt. Instantiate the according model on the plate.
+    */
     void checkCookingA() {
             if (hasBurntA) { //burnt
                 overcookedboilingondeh.destroyA = true;
@@ -148,7 +157,8 @@ public class ondehsteamer : MonoBehaviour
     }
 
 
-
+    /* Reset all variables and destroy steam on steamer A, so that new ondeh ondeh can be added there.
+    */
     void resetA() {
         ondehsteam.destroyA = true;
         
@@ -158,6 +168,9 @@ public class ondehsteamer : MonoBehaviour
         hasBurntA = false;
         cookingTimeA = 0;
     }
+    
+    /* Reset all variables and destroy steam on steamer B, so that new ondeh ondeh can be added there.
+    */
     void resetB() {
         ondehsteam.destroyB = true;
         
@@ -168,6 +181,10 @@ public class ondehsteamer : MonoBehaviour
         cookingTimeB = 0;
     }
 
+    /* Return coordinates for ondeh ondeh to be instantiated on plates.
+     * @param status indicates which coordinates should be returned based on if ondeh ondeh is raw/cooked/burnt
+     * @return coordinates where ondeh ondeh should be instantiated at.
+    */
     Vector3 getPlateCoords(string status) {
         Vector3 coords = new Vector3(0,0,0);
         if (status == "burnt") {
@@ -199,17 +216,27 @@ public class ondehsteamer : MonoBehaviour
         }
         return coords;
     }
+
+    /*Indicate in gameflow3 that ondeh ondeh on plate A is cooked. 
+     * Used again when checking if ondeh ondeh is cooked correctly during serving mechanism.
+    */
     void indicateCookedA(string status) {
         if (status == "cooked") {
             gameflow3.ondehOnACooked = true;
         }
     }
+
+    /*Indicate in gameflow3 that ondeh ondeh on plate B is cooked. 
+     * Used again when checking if ondeh ondeh is cooked correctly during serving mechanism.
+    */
     void indicateCookedB(string status) {
             if (status == "cooked") {
                 gameflow3.ondehOnBCooked = true;
             }
     }
-
+    
+    /*Checks if there is space on the plates for ondeh ondeh to be moved to.
+    */
     bool canMoveToPlate() {
         return !gameflow3.ondehOnPlateA || !gameflow3.ondehOnPlateB;
     }

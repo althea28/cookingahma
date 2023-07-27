@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/* Part of rojak dish. Supports:
+ * (i) Moving fruit from board to bowl.
+ * (ii) Trashing fruit.
+*/
 public class cutfruits : MonoBehaviour
 {
     public Transform platedFruitsObj;
@@ -16,6 +19,8 @@ public class cutfruits : MonoBehaviour
     }
 
     // Update is called once per frame
+    /*Destroys cut fruit when (i) trashing (ii) moving from board to bowl
+    */
     void Update()
     {
                 
@@ -33,7 +38,11 @@ public class cutfruits : MonoBehaviour
         }
         
     }
-
+    
+    /*Supports:
+     * (i) Moving ingredient from board to bowl
+     * (ii) Trashing mechanism 
+     */
     void OnMouseDown() {
 
         //move to bowls
@@ -83,6 +92,9 @@ public class cutfruits : MonoBehaviour
         gameflow2.resetClicksChweeKueh = true;
     }
     
+    /* Checks whether ingrdeient can be added to any bowl.
+     * @return bowl coordinates where fruits can be moved to.
+    */
     Vector3 getBowlCoords() {
         if (gameflow2.stepOnBowlA == ingredientStep) {
             gameflow2.stepOnBowlA ++;

@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Destroys dish req object after a customer is successfully served.
+*/
 public class toastReq : MonoBehaviour
 {
     public static bool destroyA = false;
@@ -14,6 +15,9 @@ public class toastReq : MonoBehaviour
     }
 
     // Update is called once per frame
+
+    /* Destroys dish request model
+    */
     void Update()
     {
         if ((destroyA) && (transform.position == customerGenerator.customerACoordinates + customerGenerator.addReqCoordinates)) {

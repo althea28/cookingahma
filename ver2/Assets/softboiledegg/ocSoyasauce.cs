@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/* Part of soft boiled egg dish. Supports trashing and serving mechanism of this dish.
+*/
 public class ocSoyasauce : MonoBehaviour
 {
     public static bool trashSoyaA = false;
@@ -16,6 +17,8 @@ public class ocSoyasauce : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Destroys soya sauce object added to egg.
+    */
     void Update()
     {
         if ((trashSoyaA) && (isOnPlateA())) {

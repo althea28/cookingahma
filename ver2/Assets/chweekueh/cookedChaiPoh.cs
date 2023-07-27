@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/* Part of chwee kueh dish. Destroys chai poh when trashing or serving dish.
+*/
 public class cookedChaiPoh : MonoBehaviour
 {
     public static bool trashChaiPohA = false;
@@ -16,6 +17,8 @@ public class cookedChaiPoh : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Destroy chai poh when trashing or serving the dish.
+    */
     void Update()
     {
         if ((trashChaiPohA) && (isOnPlateA())) {

@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/* Part of chwee kueh dish. Destroys burnt layer when moving chwee kueh from steamer to plate.
+*/
 public class burntLayer : MonoBehaviour
 {
 
@@ -17,6 +18,8 @@ public class burntLayer : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Destroys burnt layer when moving burnt chwee kueh from steamer to dish.
+    */
     void Update()
     {
         if ((destroyA) && (isOnA())) {

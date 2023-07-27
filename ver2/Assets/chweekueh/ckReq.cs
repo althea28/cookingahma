@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Dish request attached to customers. Supports destruction of request after a successful serve to customer.
+*/
 public class ckReq : MonoBehaviour
 {
     public static bool destroyA = false;
@@ -14,6 +15,8 @@ public class ckReq : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Destroys request object
+    */
     void Update()
     {
         if ((destroyA) && (transform.position == customerGenerator.customerACoordinates + customerGenerator.addReqCoordinates)) {

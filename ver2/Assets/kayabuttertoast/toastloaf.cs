@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/* Instantiates new toast on grill if possible.
+*/
 public class toastloaf : MonoBehaviour
 {
     public Transform toastObj;
@@ -20,6 +21,8 @@ public class toastloaf : MonoBehaviour
         
     }
 
+    /* Checks if there is space on the grill where new toast can be instantiated
+    */
     void OnMouseDown() {
         if (!gameflow.toastOnGrillA) {
             Instantiate(toastObj, gameflow.grillACoordinates, toastObj.rotation);

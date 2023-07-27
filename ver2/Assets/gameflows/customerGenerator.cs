@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/* customerGenerator class repeatedly generates customers for all levels.
+*/
+
 public class customerGenerator : MonoBehaviour
 {
     public static int numOfDishes = 1;
@@ -38,6 +41,8 @@ public class customerGenerator : MonoBehaviour
 
 
     // Start is called before the first frame update
+    /* Resets variables at the start of each level.
+    */
     void Start()
     {
         customerOnA = false;
@@ -52,6 +57,9 @@ public class customerGenerator : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Tracks the time where there is no customer at a coordinates.
+     * Generates a new customer at each spot after a specified time is exceeded.
+     */
     void Update()
     {
         if (!customerOnA) {
@@ -82,7 +90,10 @@ public class customerGenerator : MonoBehaviour
         }
 
     }
-
+    
+    /* Selects a random customer model to generate at a coordinate.
+     * @param cusCoord coordinates where the customer needs to be generated.
+    */
     void generateCustomer(Vector3 cusCoord) {
         int cusSelector = Random.Range(1, numOfCustomerModels + 1);
         if (cusSelector == uncleModel) {

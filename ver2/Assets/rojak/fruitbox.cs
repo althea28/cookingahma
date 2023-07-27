@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/* Part of rojak dish. Instantiate precut fruits onto board if possible
+*/
 public class fruitbox : MonoBehaviour
 {
     public Transform precutFruitsObj;
@@ -19,7 +20,9 @@ public class fruitbox : MonoBehaviour
     {
 
     }
-
+    
+    /* Instantiates precut fruits onto board if there is space on the boards.
+    */
     void OnMouseDown() {
         gameflow2.resetClicks = true; 
 

@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/* Part of ondeh ondeh dish. Supports:
+ * (i) Adding coconut flakes to dish
+ * (ii) Trashing and serving mechanism of dish
+*/
 public class cookedondeh : MonoBehaviour
 {
     public Transform coconutObj;
@@ -15,6 +18,8 @@ public class cookedondeh : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Destroys ondeh ondeh when trashing or serving
+    */
     void Update()
     {
         if ((gameflow3.destroyOndehA) && (isOnPlateA())) {
@@ -43,6 +48,10 @@ public class cookedondeh : MonoBehaviour
 
     }
 
+    /* Supports:
+    * (i) Adding coconut flakes to ondeh ondeh
+    * (ii) Trashing or serving mechanism
+    */
     void OnMouseDown() {
         //adding coconut
         if ((gameflow3.coconutClicked) && (noCoconutOnPlate())) {
@@ -72,12 +81,16 @@ public class cookedondeh : MonoBehaviour
         gameflow3.resetClicksPulut = true;
     }
 
+    /*Check if coconut flakes has been added to plate A. If it has, destroy coconut flakes too. Supports trashing mechanism
+    */
     void checkCoconutA() {
         if (gameflow3.coconutOnA) {
             cookedcoconut.destroyA = true;
             gameflow3.coconutOnA = false;
         }
     }
+    /*Check if coconut flakes has been added to plate B. If it has, destroy coconut flakes too. Supports trashing mechanism
+    */
     void checkCoconutB() {
         if (gameflow3.coconutOnB) {
             cookedcoconut.destroyB = true;
@@ -85,17 +98,23 @@ public class cookedondeh : MonoBehaviour
         }
     }
 
-
+    /*Reset variables on plate A so that new ondeh ondeh can be moved there.
+    */
     void resetA() {
         gameflow3.ondehOnPlateA = false;
         gameflow3.ondehOnACooked = false;
     }
+    /*Reset variables on plate B so that new ondeh ondeh can be moved there.
+    */
     void resetB() {
         gameflow3.ondehOnPlateB = false;
         gameflow3.ondehOnBCooked = false;
     }
 
-
+    /*Indicate in gameflow3 that coconut has already been added. In order to:
+     * (i) prevent repeated addition of coconut flakes
+     * (ii) check if dish has been prepared correctly during serving mechanism
+    */
     void addedCoconut() {
         if (isOnPlateA()) {
             gameflow3.coconutOnA = true;
@@ -103,7 +122,9 @@ public class cookedondeh : MonoBehaviour
             gameflow3.coconutOnB = true;
         }
     }
-
+    
+    /*Checks if coconut flakes has already been added to the ondeh ondeh
+    */
     bool noCoconutOnPlate() {
         if (isOnPlateA()) {
             return !gameflow3.coconutOnA;

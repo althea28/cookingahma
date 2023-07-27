@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/* Part of ondeh ondeh dish. Destroys coconut flakes when trashing or serving dish.
+*/
 public class cookedcoconut : MonoBehaviour
 {
     public static bool destroyA = false;
@@ -16,6 +17,8 @@ public class cookedcoconut : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Destroys coconut flakes when trashign or serving this dish.
+    */
     void Update()
     {
        if ((destroyA) && (isOnPlateA())) {

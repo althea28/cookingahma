@@ -4,6 +4,14 @@ using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
 
+/* gameflow3 class is attached to GAMEMASTER object in levels 7 to 9
+ * gameflow3 supports the serving of (i) ondeh ondeh and (ii) pulut hitam. 
+ * gameflow3 class:
+ * (i) holds the coordinates for ingredients and dishes 
+ * (ii) resets variables so that dishes can be repeatedly served
+ * (iii) aids in interactions between different scripts
+*/
+
 public class gameflow3 : MonoBehaviour
 {
     //sticky clicks:  ondeh: coconutClicked, ondehPlateAClicked, ondehPlateBClicked
@@ -22,34 +30,9 @@ public class gameflow3 : MonoBehaviour
     public static bool resetClicksPulut = false;
 
     //customer generation
-    /*public static Vector3 customerACoordinates = new Vector3(6.19f, 6f, -2f);
-    public static Vector3 customerBCoordinates = new Vector3(1.19f, 6f, -2f); 
-    public static Vector3 customerCCoordinates = new Vector3(-4.19f, 6f, -2f);
-    public static Vector3 addReqCoordinates = new Vector3(-2.1f,1.11f,0.1f);
-    
-    private int numOfCustomerModels = 4;
-    private int uncleModel = 1;
-    private int ladyModel = 2;
-    private int boyModel = 3;
-    private int womanModel = 4;
-
-    public Transform uncleObj;
-    public Transform ladyObj;
-    public Transform boyObj;
-    public Transform womanObj;
-
-    public static bool customerOnA = false;
-    public static bool customerOnB = false;
-    public static bool customerOnC = false;*/
     public static string dishOnA = "none";
     public static string dishOnB = "none";
     public static string dishOnC = "none";
-    /*public float timeWithoutCustomerOnA = 0;
-    public float timeWithoutCustomerOnB = 0;
-    public float timeWithoutCustomerOnC = 0;
-    public float maxTimeWithoutCustomerA = 2.5f;
-    public float maxTimeWithoutCustomerB = 4f;
-    public float maxTimeWithoutCustomerC = 4.5f;*/
 
     //ondeh
     public static Vector3 plateACoords = new Vector3(4.605f, 3.115f, 3.643f);
@@ -124,6 +107,8 @@ public class gameflow3 : MonoBehaviour
 
 
     // Start is called before the first frame update
+    /** Resets all variables when every level starts
+    */
     void Start()
     {
 
@@ -132,16 +117,9 @@ public class gameflow3 : MonoBehaviour
         //stats
         customersServed = 0;
 
-        //customer generation
-        /*customerOnA = false;
-        customerOnB = false;
-        customerOnC = false;*/
         dishOnA = "none";
         dishOnB = "none";
         dishOnC = "none";
-        /*timeWithoutCustomerOnA = 0;
-        timeWithoutCustomerOnB = 0;
-        timeWithoutCustomerOnC = 0;*/
 
         //ondeh
         doughOnSteamerA = false;
@@ -195,56 +173,18 @@ public class gameflow3 : MonoBehaviour
             resetClicks = false;
         }
         
-        /*//add time passed without customer at each spot
-        if (!customerOnA) {
-            timeWithoutCustomerOnA += Time.deltaTime;
-        }
-        if (!customerOnB) {
-            timeWithoutCustomerOnB += Time.deltaTime;
-        }
-        if (!customerOnC) {
-            timeWithoutCustomerOnC += Time.deltaTime;
-        }
-
-        //check how long there is no customer in that position
-        if (timeWithoutCustomerOnA > maxTimeWithoutCustomerA) {
-            generateCustomer(customerACoordinates);
-            customerOnA = true;
-            timeWithoutCustomerOnA = 0;
-        }
-        if (timeWithoutCustomerOnB > maxTimeWithoutCustomerB) {
-            generateCustomer(customerBCoordinates);
-            customerOnB = true;
-            timeWithoutCustomerOnB = 0;
-        }
-        if (timeWithoutCustomerOnC > maxTimeWithoutCustomerC) {
-            generateCustomer(customerCCoordinates);
-            customerOnC = true;
-            timeWithoutCustomerOnC = 0;
-        }*/
-
     }
     
-    /*//select a random customer model to add to counter
-    void generateCustomer(Vector3 cusCoord) {
-        int cusSelector = Random.Range(1, numOfCustomerModels + 1);
-        if (cusSelector == uncleModel) {
-            Instantiate(uncleObj, cusCoord, uncleObj.rotation);
-        } else if (cusSelector == ladyModel) {
-            Instantiate(ladyObj, cusCoord, ladyObj.rotation);
-        } else if (cusSelector == boyModel) {
-            Instantiate(boyObj, cusCoord, boyObj.rotation);
-        } else if (cusSelector == womanModel) {
-            Instantiate(womanObj, cusCoord, womanObj.rotation);
-        }
-    }*/
-
+    /** Resets variables of sticky clicks for ondeh ondeh dish
+    */
     void resetClickingOndeh() {
         coconutClicked = false;
         ondehPlateAClicked = false;
         ondehPlateBClicked = false;
     }
 
+    /** Resets variables of sticky clicks for pulut hitam dish
+    */
     void resetClickingPulut(){
         milkIsClicked = false;
         bowlAClicked = false;

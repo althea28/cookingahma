@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/*Part of pulut hitam dish. Supports:
+ * (i) cooking mechanism of dish
+ * (ii) Moving pulut hitam from pot to bowl
+*/
 public class pot : MonoBehaviour
 {
     public Transform cookedCookingPulutObj;
@@ -42,6 +45,8 @@ public class pot : MonoBehaviour
     }
 
     // Update is called once per frame
+    /*Tracks time pulut hitam spends in the pot. Shows changes according to if it is cooked/burnt
+    */
     void Update()
     {
         //update cooking times
@@ -85,7 +90,9 @@ public class pot : MonoBehaviour
         }
 
     }
-
+    
+    /* Supports moving pulut hitam from pot to bowl
+    */
     void OnMouseDown() {
         if ((isPotA()) && (canMoveToBowl()) && (gameflow3.potAStep > stepToStartCooking)) {
 
@@ -106,7 +113,9 @@ public class pot : MonoBehaviour
         //reset
         gameflow3.resetClicks = true;
     }
-
+    
+    /*Checks if pulut hitam in pot A is raw/cooked/burnt and instantiate models in bowls accordingly
+    */
     void checkCookingA() {
         if (hasBurnedA) { //if dish is burnt
             burntCookingPulut.destroyA = true;
@@ -125,6 +134,8 @@ public class pot : MonoBehaviour
             Instantiate(rawPulutObj, getBowlCoords() + gameflow3.addPulutCoords, rawPulutObj.rotation);
         }
     }
+    /*Checks if pulut hitam in pot B is raw/cooked/burnt and instantiate models in bowls accordingly
+    */
     void checkCookingB() {
         if (hasBurnedB) {
             burntCookingPulut.destroyB = true;
@@ -142,8 +153,8 @@ public class pot : MonoBehaviour
         }
     }
 
-
-
+    /*Resets variables and destroy items in pot A so that new pulut hitam can be cooked here.
+    */
     void resetA() {
         gameflow3.potAStep = 1;
         isCookingA = false;
@@ -154,6 +165,9 @@ public class pot : MonoBehaviour
         pandanLeaf.destroyA = true;
         pulutSteam.destroyA = true;
     }
+    
+    /*Resets variables and destroy items in pot B so that new pulut hitam can be cooked here.
+    */
     void resetB() {
         gameflow3.potBStep = 1;
         isCookingB = false;
@@ -166,7 +180,8 @@ public class pot : MonoBehaviour
 
     }
 
-
+    /*Get coordinates of bowl where pulut hitam should be instantiated
+    */
     Vector3 getBowlCoords() {
         if (!gameflow3.bowlAOccupied) {
             gameflow3.bowlAOccupied = true;
@@ -176,7 +191,10 @@ public class pot : MonoBehaviour
             return gameflow3.bowlBCoords;
         }
     }
-
+    
+    /*If pulut hitam is cooked, indicate in gameflow3. 
+    * Used again during serving mechanism to check if dish is prepared correctly.
+    */
     void indicateCooked() {
         if (!gameflow3.bowlAOccupied) {
             gameflow3.bowlACooked = true;
@@ -184,7 +202,9 @@ public class pot : MonoBehaviour
             gameflow3.bowlBCooked = true;
         }
     }
-
+    
+    /*Check if there is space in bowls to move pulut hitam to
+    */
     bool canMoveToBowl() {
         return !gameflow3.bowlAOccupied || !gameflow3.bowlBOccupied;
     }

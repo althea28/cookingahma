@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/* Part of rojak dish. Supports:
+ * (i) Adding sauce
+ * (ii) Serving mechanism 
+*/
 public class bowl : MonoBehaviour
 {
     public Transform sauceObj;
@@ -19,6 +22,10 @@ public class bowl : MonoBehaviour
     {  
     }
 
+    /* Supports:
+     * (i) Adding sauce
+     * (ii) Serving mechanism by checking dish is complete
+    */
     void OnMouseDown() {
         if ((gameflow2.sauceClicked) && (getCurrentStep() == gameflow2.stepPlateWithTofu)) { //adding sauce
             Instantiate(sauceObj, transform.position, sauceObj.rotation);
@@ -50,7 +57,9 @@ public class bowl : MonoBehaviour
         //RESET
         gameflow2.resetClicksChweeKueh = true;
     }
-
+    
+    /*Indicates in gameflow that this bowl is clicked. Supports serving mechanism
+    */
     void clickBowl(){
         if (isBowlA()) {
             gameflow2.bowlAClicked = true;
@@ -71,7 +80,10 @@ public class bowl : MonoBehaviour
     bool isBowlB() {
         return transform.position == gameflow2.bowlBCoords;
     }
-
+    
+    /* Get current step that the bowl is on.
+     * @return the current step that the bowl is on, i.e. what has already been added to the bowl.
+    */
     int getCurrentStep() {
         if (transform.position == gameflow2.bowlACoords) { //is bowl A
             return gameflow2.stepOnBowlA;
@@ -79,7 +91,9 @@ public class bowl : MonoBehaviour
             return gameflow2.stepOnBowlB;
         }
     }
-
+    
+    /* Update in gameflow when the step the bowl is on is changed.
+    */
     void nextStep() {
         if (transform.position == gameflow2.bowlACoords) { //is bowl A
             gameflow2.stepOnBowlA ++;

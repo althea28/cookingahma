@@ -2,7 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
+/** customer2 class is attached to all customers from levels 4 to 6. 
+ * customer2 supports:
+ * (i) randomly generating a dish request for each customer
+ * (ii) serving a correct dish to a customer
+ * (iii) resetting variables in class gameflow and updating game statistics after every successful serving
+ */
 
 public class customer2 : MonoBehaviour
 {
@@ -16,6 +21,8 @@ public class customer2 : MonoBehaviour
     private string rojakName = "rojak";
 
     // Start is called before the first frame update
+    /* Generates a random dish request when a new customer is instantiated
+    */
     void Start()
     {
         int dishSelector = Random.Range(1,customerGenerator.numOfDishes + 1); 
@@ -34,6 +41,9 @@ public class customer2 : MonoBehaviour
 
     }
 
+    /* Used when player is attempting to serve a customer. 
+     * Checks if the dish the player is trying to serve is (i) what the customer ordered (ii) prepared correctly.
+    */
     void OnMouseDown() {
         //check if toast is finished
         if ((customersOrder() == ckName) && (gameflow2.plateAClicked) && 
@@ -61,6 +71,10 @@ public class customer2 : MonoBehaviour
         gameflow2.resetClicks = true;
     }
 
+    /* When a dish is successfully served:
+     * (i) variables are reset so that new customer can be instantiated
+     * (ii) game statistics are updated
+    */
     void successfulServe() { 
         destroyReq();
         customerReset(transform.position);
@@ -68,6 +82,9 @@ public class customer2 : MonoBehaviour
         Destroy (gameObject);
     }
 
+    /* Resets variables so that new customer can be instantiated at this position.
+     * @param coords Current coordinates of this customer object.
+    */
     void customerReset(Vector3 coords) {
         if (coords == customerGenerator.customerACoordinates) {
             customerGenerator.customerOnA = false;
@@ -81,6 +98,8 @@ public class customer2 : MonoBehaviour
         }
     }
 
+    /* Destroys the dish request model attached to this customer.
+    */
     void destroyReq() {
         if (transform.position == customerGenerator.customerACoordinates) {
             ckReq.destroyA = true;
@@ -91,6 +110,9 @@ public class customer2 : MonoBehaviour
         }
     }
 
+    /* Indicate in gameflow which dish was randomly chosen when this customer was instantiated.
+     * @param dish Passed from Start(), is the string name of the dish chosen.
+    */
     void dishIndicator(string dish) {
         if (transform.position == customerGenerator.customerACoordinates) {
             gameflow2.dishOnA = dish;
@@ -101,6 +123,9 @@ public class customer2 : MonoBehaviour
         }
     }
 
+    /* Retrieves the dish that this customer is ordering, when the player is trying to serve a dish.
+     * @return name of dish that this customer is ordering
+    */
     string customersOrder() {
         if (transform.position == customerGenerator.customerACoordinates) {
             return gameflow2.dishOnA;

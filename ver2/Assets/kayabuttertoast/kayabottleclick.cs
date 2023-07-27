@@ -4,6 +4,9 @@ using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
 
+/* class kayabottleclick attached to kaya bottle, interacted with when player wants to add kaya to toast.
+*/
+
 public class kayabottleclick : MonoBehaviour
 {
     
@@ -21,6 +24,9 @@ public class kayabottleclick : MonoBehaviour
         
     }
 
+    /* Indicate in gameflow when kaya bottle is clicked.
+     * Resets other sticky clicks in kaya butter toast and soft boiled eggs dishes.
+    */
     void OnMouseDown() {
         gameflow.placeKaya = true;
         

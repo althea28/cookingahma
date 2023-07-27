@@ -4,6 +4,11 @@ using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
 
+/* Part of rojak dish. Supports:
+ * (i) Cutting vegetables mechanism
+ * (iii) Trashing mechanism
+*/
+
 public class precutVeges : MonoBehaviour
 {
     public Transform cutVegeObj;
@@ -15,6 +20,8 @@ public class precutVeges : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Destroys ingredient when trashing
+    */
     void Update()
     {
        if ((gameflow2.trashBoardA) && (isOnBoardA())) {
@@ -31,6 +38,8 @@ public class precutVeges : MonoBehaviour
  
     }
 
+    /* Destroys plated vegetables when cutting or trashing it.
+    */
     void OnMouseDown() {
         if (gameflow2.knifeClicked) {
             Instantiate(cutVegeObj, getCutVegeCoords(), cutVegeObj.rotation);
@@ -65,6 +74,8 @@ public class precutVeges : MonoBehaviour
     }
 
 
+    /* Gets coordinates where cut vegetables should be instantiated after precut vegetables have been cut.
+    */
     Vector3 getCutVegeCoords() {
         if (isOnBoardA()) {
             return gameflow2.boardACoords + gameflow2.addCutVegeBoardCoords;

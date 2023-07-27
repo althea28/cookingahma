@@ -4,6 +4,11 @@ using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
 
+/* Part of soft boiled eggs dish. Supports:
+ * (i) Trashing and serving mechanism of this dish.
+ * (ii) Adding soya sauce to this dish.
+*/
+
 public class rawEgg : MonoBehaviour
 {
 
@@ -16,6 +21,8 @@ public class rawEgg : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Destroys object when player is trying to trash or after serving this dish.
+    */
     void Update()
     {
         //trying to trash OR serve => destroy obj
@@ -49,6 +56,10 @@ public class rawEgg : MonoBehaviour
         
     }
 
+    /* Supports:
+     * (i) Trashing and serving mechanism of dish
+     * (ii) Adding soya sauce to this dish
+    */
     void OnMouseDown() {
         if ((gameflow.soyaSauceClicked) && (canAddSoyaSauce())) {
             //add soya sauce to egg
@@ -75,17 +86,25 @@ public class rawEgg : MonoBehaviour
         gameflow.resetClicksToast = true;
 
     }
+
+    /* Supports trashing mechanism. Checks if soya sauce has been added to plate A. If it has, destroy it.
+    */
     void checkSoyaA() {
         if (gameflow.hasSoyaOnA) { //if added soya to A, destroy it too.
             soyasauce.trashSoyaA = true;
         }
     }
+
+    /* Supports trashing mechanism. Checks if soya sauce has been added to plate B. If it has, destroy it.
+    */
     void checkSoyaB() {
         if (gameflow.hasSoyaOnB) { //if added soya to B, destroy it too
             soyasauce.trashSoyaB = true;
         }
     }
-
+    
+    /* Checks if soya sauce can be added to this egg, i.e. soya sauce has not been added before
+    */
     bool canAddSoyaSauce() {
         if (isOnPlateA()) {
             return (!gameflow.hasSoyaOnA);
@@ -94,13 +113,16 @@ public class rawEgg : MonoBehaviour
         }
     }
 
-   
+    /* Reset variables of plate A, so new eggs can be moved there.
+    */
     void resetA() { //to reset added soya, is on plate A
         gameflow.hasSoyaOnA = false;
         gameflow.eggsOnPlateA = false;
         gameflow.plateACooked = false;
     }
-    
+
+    /* Reset variables of plate B, so new eggs can be moved there.
+    */
     void resetB() { //to reset added soya, is on plate A
         gameflow.hasSoyaOnB = false;
         gameflow.eggsOnPlateB = false;
@@ -108,6 +130,8 @@ public class rawEgg : MonoBehaviour
 
     }
 
+    /* Indicate in gameflow if soya sauce has been added to the plate. Will be used in serving and trashing mechanism later on.
+    */
     void addedSoya() {
         if (isOnPlateA()) {
             gameflow.hasSoyaOnA = true;

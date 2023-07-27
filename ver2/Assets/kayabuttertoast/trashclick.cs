@@ -4,6 +4,8 @@ using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
 
+/*Support trashing mechanism for kaya butter toast and soft boiled egg dish
+*/
 public class trashclick : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -18,6 +20,8 @@ public class trashclick : MonoBehaviour
         
     }
 
+    /* Triggers destroying of dish objects that the player is trying to trash. 
+    */
     void OnMouseDown() {
         if (gameflow.toastAIsClicked) {
             gameflow.trashA = true;

@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/*Part of pulut hitam dish. Instantiates gula melaka in pot and starts cooking.
+*/
 public class sugarplate : MonoBehaviour
 {
     public Transform sugarObj;
     public Transform steamObj;
+
+    private int stepToAddSugar = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -21,15 +24,17 @@ public class sugarplate : MonoBehaviour
         
     }
 
+    /*Instantiates gula melaka in pot when pandan leaf has been added. Starts cooking in pot
+    */
     void OnMouseDown() {
-        if (gameflow3.potAStep == 3) {
+        if (gameflow3.potAStep == stepToAddSugar) {
             Instantiate(sugarObj, gameflow3.potACoords + gameflow3.addSugarCoords, sugarObj.rotation);
             gameflow3.potAStep ++;
 
             pot.isCookingA = true;
             Instantiate(steamObj, gameflow3.potACoords, steamObj.rotation);
 
-        } else if (gameflow3.potBStep == 3) {
+        } else if (gameflow3.potBStep == stepToAddSugar) {
             Instantiate(sugarObj, gameflow3.potBCoords + gameflow3.addSugarCoords, sugarObj.rotation);
             gameflow3.potBStep ++;
 

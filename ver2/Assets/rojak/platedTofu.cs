@@ -4,6 +4,9 @@ using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
 
+/* Part of rojak dish. Destroys plated tofu when serving customer.
+*/
+
 public class platedTofu : MonoBehaviour
 {
     public static bool destroyA = false;
@@ -16,6 +19,8 @@ public class platedTofu : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Destroys plated tofu when serving customer.
+    */
     void Update()
     {
         if ((destroyA) && (isOnBowlA())) {

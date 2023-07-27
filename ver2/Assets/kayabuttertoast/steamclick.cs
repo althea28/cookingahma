@@ -4,10 +4,11 @@ using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
 
+/* class steamclick destroys steam on toast when toast is cooking. Called when moving kaya butter toast from grill to breadboard.
+*/
+
 public class steamclick : MonoBehaviour
 {
-    //private float grillAXCoordinates = -2.15f;
-    //private float grillBXCoordinates = -3.94f;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,8 @@ public class steamclick : MonoBehaviour
     }
 
     // Update is called once per frame
+   /* Destroys steam when needed.
+   */
     void Update()
     {
         if ((gameflow.destroySteamA) && (transform.position == gameflow.grillACoordinates)) {

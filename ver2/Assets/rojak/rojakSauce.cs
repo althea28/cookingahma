@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/* Part of rojak dish. Supports adding sauce to bowl.
+*/
 public class rojakSauce : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -17,7 +18,9 @@ public class rojakSauce : MonoBehaviour
     {
         
     }
-
+    
+    /* Indicate in gameflow2 that sauce has been clicked. Supports adding sauce to bowl.
+    */
     void OnMouseDown() {
         gameflow2.sauceClicked = true;    
 

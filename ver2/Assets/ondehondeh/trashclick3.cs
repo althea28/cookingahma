@@ -4,6 +4,8 @@ using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
 
+/* Supports trashing mechanism for levels 7 to 9.
+*/
 public class trashclick3 : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -17,7 +19,9 @@ public class trashclick3 : MonoBehaviour
     {
         
     }
-
+    
+    /*Trigger destroying of dish that player is trying to trash
+    */
     void OnMouseDown() {
         if (gameflow3.ondehPlateAClicked) {
             gameflow3.destroyOndehA = true;

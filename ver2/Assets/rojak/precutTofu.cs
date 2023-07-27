@@ -4,6 +4,11 @@ using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
 
+/* Part of rojak dish. Supports:
+ * (i) Cutting tofu mechanism
+ * (iii) Trashing mechanism
+*/
+
 public class precutTofu : MonoBehaviour
 {
     public Transform cutTofuObj;
@@ -15,6 +20,8 @@ public class precutTofu : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Destroys ingredient when trashing
+    */
     void Update()
     {
         if ((gameflow2.trashBoardA) && (isOnBoardA())) {
@@ -30,6 +37,8 @@ public class precutTofu : MonoBehaviour
         }
     }
     
+    /* Destroys plated fruits when cutting or trashing it.
+    */
     void OnMouseDown() {
         if (gameflow2.knifeClicked) {
             Instantiate(cutTofuObj, getCutTofuCoords(), cutTofuObj.rotation);
@@ -64,6 +73,8 @@ public class precutTofu : MonoBehaviour
     }
 
 
+    /* Gets coordinates where cut tofu should be instantiated after precut tofu have been cut.
+    */
     Vector3 getCutTofuCoords() {
         if (isOnBoardA()) {
             return gameflow2.boardACoords + gameflow2.addCutTofuBoardCoords;

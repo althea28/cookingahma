@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/*Part of pulut hitam dish. Provides visual feedback when coconut milk bowl is clicked.
+*/
 public class milkladle : MonoBehaviour
 {
     private static Vector3 downCoords = new Vector3(0.21f, 3.99f, 1.08f);
@@ -16,6 +17,8 @@ public class milkladle : MonoBehaviour
     }
 
     // Update is called once per frame
+    /*Changes position of milk spoon depending on whether coconut milk bowl is clicked.
+    */
     void Update()
     {
        if ((gameflow3.milkIsClicked) && (transform.position == downCoords)) {

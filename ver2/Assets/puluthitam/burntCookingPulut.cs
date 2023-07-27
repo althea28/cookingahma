@@ -4,6 +4,8 @@ using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
 
+/*Part of pulut hitam dish. Destroys burnt cooking pulut hitam when moving from pot to bowl
+*/
 public class burntCookingPulut : MonoBehaviour
 {
     public static bool destroyA = false;
@@ -17,6 +19,8 @@ public class burntCookingPulut : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Destroys burnt cooking pulut hitam when moving from pot to bowl
+    */
     void Update()
     {
         if ((destroyA) && (isOnPotA())) {

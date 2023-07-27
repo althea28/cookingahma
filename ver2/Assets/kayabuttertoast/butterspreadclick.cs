@@ -4,6 +4,9 @@ using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
 
+/* class butterspreadclick destroys butter spread on toast. Called when trashing or serving kaya butter toast.
+*/
+
 public class butterspreadclick : MonoBehaviour
 {
 
@@ -17,6 +20,8 @@ public class butterspreadclick : MonoBehaviour
     }
 
    // Update is called once per frame
+   /* Destroys butter spread when needed.
+   */
     void Update()
     {
         if ((destroyButterA) && (transform.position == gameflow.boardACoordinates + gameflow.addButterCoordinates)) {

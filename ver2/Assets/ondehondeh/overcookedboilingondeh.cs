@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
+/*Part of ondeh ondeh dish. Destroys overcooked boiling ondeh when moving from steamer to plate.
+*/
 
 public class overcookedboilingondeh : MonoBehaviour
 {
@@ -16,6 +18,8 @@ public class overcookedboilingondeh : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Destroys overcooked boiling ondeh when moving from steamer to plate.
+    */
     void Update()
     {
         if ((destroyA) && (isOnSteamerA())) {

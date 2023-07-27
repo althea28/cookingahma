@@ -4,6 +4,8 @@ using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
 
+/* Part of ondeh ondeh dish. Supports adding coconut to ondeh ondeh.
+*/
 public class coconutbowl : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -17,7 +19,9 @@ public class coconutbowl : MonoBehaviour
     {
         
     }
-
+    
+    /*Indicate in gameflow3 that coconut flakes bowl has been clicked. Supports mechanism of adding coconut to ondeh ondeh.
+    */
     void OnMouseDown() {
         gameflow3.coconutClicked = true;
         

@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/** dishTwo class is attached to GAMEMASTER in levels 2, 3, 5, 6, 8 and 9 
+ * sets the number of possible dishes that can be served in every level to be 2
+*/
+
 public class dishTwo : MonoBehaviour
 {
     private int numOfDishes = 2;

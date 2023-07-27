@@ -4,6 +4,9 @@ using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
 
+/* Part of rojak dish. Instantiate precut vegetables onto board if possible
+*/
+
 public class vegebox : MonoBehaviour
 {
     public Transform precutVegeObj;
@@ -20,6 +23,8 @@ public class vegebox : MonoBehaviour
         
     }
 
+    /* Instantiates precut vegetables onto board if there is space on the boards.
+    */
     void OnMouseDown() {
         gameflow2.resetClicks = true; 
 

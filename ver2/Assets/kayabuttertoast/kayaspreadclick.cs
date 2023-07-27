@@ -4,6 +4,9 @@ using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
 
+/* class kayaspreadclick destroys kaya spread on toast. Called when trashing or serving kaya butter toast.
+*/
+
 public class kayaspreadclick : MonoBehaviour
 {
     
@@ -17,6 +20,8 @@ public class kayaspreadclick : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Destroys kaya spread when needed.
+    */
     void Update()
     {
         if ((destroyKayaA) && (transform.position == gameflow.boardACoordinates + gameflow.addKayaCoordinates)) {

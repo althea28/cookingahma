@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/* Part of rojak dish. Supports:
+ * (i) Cutting fruits mechanism
+ * (iii) Trashing mechanism
+*/
 public class precutFruits : MonoBehaviour
 {
     public Transform cutFruitsObj;
@@ -15,6 +18,8 @@ public class precutFruits : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Destroys ingredient when trashing
+    */
     void Update()
     {
         if ((gameflow2.trashBoardA) && (isOnBoardA())) {
@@ -29,6 +34,8 @@ public class precutFruits : MonoBehaviour
         
     }
 
+    /* Destroys plated fruits when cutting or trashing it.
+    */
     void OnMouseDown() {
         if (gameflow2.knifeClicked) { //to cut fruits
             Instantiate(cutFruitsObj, getCutFruitCoords(), cutFruitsObj.rotation);
@@ -63,7 +70,8 @@ public class precutFruits : MonoBehaviour
         gameflow2.resetClicksChweeKueh = true;
         
     }
-
+    /* Gets coordinates where cut fruits should be instantiated after precut fruits have been cut.
+    */
     Vector3 getCutFruitCoords() {
         if (isOnBoardA()) {
             return gameflow2.boardACoords + gameflow2.addCutFruitsBoardCoords;

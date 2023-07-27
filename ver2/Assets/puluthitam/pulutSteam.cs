@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/*Part of pulut hitam dish. Destroys steam on pot when moving dish from pot to bowl.
+*/
 public class pulutSteam : MonoBehaviour
 {
     public static bool destroyA = false;
@@ -17,6 +18,8 @@ public class pulutSteam : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Destroys steam on pot when moving dish from pot to bowl.
+    */
     void Update()
     {
         if ((destroyA) && (isOnPotA())) {

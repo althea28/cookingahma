@@ -4,6 +4,15 @@ using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
 
+/* gameflow2 class is attached to GAMEMASTER object in levels 4 to 6
+ * gameflow2 supports the serving of (i) chwee kueh and (ii) rojak. 
+ * gameflow2 class:
+ * (i) holds the coordinates for ingredients and dishes 
+ * (ii) resets variables so that dishes can be repeatedly served
+ * (iii) aids in interactions between different scripts
+*/
+
+
 public class gameflow2 : MonoBehaviour
 {
     //sticky clicks:  chweekueh: plateAClicked, plateBClicked, chaiPohClicked
@@ -21,34 +30,9 @@ public class gameflow2 : MonoBehaviour
     public static bool resetClicksRojak = false;
 
     //customer generation
-    /*public static Vector3 customerACoordinates = new Vector3(6.19f, 6f, -2f);
-    public static Vector3 customerBCoordinates = new Vector3(1.19f, 6f, -2f); 
-    public static Vector3 customerCCoordinates = new Vector3(-4.19f, 6f, -2f);
-    public static Vector3 addReqCoordinates = new Vector3(-2.1f,1.11f,0.1f);
-    
-    private int numOfCustomerModels = 4;
-    private int uncleModel = 1;
-    private int ladyModel = 2;
-    private int boyModel = 3;
-    private int womanModel = 4;
-
-    public Transform uncleObj;
-    public Transform ladyObj;
-    public Transform boyObj;
-    public Transform womanObj;
-
-    public static string customerOnA = "n";
-    public static string customerOnB = "n";
-    public static string customerOnC = "n";*/
     public static string dishOnA = "none";
     public static string dishOnB = "none";
     public static string dishOnC = "none";
-    /*public float timeWithoutCustomerOnA = 0;
-    public float timeWithoutCustomerOnB = 0;
-    public float timeWithoutCustomerOnC = 0;
-    public float maxTimeWithoutCustomerA = 2.5f;
-    public float maxTimeWithoutCustomerB = 4f;
-    public float maxTimeWithoutCustomerC = 4.5f;*/
 
     //chwee kueh
     public static Vector3 steamerACoords = new Vector3(6.58f, 3.493f, 1.574f);
@@ -90,11 +74,11 @@ public class gameflow2 : MonoBehaviour
     public static bool trashPlateA = false;
     public static bool trashPlateB = false;
 
-    public static string destroySteamA = "n";
-    public static string destroySteamB = "n";
+    public static bool destroySteamA = false;
+    public static bool destroySteamB = false;
 
-    public static string trashA = "n";
-    public static string trashB = "n";
+    public static bool trashA = false;
+    public static bool trashB = false;
 
     //rojak
     public static bool foodOnBoardA = false;
@@ -138,27 +122,22 @@ public class gameflow2 : MonoBehaviour
     public static bool initiating = false;
 
     // Start is called before the first frame update
+    /** Resets all variables when every level starts
+    */
     void Start()
     {
         initiating = true;
         
-        //customer generation
-        /*customerOnA = "n";
-        customerOnB = "n";
-        customerOnC = "n";*/
         dishOnA = "none";
         dishOnB = "none";
         dishOnC = "none";
-        /*timeWithoutCustomerOnA = 0;
-        timeWithoutCustomerOnB = 0;
-        timeWithoutCustomerOnC = 0;*/
 
         //chweekueh
-        destroySteamA = "n";
-        destroySteamB = "n";
+        destroySteamA = false;
+        destroySteamB = false;
 
-        trashA = "n";
-        trashB = "n";
+        trashA = false;
+        trashB = false;
         
         ckOnSteamerA = false;
         ckOnSteamerB = false;
@@ -179,10 +158,10 @@ public class gameflow2 : MonoBehaviour
 
         trashPlateA = false;
         trashPlateB = false;
-        destroySteamA = "n";
-        destroySteamB = "n";
-        trashA = "n";
-        trashB = "n";
+        destroySteamA = false;
+        destroySteamB = false;
+        trashA = false;
+        trashB = false;
 
         chweekuehbatter.ckCookingTimeA = 0;
         chweekuehbatter.ckCookingTimeB = 0;
@@ -217,6 +196,8 @@ public class gameflow2 : MonoBehaviour
     }
 
     // Update is called once per frame
+    /** Resets variables for each dish
+    */
     void Update()
     {
         Debug.Log("Scene counter " + gameflow.sceneCounter);
@@ -228,50 +209,12 @@ public class gameflow2 : MonoBehaviour
             resetClickingRojak();
         }
 
-        //add time passed without customer at each spot
-        /*if (customerOnA == "n") {
-            timeWithoutCustomerOnA += Time.deltaTime;
-        }
-        if (customerOnB == "n") {
-            timeWithoutCustomerOnB += Time.deltaTime;
-        }
-        if (customerOnC == "n") {
-            timeWithoutCustomerOnC += Time.deltaTime;
-        }
-
-        //check how long there is no customer in that position
-        if (timeWithoutCustomerOnA > maxTimeWithoutCustomerA) {
-            generateCustomer(customerACoordinates);
-            customerOnA = "y";
-            timeWithoutCustomerOnA = 0;
-        }
-        if (timeWithoutCustomerOnB > maxTimeWithoutCustomerB) {
-            generateCustomer(customerBCoordinates);
-            customerOnB = "y";
-            timeWithoutCustomerOnB = 0;
-        }
-        if (timeWithoutCustomerOnC > maxTimeWithoutCustomerC) {
-            generateCustomer(customerCCoordinates);
-            customerOnC = "y";
-            timeWithoutCustomerOnC = 0;
-        }*/
 
     }
 
-    //select a random customer model to add to counter
-    /*void generateCustomer(Vector3 cusCoord) {
-        int cusSelector = Random.Range(1, numOfCustomerModels + 1);
-        if (cusSelector == uncleModel) {
-            Instantiate(uncleObj, cusCoord, uncleObj.rotation);
-        } else if (cusSelector == ladyModel) {
-            Instantiate(ladyObj, cusCoord, ladyObj.rotation);
-        } else if (cusSelector == boyModel) {
-            Instantiate(boyObj, cusCoord, boyObj.rotation);
-        } else if (cusSelector == womanModel) {
-            Instantiate(womanObj, cusCoord, womanObj.rotation);
-        }
-    }*/
     
+    /** Resets variables of sticky clicks for chwee kueh and rojak
+    */
     public void resetClicking() {
         resetClickingChweeKueh();
         resetClickingRojak();
@@ -279,6 +222,8 @@ public class gameflow2 : MonoBehaviour
         resetClicks = false;
     }
 
+    /** Resets variables of sticky clicks for chwee kueh
+    */
     public void resetClickingChweeKueh() {
         plateAClicked = false;
         plateBClicked = false;
@@ -287,6 +232,8 @@ public class gameflow2 : MonoBehaviour
         resetClicksChweeKueh = false;
     }
 
+    /** Resets variables of sticky clicks for rojak
+    */
     public void resetClickingRojak() {
         knifeClicked = false;
         sauceClicked = false;

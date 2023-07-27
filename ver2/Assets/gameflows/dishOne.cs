@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/** dishOne class is attached to GAMEMASTER in levels 1, 4 and 7
+ * sets the number of possible dishes that can be served in every level to be 1
+*/
 public class dishOne : MonoBehaviour
 {
     private int numOfDishes = 1;

@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/*Part of chwee kueh dish. Supports trashing and serving mechanism.
+*/
 public class cookedChweeKueh : MonoBehaviour
 {
     public Transform cookedChaiPohObj;
@@ -15,6 +16,8 @@ public class cookedChweeKueh : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Destroys chwee kueh when trashing or serving the dish/
+    */
     void Update()
     {
         //trying to trash OR serve => destroy obj
@@ -46,7 +49,11 @@ public class cookedChweeKueh : MonoBehaviour
         }
             
     }
-    
+
+    /* Supports:
+     * (i) Adding chai poh
+     * (ii) Trashing or serving dish
+    */
     void OnMouseDown() {
         if ((gameflow2.chaiPohClicked) && (
             ((isOnPlateA()) && (!gameflow2.hasCPOnA)) || 
@@ -77,23 +84,32 @@ public class cookedChweeKueh : MonoBehaviour
         gameflow2.chaiPohClicked = false;
     }
    
+   /* Checks if there is chai poh on plate A when trashing or serving this dish. If there is, destroy it too.
+   */
     void checkChaiPohA() {
         if (gameflow2.hasCPOnA) { //if added chai poh to A, destroy it too.
             cookedChaiPoh.trashChaiPohA = true;
         }
     }
+
+   /* Checks if there is chai poh on plate B when trashing or serving this dish. If there is, destroy it too.
+   */
     void checkChaiPohB() {
         if (gameflow2.hasCPOnB) { //if added chai poh to B, destroy it too
                 cookedChaiPoh.trashChaiPohB = true;
             }
     }
 
+   /* Reset variables of plate A, so that new chwee kueh can be moved here.
+   */
     void resetA() { //to reset added chai poh, is on plate A
         gameflow2.hasCPOnA = false;
         gameflow2.ckOnPlateA = false;
         gameflow2.plateACooked = false;
     }
     
+   /* Reset variables of plate B, so that new chwee kueh can be moved here.
+   */
     void resetB() { //to reset added chai poh, is on plate A
         gameflow2.hasCPOnB = false;
         gameflow2.ckOnPlateB = false;
@@ -101,6 +117,10 @@ public class cookedChweeKueh : MonoBehaviour
 
     }
 
+   /* Indicate in gameflow2 that chai poh has been added here. Used again:
+    * (i) to prevent repeated adding of chai poh here
+    * (ii) during serving of dish to check if dish has been prepared correctly
+   */
     void addedCookedChaiPoh() {
         if (isOnPlateA()) {
             gameflow2.hasCPOnA = true;

@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/* Part of rojak dish. Destroys plated fruits when serving customer.
+*/
 public class platedFruits : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -13,6 +14,8 @@ public class platedFruits : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Destroys plated fruits when serving customer.
+    */
     void Update()
     {
         if ((gameflow2.serveRojakA) && (isOnBowlA())) {

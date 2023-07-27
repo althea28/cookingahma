@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/* Part of soft-boiled egg dish. Attached to egg object when it is cooking on the steamer. Supports:
+ * (i) Track time egg has spent on steamer.
+ * (ii) Instantiate steam to show that egg has been cooked/overcooked.
+ * (iii) Move eggs from steamer to plate.
+*/
 public class eggs : MonoBehaviour
 {
 
@@ -35,11 +39,16 @@ public class eggs : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       isCookedA = false;
+       isCookedB = false;
+       isBurntA = false;
+       isBurntB = false;
     }
 
     // Update is called once per frame
     void Update()
+    /* Checks whether egg has been cooked/burnt on steamer.
+    */
     {
         //update how long eggs have been on steamer
         if (isOnSteamerA()) {
@@ -72,6 +81,8 @@ public class eggs : MonoBehaviour
         
     }
 
+    /* Moves eggs from steamer to plate, if there is space on the plates.
+    */
     void OnMouseDown() { //transfer to plate
         
         gameflow.resetClicks = true;
@@ -108,6 +119,8 @@ public class eggs : MonoBehaviour
 
     }
 
+    /* Instantiates raw, cooked or burnt egg model on plate, based on how long egg has spent on position A of the steamer.
+    */
     void movingA() {
         if ((!isCookedA) && (!isBurntA)) { //if A is undercooked
                 Instantiate(undercookedEggsObj, transferEggsCoords("undercooked"), undercookedEggsObj.rotation);
@@ -120,6 +133,8 @@ public class eggs : MonoBehaviour
         }
     }
 
+    /* Instantiates raw, cooked or burnt egg model on plate, based on how long egg has spent on position B of the steamer.
+    */
     void movingB() {
         if ((!isCookedB) && (!isBurntB)) { //if B is undercooked
                 Instantiate(undercookedEggsObj, transferEggsCoords("undercooked"), undercookedEggsObj.rotation);
@@ -133,6 +148,8 @@ public class eggs : MonoBehaviour
         }
     }
 
+    /* Resets variables on position A of steamer, so that new egg can be instantiated there. Destroys any steam that has been instantiated there.
+    */
     void resetA() { //to destroy steam, reset timer, cooking checks, destroy eggs
         //to trigger destroying steam
         if (isCookedA) {
@@ -149,6 +166,8 @@ public class eggs : MonoBehaviour
 
     }
 
+    /* Resets variables on position B of steamer, so that new egg can be instantiated there. Destroys any steam that has been instantiated there.
+    */
     void resetB() { //to destroy steam, reset timer, cooking checks, destroy eggs
         //to trigger destroying steam
         if (isCookedB) {
@@ -165,6 +184,11 @@ public class eggs : MonoBehaviour
     }
     
     //get new coords for egg transfer (no need to know where egg is rn)
+    
+    /* Checks where egg can be instantied on plate.
+     * @param cookCheck indicates whether raw, cooked or burnt eggs will be instantiated. Used to retrieve correct coordinates.
+     * @return coordinates for new egg to be instantiated at.
+    */
     Vector3 transferEggsCoords(string cookCheck) {
         if (!gameflow.eggsOnPlateA) { //transf to plate A
             gameflow.eggsOnPlateA = true;
@@ -185,11 +209,18 @@ public class eggs : MonoBehaviour
         }
     }
 
+    /* Indicate in gameflow whether eggs to be transferred to plate A are cooked. 
+     * Used in serving mechanism to check if dish has been prepared correctly.
+    */
     void cookCheckA(string cookCheck) {
         if (cookCheck == "cooked") {
             gameflow.plateACooked = true;
         }
     }
+    
+    /* Indicate in gameflow whether eggs to be transferred to plate B are cooked. 
+     * Used in serving mechanism to check if dish has been prepared correctly.
+    */
     void cookCheckB(string cookCheck) {
         if (cookCheck == "cooked") {
                 gameflow.plateBCooked = true;
@@ -198,6 +229,10 @@ public class eggs : MonoBehaviour
         
     
     //adjusts eggs coordinates
+    /* Adds adjustment coordinates for eggs to be instantiated at.
+     * @param cookCheck signals which model coordinates should be returned.
+     * @return adjustment coordinates for each type of model.
+    */
     Vector3 adjustEggCoords(string cookCheck) {
         if (cookCheck == "undercooked") {
             return gameflow.addUndercookedEggsCoords;
@@ -220,6 +255,8 @@ public class eggs : MonoBehaviour
         return transform.position;
     }
 
+    /* Checks if there is space on plates for eggs to be transferred to.
+    */
     bool emptySpaceOnPlates() {
         if ((!gameflow.eggsOnPlateA) || (!gameflow.eggsOnPlateB)) {
             return true;

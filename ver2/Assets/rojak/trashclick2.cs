@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/* Supports trashing mechanism from levels 4-6.
+*/
 public class trashclick2 : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -13,6 +14,8 @@ public class trashclick2 : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Triggers destroying of dish that player is trying to trash.
+    */
     void Update()
     {
     }

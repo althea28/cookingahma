@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/* Part of soft boiled egg dish. Instantiated when egg on steamer is overcooked.
+*/
 public class eggOCSteam : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -13,6 +14,8 @@ public class eggOCSteam : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* Destroys steam
+    */
     void Update()
     {
        if ((eggs.trigDestroyOvercookedSteamA) && (isOnSteamerA())) {

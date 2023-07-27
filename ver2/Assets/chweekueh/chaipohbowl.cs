@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/* Part of chwee kueh dish. Supports adding chai poh to chwee kueh.
+*/
 public class chaipohbowl : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -18,6 +19,8 @@ public class chaipohbowl : MonoBehaviour
         
     }
 
+    /* Indicates in gameflow2 when chaipoh bowl is clicked.
+    */
     void OnMouseDown() {
         gameflow2.chaiPohClicked = true;
 

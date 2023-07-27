@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Solution below adapted from https://www.youtube.com/playlist?list=PL4UezTfGBADBsdU4ytVRJRDq2RESjqffk
-
+/* Part of chwee kueh dish. Instantiates chwee kueh batter and tins on steamer.
+*/
 public class batterbucket : MonoBehaviour
 {
     public Transform ckTinsObj;
@@ -19,7 +20,9 @@ public class batterbucket : MonoBehaviour
     {
         
     }
-
+    
+    /* Instantiates new chwee kueh batter and tins on steamer, if there is space on steamer.
+    */
     //to instantiate eggs onto steamer
     void OnMouseDown() {
         if (!gameflow2.ckOnSteamerA) { //if there is no eggs on steamer A
