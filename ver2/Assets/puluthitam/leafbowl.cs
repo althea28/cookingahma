@@ -8,7 +8,7 @@ using UnityEngine;
 public class leafbowl : MonoBehaviour
 {
     public Transform pandanObj;
-    private int stepToAddLeaves = 2
+    private int stepToAddLeaves = 2;
 
     // Start is called before the first frame update
     void Start()
