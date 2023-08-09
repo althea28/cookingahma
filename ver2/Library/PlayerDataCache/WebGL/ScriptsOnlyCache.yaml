@@ -417,6 +417,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -424,6 +426,10 @@ ScriptsOnlyBuild:
     - Class: 83
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -449,8 +455,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6244}
     - Class: 114
       Script: {instanceID: 8030}
-    - Class: 114
-      Script: {instanceID: 108898}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -742,6 +746,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -749,6 +755,10 @@ ScriptsOnlyBuild:
     - Class: 83
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -861,6 +871,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -868,6 +880,10 @@ ScriptsOnlyBuild:
     - Class: 83
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -992,6 +1008,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -999,6 +1017,10 @@ ScriptsOnlyBuild:
     - Class: 83
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -1123,6 +1145,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -1130,6 +1154,10 @@ ScriptsOnlyBuild:
     - Class: 83
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -1236,6 +1264,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -1243,6 +1273,10 @@ ScriptsOnlyBuild:
     - Class: 83
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -1383,6 +1417,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -1390,6 +1426,10 @@ ScriptsOnlyBuild:
     - Class: 83
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -1530,6 +1570,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -1537,6 +1579,10 @@ ScriptsOnlyBuild:
     - Class: 83
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -1649,6 +1695,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -1656,6 +1704,10 @@ ScriptsOnlyBuild:
     - Class: 83
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -1792,6 +1844,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -1799,6 +1853,10 @@ ScriptsOnlyBuild:
     - Class: 83
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -4929,4 +4987,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/LEVEL9.unity
   - Assets/Scenes/TUT pulut hitam.unity
   - Assets/Scenes/FinalScene.unity
-  playerPath: /Users/altheatan/Desktop/finalb8
+  playerPath: /Users/altheatan/Desktop/finalb10
